@@ -1,434 +1,303 @@
 import {
-  sinusoid,
+  racetrack,
   hairpin,
-  add,
-  sub,
+  sinusoid,
   field,
-  angularPower,
-  EXCLUSION,
   norm,
   cross,
-  scale
+  EXCLUSION
 } from './physics.mjs';
-import {trace, seeds, selected as selectField} from './streamlines.mjs';
+import {
+  samplePoints,
+  sample,
+  brightness
+} from './sampling.mjs';
+import {
+  createCanvas2D
+} from '../../lib/web/canvas2d.js';
 import {
   createLoop
 } from '../../lib/web/loop.js';
-
-const $ = id => document.getElementById(id),
-  TAU = 2 * Math.PI,
-  T = window.THREE;
+const $ = id => document.getElementById(id);
 const state = {
   time: -4,
-  beta: .72,
+  beta: .45,
   motion: 'turn',
   component: 'total',
+  vector: 'B',
   density: 'standard',
   gain: 1,
   playing: true
 };
 const host = $('scene'),
-  scene = new T.Scene(),
-  camera = new T.PerspectiveCamera(40, 1, .05, 150);
-camera.up.set(0, 0, 1);
-let renderer;
-try {
-  renderer = new T.WebGLRenderer({
-    antialias: true,
-    alpha: true
+  {
+    ctx,
+    size,
+    onResize
+  } = createCanvas2D({
+    mount: host
   });
-} catch (error) {
-  $('fatal').hidden = false;
-  $('fatal').textContent = 'This 3-D experiment needs WebGL. ' + error.message;
-  throw error;
-}
-renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
-host.append(renderer.domElement);
-let azimuth = 1.08,
-  elevation = .32,
-  distance = 21;
-const motionNow = () => state.motion === 'turn' ? hairpin(state.beta) : sinusoid(state.beta);
+const motionNow = () => ({
+  turn: racetrack,
+  ellipse: hairpin,
+  linear: sinusoid
+})[state.motion](state.beta);
+let viewport = {
+  w: innerWidth,
+  h: innerHeight
+};
+let azimuth = 0,
+  zoom = 1,
+  points = samplePoints(),
+  cached = [],
+  fieldKey = '',
+  frameIntervals = [],
+  renderCosts = [],
+  previousFrame = 0;
+let clockStart = 0,
+  clockTime = -4;
+const witnesses = [
+  [2, 0, 0],
+  [5, 0, 0]
+];
 
-function updateCamera() {
-  const d = distance * Math.max(1, 1.05 / camera.aspect);
-  camera.position.set(d * Math.cos(elevation) * Math.cos(azimuth), d * Math.cos(elevation) * Math.sin(
-    azimuth), d * Math.sin(elevation) - 1);
-  camera.lookAt(0, 0, -1);
-  camera.updateMatrixWorld();
-}
-
-function resize() {
+function worldScale() {
   const {
-    width,
-    height
-  } = host.getBoundingClientRect();
-  renderer.setSize(width, height);
-  camera.aspect = width / height;
-  camera.updateProjectionMatrix();
-  updateCamera();
-  render();
+    w,
+    h
+  } = viewport;
+  return Math.min(w * .36, h * .55) * .83 / 6 * zoom * (w < 650 ? 1.45 : 1);
 }
 
-function line(points, color, opacity = 1, dashed = false) {
-  const geometry = new T.BufferGeometry().setFromPoints(points.map(p => new T.Vector3(...p)));
-  const material = dashed ? new T.LineDashedMaterial({
-    color,
-    transparent: true,
-    opacity,
-    dashSize: .13,
-    gapSize: .1
-  }) : new T.LineBasicMaterial({
-    color,
-    transparent: true,
-    opacity
-  });
-  const object = new T.Line(geometry, material);
-  if (dashed) object.computeLineDistances();
-  scene.add(object);
-  return object;
-}
-// Cartesian ruler in the motion plane; no field geometry is inferred from it.
-for (let x = -6; x <= 6; x += 2) line([[x, 0, -6], [x, 0, 4]], 0x44586a, .11);
-for (let z = -6; z <= 4; z += 2) line([[-6, 0, z], [6, 0, z]], 0x44586a, .11);
-
-function sphere(radius, color, wireframe = false) {
-  const m = new T.Mesh(new T.SphereGeometry(radius, 20, 12), new T.MeshBasicMaterial({
-    color,
-    wireframe,
-    transparent: true,
-    opacity: wireframe ? .28 : 1
-  }));
-  scene.add(m);
-  return m;
-}
-const electron = sphere(.16, 0xf1f7f6),
-  exclusion = sphere(EXCLUSION, 0x91a0ad, true),
-  past = sphere(.065, 0xe9c28a),
-  probe = sphere(.065, 0xffffff);
-const path = line([
-  [0, 0, -.15],
-  [0, 0, .15]
-], 0xe9c28a, .8);
-const lightPath = line([
-  [0, 0, 0],
-  [1, 0, 0]
-], 0xe9c28a, .65, true);
-// Procedural marker halo: an enlarged source glyph, never a field shell.
-const glowCanvas = document.createElement('canvas'); glowCanvas.width = glowCanvas.height = 64;
-const glowContext = glowCanvas.getContext('2d');
-const gradient = glowContext.createRadialGradient(32, 32, 2, 32, 32, 32);
-gradient.addColorStop(0, 'rgba(230,255,255,.8)'); gradient.addColorStop(.25, 'rgba(150,235,255,.25)'); gradient.addColorStop(1, 'rgba(100,200,255,0)');
-glowContext.fillStyle = gradient; glowContext.fillRect(0, 0, 64, 64);
-const glow = new T.Sprite(new T.SpriteMaterial({map: new T.CanvasTexture(glowCanvas), transparent: true, depthWrite: false}));
-glow.scale.set(1.3, 1.3, 1); scene.add(glow);
-const witnesses = [[2, 0, 1], [5, 0, 1]].map((p, i) => ({p, marker: sphere(.08, 0xffffff), id: ['local', 'distant'][i]}));
-let fieldSeeds = [],
-  electric = [],
-  flow = [];
-const Ecolor = 0xe9c28a,
-  Scolor = 0xa9d6ac,
-  positive = new T.Color(0x63d9e7),
-  negative = new T.Color(0xf2cd78);
-
-function arrow(position, color) {
-  const a = new T.ArrowHelper(new T.Vector3(0, 1, 0), new T.Vector3(...position), .3, color, .1, .06);
-  scene.add(a);
-  return a;
+function project(p) {
+  const {
+    w,
+    h
+  } = viewport, s = worldScale();
+  const x = p[0] * Math.cos(azimuth) - p[1] * Math.sin(azimuth),
+    y = p[0] * Math.sin(azimuth) + p[1] * Math.cos(azimuth);
+  return [w / 2 + s * x, h * (w < 650 ? .38 : .28) + s * (.24 * y - .85 * p[2])];
 }
 
-function dispose(object) {
-  scene.remove(object);
-  object.traverse(o => {
-    o.geometry?.dispose();
-    if (o.material)
-      for (const m of [o.material].flat()) m.dispose();
-  });
+function segment(a, b) {
+  const p = project(a),
+    q = project(b);
+  ctx.moveTo(...p);
+  ctx.lineTo(...q);
 }
 
-function dynamicGeometry(capacity) {
-  const geometry = new T.BufferGeometry();
-  for (const name of ['position', 'color']) geometry.setAttribute(name,
-    new T.Float32BufferAttribute(new Float32Array(capacity * 3), 3).setUsage(T.DynamicDrawUsage));
-  return geometry;
-}
-function updateGeometry(geometry, positions, colors) {
-  for (const [name, values] of [['position', positions], ['color', colors]]) {
-    const attribute = geometry.getAttribute(name);
-    attribute.array.set(values);
-    attribute.updateRange.count = values.length;
-    attribute.needsUpdate = true;
-  }
-  geometry.setDrawRange(0, positions.length / 3);
-  geometry.computeBoundingSphere();
-}
-// Reuse GPU buffers: replacing BufferAttributes each frame leaks old GL buffers.
-const streamGeometry = dynamicGeometry(10000);
-const streams = new T.LineSegments(streamGeometry, new T.LineBasicMaterial({vertexColors: true}));
-scene.add(streams);
-const directionGeometry = dynamicGeometry(1024);
-const directions = new T.LineSegments(directionGeometry, new T.LineBasicMaterial({vertexColors: true}));
-scene.add(directions);
-const velocityArrow = arrow([0, 0, 0], 0xffffff);
-let cachedTraces = [], fieldKey = '', pathKey = '', lastFieldCost = 0;
-
-function buildSamples() {
-  electric.forEach(a => dispose(a.arrow));
-  flow.forEach(a => dispose(a.arrow));
-  electric = []; flow = [];
-  fieldSeeds = seeds(state.density);
-  fieldKey = '';
-  for (let z = -4; z <= 4; z += 2)
-    for (const x of [-5, -3, -1, 1, 3, 5]) {
-      const p = [x, 0, z];
-      electric.push({p, arrow: arrow(p, Ecolor)});
-      flow.push({p, arrow: arrow(p, Scolor)});
-    }
+function textAt(text, p, color = '#adc7b7', dx = 10, dy = -8) {
+  const q = project(p);
+  ctx.fillStyle = color;
+  ctx.font = '11px ui-monospace,monospace';
+  ctx.fillText(text, q[0] + dx, q[1] + dy);
 }
 
-function drawStreams(motion, t) {
-  streams.visible = directions.visible = $('magnetic').checked;
-  if (!streams.visible) return;
-  const key = [t, state.beta, state.motion, state.component, state.density].join('/');
-  if (key !== fieldKey) {
-    const start = performance.now();
-    cachedTraces = fieldSeeds.map(p => trace(p, t, motion, state.component));
-    fieldKey = key;
-    lastFieldCost = performance.now() - start;
-  }
-  const positions = [], colors = [], arrowPositions = [], arrowColors = [];
-  for (const points of cachedTraces) {
-    for (let i = 1; i < points.length; i++) {
-      const a = points[i - 1], b = points[i];
-      positions.push(...a.p, ...b.p);
-      for (const v of [a, b]) {
-        const color = v.B[1] >= 0 ? positive : negative;
-        const brightness = .12 + .88 * compress(v.magnitude, 120);
-        colors.push(color.r * brightness, color.g * brightness, color.b * brightness);
-      }
-      if (i % 24 === 12) {
-        // Arrowheads use the computed 3-D B tangent, not screen motion.
-        const side0 = cross(b.direction, [0, 0, 1]);
-        const side = norm(side0) > .01 ? scale(side0, 1 / norm(side0)) : [1, 0, 0];
-        const tip = add(b.p, scale(b.direction, .12));
-        const back = add(b.p, scale(b.direction, -.10));
-        arrowPositions.push(...add(back, scale(side, .10)), ...tip, ...tip, ...add(back, scale(side, -.10)));
-        const c = b.B[1] >= 0 ? positive : negative;
-        for (let j = 0; j < 4; j++) arrowColors.push(c.r, c.g, c.b);
-      }
-    }
-  }
-  updateGeometry(streamGeometry, positions, colors);
-  updateGeometry(directionGeometry, arrowPositions, arrowColors);
-}
-const compress = (m, factor) => Math.min(1, Math.log1p(factor * state.gain * m) / Math.log(13));
-
-const selected = f => selectField(f, state.component);
-
-function drawArrow(a, v, factor) {
-  const m = norm(v);
-  a.visible = m > 1e-14;
-  if (!a.visible) return;
-  const b = compress(m, factor);
-  a.setDirection(new T.Vector3(...scale(v, 1 / m)));
-  a.setLength(.12 + .65 * b, .07 + .15 * b, .055 + .07 * b);
-  a.line.material.transparent = true;
-  a.cone.material.transparent = true;
-  a.line.material.opacity = a.cone.material.opacity = .2 + .8 * b;
-}
-let lastPlot = -Infinity,
-  lastReadout = -Infinity;
-
-function updateFields() {
-  const motion = motionNow(),
-    t = state.time;
-  electron.position.fromArray(motion.at(t).position);
-  exclusion.position.copy(electron.position);
-  glow.position.copy(electron.position);
-  const newPathKey = `${state.motion}/${state.beta}`;
-  if (pathKey !== newPathKey) {
-    const pathPoints = state.motion === 'turn'
-      ? Array.from({length: 181}, (_, i) => new T.Vector3(1.4 * Math.sin(i * TAU / 180), 0, 3 * (Math.cos(i * TAU / 180) - 1)))
-      : [new T.Vector3(0, 0, -state.beta), new T.Vector3(0, 0, state.beta)];
-    path.geometry.dispose();
-    path.geometry = new T.BufferGeometry().setFromPoints(pathPoints);
-    pathKey = newPathKey;
-  }
-  path.material.color.setHex(0xa7b4bd); path.material.opacity = .6;
-  velocityArrow.position.copy(electron.position);
-  drawArrow(velocityArrow, motion.at(t).velocity, 4);
-  if (norm(motion.at(t).velocity) > 0) velocityArrow.setLength(1.1, .23, .16);
-  drawStreams(motion, t);
-  for (const witness of witnesses) {
-    const f = field(witness.p, t, motion);
-    const B = f.masked ? [0, 0, 0] : selected(f)[1];
-    witness.marker.position.fromArray(witness.p);
-    witness.marker.material.color.copy(B[1] >= 0 ? positive : negative);
-    const el = $(witness.id + '-readout');
-    el.textContent = `${Math.abs(B[1]) < 1e-14 ? 'By = 0' : B[1] >= 0 ? '+By' : '−By'} · tᵣ ${f.tr.toFixed(2)}`;
-    el.style.color = B[1] >= 0 ? '#63d9e7' : '#f2cd78';
-  }
-  for (let i = 0; i < electric.length; i++) {
-    const e = electric[i],
-      s = flow[i];
-    e.arrow.visible = $('electric').checked;
-    s.arrow.visible = $('poynting').checked;
-    if (!e.arrow.visible && !s.arrow.visible) continue;
-    const f = field(e.p, t, motion);
-    if (f.masked) {
-      e.arrow.visible = s.arrow.visible = false;
-      continue;
-    }
-    const [E, B] = selected(f);
-    if (e.arrow.visible) drawArrow(e.arrow, E, 15);
-    if (s.arrow.visible) drawArrow(s.arrow, scale(cross(E, B), 1 / (4 * Math.PI)), 600);
-  }
-  const radius = +$('probe-radius').value,
-    theta = +$('probe-angle').value * Math.PI / 180;
-  const p = [radius * Math.sin(theta), 0, radius * Math.cos(theta)],
-    f = field(p, t, motion);
-  probe.position.fromArray(p);
-  past.position.fromArray(f.source.position);
-  const lightPositions = lightPath.geometry.getAttribute('position');
-  lightPositions.setXYZ(0, ...past.position.toArray());
-  lightPositions.setXYZ(1, ...probe.position.toArray());
-  lightPositions.needsUpdate = true;
-  lightPath.geometry.computeBoundingSphere();
-  const distances = lightPath.geometry.getAttribute('lineDistance');
-  distances.setX(0, 0); distances.setX(1, past.position.distanceTo(probe.position));
-  distances.needsUpdate = true;
-  if (performance.now() - lastReadout > 100 || !state.playing) {
-    lastReadout = performance.now();
-    const num = v => v.toExponential(3);
-    const entries = [
-      ['t / tᵣ', `${t.toFixed(3)} / ${f.tr.toFixed(3)}`],
-      ['Delay / R', f.R.toFixed(4)],
-      ['z now / retarded', `${electron.position.z.toFixed(3)} / ${past.position.z.toFixed(3)}`],
-      ['βx / βz retarded', `${f.source.velocity[0].toFixed(3)} / ${f.source.velocity[2].toFixed(3)}`],
-      ['Solve residual', num(f.residual)]
-    ];
-    if (f.masked) entries.push(['Field', 'EXCLUDED']);
-    else entries.push(['|E| / |B|', `${num(norm(f.E))} / ${num(norm(f.B))}`], ['|E near| / |E rad|',
-      `${num(norm(f.Enear))} / ${num(norm(f.Erad))}`
-    ], ['By near / rad', `${num(f.Bnear[1])} / ${num(f.Brad[1])}`], ['|S total|', num(norm(f.S))]);
-    $('probe-readout').replaceChildren(...entries.flatMap(([key, value]) => {
-      const dt = document.createElement('dt'),
-        dd = document.createElement('dd');
-      dt.textContent = key;
-      dd.textContent = value;
-      return [dt, dd];
-    }));
-  }
-  if ($('power').checked && (performance.now() - lastPlot > 100 || !state.playing)) {
-    drawPower(motion);
-    lastPlot = performance.now();
-  }
-  $('phase').value = t;
-  $('phase-value').textContent = `${t.toFixed(2)} t`;
-  $('moment-label').textContent = state.motion === 'linear' ? 'LINEAR COMPARISON' : t < -1.5 ? '01 / APPROACHING THE TURN' : t < 1.5 ? '02 / THE ELECTRON TURNS' : t < 3 ? '03 / FOLLOW THE DELAY' : '04 / THE RESPONSE SPREADS';
-  $('moment-detail').textContent = state.motion === 'linear' ? 'Sinusoidal motion along z' : t < -1.5 ? 'Watch the white velocity arrow rotate.' : t < 1.5 ? 'Near and distant samples see different source times.' : 'Compare A and B: their fields sample different moments of the turn.';
-}
-
-function drawPower(motion) {
-  const canvas = $('power-chart'),
-    ctx = canvas.getContext('2d'),
-    w = canvas.width,
-    h = canvas.height,
-    cx = w / 2,
-    cy = h / 2,
-    rad = 115;
-  ctx.clearRect(0, 0, w, h);
-  if (!motion.axisymmetric) {
-    ctx.fillStyle = '#95a7b8'; ctx.font = '15px system-ui';
-    ctx.fillText('Turning motion is not axisymmetric.', 55, 135);
-    ctx.fillText('Choose Linear comparison for the meridian power plot.', 55, 163);
-    const source = motion.at(state.time), v = source.velocity, a = source.acceleration;
-    const total = (2 / 3) * (norm(a) ** 2 - norm(cross(v, a)) ** 2) / (1 - norm(v) ** 2) ** 3;
-    $('power-value').textContent = `Full-sphere Liénard power ${total.toExponential(3)} · emission t = ${state.time.toFixed(3)}`;
-    return;
-  }
-  const n = 180,
-    values = Array.from({
-      length: n + 1
-    }, (_, i) => angularPower(i * TAU / n, state.time, motion)),
-    max = Math.max(...values);
-  ctx.strokeStyle = '#344654';
+function drawPath(motion) {
+  ctx.strokeStyle = '#57836a66';
   ctx.lineWidth = 1;
   ctx.beginPath();
-  ctx.moveTo(cx, 15);
-  ctx.lineTo(cx, h - 15);
-  ctx.moveTo(40, cy);
-  ctx.lineTo(w - 40, cy);
+  segment([0, 0, -7], [0, 0, .4]);
+  for (let z = -7; z <= 0; z++) segment([-.075, 0, z], [.075, 0, z]);
+  for (let i = 0; i < 120; i++) {
+    const a = i * 2 * Math.PI / 120,
+      b = (i + 1) * 2 * Math.PI / 120;
+    segment([7 * Math.cos(a), 7 * Math.sin(a), -6.8], [7 * Math.cos(b), 7 * Math.sin(b), -6.8]);
+  }
   ctx.stroke();
+  ctx.strokeStyle = '#a3b9ac55';
+  ctx.setLineDash([3, 4]);
+  ctx.beginPath();
+  const period = Number.isFinite(motion.period) ? motion.period : 2 * Math.PI;
+  for (let i = 1; i <= 240; i++) segment(motion.at(period * (i - 1) / 240).position, motion.at(period * i /
+    240).position);
+  ctx.stroke();
+  ctx.setLineDash([]);
+}
 
-  function curve(reference) {
+function drawSamples() {
+  const key = [state.time, state.beta, state.motion, state.component, state.vector, state.density].join('/');
+  if (key !== fieldKey) {
+    const m = motionNow();
+    cached = points.map((p, i) => sample(p, state.time, m, state.component, state.vector, cached[i]?.tr));
+    fieldKey = key;
+  }
+  // Quantize ONLY opacity to batch draw calls. Values/directions are unmodified.
+  const paths = Array.from({
+    length: 32
+  }, () => new Path2D());
+  let visible = 0;
+  for (let index = 0; index < cached.length; index++) {
+    const f = cached[index];
+    if (f.masked || f.magnitude < 1e-14) continue;
+    const b = brightness(f.magnitude, state.gain),
+      bin = Math.min(15, Math.floor(b * 16));
+    if (bin === 0) continue;
+    const p = project(f.p);
+    if (p[0] < -15 || p[0] > viewport.w + 15 || p[1] < -15 || p[1] > viewport.h + 15) continue;
+    const q = project(f.p.map((v, i) => v + .18 * f.direction[i]));
+    const dx = q[0] - p[0],
+      dy = q[1] - p[1],
+      length = Math.hypot(dx, dy);
+    const path = paths[(f.sign >= 0 ? 0 : 16) + bin];
+    path.moveTo(p[0] - dx / 2, p[1] - dy / 2);
+    path.lineTo(p[0] + dx / 2, p[1] + dy / 2);
+    // Arrow tip follows projected physical vector; no animated dash motion.
+    if (length > 2.5 && index % 7 === 0) {
+      const x = p[0] + dx / 2,
+        y = p[1] + dy / 2;
+      path.moveTo(x - .35 * dx - .22 * dy, y - .35 * dy + .22 * dx);
+      path.lineTo(x, y);
+      path.lineTo(x - .35 * dx + .22 * dy, y - .35 * dy - .22 * dx);
+    }
+    visible++;
+  }
+  ctx.lineWidth = 1.3;
+  for (let i = 0; i < 32; i++) {
+    ctx.strokeStyle = i < 16 ? '#6ec8ff' : '#ffd36e';
+    ctx.globalAlpha = (i % 16 + .5) / 16;
+    ctx.stroke(paths[i]);
+  }
+  ctx.globalAlpha = 1;
+  return visible;
+}
+
+function drawGuide() {
+  if (!$('guide').checked || state.time <= 0 || state.motion === 'linear' || state.beta === 0) return;
+  ctx.strokeStyle = '#dbe4d277';
+  ctx.lineWidth = 1;
+  ctx.setLineDash([4, 6]);
+  ctx.beginPath();
+  for (let plane = 0; plane < 3; plane++)
+    for (let i = 0; i < 120; i++) {
+      const p = a => {
+        const v = [state.time * Math.cos(a), state.time * Math.sin(a), 0];
+        return plane === 0 ? v : plane === 1 ? [v[0], 0, v[1]] : [0, v[0], v[1]];
+      };
+      segment(p(i * 2 * Math.PI / 120), p((i + 1) * 2 * Math.PI / 120));
+    }
+  ctx.stroke();
+  ctx.setLineDash([]);
+  textAt('tᵣ = 0 light sphere · guide', [state.time, 0, 0], '#bdcaba');
+}
+
+function drawElectron(motion) {
+  const s = motion.at(state.time),
+    p = project(s.position),
+    g = ctx.createRadialGradient(...p, 0, ...p, 36);
+  g.addColorStop(0, '#ffffff');
+  g.addColorStop(.18, '#dfffffc0');
+  g.addColorStop(.4, '#abdfbf35');
+  g.addColorStop(1, '#abdfbf00');
+  ctx.fillStyle = g;
+  ctx.beginPath();
+  ctx.arc(...p, 36, 0, 2 * Math.PI);
+  ctx.fill();
+  ctx.fillStyle = '#fff';
+  ctx.beginPath();
+  ctx.arc(...p, 9, 0, 2 * Math.PI);
+  ctx.fill();
+  const v = norm(s.velocity);
+  if (v > 0) {
+    const tip = project(s.position.map((x, i) => x + .8 * s.velocity[i] / v));
+    const dx = tip[0] - p[0],
+      dy = tip[1] - p[1];
+    ctx.strokeStyle = '#f2fff4';
+    ctx.lineWidth = 2;
     ctx.beginPath();
-    values.forEach((v, i) => {
-      const angle = i * TAU / n,
-        r = rad * (reference ? Math.sin(angle) ** 2 : (max > 1e-24 ? v / max : 0));
-      const x = cx + r * Math.sin(angle),
-        y = cy - r * Math.cos(angle);
-      i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
-    });
-    ctx.closePath();
+    ctx.moveTo(...p);
+    ctx.lineTo(...tip);
+    ctx.lineTo(tip[0] - .22 * dx - .16 * dy, tip[1] - .22 * dy + .16 * dx);
+    ctx.moveTo(...tip);
+    ctx.lineTo(tip[0] - .22 * dx + .16 * dy, tip[1] - .22 * dy - .16 * dx);
     ctx.stroke();
   }
-  ctx.setLineDash([4, 5]);
-  ctx.strokeStyle = '#72818d';
-  curve(true);
-  ctx.setLineDash([]);
-  ctx.strokeStyle = '#e9c28a';
-  ctx.lineWidth = 2;
-  curve(false);
-  ctx.fillStyle = '#95a7b8';
-  ctx.font = '12px monospace';
-  ctx.fillText('+z', cx + 8, 18);
-  ctx.fillText('θ = 90°', w - 120, cy - 10);
-  ctx.fillText('−z', cx + 8, h - 10);
-  // Midpoint integration in mu = cos(theta), independent of display normalization.
-  let total = 0;
-  for (let i = 0; i < 160; i++) total += angularPower(Math.acos(-1 + (i + .5) * 2 / 160), state.time,
-    motion) * 4 * Math.PI / 160;
-  $('power-value').textContent =
-    `Peak ${max.toExponential(3)} / sr · P(t) ${total.toExponential(3)} · emission phase ${(state.time%TAU).toFixed(3)}`;
+  textAt('e⁻ now', s.position, '#fff', 12, 5);
+  const r = EXCLUSION * worldScale();
+  ctx.strokeStyle = '#dae8dd55';
+  ctx.beginPath();
+  ctx.ellipse(...p, r, r * Math.hypot(.24, .85), 0, 0, 2 * Math.PI);
+  ctx.stroke();
 }
-const frames = [],
-  work = [];
-let previousFrame = 0;
+
+function renderFrame() {
+  const start = performance.now();
+  viewport = size();
+  const {
+    w,
+    h
+  } = viewport, motion = motionNow();
+  ctx.fillStyle = '#04120b';
+  ctx.fillRect(0, 0, w, h);
+  drawPath(motion);
+  const visible = drawSamples();
+  drawGuide();
+  drawElectron(motion);
+  const readings = witnesses.map((p, i) => {
+    const f = field(p, state.time, motion),
+      v = f.masked ? 0 : f[state.vector + (state.component === 'total' ? '' : state.component === 'near' ?
+        'near' : 'rad')][state.vector === 'B' ? 1 : 2];
+    const color = v >= 0 ? '#6ec8ff' : '#ffd36e',
+      q = project(p);
+    ctx.strokeStyle = color;
+    ctx.beginPath();
+    ctx.arc(...q, 3, 0, 2 * Math.PI);
+    ctx.stroke();
+    textAt(i ? 'B' : 'A', p, color, 7, 16);
+    return `${i?'B · farther':'A · nearer'}  tᵣ ${f.tr.toFixed(2)}  ${v<0?'−':'+'}${state.vector}${state.vector==='B'?'y':'z'}`;
+  });
+  $('readout').textContent =
+    `β ${norm(motion.at(state.time).velocity).toFixed(2)} / c = 1\n${readings.join('\n')}`;
+  $('phase').value = state.time;
+  $('phase-value').textContent = state.time.toFixed(2);
+  $('moment-detail').textContent = state.motion === 'linear' ? 'A prescribed sinusoid along z.' : state.time <
+    -.5 ? 'The electron rises. Watch the tight turn at the top.' : state.time < .5 ?
+    'The electron turns. The distant field still sees the approach.' : state.time < 3 ?
+    'The changed field spreads through the older field.' :
+    'The electron descends; the earlier turn is now farther away.';
+  for (const [id, t] of [
+      ['before', -3],
+      ['during', 0],
+      ['delay', 3],
+      ['after', 6]
+    ]) $(id).classList.toggle('active', !state.playing && Math.abs(state.time - t) < .015);
+  if ($('power').checked) {
+    const {
+      velocity: v,
+      acceleration: a
+    } = motion.at(state.time);
+    const power = (2 / 3) * (norm(a) ** 2 - norm(cross(v, a)) ** 2) / (1 - norm(v) ** 2) ** 3;
+    $('power-value').textContent =
+      `Full-sphere Liénard power ${power.toExponential(3)} at source t = ${state.time.toFixed(2)}. ${motion.axisymmetric?'Axial symmetry.':'Not axisymmetric; no meridian × 2π shortcut.'}`;
+  }
+  renderCosts.push(performance.now() - start);
+  if (renderCosts.length > 600) renderCosts.shift();
+  window.orrery.visible = visible;
+}
 
 function render() {
-  const start = performance.now();
-  updateFields();
-  renderer.render(scene, camera);
-  const p = new T.Vector3(0, 0, -5.8).project(camera),
-    box = host.getBoundingClientRect();
-  $('axis-label').style.left = `${(p.x+1)*box.width/2+8}px`;
-  $('axis-label').style.top = `${host.offsetTop+(1-p.y)*box.height/2}px`;
-  for (const [id, position] of [['electron-label', electron.position], ...witnesses.map(w => [w.id + '-label', w.marker.position])]) {
-    const projected = position.clone().project(camera), el = $(id);
-    el.style.left = `${(projected.x + 1) * box.width / 2 + 10}px`;
-    el.style.top = `${host.offsetTop + (1 - projected.y) * box.height / 2 - 14}px`;
-    el.hidden = Math.abs(projected.x) > .95 || Math.abs(projected.y) > .95 || projected.z > 1;
+  try {
+    renderFrame();
+  } catch (error) {
+    state.playing = false;
+    loop.pause();
+    $('fatal').hidden = false;
+    $('fatal').textContent = 'Field sampling stopped: ' + error.message;
+    throw error;
   }
-  work.push(performance.now() - start);
-  if (work.length > 600) work.shift();
 }
-// This trajectory is analytic, so physical time comes from a playback clock,
-// not a frame counter. Fixed-step shared loop schedules rendering only. A slow
-// frame skips displayed instants, never changes the field at a given t.
-let clockStart = 0, clockTime = state.time;
 const loop = createLoop({
   step: () => {},
   render: () => {
     const now = performance.now();
-    state.time = Math.min(10, clockTime + (now - clockStart) * .00125);
-    if (previousFrame) frames.push(now - previousFrame);
+    state.time = Math.min(10, clockTime + (now - clockStart) * .0018);
+    if (previousFrame) frameIntervals.push(now - previousFrame);
     previousFrame = now;
-    if (frames.length > 600) frames.shift();
+    if (frameIntervals.length > 600) frameIntervals.shift();
     render();
     if (state.time >= 10) pause();
   }
 });
-document.addEventListener('visibilitychange', () => { if (document.hidden && state.playing) pause(); });
 
 function pause() {
   state.playing = false;
@@ -440,162 +309,137 @@ function pause() {
 
 function play() {
   if (state.time >= 10) state.time = -4;
-  clockStart = performance.now(); clockTime = state.time;
-  state.playing = true;
+  clockTime = state.time;
+  clockStart = performance.now();
   previousFrame = 0;
-  loop.start();
+  state.playing = true;
   $('play').textContent = 'Ⅱ Pause';
   $('play').setAttribute('aria-label', 'Pause simulation');
+  loop.start();
+}
+
+function seek(t) {
+  pause();
+  state.time = t;
+  render();
 }
 $('play').onclick = () => state.playing ? pause() : play();
-$('reset').onclick = () => {
-  pause();
-  loop.reset();
-  state.time = -4;
-  render();
-};
+$('reset').onclick = () => seek(-4);
 $('phase').oninput = () => {
-  const time = +$('phase').value;
-  pause();
-  state.time = time;
-  loop.reset();
+  const t = +$('phase').value;
+  seek(t);
+};
+for (const [id, t] of [
+    ['before', -3],
+    ['during', 0],
+    ['delay', 3],
+    ['after', 6]
+  ]) $(id).onclick = () => seek(t);
+for (const id of ['beta', 'gain']) $(id).oninput = () => {
+  state[id] = +$(id).value;
+  $(id + '-value').textContent = state[id].toFixed(id === 'beta' ? 2 : 1) + (id === 'beta' ? ' c' : '×');
   render();
 };
-$('beta').oninput = () => {
-  state.beta = +$('beta').value;
-  $('beta-value').textContent = state.beta.toFixed(2) + ' c';
+for (const id of ['component', 'density', 'vector', 'motion']) $(id).onchange = () => {
+  state[id] = $(id).value;
+  if (id === 'density') points = samplePoints(state.density);
+  if (id === 'motion') {
+    state.beta = state.motion === 'linear' ? .15 : .45;
+    $('beta').value = state.beta;
+    $('beta-value').textContent = state.beta.toFixed(2) + ' c';
+  }
+  $('field-label').textContent = ({
+    total: 'TOTAL',
+    near: 'VELOCITY',
+    rad: 'ACCELERATION'
+  })[state.component] + ' ' + state.vector;
+  $('color-key').innerHTML = state.vector === 'B' ? '<i class="cyan"></i> +Bφ <i class="gold"></i> −Bφ' :
+    '<i class="cyan"></i> +Ez <i class="gold"></i> −Ez';
   render();
 };
-$('gain').oninput = () => {
-  state.gain = +$('gain').value;
-  $('gain-value').textContent = state.gain.toFixed(1) + '×';
+for (const id of ['guide', 'power']) $(id).onchange = () => {
+  $('power-value').hidden = !$('power').checked;
   render();
 };
-$('component').onchange = () => {
-  state.component = $('component').value;
-  $('component-label').textContent = ({
-    total: 'TOTAL FIELD',
-    near: 'VELOCITY FIELD',
-    rad: 'RADIATION FIELD'
-  })[state.component];
+$('home-camera').onclick = () => {
+  azimuth = 0;
+  zoom = 1;
   render();
-};
-$('density').onchange = () => {
-  state.density = $('density').value;
-  buildSamples();
-  render();
-};
-for (const id of ['magnetic', 'electric', 'poynting', 'power']) $(id).onchange = () => {
-  $('power-panel').hidden = !$('power').checked;
-  render();
-};
-for (const id of ['probe-radius', 'probe-angle']) $(id).oninput = () => {
-  $('radius-value').textContent = (+$('probe-radius').value).toFixed(1);
-  $('angle-value').textContent = $('probe-angle').value + '°';
-  render();
-};
-function homeCamera() { distance = 21; azimuth = 1.08; elevation = .32; updateCamera(); }
-$('home-camera').onclick = () => { homeCamera(); render(); };
-$('motion').onchange = () => {
-  state.motion = $('motion').value;
-  state.beta = state.motion === 'turn' ? .72 : .15;
-  $('beta').value = state.beta;
-  $('beta').oninput();
-  render();
-};
-for (const [id, time] of [['before', -4], ['during', 0], ['delay', 2], ['after', 5.5]]) $(id).onclick = () => {
-  pause(); loop.reset(); state.time = time; render();
-};
-$('preset').onchange = () => {
-  const v = $('preset').value;
-  if (v === 'stationary') { state.beta = 0; $('beta').value = 0; $('beta-value').textContent = '0.00 c'; }
-  $('component').value = v === 'radiation' ? 'rad' : v === 'near' ? 'near' : 'total';
-  state.component = $('component').value;
-  $('component-label').textContent = ({total: 'TOTAL B', near: 'VELOCITY B', rad: 'RADIATION B'})[state.component];
-  $('electric').checked = v === 'near' || v === 'stationary';
-  $('magnetic').checked = true;
-  $('poynting').checked = false;
-  $('power').checked = v === 'power';
-  $('power-panel').hidden = v !== 'power';
-  homeCamera(); render();
 };
 const pointers = new Map();
-let pinchDistance = 0;
+let pinch = 0,
+  dragged = false;
 host.onpointerdown = e => {
   host.setPointerCapture(e.pointerId);
   pointers.set(e.pointerId, [e.clientX, e.clientY]);
-  pinchDistance = 0;
+  pinch = 0;
+  dragged = false;
 };
 host.onpointermove = e => {
   if (!pointers.has(e.pointerId)) return;
-  const previous = pointers.get(e.pointerId);
+  const last = pointers.get(e.pointerId);
   pointers.set(e.pointerId, [e.clientX, e.clientY]);
   if (pointers.size === 2) {
     const [a, b] = [...pointers.values()], d = Math.hypot(a[0] - b[0], a[1] - b[1]);
-    if (pinchDistance) distance = Math.max(4, Math.min(55, distance * pinchDistance / d));
-    pinchDistance = d;
+    if (pinch) zoom = Math.max(.4, Math.min(3, zoom * d / pinch));
+    pinch = d;
   } else {
-    azimuth -= (e.clientX - previous[0]) * .007;
-    elevation = Math.max(-1.45, Math.min(1.45, elevation + (e.clientY - previous[1]) * .007));
+    azimuth += (e.clientX - last[0]) * .006;
   }
-  updateCamera();
+  if (Math.abs(e.clientX - last[0]) + Math.abs(e.clientY - last[1]) > 1) dragged = true;
   if (!state.playing) render();
 };
-for (const name of ['onpointerup', 'onpointercancel', 'onlostpointercapture']) host[name] = e => {
+host.onpointerup = e => {
   pointers.delete(e.pointerId);
-  pinchDistance = 0;
+  pinch = 0;
+  if (!dragged && e.pointerType !== 'touch')(state.playing ? pause : play)();
+};
+for (const event of ['onpointercancel', 'onlostpointercapture']) host[event] = e => {
+  pointers.delete(e.pointerId);
+  pinch = 0;
 };
 host.onwheel = e => {
   e.preventDefault();
-  distance = Math.max(4, Math.min(55, distance * Math.exp(e.deltaY * .001)));
-  updateCamera();
+  zoom = Math.max(.4, Math.min(3, zoom * Math.exp(-e.deltaY * .001)));
   if (!state.playing) render();
 };
 host.onkeydown = e => {
-  const actions = {
-    ArrowLeft: () => azimuth -= .12,
-    ArrowRight: () => azimuth += .12,
-    ArrowUp: () => elevation = Math.min(1.45, elevation + .1),
-    ArrowDown: () => elevation = Math.max(-1.45, elevation - .1),
-    '+': () => distance = Math.max(4, distance * .9),
-    '=': () => distance = Math.max(4, distance * .9),
-    '-': () => distance = Math.min(55, distance / .9)
-  };
-  if (actions[e.key]) {
+  if (e.code === 'Space') {
     e.preventDefault();
-    actions[e.key]();
-    updateCamera();
+    state.playing ? pause() : play();
+  } else if (['ArrowLeft', 'ArrowRight', '+', '=', '-'].includes(e.key)) {
+    e.preventDefault();
+    if (e.key === 'ArrowLeft') azimuth -= .1;
+    else if (e.key === 'ArrowRight') azimuth += .1;
+    else zoom = Math.max(.4, Math.min(3, zoom * (e.key === '-' ? .9 : 1.1)));
     render();
   }
 };
-// Read-only diagnostics for reproducible browser validation; no alternate physics path.
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden && state.playing) pause();
+});
 window.orrery = {
   snapshot: () => ({
     ...state,
-    camera: [azimuth, elevation, distance],
-    streamlines: fieldSeeds.length,
-    vertices: cachedTraces.reduce((n, points) => n + points.length, 0),
+    camera: [azimuth, zoom],
+    samples: points.length,
+    visible: window.orrery.visible,
     electron: motionNow().at(state.time),
-    witnesses: witnesses.map(w => field(w.p, state.time, motionNow())),
-    probe: field([+$('probe-radius').value * Math.sin(+$('probe-angle').value * Math.PI / 180), 0, +$(
-        'probe-radius').value * Math.cos(+$('probe-angle').value * Math.PI / 180)], state.time,
-      motionNow())
+    witnesses: witnesses.map(p => field(p, state.time, motionNow())),
+    probe: field([3, 1, 1], state.time, motionNow())
   }),
+  sampleAt: i => cached[i],
   metrics: () => ({
-    lastFieldCostMs: lastFieldCost,
-    frameIntervalsMs: [...frames],
-    cpuRenderMs: [...work],
-    drawCalls: renderer.info.render.calls,
-    triangles: renderer.info.render.triangles,
-    pixelRatio: renderer.getPixelRatio()
+    frameIntervalsMs: [...frameIntervals],
+    cpuRenderMs: [...renderCosts],
+    pixelRatio: devicePixelRatio
   }),
   clearMetrics: () => {
-    frames.length = 0;
-    work.length = 0;
+    frameIntervals = [];
+    renderCosts = [];
     previousFrame = 0;
   }
 };
-buildSamples();
-new ResizeObserver(resize).observe(host);
-resize();
+onResize(render);
+render();
 play();

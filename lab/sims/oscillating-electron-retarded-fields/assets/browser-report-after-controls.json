@@ -301,16 +301,16 @@
   ],
   "originalSequence": [
     {
-      "T": 11.377,
+      "T": 11.357999999999999,
       "p": {
         "x": 705,
-        "y": 345.5408140000719,
+        "y": 347.42343320957764,
         "tx": 0,
         "ty": -1,
         "turn": false
       },
-      "rings": 246,
-      "dist": 1127.2925656076218,
+      "rings": 245,
+      "dist": 1125.409946398116,
       "viewport": {
         "width": 1440,
         "height": 1000
@@ -319,20 +319,19 @@
       "targetT": 11.365805255913582,
       "turnT": 12.262205255913582,
       "candidateTime": -3,
-      "candidateModelPixelsPerUnit": 71.71199999999999,
-      "comparisonTimeScalePixelsPerUnit": 71.71199999999999
+      "candidateModelPixelsPerUnit": 71.71199999999999
     },
     {
-      "T": 12.320000000000002,
+      "T": 12.333,
       "p": {
-        "x": 725.5885054201002,
-        "y": 267.4719207197118,
-        "tx": 0.9280052853525501,
-        "ty": 0.3725670280066824,
+        "x": 726.761814655203,
+        "y": 268.00253165474146,
+        "tx": 0.8926312230172397,
+        "ty": 0.45078764368019975,
         "turn": true
       },
       "rings": 246,
-      "dist": 1220.7299295320308,
+      "dist": 1222.0180374122185,
       "viewport": {
         "width": 1440,
         "height": 1000
@@ -341,20 +340,19 @@
       "targetT": 12.262205255913582,
       "turnT": 12.262205255913582,
       "candidateTime": 0,
-      "candidateModelPixelsPerUnit": 71.71199999999999,
-      "comparisonTimeScalePixelsPerUnit": 71.71199999999999
+      "candidateModelPixelsPerUnit": 71.71199999999999
     },
     {
-      "T": 13.217000000000002,
+      "T": 13.24,
       "p": {
         "x": 735,
-        "y": 352.43610385346443,
+        "y": 354.71506394918157,
         "tx": 0,
         "ty": 1,
         "turn": false
       },
       "rings": 246,
-      "dist": 1309.609373265005,
+      "dist": 1311.888333360722,
       "viewport": {
         "width": 1440,
         "height": 1000
@@ -363,20 +361,19 @@
       "targetT": 13.158605255913582,
       "turnT": 12.262205255913582,
       "candidateTime": 3,
-      "candidateModelPixelsPerUnit": 71.71199999999999,
-      "comparisonTimeScalePixelsPerUnit": 71.71199999999999
+      "candidateModelPixelsPerUnit": 71.71199999999999
     },
     {
-      "T": 14.119000000000002,
+      "T": 14.138,
       "p": {
         "x": 735,
-        "y": 441.81097369420314,
+        "y": 443.69359290370863,
         "tx": 0,
         "ty": 1,
         "turn": false
       },
-      "rings": 245,
-      "dist": 1398.9842431057436,
+      "rings": 246,
+      "dist": 1400.8668623152491,
       "viewport": {
         "width": 1440,
         "height": 1000
@@ -385,42 +382,40 @@
       "targetT": 14.055005255913581,
       "turnT": 12.262205255913582,
       "candidateTime": 6,
-      "candidateModelPixelsPerUnit": 71.71199999999999,
-      "comparisonTimeScalePixelsPerUnit": 71.71199999999999
+      "candidateModelPixelsPerUnit": 71.71199999999999
     },
     {
-      "T": 10.925,
+      "T": 11.591,
       "p": {
-        "x": 180,
-        "y": 485.55767214201273,
-        "tx": 0,
-        "ty": -1,
-        "turn": false
+        "x": 187.09344469732602,
+        "y": 464.6799853202501,
+        "tx": 0.8498009786499893,
+        "ty": -0.5271036868449324,
+        "turn": true
       },
       "rings": 74,
-      "dist": 383.2737074656811,
+      "dist": 406.63849365992746,
       "viewport": {
         "width": 390,
         "height": 844
       },
       "moment": "before",
-      "targetT": 10.931980102680122,
+      "targetT": 11.585605102680121,
       "turnT": 11.828380102680121,
       "candidateTime": -3,
-      "candidateModelPixelsPerUnit": 19.422,
-      "comparisonTimeScalePixelsPerUnit": 71.71199999999999
+      "candidateModelPixelsPerUnit": 19.422
     },
     {
-      "T": 11.82,
+      "T": 11.831,
       "p": {
-        "x": 194.70602586805452,
-        "y": 462.4298809696746,
-        "tx": 0.9998079353550237,
-        "ty": -0.01959827546303123,
+        "x": 195.0919113478617,
+        "y": 462.4272815925053,
+        "tx": 0.9999812271663109,
+        "ty": 0.006127423190780654,
         "turn": true
       },
-      "rings": 75,
-      "dist": 414.67233155554675,
+      "rings": 74,
+      "dist": 415.05823643262886,
       "viewport": {
         "width": 390,
         "height": 844
@@ -429,52 +424,49 @@
       "targetT": 11.828380102680121,
       "turnT": 11.828380102680121,
       "candidateTime": 0,
-      "candidateModelPixelsPerUnit": 19.422,
-      "comparisonTimeScalePixelsPerUnit": 71.71199999999999
+      "candidateModelPixelsPerUnit": 19.422
     },
     {
-      "T": 12.716000000000001,
+      "T": 12.086,
       "p": {
-        "x": 210,
-        "y": 485.00476849542446,
-        "tx": 0,
-        "ty": 1,
-        "turn": false
+        "x": 203.5008808753181,
+        "y": 465.06839877074873,
+        "tx": 0.8239067486167505,
+        "ty": 0.5667253916878745,
+        "turn": true
       },
       "rings": 74,
-      "dist": 446.1060379069653,
+      "dist": 424.00421312862414,
       "viewport": {
         "width": 390,
         "height": 844
       },
       "moment": "delay",
-      "targetT": 12.724780102680121,
+      "targetT": 12.071155102680121,
       "turnT": 11.828380102680121,
       "candidateTime": 3,
-      "candidateModelPixelsPerUnit": 19.422,
-      "comparisonTimeScalePixelsPerUnit": 71.71199999999999
+      "candidateModelPixelsPerUnit": 19.422
     },
     {
-      "T": 13.612000000000002,
+      "T": 12.323,
       "p": {
-        "x": 210,
-        "y": 516.4384748468431,
-        "tx": 0,
-        "ty": 1,
-        "turn": false
+        "x": 208.73296266830442,
+        "y": 471.39328337167234,
+        "tx": 0.40224777522184235,
+        "ty": 0.9155308445536273,
+        "turn": true
       },
       "rings": 74,
-      "dist": 477.53974425838385,
+      "dist": 432.31870911666675,
       "viewport": {
         "width": 390,
         "height": 844
       },
       "moment": "after",
-      "targetT": 13.621180102680121,
+      "targetT": 12.313930102680121,
       "turnT": 11.828380102680121,
       "candidateTime": 6,
-      "candidateModelPixelsPerUnit": 19.422,
-      "comparisonTimeScalePixelsPerUnit": 71.71199999999999
+      "candidateModelPixelsPerUnit": 19.422
     }
   ],
   "measurements": [

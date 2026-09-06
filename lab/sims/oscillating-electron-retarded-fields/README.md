@@ -1,226 +1,242 @@
-# Turning electron — retarded fields
+# Turning electron — dense retarded field
 
-A prescribed electron takes a smooth hairpin turn. The scene integrates the actual
-instantaneous magnetic field in 3-D, so nearby and distant curves can point in
-different directions because they see different retarded source times.
+The computed page fills the window with **8,064 stationary vector samples** around
+an electron taking a tight, smooth turn. Cyan grows out of the near-source region
+while the distant field still points the other way. The original illustration
+remains one click away, with its animation intact.
+
+**Visual limitation:** the computed response is a bent, spreading volume of field
+samples. It is materially different from the original's broad sheet/funnel. This
+implementation does not reproduce or establish that illustrative folding topology,
+and the validation below is not a claim of user acceptance.
 
 ```sh
-lab/tools/serve.sh 8765
+bash lab/tools/serve.sh 8765
 # http://localhost:8765/lab/sims/oscillating-electron-retarded-fields/
 node lab/sims/oscillating-electron-retarded-fields/checks.mjs
+node lab/sims/oscillating-electron-retarded-fields/dense-checks.mjs
 ```
 
-Plain ES modules, vendored three.js r128, no build step or network assets.
+Plain ES modules and shared canvas/loop helpers; no build step or network assets.
+Only these two electron pages and their gallery entries change (ORB-11374).
 
-## Watch the turn
+## Playback and what the marks mean
 
-The default plays from t = −4 to 10 at 1.25 model time units per wall second,
-then pauses. **Before / Turn / Delay / After** pause at −4, 0, 2, and 5.5.
-Reset pauses at −4 and keeps experiment settings; Play at the end restarts the
-sequence. Scrub to any observation time in this window. Drag/touch or arrow keys
-orbit, wheel/pinch or +/− zoom; View restores the camera.
+The default plays t = −4 through 10 at **1.8 model units per wall second**, then
+pauses. Before / Turn / Outward / After pause at −3, 0, 3, 6. Scrubbing pauses;
+Reset returns to −4; Play at the end restarts. The electron rises on the narrow
+left leg, turns toward +x at t = 0, and descends on the right. Its default peak
+speed is 0.45 c; the upper turn's curvature radius is about 0.248 length units.
 
-The white electron and its velocity arrow climb the x < 0 leg, turn toward +x at t = 0,
-and descend the x > 0 leg. A = (2,0,1) and B = (5,0,1) are fixed observers.
-At default beta 0.72 and t = 2, A samples tᵣ = −0.34 and has By ≈ +0.189;
-B samples tᵣ = −4.91 and still has By ≈ −0.007. By t = 5.5 both have positive By.
-These are computed total-field values, not an imposed wavefront. The source turns
-continuously, so there is no unique sudden turn signal or sharp shell.
+- **Colored strokes** are instantaneous 3-D B vectors at fixed locations, projected
+  into the view. Every seventh sample has an arrowhead; other strokes show the
+  tangent axis. They are not emitted rings, connected field lines, particle paths,
+  or stored history. E can be selected instead of B. Total, velocity and acceleration
+  contributions use the kernel's exact corresponding vectors.
+- **The cutaway** samples the fixed y ≥ 0 half-volume: cylindrical radii approximately
+  0.3–10.3 and z = −7.5…4.5. The unsampled half is omitted to reduce projected
+  front/back overlap. Orbiting rotates this same physical cutaway, not the field or
+  sampling locations. Finite coverage is a drawing choice, not magnetic flux.
+- **Color** is the sign of Bφ = B·(−y/r, x/r, 0), about the fixed z axis, even though
+  the motion is not axisymmetric. Cyan is positive, yellow negative. In E mode it
+  is the sign of Ez. No velocity-based coloring or assumed circulation is used.
+- **Brightness** compresses magnitude: b = min(1, ln(1 + 100 g |F|)/ln 21). Opacity
+  is quantized into 16 bins for drawing; the lowest bin is omitted. Nonzero bins
+  use their midpoint opacity. Stroke length is 0.18 physical units before
+  projection, independent of magnitude. A projected vector can foreshorten nearly
+  to a dot. Values below 1e−14 are omitted. Gain, glyph density and brightness are
+  not power or flux measurements.
+- **White electron and arrow** show the present position and velocity; the glow
+  is an enlarged marker. The faint ellipse around it projects the exclusion
+  sphere. Gray dashes are the prescribed trajectory; green is a spatial ruler.
+- **A = (2,0,0), B = (5,0,0)** are fixed observers. Their always-visible readings
+  give tᵣ and the selected vector's By (or Ez). With defaults at t = 3, A has
+  changed sign and B has not; by t = 6 both have changed. These are computed values.
+- **Optional dashed light sphere** is explicitly labeled tᵣ = 0 and has radius t
+  about the turn position. It marks reception of the source event at t = 0;
+  it is neither a B field line nor a claim of a sharp radiation front. It is off
+  by default. The source accelerates smoothly before and after the turn.
 
-Motion selects the hairpin (beta 0.72) or linear comparison (beta 0.15). Contribution,
-gain and sampling retain the motion/time. Curated views select contributions and
-layers; Stationary also sets beta to zero. Choose a motion again or move the speed
-slider to resume a driven source. The displayed sign and probe values remain
-meaningful when the specific default near/far reversal no longer applies.
+Light / standard / dense select 4,608 / 8,064 / 23,040 points. Sampling is fixed
+in model units and independent of screen size. Each displayed instant gets a new
+retarded solve at every sample. Previous roots are initial guesses only: there is
+no time interpolation, quantized field-time cache, or temporal smoothing. Camera
+and gain changes while paused reuse the same values. Playback uses elapsed wall
+time; a slow frame skips displayed instants instead of slowing the source. Hiding
+the tab pauses. Drag/touch or left/right arrows rotate about z; wheel/pinch or +/−
+zoom. The original's shallow depth projection (0.24 y − 0.85 z) is retained.
 
-## Trajectory, units and physics
+## Smooth bounded trajectory and field
 
-Choose time unit T, length cT, E unit |e|/(4πε₀c²T²), B unit E/c, and power unit
-e²/(4πε₀cT²). Thus c = 1 and the electron's charge sign is q = −1.
-For the hairpin let a = 3, b = 1.4, w = β₀/a:
+Dimensionless c = 1 and q = −1. Length unit cT, E unit |e|/(4πε₀c²T²), B unit E/c,
+power unit e²/(4πε₀cT²). Let ε = 0.12, a = 3/atan(1/ε), ω = β₀/a,
+s = sin(ωt), C = cos(ωt), D = ε² + s². The default racetrack is:
 
 ```text
-r(t) = (b sin wt, 0, a(cos wt − 1))
-v(t) = (bw cos wt, 0, −aw sin wt)
-a(t) = (−bw² sin wt, 0, −aw² cos wt)
-|v|² = w²(b² cos² wt + a² sin² wt) ≤ β₀²
+x = a ε s / sqrt(D)
+y = 0
+z = a [asin(C / sqrt(1 + ε²)) − atan(1/ε)]
+vx = a ε³ ω C / D^(3/2)       vz = −a ω s / sqrt(D)
+ax = −a ε³ ω² s (D + 3C²) / D^(5/2)
+az = −a ω² ε² C / D^(3/2)
 ```
 
-This bounded, smooth elongated ellipse is defined for all positive and negative
-times. It has rounded ends, rather than the historical racetrack's abrupt
-straight/semicircle acceleration transitions. Speed varies along it: the default
-peak is 0.72 c, and speed at the upper turn is 0.336 c. The source repeats every
-2π/w ≈ 26.18 time units; older turns are part of the exact retarded field.
-Beta zero gives the stationary origin. The retained linear comparison is
-r = (0,0,β₀ sin t), with derivatives (0,0,β₀ cos t), (0,0,−β₀ sin t).
-Both expose an honest global speed bound β₀ ≤ 0.8.
+It is smooth for all times, bounded by |x| < 0.25 and −6 ≤ z ≤ 0, and repeats
+with period 2π/ω (about 28.86 at the default). It has nearly straight legs and a
+smooth reversal rather than the illustration's abrupt acceleration changes at
+straight/semicircle joins. Its global speed bound is exact:
 
-At each observation point x and displayed time t solve tᵣ + |x − r(tᵣ)| = t.
-All source quantities in the following expression are retarded:
+```text
+|v|²/β₀² = s²/D + ε⁶ C²/D³ ≤ 1
+because ε⁶ C² ≤ ε²(ε² + s²)².
+```
+
+β₀ is constrained to 0…0.8; zero gives the stationary origin to floating-point
+roundoff. The earlier ellipse remains an optional comparison:
+r = (1.4 sin ωt, 0, 3(cos ωt − 1)), ω = β₀/3. The linear comparison is
+r = (0,0,β₀ sin t), with its analytic derivatives. Neither comparison changes the
+kernel. Field controls select β₀ = 0.45 for turning modes and 0.15 for linear.
+
+At every point solve tᵣ + |x − r(tᵣ)| = t. With all source quantities at tᵣ:
 
 ```text
 R = |x − r(tᵣ)|; n = (x − r(tᵣ))/R; κ = 1 − n·v
-E_velocity  = q (1 − v²)(n − v)/(κ³R²)
-E_radiation = q n × ((n − v) × a)/(κ³R)
-B_velocity = n × E_velocity; B_radiation = n × E_radiation
-E = E_velocity + E_radiation; B = B_velocity + B_radiation
-S = E × B/(4π)
+Enear = q (1 − v²)(n − v)/(κ³ R²)
+Erad  = q n × ((n − v) × a)/(κ³ R)
+Bnear = n × Enear; Brad = n × Erad
+E = Enear + Erad; B = Bnear + Brad; S = E × B/(4π)
 ```
 
-The source is an externally driven classical net charge. The external apparatus's
-fields, radiation reaction and quantum structure are omitted. No photon, electron
-vortex, or topological folding claim follows from the rendered curves.
+The charge sign and both field terms are preserved. Present-source distances
+≤ 0.18 are excluded; no softened or fabricated field is assigned there. This
+region is numerical exclusion, not electron size. From present distance d and
+speed bound β₀, the solver brackets [t − d/(1−β₀), t], with κ ≥ 0.2, residual
+≤ 2e−12 max(1,d) and a 64-iteration cap. A warm start must lie inside the bracket.
+Newton steps must also be smaller than half the remaining bracket; otherwise
+bisection prevents endpoint-to-endpoint stagnation on the narrow trajectory.
+Warm and cold evaluations agree within solver tolerance, not necessarily bitwise.
 
-Verified against [Feynman II.21](https://www.feynmanlectures.caltech.edu/II_21.html),
-§§21–1 and 21–5 (retardation, B = n × E/c and moving-charge potentials), and
-[Tong's radiation chapter](https://www.damtp.cam.ac.uk/user/tong/em/el5.pdf),
-(6.42), (6.45), (6.55)–(6.56), inspected 2026-09-06. Tong's PDF is internally
-chapter 6 despite the `el5.pdf` filename. Its emitted power per source time is
-|n × ((n − v) × a)|²/(4πκ⁵); the extra κ relative to observer flux is essential.
+The optional power readout evaluates full-sphere Liénard power per **source** time,
+P = (2/3)(a² − |v × a|²)/(1 − v²)³. Turning is not axisymmetric, so no meridian
+plot or multiplication of one meridian by 2π is offered. Its independent check
+integrates both polar and azimuthal angles. Power is not inferred from display
+brightness. The drive supplies energy; its own fields, radiation reaction,
+quantum structure and the driving apparatus are omitted.
 
-The power panel reports the full-sphere Liénard result
-P = (2/3)(a² − |v × a|²)/(1 − v²)³ in turning mode. **It disables the meridian
-plot for that mode**: the pattern generally depends on both polar and azimuthal
-angles. The linear comparison alone plots the axisymmetric meridian and integrates
-160 midpoints in cos θ. Plot radius is normalized power, with absolute maximum and
-integral printed. Zero acceleration gives zero power and no nonzero normalized
-curve. The dashed sin²θ reference is only a comparison. Power uses source time t,
-while the main scene uses observation time t.
+The field conventions retained from ORB-11364 follow
+[Feynman II.21](https://www.feynmanlectures.caltech.edu/II_21.html) and
+[Tong, radiation chapter](https://www.damtp.cam.ac.uk/user/tong/em/el5.pdf).
+No new literature or theory verdict is asserted by changing the trajectory/view.
 
-## Computed geometry versus guides
+## Before / turn / outward / after evidence
 
-- **Magnetic curves:** `streamlines.mjs` integrates dx/ds = ±B/|B| in full 3-D at
-  one observation time, using the selected total/velocity/radiation contribution.
-  Each vertex and midpoint requires its own retarded solve. There is no axial
-  sample shortcut, emission history, or connection to curves in another frame.
-  Arrowheads follow actual B, even on the branch integrated against B.
-- **Colors:** cyan/yellow = positive/negative component along the fixed +y axis,
-  not handedness about an assumed drive axis. Arrows give the complete vector.
-  Vertex brightness is 0.12 + 0.88 min(1, log(1+120g|B|)/log 13), where g is
-  display gain. Arrowheads use the full palette color. Seeding is not proportional
-  to magnetic flux; neither curve count nor brightness represents emitted power.
-- **Guides:** the gray oval is the prescribed trajectory and the faint grid is a
-  ruler in its xz plane. The enlarged glowing electron and white velocity arrow
-  identify the present source. The halo is a marker, not a field shell. The amber
-  source and dashed light path belong only to the adjustable white probe. A and B
-  are fixed point markers with selected-contribution By and retarded-time readouts.
-- **Optional arrows:** gold E and green S are 30 independent samples in the xz
-  plane. For separated contributions S uses that contribution's E × B. Total S
-  includes interference and need not equal the sum of separated S. Their length
-  is 0.12+0.65b, opacity 0.2+0.8b, with compression factors 15 and 600. The probe
-  always reports uncompressed total fields and both contributions.
+[Side-by-side comparison](assets/comparison.html) shows the original and candidate
+at four comparable phases, desktop and narrow, with links to the full frames.
+The worker ran the actual original page before design, inspected its live rising
+and post-turn envelopes, then iterated the candidate using actual Chromium frames.
+A full-volume first pass produced excessive front/back overlap; the fixed cutaway
+and fewer arrowheads make the direction texture and growing reversal clearer.
+The former 24 sparse loops and large sidebar are no longer the default view.
 
-The wire exclusion sphere has radius 0.18 about the **present** source. Inside it
-no field is assigned; it is numerical exclusion, not electron size or softening.
-Present distance d and global speed bound b give bracket [t−d/(1−b),t]. The
-safeguarded Newton/bisection solver uses residual tolerance 2e−12 max(1,d) and a
-64-iteration cap. Its derivative κ ≥ 0.2 ensures a unique root. Failure throws.
+The final original comparison is generated by executing its actual animation
+through a full period before capture. A seeded pseudorandom sequence gives ordinary
+varied dash offsets; the harness alone controls requestAnimationFrame time and
+pause for reproducible phases. Default original camera, controls and physics
+parameters remain unchanged. Candidate frames use its actual phase buttons.
+On desktop both use approximately 71.71 horizontal pixels per model unit, the
+same 0.24 depth / 0.85 vertical projection and a nearly matched upper turn height
+(original ≈266 px, candidate 280 px). Original time offsets are candidate offsets
+multiplied by this scale / 240, matching the nominal light-travel distance. Exact
+turn source positions/speeds differ because the trajectories differ. All actual
+times and states are recorded in [browser-report.json](assets/browser-report.json).
 
-The rendering uses explicit midpoint integration with step 0.16 and at most 72
-steps each way (11.52 arclength units per branch). It stops at the exclusion,
-|B| ≤ 1e−10, radius 10 about (0,0,−1), an approximate loop return, or a direction
-change exceeding 60° between substeps. This prevents blindly bridging nulls but
-can truncate curves. Sparse/standard/dense use 16/24/32 fixed seeds in y = 0;
-they change coverage, **not integration step**. Small loops and near-null geometry
-may be missed. Apparent crossings in projection are not proof of 3-D intersections
-or topology. Short-path refinement is tested; long-curve topology is not certified.
+Narrow frames use the same viewport, but the candidate deliberately zooms 1.45×
+and shifts the origin to 38% height for readability below its header. The original
+retains its own responsive framing. Original narrow offsets retain the desktop
+fraction of its circuit, so all four phases span the turnaround; they are not
+shrunk with viewport width. Their pixel propagation distances consequently differ
+from the candidate. This is not a pixel-identical camera comparison;
+no physical value or time changes on resize. On narrow, the dense texture still
+spans the available scene; the turn and expanding cyan region are visible. Open
+controls overlay the left scene and can be collapsed. Far field outside the finite
+volume/screen is absent. Projected overlap and missing small structures remain
+limitations. **There is no claim that the sampled geometry equals the original
+illustrative sheet, that a topological fold was verified, or that Daniel accepted
+this visual result.**
 
-The entire scene is sampled at the current displayed t, with no field-time cache
-quantization or interpolation. Paused camera/gain changes reuse the same computed
-vertices. Playback derives t from elapsed wall time; a slow frame skips displayed
-instants rather than slowing the source. The shared fixed-step loop schedules
-rendering; it does not numerically integrate this analytic trajectory. Hiding the
-tab pauses playback. The optional text/power readouts refresh at most every 100 ms
-while playing; all geometry and the A/B readings use the current frame's t.
+The original animation's inline JavaScript is byte-identical to the pre-task
+version (SHA-256 `0b7cfda2940ef0ac42a7951222b7593dd23510442f3c74044e466950fcc0e7ae`).
+Only its comparison notice and metadata change: no superseded label, direct link
+back to the computed view. Existing URLs and the original experience remain.
+Earlier `desktop-*`, `narrow-*` and atlas assets are retained historical evidence;
+**the current candidate frames have the `dense-` prefix**.
 
-## Reproducible validation
+## Numerical and browser validation
 
-[checks.mjs](checks.mjs) uses only Node built-ins. The captured
-[numerical report](assets/numerical-report.json) retains 37,440 linear field samples,
-stationary Coulomb, boosted uniform-motion fields, independent linear potential
-derivatives, charge reversal, far-field 1/R and wave relations, low-beta sin²θ and
-cycle-averaged Larmor, and relativistic linear power controls.
+[Prior-model controls](assets/numerical-report.json) rerun the existing 37,440-sample
+linear sweep, 5,025-sample ellipse sweep, stationary/boosted fields, independent
+potential derivatives, charge reversal, radiation scaling, angular power and
+streamline refinement. [New controls](assets/dense-numerical-report.json) add:
 
-Turning checks add 5,025 samples across beta 0–0.8, varied times and radii through
-10,000; trajectory derivative and bound checks; independent 90-step bisection
-potentials with finite differences; full-sphere two-angle power quadrature; power
-versus radiation field; and short streamline step refinement.
+| Control | Maximum observed error / result |
+|---|---:|
+| Analytic trajectory derivatives vs finite differences | 3.70e−9 absolute |
+| 321,408 dense spacetime samples at β₀ = 0.8 | normalized residual 2.00e−12; ≤10 iterations |
+| Independent bisection potentials and numerical source velocity | 3.41e−6 relative E/B error |
+| Warm vs cold field solves | 5.21e−10 relative B error |
+| Two-angle full-sphere power vs Liénard | 4.21e−5 relative |
+| Same source past, different future, outside light cone | E/B difference ≤1.25e−10 absolute |
+| Former Newton stagnation point | converges in 5 iterations |
 
-| Turning control | Observed maximum error | Required |
+The independent potentials use an alternative atan2 position formula, numerical
+velocity and 90 pure bisections, not the production derivatives/root solver.
+The causality check compares two trajectories identical through t = 0 but different
+afterwards; fields outside that event's light cone agree within solver accuracy,
+and a point inside distinguishes them. The rendered sampler is checked against
+both exact field contributions, both vector selections and electron charge sign.
+
+`browser-check.py` checks actual desktop/narrow playback, pause/scrub/reset/end,
+all contributions and both vectors, speed-zero control, comparison motions and
+power, mouse/keyboard/touch/pinch, field invariance under display changes, the
+labeled optional guide, reciprocal original links, and absence of browser errors.
+An injected 240 ms stall tests elapsed-time playback. Timings exclude screenshots.
+See the JSON report for hardware, actual observation-time coverage and full results.
+
+Measured on 13th Gen Intel(R) Core(TM) i5-13500H, 14 logical CPUs exposed, Chromium
+151.0.7922.34, Linux headless Canvas2D, DPR 1. Fresh default pages,
+one-second warm-up, five seconds measured across the turn and outward response:
+
+| Viewport | Frame interval median / p95 | CPU compute + canvas submit median / p95 |
 |---|---:|---:|
-| Position/velocity derivative agreement | 1.12e−10 absolute | <2e−9 |
-| Retarded residual / max(1,d) | 1.94e−12 | <2.1e−12 |
-| E and B from independent potential derivatives | 6.69e−9 relative | <2e−6 |
-| Full-sphere power vs Liénard | 3.84e−5 relative | <2e−4 |
-| Streamline endpoint, h=.16 vs .04, arclength 1.28 | 0.0134 | <0.02 |
-| Streamline endpoint, h=.08 vs .04 | 0.00177 | <half the coarse error |
+| 1440×1000 | 75.7 / 171.4 ms | 44.9 / 108.9 ms |
+| 390×844 | 67.0 / 114.4 ms | 48.9 / 92.3 ms |
 
-The power quadrature uses 800 polar × 160 azimuthal midpoints. A coarser polar
-quadrature was insufficient near relativistic beaming; refining resolves it.
-The numerical tests explicitly show azimuth dependence in turning mode.
+This run gives roughly 13 desktop / 15 narrow frames per second, with visible
+stutter during slower frames. It is not a 60 fps result. An isolated early run
+was faster (~25 fps); the full captured run is the evidence reported here.
+A separate [measurement after exercising all controls](assets/browser-report-after-controls.json)
+recorded median intervals of 88.1 ms desktop and 59.5 ms narrow. Thus cadence is
+sensitive to this executor and browser workload; no causal conclusion about that
+variation is established. Light sampling is available when speed matters more
+than texture density. Dense sampling costs more. Neither changes the physical
+clock or field values. CPU times omit final raster/compositing completion, while
+frame intervals include browser scheduling. Physical GPUs, actual phones,
+Safari and Firefox were not tested. Browser emulation is not a mobile performance
+promise. The original's small-screen beta/framing depend on its viewport; the
+computed field's do not.
 
-Browser test tooling is external to the checkout:
+
+Browser tooling and caches stay outside the checkout:
 
 ```sh
 UV_CACHE_DIR=/tmp/orrery-uv uv venv /tmp/orrery-browser
 UV_CACHE_DIR=/tmp/orrery-uv uv pip install --python /tmp/orrery-browser/bin/python playwright==1.62.0
 PLAYWRIGHT_BROWSERS_PATH=/tmp/orrery-playwright /tmp/orrery-browser/bin/playwright install chromium
-# Chromium's Linux shared libraries must be available.
 PLAYWRIGHT_BROWSERS_PATH=/tmp/orrery-playwright /tmp/orrery-browser/bin/python lab/sims/oscillating-electron-retarded-fields/browser-check.py
 ```
 
-Keep the static server running; `ORRERY_URL` overrides http://localhost:8765.
-The script checks mouse, keyboard, touch and pinch, all layers/contributions,
-comparison/power restrictions, probe exclusion, time and end behavior, injected
-slow-frame timing, display/field invariance, responsive bounds, catalog and
-historical navigation. Screenshots are actual Chromium output at DPR 1, paused
-with identical default camera and physical parameters. They are intentionally
-versioned, reproducible review artifacts:
-
-| Moment | Desktop 1440×1000 | Narrow 390×844 |
-|---|---|---|
-| Before, t=−4 | [frame](assets/desktop-before.png) | [frame](assets/narrow-before.png) |
-| Turn, t=0 | [frame](assets/desktop-during.png) | [frame](assets/narrow-during.png) |
-| Delay, t=2 | [frame](assets/desktop-delay.png) | [frame](assets/narrow-delay.png) |
-| After, t=5.5 | [frame](assets/desktop-after.png) | [frame](assets/narrow-after.png) |
-
-[Linear power frame](assets/desktop-power.png) ·
-[Browser report, hardware and timings](assets/browser-report.json).
-Screenshots include the full scrollable explanation. The current source supersedes
-the previous atlas evidence; the historical sim itself is unchanged and runnable.
-
-## Measured performance and limits
-
-Final frames were visually inspected on desktop and narrow layouts: approach
-curves, the strongly bent turn view, near/far opposite signs at Delay, and the
-later reversal are legible. The enlarged electron, labeled observers and restored
-camera help distinguish source motion from computed field geometry. The narrow
-title/badge overlap found in the first browser run was corrected before capture.
-No page, console or load errors remained. SwiftShader's screenshot-related
-`GPU stall due to ReadPixels` warnings are retained in the report.
-
-Measured on an Intel i5-13500H (14 logical CPUs exposed), Linux 6.8.0-138,
-Chromium 151.0.7922.34, ANGLE/Vulkan SwiftShader, DPR 1:
-
-| Viewport / density | Frame median / p95 | CPU update + submit median / p95 |
-|---|---:|---:|
-| 1440×1000 / standard | 39.6 / 59.7 ms | 21.8 / 33.5 ms |
-| 1440×1000 / dense | 67.8 / 102.9 ms | 39.4 / 60.0 ms |
-| 390×844 / standard | 45.9 / 66.6 ms | 29.7 / 49.7 ms |
-
-Each sample uses one second warm-up
-and five seconds playback across the upper turn, default beta 0.72 and gain 1.
-CPU time includes integration, buffer updates and render submission, not GPU
-completion. Frame intervals include browser scheduling; screenshots are excluded.
-These observations use software rendering and are not physical-GPU or mobile-device
-performance promises. Safari, Firefox and physical touch devices were not tested.
-
-## Lineage
-
-ORB-11364 corrects ORB-11350 in place, retaining the general physical model and
-linear comparison. [swirl-ball-far-field](../swirl-ball-far-field/) is the original
-illustrative racetrack and remains runnable. The `swirl-photon` family records
-historical lineage only. No sister-repository write or theory-status change is
-part of this implementation. The user's reference image was described in the task;
-its later named /tmp path was absent from this executor, so no direct reference
-image inspection is claimed.
+On this executor Chromium lacked libatk, libatk-bridge, libatspi, libXdamage and
+libasound. These Ubuntu packages were downloaded with `apt-get download` into
+`/tmp/orrery-debs`, extracted with `dpkg-deb -x` to `/tmp/orrery-libs`, and the run
+used `LD_LIBRARY_PATH=/tmp/orrery-libs/usr/lib/x86_64-linux-gnu`. No host package or
+repository dependency was installed. `ORRERY_URL` overrides localhost:8765.

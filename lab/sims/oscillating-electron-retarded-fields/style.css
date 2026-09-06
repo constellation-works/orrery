@@ -1,14 +1,12 @@
 :root {
   color-scheme: dark;
-  --bg: #080e16;
-  --panel: #0e1722;
-  --ink: #dde6ec;
-  --muted: #95a7b8;
-  --line: #223140;
-  --cyan: #63d9e7;
-  --coral: #f68f82;
-  --gold: #e9c28a;
-  --green: #a9d6ac
+  --ink: #d4e9de;
+  --muted: #89a696;
+  --cyan: #6ec8ff;
+  --gold: #ffd36e;
+  font: 12px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
+  background: #04120b;
+  color: var(--ink)
 }
 
 * {
@@ -16,560 +14,399 @@
 }
 
 body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--ink);
-  font: 14px/1.65 system-ui, sans-serif
-}
-
-a {
-  color: inherit;
-  text-underline-offset: 4px
-}
-
-header,
-footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 32px;
-  border-bottom: 1px solid var(--line);
-  font-size: 11px;
-  letter-spacing: .16em
-}
-
-header a {
-  text-decoration: none
-}
-
-header span,
-footer span {
-  color: var(--muted)
+  margin: 0
 }
 
 main {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 330px;
-  max-width: 1800px;
-  margin: auto
-}
-
-.apparatus {
+  height: 100svh;
+  min-height: 480px;
   position: relative;
-  min-width: 0;
-  align-self: start;
-  position: sticky;
-  top: 0;
-  height: min(880px, calc(100vh - 60px));
-  min-height: 650px;
-  background: radial-gradient(ellipse at 45% 50%, #122432 0, transparent 65%)
+  overflow: hidden
 }
 
-.intro {
-  position: absolute;
-  top: 28px;
-  left: 36px;
-  pointer-events: none;
-  z-index: 1
+a {
+  color: #a2dccc;
+  text-underline-offset: 3px
 }
 
-.eyebrow {
-  font-size: 10px;
-  letter-spacing: .19em;
-  color: var(--cyan);
-  margin: 0 0 12px
+button,
+select {
+  font: inherit;
+  color: inherit;
+  background: #0d251a;
+  border: 1px solid #315343;
+  border-radius: 4px;
+  padding: 6px 10px
 }
 
-h1 {
-  font-family: Georgia, serif;
-  font-weight: 400;
-  font-size: clamp(32px, 3vw, 49px);
-  line-height: 1.15;
-  margin: 0 0 8px
+button,
+summary,
+select,
+input {
+  cursor: pointer
 }
 
-h2 {
-  font-family: Georgia, serif;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 1.3;
-  margin: 0 0 10px
+button:hover,
+button.active {
+  background: #254635;
+  border-color: #7ba38b
 }
 
-.intro>p:last-child {
-  color: var(--muted);
-  margin: 0;
-  font-size: 14px
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+#scene:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px
 }
 
 #scene {
   position: absolute;
-  inset: 120px 0 112px;
-  touch-action: none;
-  outline-offset: -4px
+  inset: 0;
+  touch-action: none
 }
 
 #scene canvas {
   width: 100%;
-  height: 100%;
+  height: 100% !important;
   display: block
 }
 
-.scene-top {
+header {
   position: absolute;
-  top: 154px;
-  left: 36px;
+  top: 18px;
+  left: 24px;
+  right: 24px;
   display: flex;
-  align-items: center;
-  gap: 10px;
-  pointer-events: none;
-  font-size: 10px;
-  letter-spacing: .08em
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 11px
 }
 
-.badge {
-  border: 1px solid #314451;
-  border-radius: 20px;
-  padding: 3px 10px;
-  color: #acbec9
+header>a {
+  text-decoration: none;
+  letter-spacing: .14em
 }
 
-#component-label {
-  color: var(--muted)
+nav {
+  display: flex;
+  gap: 18px
 }
 
-.axis-label {
+nav span {
+  color: white
+}
+
+.intro {
   position: absolute;
-  pointer-events: none;
-  font: 11px ui-monospace, monospace;
-  color: var(--muted)
-}
-
-.scene-bottom {
-  position: absolute;
-  left: 36px;
-  bottom: 76px;
-  font-size: 11px;
+  top: 64px;
+  left: 24px;
   pointer-events: none
 }
 
-.scene-bottom p {
-  margin: 2px 0
+h1 {
+  font: 400 25px/1.2 system-ui;
+  margin: 0 0 9px
 }
 
-.scene-bottom span {
-  margin-left: 12px;
-  color: var(--muted)
+.intro p {
+  font: 12px/1.5 system-ui;
+  color: var(--muted);
+  margin: 0
 }
 
-i {
+.legend {
+  position: absolute;
+  top: 145px;
+  left: 24px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 10px
+}
+
+.legend small {
+  font-size: 10px
+}
+
+.legend i {
   display: inline-block;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  margin: 0 4px 0 12px
-}
-
-i:first-child {
-  margin-left: 0
+  width: 12px;
+  height: 2px;
+  vertical-align: middle;
+  margin: 0 4px
 }
 
 .cyan {
   background: var(--cyan)
 }
 
-.coral {
-  background: var(--coral)
+.gold {
+  background: var(--gold)
 }
 
-.cyan-text {
-  color: var(--cyan)
-}
-
-.gold-text {
-  color: var(--gold)
-}
-
-.green-text {
-  color: var(--green)
-}
-
-.transport {
+#readout {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  border-block: 1px solid var(--line);
-  padding: 16px 30px;
-  background: #0a121c
-}
-
-.transport input {
-  flex: 1;
-  min-width: 40px
-}
-
-.transport label,
-.transport output {
-  font: 11px ui-monospace, monospace;
-  white-space: nowrap
-}
-
-button,
-select {
-  border: 1px solid #344759;
-  border-radius: 5px;
-  background: #142231;
-  color: var(--ink);
-  font: 12px system-ui;
-  padding: 8px 10px;
-  cursor: pointer
-}
-
-button:hover,
-select:hover {
-  border-color: var(--cyan)
-}
-
-button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-a:focus-visible {
-  outline: 2px solid var(--cyan);
-  outline-offset: 3px
-}
-
-#play {
-  min-width: 88px;
-  background: #c4e7e6;
-  color: #092025;
-  border-color: #c4e7e6
-}
-
-aside {
-  border-left: 1px solid var(--line);
-  background: var(--panel);
-  padding: 6px 24px 0
-}
-
-aside section {
-  padding: 24px 0;
-  border-bottom: 1px solid var(--line)
-}
-
-.muted {
+  right: 24px;
+  top: 65px;
+  text-align: right;
   color: var(--muted);
-  font-size: 12px
+  font-size: 11px;
+  white-space: pre-line;
+  pointer-events: none
+}
+
+#settings {
+  position: absolute;
+  left: 20px;
+  bottom: 138px;
+  width: 246px;
+  background: #071b13e8;
+  border: 1px solid #315343;
+  border-radius: 5px;
+  max-height: calc(100% - 220px);
+  overflow: auto;
+  backdrop-filter: blur(8px)
+}
+
+summary {
+  padding: 10px 12px;
+  color: #bfd7ca
+}
+
+.settings-body {
+  padding: 0 12px 12px
+}
+
+.settings-body label {
+  display: block;
+  margin: 9px 0;
+  color: #a3b9ac
+}
+
+.settings-body select {
+  display: block;
+  width: 100%;
+  margin-top: 4px
+}
+
+.settings-body output {
+  float: right
+}
+
+.settings-body input[type=range] {
+  display: block;
+  width: 100%
+}
+
+.settings-body .check {
+  display: flex;
+  gap: 8px;
+  align-items: center
 }
 
 .micro {
   font-size: 10px;
-  line-height: 1.65;
   color: var(--muted);
-  margin: 8px 0 0
+  margin: 9px 0 0
 }
 
-.row {
+input {
+  accent-color: var(--gold)
+}
+
+.transport {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(720px, calc(100% - 40px));
+  background: #06180feb;
+  padding: 10px 14px;
+  border: 1px solid #315343;
+  border-radius: 6px;
+  backdrop-filter: blur(8px)
+}
+
+.moments {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 8px;
-  font-size: 11px;
-  margin: 17px 0
+  margin-bottom: 9px
 }
 
-select {
-  max-width: 190px;
-  font-size: 11px
+.moments button {
+  min-width: 85px
 }
 
-.range-label {
-  display: flex;
-  justify-content: space-between;
-  font-size: 11px;
-  margin-top: 15px
-}
-
-.range-label output {
-  font-family: ui-monospace, monospace;
-  color: var(--ink)
-}
-
-input[type=range] {
-  width: 100%;
-  accent-color: var(--cyan);
-  height: 16px;
-  margin: 6px 0 0
-}
-
-input[type=checkbox] {
-  accent-color: var(--cyan);
-  margin: 0 7px 0 0
-}
-
-.checks {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 13px 8px;
-  font-size: 11px
-}
-
-.checks label {
+.timeline {
   display: flex;
   align-items: center;
-  gap: 3px
+  gap: 10px
 }
 
-dl {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  font: 11px/1.8 ui-monospace, monospace;
-  background: #080f18;
-  padding: 12px;
-  margin: 12px 0 0;
-  border-radius: 5px
+#phase {
+  min-width: 40px;
+  flex: 1
 }
 
-dt {
-  color: var(--muted)
-}
-
-dd {
-  margin: 0;
+#phase-value {
+  min-width: 45px;
   text-align: right
 }
 
-#power-panel {
-  grid-column: 1/-1;
-  padding: 28px 36px;
-  border-block: 1px solid var(--line);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 40px
-}
-
-#power-panel[hidden] {
-  display: none
-}
-
-#power-chart {
-  width: 100%;
-  max-width: 620px
-}
-
-.mono {
-  font: 11px ui-monospace, monospace;
-  color: var(--gold)
-}
-
-.notes {
-  grid-column: 1/-1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  padding: 40px 36px;
-  border-bottom: 1px solid var(--line)
-}
-
-.notes p:not(.eyebrow) {
-  font-size: 12px;
-  color: var(--muted);
-  max-width: 650px
-}
-
-footer {
-  border: 0;
-  font-size: 9px
+.transport p {
+  font: 10px/1.5 system-ui;
+  color: #94ae9d;
+  margin: 9px 0 0;
+  text-align: center
 }
 
 #fatal {
   position: absolute;
-  inset: 220px 40px auto;
-  padding: 24px;
-  background: #4b2424
+  inset: 30%;
+  background: #321;
+  padding: 20px
 }
 
-@media(min-width:1500px) {
-  aside {
-    padding-inline: 30px
-  }
-
-  main {
-    grid-template-columns: minmax(0, 1fr) 365px
-  }
+#power-value {
+  font-size: 10px;
+  overflow-wrap: anywhere;
+  color: var(--gold)
 }
 
-@media(max-width:760px) {
+@media(max-width:650px) {
   header {
-    padding: 16px 18px;
-    font-size: 9px
-  }
-
-  header span {
-    display: none
-  }
-
-  main {
+    left: 16px;
+    right: 16px;
+    top: 14px;
     display: block
   }
 
-  .apparatus {
-    position: relative;
-    height: 620px;
-    min-height: 0
-  }
-
-  .intro {
-    left: 22px;
-    top: 25px
-  }
-
-  h1 {
-    font-size: 34px
-  }
-
-  .scene-top {
-    left: 22px;
-    top: 148px;
-    font-size: 9px;
-    gap: 6px
-  }
-
-  #scene {
-    inset: 110px 0 110px
-  }
-
-  .scene-bottom {
-    left: 22px;
-    bottom: 86px;
-    font-size: 10px
-  }
-
-  .scene-bottom span {
-    margin-left: 6px
-  }
-
-  .transport {
-    padding: 16px 16px;
-    gap: 9px;
-    flex-wrap: wrap
-  }
-
-  .transport label {
-    display: none
-  }
-
-  .transport output {
-    font-size: 10px
-  }
-
-  #play {
-    min-width: 75px
-  }
-
-  #reset {
-    font-size: 11px
-  }
-
-  .transport input {
-    width: 70px
-  }
-
-  .axis-label {
+  header>a {
     font-size: 9px
   }
 
-  aside {
-    border-left: 0;
-    padding: 0 22px;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0
+  nav {
+    margin-top: 10px;
+    gap: 16px
   }
 
-  aside section {
-    padding: 24px 0
+  .intro {
+    left: 16px;
+    top: 81px
   }
 
-  select {
-    max-width: 230px
+  h1 {
+    font-size: 22px
   }
 
-  .checks {
-    gap: 18px
+  .intro p {
+    max-width: 290px
   }
 
-  #power-panel,
-  .notes {
-    display: block;
-    padding: 30px 22px
+  .legend {
+    left: 16px;
+    top: 153px;
+    flex-wrap: wrap;
+    gap: 5px 12px;
+    max-width: 320px
   }
 
-  .notes>div+div {
-    margin-top: 30px
+  .legend small {
+    width: 100%
   }
 
-  footer {
-    padding: 18px 22px
+  #readout {
+    top: 202px;
+    right: 16px;
+    font-size: 10px
   }
 
-  footer span {
-    display: none
+  #settings {
+    left: 12px;
+    bottom: 166px;
+    width: 230px;
+    max-height: calc(100% - 260px)
+  }
+
+  .transport {
+    bottom: 12px;
+    width: calc(100% - 24px);
+    padding: 10px
+  }
+
+  .moments {
+    gap: 5px
+  }
+
+  .moments button {
+    min-width: 0;
+    flex: 1;
+    padding: 6px
+  }
+
+  .timeline {
+    gap: 6px
+  }
+
+  .timeline button {
+    padding: 6px 8px
+  }
+
+  .transport p {
+    font-size: 10px
+  }
+
+  .transport p a {
+    white-space: nowrap
   }
 }
 
-@media(max-width:760px) {
-  .apparatus {
-    height: 680px
+@media(max-height:650px) and (min-width:651px) {
+  .intro {
+    top: 52px
   }
 
-  .scene-top {
-    top: 190px
+  .legend {
+    top: 115px
   }
 
-  #scene {
-    inset: 175px 0 110px
+  #settings {
+    bottom: 145px
+  }
+
+  .transport {
+    bottom: 8px
   }
 }
 
-.gold { background: #f2cd78; }
-.moment { position: absolute; left: 36px; top: 194px; pointer-events: none; }
-.moment p { margin: 0; font-size: 11px; color: var(--muted); }
-#moment-label { font-size: 10px; letter-spacing: .13em; color: var(--gold); margin-bottom: 3px; }
-.checkpoints { position: absolute; left: 36px; bottom: 125px; display: flex; gap: 8px; }
-.checkpoints button { font-size: 11px; background: #0b1825d9; }
-@media(max-width:760px) {
-  .apparatus { height: 780px; }
-  .intro { right: 18px; }
-  .intro>p:last-child { max-width: 310px; font-size: 12px; }
-  .scene-top { top: 174px; }
-  .moment { top: 220px; left: 22px; right: 20px; }
-  .moment p { font-size: 10px; }
-  #scene { inset: 235px 0 168px; }
-  .checkpoints { left: 22px; bottom: 135px; gap: 6px; }
-  .checkpoints button { padding: 8px; font-size: 10px; }
-  .scene-bottom { right: 12px; bottom: 80px; font-size: 9px; }
-  .scene-bottom span { margin-left: 4px; }
+header,
+.intro,
+.legend,
+#readout {
+  text-shadow: 0 1px 3px #04120b, 0 0 12px #04120b;
+  background: #04120bcc;
+  border-radius: 4px
 }
 
-.object-label { position: absolute; pointer-events: none; font: 11px ui-monospace, monospace; color: #f2fbff; background: #08121bab; border-radius: 3px; padding: 2px 4px; }
-.witnesses { position: absolute; right: 28px; top: 156px; font: 10px/1.9 ui-monospace, monospace; color: var(--muted); }
-.witnesses p { margin: 0; }
-.witnesses span { display: inline-block; min-width: 108px; text-align: right; margin-left: 10px; }
-@media(max-width:1050px) { .witnesses { top: 240px; left: 36px; right: auto; display: flex; gap: 20px; } .witnesses span { display: block; text-align: left; margin: 0; } }
-@media(max-width:760px) {
-  .witnesses { top: 277px; left: 22px; font-size: 9px; gap: 25px; }
-  .witnesses span { display: inline; margin-left: 5px; }
-  #scene { inset: 283px 0 158px; }
-  .checkpoints { gap: 5px; }
-  .checkpoints button { padding: 8px 6px; }
-  .object-label { font-size: 9px; }
+.intro {
+  padding: 6px 10px;
+  margin-left: -10px
 }
 
-@media(max-width:760px) {
-  .scene-top { top: 184px; }
-  .moment { top: 227px; }
+.legend {
+  padding: 4px 6px;
+  margin-left: -6px
+}
+
+header {
+  padding: 4px 0
+}
+
+#readout {
+  padding: 5px 8px;
+  margin-right: -8px
 }

@@ -3,14 +3,14 @@
   "title": "Oscillating electron \u2014 radiating B-field",
   "kind": "web",
   "entry": "index.html",
-  "status": "superseded",
+  "status": "imported",
   "created": "2026-06-27",
   "topics": [
     "electromagnetism",
     "radiation"
   ],
   "family": "swirl-photon",
-  "summary": "Historical illustrative swirl-ball companion, not sampled Maxwell fields. Successor: oscillating-electron-retarded-fields (retarded classical point-charge model).",
+  "summary": "Original illustrative electron animation: dense expanding rings and a tight turnaround. Compare the computed Maxwell field in oscillating-electron-retarded-fields; these illustrative rings are not field samples.",
   "provenance": {
     "almanac": "15-discussions/26-06/swirl-photon-correspondence.md",
     "imported_from": "almanac/_attachments/swirl-ball-sim/far-field.html"

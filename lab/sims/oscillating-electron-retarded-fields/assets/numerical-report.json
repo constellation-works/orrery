@@ -2,9 +2,9 @@
   "status": "pass",
   "sweep": {
     "count": 37440,
-    "maxResidual": 1.997754672800056e-8,
+    "maxResidual": 1.9874401679942366e-8,
     "maxIterations": 39,
-    "maxRelativeEradMinusCBrad": 7.351589126113968e-16
+    "maxRelativeEradMinusCBrad": 6.809544600899929e-16
   },
   "boundaryControls": "pass: invalid beta rejected; mask fixed at present-source radius 0.18; long/negative times finite",
   "analyticControls": {
@@ -12,10 +12,10 @@
     "uniformRelativeError": 3.9292592679630034e-12
   },
   "potentialDerivativeRelativeError": 1.0933442048634791e-7,
-  "farObserverCycleSinSquaredNormalizedError": 0.00009376107113287724,
+  "farObserverCycleSinSquaredNormalizedError": 0.00009376107761962291,
   "radiation": {
     "sinSquaredAbsoluteNormalizedError": 3.193238981331145e-16,
-    "inverseRadiusRelativeError": 5.4317617070864796e-11,
+    "inverseRadiusRelativeError": 1.364687918226082e-10,
     "larmor": [
       {
         "beta": 0.1,
@@ -42,7 +42,7 @@
   "turning": {
     "samples": 5025,
     "derivativeAbsoluteError": 1.1192796052337758e-10,
-    "normalizedRetardedResidual": 1.943334382303874e-12,
+    "normalizedRetardedResidual": 1.9895196601282805e-12,
     "potentialDerivativeRelativeError": 6.690213475098652e-9,
     "fullSpherePowerRelativeError": 0.00003843317488128051,
     "nonAxisymmetricPowerDifference": 0.011094612328741076,

@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "trajectoryDerivativeAbsoluteError": 3.6912267391025097e-9,
+  "warmRelativeError": 5.201424734645265e-10,
+  "denseSweep": {
+    "samples": 321408,
+    "maxNormalizedResidual": 1.9999245575582453e-12,
+    "maxIterations": 10
+  },
+  "newtonStagnationRegression": 5,
+  "independentPotentialRelativeError": 0.0000034005739648787396,
+  "fullSpherePowerRelativeError": 0.000042062686160138085,
+  "causality": {
+    "outsideLightConeDifference": 1.2463894059498288e-10,
+    "nearFarAtTwo": [
+      {
+        "tr": 3.26274539341493e-12,
+        "By": 13.328884292898984
+      },
+      {
+        "tr": -3.812008742148453,
+        "By": -0.027816701902127393
+      }
+    ]
+  },
+  "renderedVectors": "exact kernel selection; normalized physical direction; electron sign checked"
+}

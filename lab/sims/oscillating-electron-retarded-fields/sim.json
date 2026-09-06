@@ -11,14 +11,14 @@
     "retarded-fields"
   ],
   "family": "swirl-photon",
-  "summary": "A smooth electron hairpin and its delayed magnetic response: full 3-D Li\u00e9nard\u2013Wiechert streamlines, before/turn/delay/after views, fixed observers, field separation and a linear comparison. Historical family label records lineage only.",
+  "summary": "A tight, smooth electron turn and its outward delayed response, drawn as dense stationary samples of the full retarded field. Compact phase controls, exact field contributions and direct comparison with the original illustration.",
   "provenance": {
-    "task": "ORB-11364",
+    "task": "ORB-11374",
     "predecessor": "lab/sims/swirl-ball-far-field/",
     "sources": [
       "https://www.feynmanlectures.caltech.edu/II_21.html",
       "https://www.damtp.cam.ac.uk/user/tong/em/el5.pdf"
     ],
-    "previous_task": "ORB-11350"
+    "previous_task": "ORB-11364"
   }
 }

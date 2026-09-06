@@ -41,7 +41,27 @@ export function hairpin(beta = 0.72) {
     }
   };
 }
-export function retarded(point, time, motion) {
+// Smooth, bounded narrow racetrack. Analytic at all times, including turns.
+// e controls rounding; |v| <= a*w = beta (proof in README).
+export function racetrack(beta = 0.72) {
+  if (!Number.isFinite(beta) || beta < 0 || beta > MAX_BETA)
+    throw new RangeError('Peak beta must be in [0, 0.8]');
+  const e = .12, a = 3 / Math.atan(1 / e), w = beta / a;
+  return {
+    maxBeta: beta, axisymmetric: false, period: w ? 2 * Math.PI / w : Infinity,
+    at: t => {
+      const s = Math.sin(w * t), c = Math.cos(w * t), d = e * e + s * s;
+      return {
+        position: [a * e * s / Math.sqrt(d), 0,
+          a * (Math.asin(c / Math.sqrt(1 + e * e)) - Math.atan(1 / e))],
+        velocity: [a * e ** 3 * w * c / d ** 1.5, 0, -a * w * s / Math.sqrt(d)],
+        acceleration: [-a * e ** 3 * w * w * s * (d + 3 * c * c) / d ** 2.5,
+          0, -a * w * w * e * e * c / d ** 1.5]
+      };
+    }
+  };
+}
+export function retarded(point, time, motion, initialTr) {
   if (!Number.isFinite(time) || point.length !== 3 || !point.every(Number.isFinite) || !(motion.maxBeta >=
       0 && motion.maxBeta <= MAX_BETA)) throw new RangeError(
     'Finite coordinates and subluminal speed bound required');
@@ -49,7 +69,8 @@ export function retarded(point, time, motion) {
   // Speed bound: delay <= present distance/(1-beta_max). f'(tr)=1-n.beta >= .2.
   let lo = time - distance / (1 - motion.maxBeta),
     hi = time,
-    tr = (lo + hi) / 2;
+    tr = Number.isFinite(initialTr) && initialTr > lo && initialTr < hi
+      ? initialTr : (lo + hi) / 2;
   const tolerance = 2e-12 * Math.max(1, distance);
   for (let iterations = 1; iterations <= 64; iterations++) {
     const source = motion.at(tr),
@@ -68,13 +89,16 @@ export function retarded(point, time, motion) {
     else lo = tr;
     const derivative = R ? 1 - dot(displacement, source.velocity) / R : 1;
     const next = tr - residual / derivative;
-    tr = next > lo && next < hi ? next : (lo + hi) / 2;
+    // An in-bracket Newton step alone can alternate near opposite endpoints
+    // on a tight periodic turn. Require progress as well as containment.
+    tr = next > lo && next < hi && Math.abs(next - tr) < (hi - lo) / 2
+      ? next : (lo + hi) / 2;
   }
   throw new Error('Retarded solve did not converge');
 }
-export function field(point, time, motion = sinusoid(), charge = -1) {
+export function field(point, time, motion = sinusoid(), charge = -1, initialTr) {
   if (charge !== -1 && charge !== 1) throw new RangeError('Charge sign must be -1 or +1');
-  const solved = retarded(point, time, motion);
+  const solved = retarded(point, time, motion, initialTr);
   // A fixed physical sphere about the present source: no softened/fabricated field.
   if (norm(sub(point, motion.at(time).position)) <= EXCLUSION) return {
     ...solved,
