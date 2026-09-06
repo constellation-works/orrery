@@ -27,12 +27,16 @@ export PYTHONDONTWRITEBYTECODE=1
 python3 lab/tools/build-gallery.py --check
 ```
 
-The checker re-runs the shared Orrery importer at source baseline
-`a1c430db54d585048ec85c4e7c47141db634f398`, inventories every selected JSON
-container and nested selector, verifies source bytes against their Git blobs,
-rebuilds every record, and byte-compares the complete generated authority. The
-committed manifest contains per-source unit-map digests instead of duplicating
-large result arrays. All 83 JSON sources and 16,653 units are still checked.
+The checker imports the immutable source baseline
+`a1c430db54d585048ec85c4e7c47141db634f398` from a temporary detached Git
+checkout, then independently inventories the live checkout. It rejects live
+selected-source, selector, or supporting-artifact additions/deletions and
+verifies every retained source byte against its baseline blob before rebuilding
+every record and byte-comparing the complete generated authority. Thus a later,
+unrelated commit may advance `HEAD`; it cannot silently change migration input.
+The committed manifest contains per-source unit-map digests instead of
+duplicating large result arrays. All 83 JSON sources and 16,653 units are still
+checked.
 
 Eight source roots formerly collided under four content-derived anonymous
 identities. They retain those legacy aliases in metadata, but each now has a

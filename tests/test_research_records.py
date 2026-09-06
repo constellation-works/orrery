@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+import importlib.util
 import json
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -13,11 +15,30 @@ SCRIPT = ROOT / "scripts/research_records.py"
 
 
 def run(*args, ok=True):
-    result = subprocess.run([sys.executable, str(SCRIPT), *map(str, args)],
-                            cwd=ROOT, capture_output=True, text=True)
+    return run_at(ROOT, *args, ok=ok)
+
+
+def run_at(root, *args, ok=True):
+    result = subprocess.run([sys.executable, str(root / "scripts/research_records.py"), *map(str, args)],
+                            cwd=root, capture_output=True, text=True)
     if ok and result.returncode:
         raise AssertionError(result.stderr or result.stdout)
     return result
+
+
+def git(root, *args):
+    result = subprocess.run(["git", "-C", str(root), *args], capture_output=True, text=True)
+    if result.returncode:
+        raise AssertionError(result.stderr or result.stdout)
+    return result.stdout.strip()
+
+
+def load_checker(root):
+    spec = importlib.util.spec_from_file_location("isolated_research_records", root / "scripts/research_records.py")
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+    return module
 
 
 class ResearchRecordMigrationTests(unittest.TestCase):
@@ -69,6 +90,58 @@ class ResearchRecordMigrationTests(unittest.TestCase):
             result = run("check", "--authority", output, ok=False)
             self.assertNotEqual(result.returncode, 0)
             self.assertIn("authority drift", result.stderr)
+
+    def test_landed_migration_survives_head_advance_and_refuses_source_drift(self):
+        with tempfile.TemporaryDirectory() as parent:
+            checkout = Path(parent) / "orrery"
+            git(ROOT.parent, "clone", "--no-hardlinks", str(ROOT), str(checkout))
+            shutil.copyfile(SCRIPT, checkout / "scripts/research_records.py")
+            git(checkout, "add", "scripts/research_records.py")
+            git(checkout, "-c", "user.name=Research test", "-c", "user.email=test@example.invalid",
+                "commit", "-m", "test: land research migration repair")
+            marker = checkout / "post-migration-marker.txt"
+            marker.write_text("unrelated commit proving HEAD may advance\n")
+            git(checkout, "add", marker.name)
+            git(checkout, "-c", "user.name=Research test", "-c", "user.email=test@example.invalid",
+                "commit", "-m", "test: advance HEAD after research migration")
+
+            self.assertEqual(json.loads(run_at(checkout, "check").stdout)["catalogs"], 39)
+            checker = load_checker(checkout)
+            baseline_report = checker.import_source(checkout, "orrery", "orrery")
+            baseline_catalogs = [(item["path"], checker.strict_json((checkout / item["path"]).read_bytes()))
+                                 for item in baseline_report["files"] if Path(item["path"]).name == "sim.json"]
+            baseline_supporting = checker.supporting_paths(checkout, baseline_catalogs)
+
+            source = checkout / "lab/sims/solar-system-nbody/sim.json"
+            original = source.read_bytes()
+            source.write_bytes(original + b" ")
+            with self.assertRaisesRegex(ValueError, "source drift from migration baseline"):
+                checker.require_live_source_matches_baseline(baseline_report, baseline_supporting)
+
+
+    def test_source_addition_and_deletion_fail_closed(self):
+        with tempfile.TemporaryDirectory() as parent:
+            checkout = Path(parent) / "orrery"
+            git(ROOT.parent, "clone", "--no-hardlinks", str(ROOT), str(checkout))
+            shutil.copyfile(SCRIPT, checkout / "scripts/research_records.py")
+            checker = load_checker(checkout)
+            baseline_report = checker.import_source(checkout, "orrery", "orrery")
+            baseline_catalogs = [(item["path"], checker.strict_json((checkout / item["path"]).read_bytes()))
+                                 for item in baseline_report["files"] if Path(item["path"]).name == "sim.json"]
+            baseline_supporting = checker.supporting_paths(checkout, baseline_catalogs)
+
+            source = checkout / "lab/sims/solar-system-nbody/sim.json"
+            added = checkout / "lab/sims/post-migration-added/sim.json"
+            added.parent.mkdir()
+            added.write_bytes(source.read_bytes())
+            with self.assertRaisesRegex(ValueError, "source inventory differs"):
+                checker.require_live_source_matches_baseline(baseline_report, baseline_supporting)
+            added.unlink()
+            added.parent.rmdir()
+
+            source.unlink()
+            with self.assertRaisesRegex(ValueError, "source inventory differs"):
+                checker.require_live_source_matches_baseline(baseline_report, baseline_supporting)
 
     def test_wide_binary_failures_missingness_and_diagnosis_survive(self):
         chain = self.manifest()["wide_binary"]

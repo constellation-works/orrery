@@ -18,6 +18,7 @@ import os
 from pathlib import Path
 import subprocess
 import sys
+import tempfile
 
 from orbit_research import make_record, validate
 from orbit_research.contract import canonical, reference, revision_digest
@@ -217,25 +218,60 @@ def source_unit_summary(report):
     }
 
 
-def supporting_paths(catalogs):
+def supporting_paths(root, catalogs):
     roles = {}
     for path, raw in catalogs:
-        entry = (ROOT / path).parent / raw["entry"]
-        require(entry.is_file(), f"catalog entry is missing: {entry.relative_to(ROOT)}")
-        roles[entry.relative_to(ROOT).as_posix()] = "apparatus-entry"
-    for path in sorted((ROOT / "lab/sims").glob("**/*")):
+        entry = (root / path).parent / raw["entry"]
+        require(entry.is_file(), f"catalog entry is missing: {entry.relative_to(root)}")
+        roles[entry.relative_to(root).as_posix()] = "apparatus-entry"
+    for path in sorted((root / "lab/sims").glob("**/*")):
         if not path.is_file() or path.suffix.lower() not in {".png", ".parquet", ".csv"}:
             continue
-        relative = path.relative_to(ROOT).as_posix()
+        relative = path.relative_to(root).as_posix()
         roles.setdefault(relative, "figure" if path.suffix.lower() == ".png" else "captured-data")
-    comparison = ROOT / "lab/sims/oscillating-electron-retarded-fields/assets/comparison.html"
+    comparison = root / "lab/sims/oscillating-electron-retarded-fields/assets/comparison.html"
     if comparison.is_file():
-        roles[comparison.relative_to(ROOT).as_posix()] = "comparison-view"
+        roles[comparison.relative_to(root).as_posix()] = "comparison-view"
     return sorted(roles.items())
 
 
+def baseline_source_report():
+    """Import the immutable migration source from its own historical checkout."""
+    with tempfile.TemporaryDirectory(prefix="orrery-research-baseline-") as parent:
+        checkout = Path(parent) / "source"
+        git(ROOT.parent, "clone", "--no-hardlinks", str(ROOT), str(checkout))
+        git(checkout, "checkout", "--detach", BASELINE)
+        report = import_source(checkout, "orrery", "orrery", expected_revision=BASELINE)
+        catalogs = []
+        for item in report["files"]:
+            path = item["path"]
+            if Path(path).name == "sim.json":
+                catalogs.append((path, strict_json((checkout / path).read_bytes())))
+        return report, supporting_paths(checkout, catalogs)
+
+
+def require_live_source_matches_baseline(baseline_report, baseline_supporting):
+    """Reject live selected-source or supporting-artifact drift before rebuilding."""
+    live_report = import_source(ROOT, "orrery", "orrery")
+    baseline_paths = [item["path"] for item in baseline_report["files"]]
+    live_paths = [item["path"] for item in live_report["files"]]
+    require(live_paths == baseline_paths, "source inventory differs from migration baseline")
+    require(source_unit_summary(live_report) == source_unit_summary(baseline_report),
+            "source selector inventory differs from migration baseline")
+    for item in baseline_report["files"]:
+        path = item["path"]
+        require((ROOT / path).read_bytes() == git(ROOT, "show", f"{BASELINE}:{path}", binary=True),
+                f"source drift from migration baseline: {path}")
+    live_catalogs = [(item["path"], strict_json((ROOT / item["path"]).read_bytes()))
+                     for item in live_report["files"] if Path(item["path"]).name == "sim.json"]
+    require(supporting_paths(ROOT, live_catalogs) == baseline_supporting,
+            "supporting artifact inventory differs from migration baseline")
+    return baseline_report
+
+
 def build(principia_root, astrolabe_root):
-    report = import_source(ROOT, "orrery", "orrery", expected_revision=BASELINE)
+    baseline_report, baseline_supporting = baseline_source_report()
+    report = require_live_source_matches_baseline(baseline_report, baseline_supporting)
     unit_summary = source_unit_summary(report)
     source_files = []
     catalogs, captures = [], []
@@ -295,7 +331,7 @@ def build(principia_root, astrolabe_root):
         records.append(record); by_source[path] = record
 
     supporting = []
-    for path, scientific_role in supporting_paths(catalogs):
+    for path, scientific_role in supporting_paths(ROOT, catalogs):
         data = (ROOT / path).read_bytes()
         require(data == git(ROOT, "show", f"{BASELINE}:{path}", binary=True),
                 f"supporting artifact drift from migration baseline: {path}")
