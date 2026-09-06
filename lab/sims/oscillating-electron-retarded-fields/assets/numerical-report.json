@@ -14,29 +14,39 @@
   "potentialDerivativeRelativeError": 1.0933442048634791e-7,
   "farObserverCycleSinSquaredNormalizedError": 0.00009376107113287724,
   "radiation": {
-    "sinSquaredAbsoluteNormalizedError": 3.385365526707902e-12,
+    "sinSquaredAbsoluteNormalizedError": 3.193238981331145e-16,
     "inverseRadiusRelativeError": 5.4317617070864796e-11,
     "larmor": [
       {
         "beta": 0.1,
-        "measured": 0.0033586160111681285,
+        "measured": 0.003358616011160567,
         "prediction": 0.003333333333333334,
-        "relativeError": 0.007584803350438429
+        "relativeError": 0.0075848033481698
       },
       {
         "beta": 0.03,
-        "measured": 0.0003002052953955017,
+        "measured": 0.00030020529539502425,
         "prediction": 0.0003,
-        "relativeError": 0.000684317985005789
+        "relativeError": 0.0006843179834141733
       },
       {
         "beta": 0.01,
-        "measured": 0.00003333612304372099,
+        "measured": 0.00003333612304374073,
         "prediction": 0.000033333333333333335,
-        "relativeError": 0.00008369131162977439
+        "relativeError": 0.00008369131222196735
       }
     ],
-    "refinedLowBetaPower": 0.00003333590594843575,
-    "relativisticPowerError": 0.0000061766639352089925
+    "refinedLowBetaPower": 0.00003333590594845523,
+    "relativisticPowerError": 0.000006176575743088719
+  },
+  "turning": {
+    "samples": 5025,
+    "derivativeAbsoluteError": 1.1192796052337758e-10,
+    "normalizedRetardedResidual": 1.943334382303874e-12,
+    "potentialDerivativeRelativeError": 6.690213475098652e-9,
+    "fullSpherePowerRelativeError": 0.00003843317488128051,
+    "nonAxisymmetricPowerDifference": 0.011094612328741076,
+    "streamlineCoarseVsFine": 0.013377953342460244,
+    "streamlineHalfStepVsFine": 0.001769548195451415
   }
 }

@@ -1,6 +1,6 @@
 {
   "slug": "oscillating-electron-retarded-fields",
-  "title": "Oscillating electron — retarded fields",
+  "title": "Turning electron \u2014 retarded fields",
   "kind": "web",
   "entry": "index.html",
   "status": "active",
@@ -11,13 +11,14 @@
     "retarded-fields"
   ],
   "family": "swirl-photon",
-  "summary": "Classical sinusoidally driven electron: calculated 3-D Liénard–Wiechert fields, signed magnetic circulation, radiation decomposition and a retarded-source probe. Physical-model successor to swirl-ball-far-field; the historical family label records lineage only.",
+  "summary": "A smooth electron hairpin and its delayed magnetic response: full 3-D Li\u00e9nard\u2013Wiechert streamlines, before/turn/delay/after views, fixed observers, field separation and a linear comparison. Historical family label records lineage only.",
   "provenance": {
-    "task": "ORB-11350",
+    "task": "ORB-11364",
     "predecessor": "lab/sims/swirl-ball-far-field/",
     "sources": [
       "https://www.feynmanlectures.caltech.edu/II_21.html",
       "https://www.damtp.cam.ac.uk/user/tong/em/el5.pdf"
-    ]
+    ],
+    "previous_task": "ORB-11350"
   }
 }

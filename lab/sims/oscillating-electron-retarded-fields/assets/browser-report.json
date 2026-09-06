@@ -1,6 +1,6 @@
 {
   "status": "pass",
-  "recordedAt": "2026-09-06T01:07:08.996225+00:00",
+  "recordedAt": "2026-09-06T01:44:03.878927+00:00",
   "browser": "151.0.7922.34",
   "os": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
   "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
@@ -14,19 +14,308 @@
     "--enable-unsafe-swiftshader"
   ],
   "checks": [
-    "pause/scrub/reset/play",
-    "all presets",
-    "all field toggles and contributions",
-    "probe position and singular exclusion",
-    "density/gain/camera/viewport invariance",
-    "mouse orbit/wheel zoom and keyboard orbit/zoom",
-    "narrow pointer and keyboard controls, no horizontal overflow",
-    "gallery and historical successor navigation",
-    "no console/page/load errors"
+    "four desktop and narrow moments",
+    "pause/scrub/reset/end/play",
+    "all presets and motion comparison",
+    "all contributions and field toggles",
+    "symmetry-restricted power",
+    "retarded probe and exclusion",
+    "density/gain/camera/viewport field invariance",
+    "mouse/keyboard/touch/pinch camera controls",
+    "near/far delayed By reversal",
+    "slow-frame wall-clock invariance",
+    "gallery and historical navigation",
+    "no browser errors"
+  ],
+  "slowFrameClock": {
+    "dt": 0.3557500000018625,
+    "wall": 0.37887500000186264
+  },
+  "sequence": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "moment": "before",
+      "time": -4,
+      "electron": {
+        "position": [
+          -1.1468681956213975,
+          0,
+          -1.27944004178263
+        ],
+        "velocity": [
+          0.19270271532034544,
+          0,
+          0.5898179291767187
+        ],
+        "acceleration": [
+          0.06605960806779249,
+          0,
+          -0.09910425359332051
+        ]
+      },
+      "witnesses": [
+        {
+          "tr": -11.185944858363673,
+          "By": -0.03251410014058531
+        },
+        {
+          "tr": -12.672363355736517,
+          "By": -0.014411922037668386
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "moment": "during",
+      "time": 0,
+      "electron": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "velocity": [
+          0.33599999999999997,
+          0,
+          -0.0
+        ],
+        "acceleration": [
+          -0.0,
+          0,
+          -0.17279999999999998
+        ]
+      },
+      "witnesses": [
+        {
+          "tr": -3.7724945168235893,
+          "By": 0.014555589607704922
+        },
+        {
+          "tr": -8.106642711438695,
+          "By": -0.04008236610021636
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "moment": "delay",
+      "time": 2,
+      "electron": {
+        "position": [
+          0.646490845758076,
+          0,
+          -0.33901523166214753
+        ],
+        "velocity": [
+          0.29803029405383946,
+          0,
+          -0.33248100638986766
+        ],
+        "acceleration": [
+          -0.03723787271566518,
+          0,
+          -0.1532727226562603
+        ]
+      },
+      "witnesses": [
+        {
+          "tr": -0.34442694246842076,
+          "By": 0.18873253033726983
+        },
+        {
+          "tr": -4.909955205355507,
+          "By": -0.006680700742899098
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "moment": "after",
+      "time": 5.5,
+      "electron": {
+        "position": [
+          1.3562011401655711,
+          0,
+          -2.2554736450428807
+        ],
+        "velocity": [
+          0.08338695175519736,
+          0,
+          -0.6974748720851509
+        ],
+        "acceleration": [
+          -0.0781171856735369,
+          0,
+          -0.04288471804553007
+        ]
+      },
+      "witnesses": [
+        {
+          "tr": 3.342822473913194,
+          "By": 0.016092634232543576
+        },
+        {
+          "tr": 0.5876436272030688,
+          "By": 0.08275952993823057
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "moment": "before",
+      "time": -4,
+      "electron": {
+        "position": [
+          -1.1468681956213975,
+          0,
+          -1.27944004178263
+        ],
+        "velocity": [
+          0.19270271532034544,
+          0,
+          0.5898179291767187
+        ],
+        "acceleration": [
+          0.06605960806779249,
+          0,
+          -0.09910425359332051
+        ]
+      },
+      "witnesses": [
+        {
+          "tr": -11.185944858363673,
+          "By": -0.03251410014058531
+        },
+        {
+          "tr": -12.672363355736517,
+          "By": -0.014411922037668386
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "moment": "during",
+      "time": 0,
+      "electron": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "velocity": [
+          0.33599999999999997,
+          0,
+          -0.0
+        ],
+        "acceleration": [
+          -0.0,
+          0,
+          -0.17279999999999998
+        ]
+      },
+      "witnesses": [
+        {
+          "tr": -3.7724945168235893,
+          "By": 0.014555589607704922
+        },
+        {
+          "tr": -8.106642711438695,
+          "By": -0.04008236610021636
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "moment": "delay",
+      "time": 2,
+      "electron": {
+        "position": [
+          0.646490845758076,
+          0,
+          -0.33901523166214753
+        ],
+        "velocity": [
+          0.29803029405383946,
+          0,
+          -0.33248100638986766
+        ],
+        "acceleration": [
+          -0.03723787271566518,
+          0,
+          -0.1532727226562603
+        ]
+      },
+      "witnesses": [
+        {
+          "tr": -0.34442694246842076,
+          "By": 0.18873253033726983
+        },
+        {
+          "tr": -4.909955205355507,
+          "By": -0.006680700742899098
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "moment": "after",
+      "time": 5.5,
+      "electron": {
+        "position": [
+          1.3562011401655711,
+          0,
+          -2.2554736450428807
+        ],
+        "velocity": [
+          0.08338695175519736,
+          0,
+          -0.6974748720851509
+        ],
+        "acceleration": [
+          -0.0781171856735369,
+          0,
+          -0.04288471804553007
+        ]
+      },
+      "witnesses": [
+        {
+          "tr": 3.342822473913194,
+          "By": 0.016092634232543576
+        },
+        {
+          "tr": 0.5876436272030688,
+          "By": 0.08275952993823057
+        }
+      ]
+    }
   ],
   "warnings": [
-    "[.WebGL-0x1a3c00164a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
-    "[.WebGL-0x1a3c00164a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+    "[.WebGL-0x6ec00165600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x6ec00165600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
   ],
   "errors": [],
   "failedResponses": [],
@@ -36,26 +325,26 @@
         "width": 1440,
         "height": 1000
       },
-      "preset": "overview",
       "density": "standard",
-      "beta": 0.15,
+      "motion": "turn",
+      "beta": 0.72,
       "gain": 1,
       "warmupSeconds": 1,
       "measurementSeconds": 5,
       "frameIntervalMs": {
-        "samples": 243,
-        "median": 20.300000000745058,
-        "p95": 24.099999997764826,
-        "max": 34.19999999925494
+        "samples": 127,
+        "median": 39.600000001490116,
+        "p95": 59.69999999552965,
+        "max": 68.30000000447035
       },
       "cpuUpdateAndRenderSubmitMs": {
-        "samples": 244,
-        "median": 2.699999999254942,
-        "p95": 4.399999998509884,
-        "max": 6.5
+        "samples": 128,
+        "median": 21.75,
+        "p95": 33.5,
+        "max": 47.5
       },
-      "drawCalls": 580,
-      "triangles": 5100,
+      "drawCalls": 26,
+      "triangles": 2217,
       "pixelRatio": 1
     },
     {
@@ -63,26 +352,26 @@
         "width": 1440,
         "height": 1000
       },
-      "preset": "radiation",
       "density": "dense",
-      "beta": 0.15,
+      "motion": "turn",
+      "beta": 0.72,
       "gain": 1,
       "warmupSeconds": 1,
       "measurementSeconds": 5,
       "frameIntervalMs": {
-        "samples": 191,
-        "median": 25.899999998509884,
-        "p95": 29.400000002235174,
-        "max": 32.599999997764826
+        "samples": 74,
+        "median": 67.75000000372529,
+        "p95": 102.89999999850988,
+        "max": 152.39999999850988
       },
       "cpuUpdateAndRenderSubmitMs": {
-        "samples": 192,
-        "median": 3.600000001490116,
-        "p95": 6,
-        "max": 6.900000002235174
+        "samples": 75,
+        "median": 39.399999998509884,
+        "p95": 60,
+        "max": 103.89999999850988
       },
-      "drawCalls": 1012,
-      "triangles": 8070,
+      "drawCalls": 26,
+      "triangles": 2217,
       "pixelRatio": 1
     },
     {
@@ -90,26 +379,26 @@
         "width": 390,
         "height": 844
       },
-      "preset": "overview",
       "density": "standard",
-      "beta": 0.15,
+      "motion": "turn",
+      "beta": 0.72,
       "gain": 1,
       "warmupSeconds": 1,
       "measurementSeconds": 5,
       "frameIntervalMs": {
-        "samples": 301,
-        "median": 16.699999999254942,
-        "p95": 17.699999999254942,
-        "max": 23.100000001490116
+        "samples": 105,
+        "median": 45.899999998509884,
+        "p95": 66.59999999403954,
+        "max": 84.5
       },
       "cpuUpdateAndRenderSubmitMs": {
-        "samples": 302,
-        "median": 2.799999998882413,
-        "p95": 4.099999997764826,
-        "max": 5.899999998509884
+        "samples": 106,
+        "median": 29.74999999627471,
+        "p95": 49.70000000298023,
+        "max": 69.60000000149012
       },
-      "drawCalls": 580,
-      "triangles": 5100,
+      "drawCalls": 26,
+      "triangles": 2217,
       "pixelRatio": 1
     }
   ]

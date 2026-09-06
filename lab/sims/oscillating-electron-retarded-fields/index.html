@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Oscillating electron · Orrery</title>
+<title>An electron takes a turn · Orrery</title>
 <link rel="icon" href="data:,"><link rel="stylesheet" href="style.css">
 <script src="../../vendor/three/three.min.js"></script>
 </head>
@@ -10,25 +10,30 @@
 <header><a href="../../gallery/">ORRERY <span>/ ELECTROMAGNETISM</span></a><a href="README.md">Model & validation ↗</a></header>
 <main>
 <section class="apparatus">
-<div class="intro"><p class="eyebrow">01 / RETARDED FIELDS</p><h1>An electron in motion.</h1><p>A local oscillation. A field that remembers.</p></div>
+<div class="intro"><p class="eyebrow">01 / RETARDED FIELDS</p><h1>An electron takes a turn.</h1><p>The charge turns here. The distant field responds later.</p></div>
 <div id="scene" tabindex="0" role="img" aria-label="Interactive three dimensional electromagnetic field. Drag or use arrow keys to orbit; scroll or use plus and minus to zoom."></div>
-<div class="scene-top"><span class="badge">q = −e</span><span class="badge">c = ω = 1</span><span id="component-label">TOTAL FIELD</span></div>
-<div class="axis-label" id="axis-label">+z / drive axis</div>
-<div class="scene-bottom"><p><i class="cyan"></i> +Bφ <i class="coral"></i> −Bφ <span>arrows give circulation</span></p><p class="muted">Drag to orbit · scroll to zoom · arrow keys / + −</p></div>
-<div class="transport"><button id="play" aria-label="Pause simulation">Ⅱ Pause</button><button id="reset">↺ Reset</button><label for="phase">Phase</label><input id="phase" type="range" min="0" max="6.28318530718" step="0.001" value="0"><output id="phase-value">0.00 τ</output></div>
+<div class="scene-top"><span class="badge">q = −e</span><span class="badge">c = 1</span><span id="component-label">TOTAL B</span></div>
+<div class="object-label" id="electron-label">e⁻ now</div><div class="object-label" id="local-label">A</div><div class="object-label" id="distant-label">B</div>
+<div class="witnesses"><p>A / nearer <span id="local-readout"></span></p><p>B / farther <span id="distant-readout"></span></p></div>
+<div class="axis-label" id="axis-label">xz / trajectory plane</div>
+<div class="moment"><p id="moment-label">01 / APPROACHING THE TURN</p><p id="moment-detail">Watch the white velocity arrow rotate.</p></div>
+<div class="checkpoints"><button id="before">01 Before</button><button id="during">02 Turn</button><button id="delay">03 Delay</button><button id="after">04 After</button><button id="home-camera" title="Restore the default camera">⌂ View</button></div>
+<div class="scene-bottom"><p><i class="cyan"></i> +By <i class="gold"></i> −By <span>computed B · arrows give direction</span></p><p class="muted">Drag to orbit · scroll to zoom · arrow keys / + −</p></div>
+<div class="transport"><button id="play" aria-label="Pause simulation">Ⅱ Pause</button><button id="reset">↺ Reset</button><label for="phase">Time</label><input id="phase" type="range" min="-4" max="10" step="0.01" value="-4"><output id="phase-value">−4.00 t</output></div>
 <div id="fatal" role="alert" hidden></div>
 </section>
 <aside>
-<section><p class="eyebrow">THE EXPERIMENT</p><h2>Driven, not free.</h2><p class="muted">A classical point electron follows z = β₀ sin t. Its field is evaluated at the source’s retarded time.</p>
-<label class="row" for="preset">Curated view<select id="preset"><option value="overview">Field atlas</option><option value="radiation">Radiation only</option><option value="near">Near the electron</option><option value="power">Angular power</option><option value="stationary">Stationary control</option></select></label>
-<label class="range-label" for="beta">Peak speed <output id="beta-value">0.15 c</output></label><input id="beta" type="range" min="0" max="0.8" step="0.01" value="0.15"><p class="micro">0–0.8 c · default is nonrelativistic · ω fixed at 1</p>
+<section><p class="eyebrow">THE EXPERIMENT</p><h2>Driven, not free.</h2><p class="muted">A smooth hairpin in the xz plane. The white arrow follows the electron’s velocity; each field sample sees its own retarded source time.</p>
+<label class="row" for="motion">Motion<select id="motion"><option value="turn">Smooth hairpin</option><option value="linear">Linear comparison</option></select></label>
+<label class="row" for="preset">Curated view<select id="preset"><option value="overview">Full field</option><option value="radiation">Radiation only</option><option value="near">Near the electron</option><option value="power">Angular power</option><option value="stationary">Stationary control</option></select></label>
+<label class="range-label" for="beta">Peak speed <output id="beta-value">0.72 c</output></label><input id="beta" type="range" min="0" max="0.8" step="0.01" value="0.72"><p class="micro">0–0.8 c · exact global bound · turn at t = 0</p>
 </section>
 <section><p class="eyebrow">READ THE FIELD</p>
 <label class="row" for="component">Contribution<select id="component"><option value="total">Total</option><option value="near">Velocity / near · 1/R²</option><option value="rad">Radiation · 1/R</option></select></label>
-<div class="checks"><label><input id="magnetic" type="checkbox" checked> <span class="cyan-text">B</span> circulation</label><label><input id="electric" type="checkbox"> <span class="gold-text">E</span> meridian slice</label><label><input id="poynting" type="checkbox"> <span class="green-text">S</span> energy flow</label><label><input id="power" type="checkbox"> Angular power</label></div>
-<label class="row" for="density">Sampling<select id="density"><option value="sparse">Sparse · 35 rings</option><option value="standard" selected>Standard · 63 rings</option><option value="dense">Dense · 99 rings</option></select></label>
+<div class="checks"><label><input id="magnetic" type="checkbox" checked> <span class="cyan-text">B</span> streamlines</label><label><input id="electric" type="checkbox"> <span class="gold-text">E</span> xz samples</label><label><input id="poynting" type="checkbox"> <span class="green-text">S</span> energy flow</label><label><input id="power" type="checkbox"> Angular power</label></div>
+<label class="row" for="density">Sampling<select id="density"><option value="sparse">Sparse · 16 curves</option><option value="standard" selected>Standard · 24 curves</option><option value="dense">Dense · 32 curves</option></select></label>
 <label class="range-label" for="gain">Display gain <output id="gain-value">1.0×</output></label><input id="gain" type="range" min="0.25" max="4" step="0.05" value="1">
-<p class="micro">Fixed guides, not moving matter. Cyan/coral = sign of Bφ about +z. Brightness = log-compressed magnitude; arrows = direction. E is gold; S = E × B / 4π is green. <a href="#encoding">Encoding details ↓</a></p>
+<p class="micro">Curves integrate the instantaneous B field in 3-D. Cyan/yellow = sign of its fixed +y component; arrowheads show the full vector. Gray oval = prescribed trajectory, not B. A (2,0,1) and B (5,0,1) are fixed observers. Brightness compresses strength. <a href="#encoding">Encoding details ↓</a></p>
 </section>
 <section id="probe-panel"><p class="eyebrow">RETARDED-SOURCE PROBE</p>
 <label class="range-label" for="probe-radius">Radius from origin <output id="radius-value">5.0</output></label><input id="probe-radius" type="range" min="0.2" max="12" step="0.1" value="5">
@@ -36,8 +41,8 @@
 <dl id="probe-readout"></dl><p class="micro">White point: observer in xz plane. Dashed line: light path from the amber retarded source. Solid white source: now. Dotted sphere: excluded radius 0.18 about the present electron; no field is assigned inside.</p>
 </section>
 </aside>
-<section id="power-panel" hidden><div><p class="eyebrow">RADIATION / SOURCE TIME</p><h2>Power has no sign.</h2><p class="muted">Calculated dP/dΩ at emission phase t; radius encodes power, normalized to the current angular maximum. Dashed: sin²θ reference. No near field or display gain enters this plot.</p><p id="power-value" class="mono"></p></div><canvas id="power-chart" width="620" height="300" aria-label="Angular radiation power in a meridian plane"></canvas></section>
-<section class="notes" id="encoding"><div><p class="eyebrow">A MAP, NOT A MATERIAL</p><h2>What the light means</h2><p>The rings are instantaneous magnetic-field guides around the drive axis, sampled from the Liénard–Wiechert solution. Their radii stay fixed as signs and strengths change. Neither guides nor arrows are particles, photons, or an electron’s structure.</p><p>Brightness b = min(1, log(1 + 120 g |B|) / log 13); ring opacity = 0.08 + 0.82 b. Zero fields hide their guides. E and S arrows use the same compression with factors 15 and 600, respectively; arrow lengths and brightness clip. Gain g and sampling alter only the drawing. Probe values are uncompressed totals and both contributions.</p></div><div><p class="eyebrow">THE MODEL’S BOUNDARY</p><h2>Prescribed classical motion</h2><p>The external drive supplies the energy. Radiation reaction, quantum structure and the driving apparatus’s own fields are omitted. This is a single net charge, not a neutral dipole. The exact field includes velocity and acceleration terms; “radiation only” isolates the acceleration term.</p><p>Dimensionless length c/ω, time 1/ω; E unit |e|ω²/(4πε₀c²), B unit E/c, power unit e²ω²/(4πε₀c). <a href="README.md">Derivation, checks and limitations ↗</a> · <a href="../swirl-ball-far-field/">Historical illustration ↗</a></p></div></section>
+<section id="power-panel" hidden><div><p class="eyebrow">RADIATION / SOURCE TIME</p><h2>Power has no sign.</h2><p class="muted">Turning mode reports the full-sphere Liénard power. The meridian plot is available only for the axisymmetric linear comparison: radius encodes dP/dΩ, normalized to its current maximum; dashed is sin²θ. Both use emission time t.</p><p id="power-value" class="mono"></p></div><canvas id="power-chart" width="620" height="300" aria-label="Angular radiation power in a meridian plane"></canvas></section>
+<section class="notes" id="encoding"><div><p class="eyebrow">A MAP, NOT A MATERIAL</p><h2>What the light means</h2><p>These curves are integrated magnetic streamlines at the displayed observation time. Near the turning electron they bend differently from distant curves, whose source information is older. They are recomputed each frame: they are not emitted rings, photons or moving material.</p><p>Arrows follow the full B vector. Cyan/yellow records the sign of B’s +y component; color is not a topological fold claim. Gray is the prescribed path. White is the present electron and its velocity; amber and the dashed light path belong to the probe alone. No guide is presented as a computed field.</p><p>Brightness compresses |B| logarithmically; curve density is a drawing choice, not magnetic flux. Integration and finite seeding can miss fine structures. <a href="README.md">Numerical and rendering limits ↗</a></p></div><div><p class="eyebrow">THE MODEL’S BOUNDARY</p><h2>Prescribed classical motion</h2><p>The external drive supplies the energy. Radiation reaction, quantum structure and the driving apparatus’s own fields are omitted. This is a single net charge, not a neutral dipole. The exact field includes velocity and acceleration terms; “radiation only” isolates the acceleration term.</p><p>Dimensionless length cT and time T; E unit |e|/(4πε₀c²T²), B unit E/c. The hairpin has semi-axes 1.4 and 3; its angular rate is β₀/3. The linear comparison has ωT = 1. <a href="README.md">Derivation, checks and limitations ↗</a> · <a href="../swirl-ball-far-field/">Historical illustration ↗</a></p></div></section>
 </main><footer>ORRERY / CLASSICAL ELECTRODYNAMICS <span>One prescribed charge. Finite propagation speed.</span></footer>
 <script type="module" src="app.js"></script>
 </body></html>

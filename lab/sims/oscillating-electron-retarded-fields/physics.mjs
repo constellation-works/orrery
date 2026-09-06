@@ -1,4 +1,4 @@
-// Dimensionless Lienard–Wiechert fields. c = omega = |q|/(4 pi epsilon0) = 1.
+// Dimensionless Lienard–Wiechert fields. c = |q|/(4 pi epsilon0) = 1.
 // Sources and conventions: README.md. No rendering state enters this module.
 export const MAX_BETA = 0.8;
 export const EXCLUSION = 0.18;
@@ -13,12 +13,32 @@ export function sinusoid(beta = 0.15) {
   if (!Number.isFinite(beta) || beta < 0 || beta > MAX_BETA) throw new RangeError(
     'Peak beta must be in [0, 0.8]');
   return {
+    axisymmetric: true,
     maxBeta: beta,
     at: t => ({
       position: [0, 0, beta * Math.sin(t)],
       velocity: [0, 0, beta * Math.cos(t)],
       acceleration: [0, 0, -beta * Math.sin(t)]
     })
+  };
+}
+// A smooth closed hairpin: elongated ellipse in xz, upper turn at t=0.
+// |v|² = w²(b² cos²(wt) + a² sin²(wt)) <= (a w)² = beta².
+// Scale time with beta; beta=0 is the stationary source at the origin.
+export function hairpin(beta = 0.72) {
+  if (!Number.isFinite(beta) || beta < 0 || beta > MAX_BETA)
+    throw new RangeError('Peak beta must be in [0, 0.8]');
+  const a = 3, b = 1.4, w = beta / a;
+  return {
+    maxBeta: beta, axisymmetric: false, period: w ? 2 * Math.PI / w : Infinity,
+    at: t => {
+      const s = Math.sin(w * t), c = Math.cos(w * t);
+      return {
+        position: [b * s, 0, a * (c - 1)],
+        velocity: [b * w * c, 0, -a * w * s],
+        acceleration: [-b * w * w * s, 0, -a * w * w * c]
+      };
+    }
   };
 }
 export function retarded(point, time, motion) {
@@ -86,10 +106,12 @@ export function field(point, time, motion = sinusoid(), charge = -1) {
 }
 // Radiation power per SOURCE time and solid angle, on a sphere about source(tr).
 // dt_observer = k dt_source supplies one power of k relative to R² S_rad.
+export function directionalPower(n, tr, motion) {
+  const {velocity: beta, acceleration: a} = motion.at(tr);
+  const v = cross(n, cross(sub(n, beta), a));
+  return dot(v, v) / (4 * Math.PI * (1 - dot(n, beta)) ** 5);
+}
+// A meridian sample only. Multiplication by 2pi requires axial symmetry.
 export function angularPower(theta, tr, motion) {
-  const R = 100,
-    source = motion.at(tr),
-    n = [Math.sin(theta), 0, Math.cos(theta)];
-  const f = field(add(source.position, scale(n, R)), tr + R, motion);
-  return R * R * dot(f.Erad, f.Erad) * f.k / (4 * Math.PI);
+  return directionalPower([Math.sin(theta), 0, Math.cos(theta)], tr, motion);
 }

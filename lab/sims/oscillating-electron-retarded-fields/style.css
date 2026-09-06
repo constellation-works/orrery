@@ -534,3 +534,42 @@ footer {
     inset: 175px 0 110px
   }
 }
+
+.gold { background: #f2cd78; }
+.moment { position: absolute; left: 36px; top: 194px; pointer-events: none; }
+.moment p { margin: 0; font-size: 11px; color: var(--muted); }
+#moment-label { font-size: 10px; letter-spacing: .13em; color: var(--gold); margin-bottom: 3px; }
+.checkpoints { position: absolute; left: 36px; bottom: 125px; display: flex; gap: 8px; }
+.checkpoints button { font-size: 11px; background: #0b1825d9; }
+@media(max-width:760px) {
+  .apparatus { height: 780px; }
+  .intro { right: 18px; }
+  .intro>p:last-child { max-width: 310px; font-size: 12px; }
+  .scene-top { top: 174px; }
+  .moment { top: 220px; left: 22px; right: 20px; }
+  .moment p { font-size: 10px; }
+  #scene { inset: 235px 0 168px; }
+  .checkpoints { left: 22px; bottom: 135px; gap: 6px; }
+  .checkpoints button { padding: 8px; font-size: 10px; }
+  .scene-bottom { right: 12px; bottom: 80px; font-size: 9px; }
+  .scene-bottom span { margin-left: 4px; }
+}
+
+.object-label { position: absolute; pointer-events: none; font: 11px ui-monospace, monospace; color: #f2fbff; background: #08121bab; border-radius: 3px; padding: 2px 4px; }
+.witnesses { position: absolute; right: 28px; top: 156px; font: 10px/1.9 ui-monospace, monospace; color: var(--muted); }
+.witnesses p { margin: 0; }
+.witnesses span { display: inline-block; min-width: 108px; text-align: right; margin-left: 10px; }
+@media(max-width:1050px) { .witnesses { top: 240px; left: 36px; right: auto; display: flex; gap: 20px; } .witnesses span { display: block; text-align: left; margin: 0; } }
+@media(max-width:760px) {
+  .witnesses { top: 277px; left: 22px; font-size: 9px; gap: 25px; }
+  .witnesses span { display: inline; margin-left: 5px; }
+  #scene { inset: 283px 0 158px; }
+  .checkpoints { gap: 5px; }
+  .checkpoints button { padding: 8px 6px; }
+  .object-label { font-size: 9px; }
+}
+
+@media(max-width:760px) {
+  .scene-top { top: 184px; }
+  .moment { top: 227px; }
+}

@@ -2,6 +2,8 @@
 import assert from 'node:assert/strict';
 import {
   field,
+  hairpin,
+  directionalPower,
   sinusoid,
   retarded,
   norm,
@@ -13,6 +15,7 @@ import {
   EXCLUSION,
   angularPower
 } from './physics.mjs';
+import {trace} from './streamlines.mjs';
 const results = {},
   close = (actual, expected, tol, label) => assert.ok(Math.abs(actual - expected) <= tol,
     `${label}: ${actual} vs ${expected}, tolerance ${tol}`);
@@ -244,6 +247,95 @@ results.radiation = {
   refinedLowBetaPower: refined,
   relativisticPowerError
 };
+// Non-collinear trajectory and field controls. Finite-difference potentials below
+// use their own ellipse formulas and pure bisection, not hairpin()/retarded().
+let derivativeError = 0, turnPotentialError = 0, turnResidual = 0, turnCount = 0;
+for (const beta of [0, .01, .15, .72, .8]) {
+  const m = hairpin(beta), h = 1e-4;
+  for (let i = -100; i <= 100; i++) {
+    const t = i * .47, a = m.at(t), left = m.at(t-h), right = m.at(t+h);
+    const error = Math.max(norm(sub(scale(sub(right.position,left.position),1/(2*h)),a.velocity)),
+      norm(sub(scale(sub(right.velocity,left.velocity),1/(2*h)),a.acceleration)));
+    derivativeError = Math.max(derivativeError,error);
+    assert.ok(error < 2e-9);
+    assert.ok(norm(a.velocity) <= m.maxBeta + 1e-14);
+    assert.ok(Math.abs(a.position[0]) <= 1.4 && a.position[2] >= -6 && a.position[2] <= 0);
+    for (const radius of [.180001,.5,2,8,10000]) {
+      const n = scale([Math.sin(i), Math.cos(i), .4],1/Math.sqrt(1.16));
+      const p = add(a.position,scale(n,radius)), f = field(p,t,m);
+      assert.ok(!f.masked && f.E.every(Number.isFinite) && f.B.every(Number.isFinite));
+      const residual = Math.abs(f.residual)/Math.max(1,radius);
+      turnResidual = Math.max(turnResidual,residual); turnCount++;
+      assert.ok(residual < 2.1e-12);
+      vectorClose(f.B,add(f.Bnear,f.Brad),1e-11,'turn B decomposition');
+      vectorClose(f.B,scale(field(p,t,m,1).B,-1),1e-11,'turn electron sign');
+    }
+  }
+}
+for (const beta of [-1,.81,NaN,Infinity]) assert.throws(()=>hairpin(beta),RangeError);
+function turnPotentials(p,t,beta) {
+  const w = beta/3;
+  let lo = t - Math.hypot(...p) - 8, hi = t;
+  for (let i=0;i<90;i++) {
+    const tr=(lo+hi)/2;
+    const R=Math.hypot(p[0]-1.4*Math.sin(w*tr),p[1],p[2]-3*(Math.cos(w*tr)-1));
+    if(tr+R>t) hi=tr; else lo=tr;
+  }
+  const tr=(lo+hi)/2, d=[p[0]-1.4*Math.sin(w*tr),p[1],p[2]-3*(Math.cos(w*tr)-1)];
+  const v=[1.4*w*Math.cos(w*tr),0,-3*w*Math.sin(w*tr)];
+  const phi=-1/(Math.hypot(...d)-d.reduce((s,x,i)=>s+x*v[i],0));
+  return [phi,...v.map(x=>phi*x)];
+}
+for(const beta of [.15,.72,.8]) for(const t of [-4,0,2,5.5,10])
+  for(const p of [[1,.4,2],[-2,1,-1],[7,-4,3],[-.4,.6,-3]]) {
+    const h=1e-4;
+    const spatial=[0,1,2].map(i=>{
+      const plus=[...p],minus=[...p];plus[i]+=h;minus[i]-=h;
+      return scale(sub(turnPotentials(plus,t,beta),turnPotentials(minus,t,beta)),1/(2*h));
+    });
+    const temporal=scale(sub(turnPotentials(p,t+h,beta),turnPotentials(p,t-h,beta)),1/(2*h));
+    const E=spatial.map((d,i)=>-d[0]-temporal[i+1]);
+    const B=[spatial[1][3]-spatial[2][2],spatial[2][1]-spatial[0][3],spatial[0][2]-spatial[1][1]];
+    const f=field(p,t,hairpin(beta));
+    const err=Math.max(norm(sub(E,f.E))/norm(f.E),norm(sub(B,f.B))/norm(f.B));
+    turnPotentialError=Math.max(turnPotentialError,err);assert.ok(err<2e-6,`turn potentials ${err}`);
+  }
+let turnPowerError=0, azimuthDifference=0;
+for (const t of [-4,0,2,5.5]) {
+  const m=hairpin(.8), s=m.at(t), nMu=800,nPhi=160;
+  let P=0;
+  for(let i=0;i<nMu;i++) for(let j=0;j<nPhi;j++) {
+    const mu=-1+(i+.5)*2/nMu, phi=(j+.5)*2*Math.PI/nPhi;
+    const n=[Math.sqrt(1-mu*mu)*Math.cos(phi),Math.sqrt(1-mu*mu)*Math.sin(phi),mu];
+    P+=directionalPower(n,t,m)*4*Math.PI/(nMu*nPhi);
+  }
+  const exact=(2/3)*(dot(s.acceleration,s.acceleration)-norm(cross(s.velocity,s.acceleration))**2)/(1-dot(s.velocity,s.velocity))**3;
+  const err=Math.abs(P/exact-1);turnPowerError=Math.max(turnPowerError,err);assert.ok(err<2e-4,`sphere power ${err}`);
+  for(const n of [[1,0,0],[0,1,0],[0,0,1]]) {
+    const f=field(add(s.position,scale(n,100)),t+100,m);
+    close(directionalPower(n,t,m),10000*dot(f.Erad,f.Erad)*f.k/(4*Math.PI),1e-10,'power vs field');
+  }
+  azimuthDifference=Math.max(azimuthDifference,Math.abs(directionalPower([1,0,0],t,m)-directionalPower([0,1,0],t,m)));
+}
+assert.ok(azimuthDifference>1e-4,'turning cannot use an axial meridian integral');
+assert.equal(directionalPower([1,0,0],0,hairpin(0)),0);
+assert.equal(hairpin(.72).axisymmetric,false);assert.equal(sinusoid(.15).axisymmetric,true);
+// Spatial convergence: matched short arclength at .16, .08, .04. Include all
+// components; no closed-loop/topology assertion for the sparse visual seeding.
+let streamlineError=0, streamlineRefinedError=0;
+for(const component of ['total','near','rad']) for(const t of [-4,0,5.5]) for(const seed of [[-3,0,2],[3,0,2],[-3,0,-2]]) {
+  const runs=[.16,.08,.04].map(h=>trace(seed,t,hairpin(.72),component,h,Math.round(1.28/h)));
+  if(runs.some((r,i)=>r.length!==2*Math.round(1.28/[.16,.08,.04][i])+1)) continue;
+  const coarse=norm(sub(runs[0].at(-1).p,runs[2].at(-1).p));
+  const fine=norm(sub(runs[1].at(-1).p,runs[2].at(-1).p));
+  streamlineError=Math.max(streamlineError,coarse);streamlineRefinedError=Math.max(streamlineRefinedError,fine);
+  assert.ok(coarse<.02 && fine<coarse*.5,`streamline refinement ${coarse} ${fine}`);
+}
+assert.ok(streamlineError>0,'nonempty streamline convergence sample');
+results.turning={samples:turnCount,derivativeAbsoluteError:derivativeError,normalizedRetardedResidual:turnResidual,
+  potentialDerivativeRelativeError:turnPotentialError,fullSpherePowerRelativeError:turnPowerError,
+  nonAxisymmetricPowerDifference:azimuthDifference,streamlineCoarseVsFine:streamlineError,streamlineHalfStepVsFine:streamlineRefinedError};
+
 console.log(JSON.stringify({
   status: 'pass',
   ...results

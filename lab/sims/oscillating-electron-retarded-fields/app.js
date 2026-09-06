@@ -1,5 +1,8 @@
 import {
   sinusoid,
+  hairpin,
+  add,
+  sub,
   field,
   angularPower,
   EXCLUSION,
@@ -7,6 +10,7 @@ import {
   cross,
   scale
 } from './physics.mjs';
+import {trace, seeds, selected as selectField} from './streamlines.mjs';
 import {
   createLoop
 } from '../../lib/web/loop.js';
@@ -15,8 +19,9 @@ const $ = id => document.getElementById(id),
   TAU = 2 * Math.PI,
   T = window.THREE;
 const state = {
-  time: 0,
-  beta: .15,
+  time: -4,
+  beta: .72,
+  motion: 'turn',
   component: 'total',
   density: 'standard',
   gain: 1,
@@ -39,15 +44,16 @@ try {
 }
 renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 host.append(renderer.domElement);
-let azimuth = .72,
-  elevation = .34,
-  distance = 26;
+let azimuth = 1.08,
+  elevation = .32,
+  distance = 21;
+const motionNow = () => state.motion === 'turn' ? hairpin(state.beta) : sinusoid(state.beta);
 
 function updateCamera() {
-  const d = distance * Math.max(1, 1.4 / camera.aspect);
+  const d = distance * Math.max(1, 1.05 / camera.aspect);
   camera.position.set(d * Math.cos(elevation) * Math.cos(azimuth), d * Math.cos(elevation) * Math.sin(
-    azimuth), d * Math.sin(elevation));
-  camera.lookAt(0, 0, 0);
+    azimuth), d * Math.sin(elevation) - 1);
+  camera.lookAt(0, 0, -1);
   camera.updateMatrixWorld();
 }
 
@@ -81,22 +87,9 @@ function line(points, color, opacity = 1, dashed = false) {
   scene.add(object);
   return object;
 }
-line([
-  [0, 0, -7],
-  [0, 0, 7]
-], 0x8498a6, .3, true);
-line([
-  [-8, 0, 0],
-  [8, 0, 0]
-], 0x41586a, .2);
-line([
-  [0, -8, 0],
-  [0, 8, 0]
-], 0x41586a, .2);
-// Subtle fixed equatorial ruler, not a propagating shell.
-for (let r = 2; r <= 8; r += 2) line(Array.from({
-  length: 97
-}, (_, i) => [r * Math.cos(i * TAU / 96), r * Math.sin(i * TAU / 96), 0]), 0x44586a, .13);
+// Cartesian ruler in the motion plane; no field geometry is inferred from it.
+for (let x = -6; x <= 6; x += 2) line([[x, 0, -6], [x, 0, 4]], 0x44586a, .11);
+for (let z = -6; z <= 4; z += 2) line([[-6, 0, z], [6, 0, z]], 0x44586a, .11);
 
 function sphere(radius, color, wireframe = false) {
   const m = new T.Mesh(new T.SphereGeometry(radius, 20, 12), new T.MeshBasicMaterial({
@@ -108,7 +101,7 @@ function sphere(radius, color, wireframe = false) {
   scene.add(m);
   return m;
 }
-const electron = sphere(.075, 0xf1f7f6),
+const electron = sphere(.16, 0xf1f7f6),
   exclusion = sphere(EXCLUSION, 0x91a0ad, true),
   past = sphere(.065, 0xe9c28a),
   probe = sphere(.065, 0xffffff);
@@ -120,13 +113,22 @@ const lightPath = line([
   [0, 0, 0],
   [1, 0, 0]
 ], 0xe9c28a, .65, true);
-let rings = [],
+// Procedural marker halo: an enlarged source glyph, never a field shell.
+const glowCanvas = document.createElement('canvas'); glowCanvas.width = glowCanvas.height = 64;
+const glowContext = glowCanvas.getContext('2d');
+const gradient = glowContext.createRadialGradient(32, 32, 2, 32, 32, 32);
+gradient.addColorStop(0, 'rgba(230,255,255,.8)'); gradient.addColorStop(.25, 'rgba(150,235,255,.25)'); gradient.addColorStop(1, 'rgba(100,200,255,0)');
+glowContext.fillStyle = gradient; glowContext.fillRect(0, 0, 64, 64);
+const glow = new T.Sprite(new T.SpriteMaterial({map: new T.CanvasTexture(glowCanvas), transparent: true, depthWrite: false}));
+glow.scale.set(1.3, 1.3, 1); scene.add(glow);
+const witnesses = [[2, 0, 1], [5, 0, 1]].map((p, i) => ({p, marker: sphere(.08, 0xffffff), id: ['local', 'distant'][i]}));
+let fieldSeeds = [],
   electric = [],
   flow = [];
 const Ecolor = 0xe9c28a,
   Scolor = 0xa9d6ac,
   positive = new T.Color(0x63d9e7),
-  negative = new T.Color(0xf68f82);
+  negative = new T.Color(0xf2cd78);
 
 function arrow(position, color) {
   const a = new T.ArrowHelper(new T.Vector3(0, 1, 0), new T.Vector3(...position), .3, color, .1, .06);
@@ -143,60 +145,84 @@ function dispose(object) {
   });
 }
 
-function buildSamples() {
-  for (const r of rings) {
-    dispose(r.line);
-    r.arrows.forEach(dispose);
+function dynamicGeometry(capacity) {
+  const geometry = new T.BufferGeometry();
+  for (const name of ['position', 'color']) geometry.setAttribute(name,
+    new T.Float32BufferAttribute(new Float32Array(capacity * 3), 3).setUsage(T.DynamicDrawUsage));
+  return geometry;
+}
+function updateGeometry(geometry, positions, colors) {
+  for (const [name, values] of [['position', positions], ['color', colors]]) {
+    const attribute = geometry.getAttribute(name);
+    attribute.array.set(values);
+    attribute.updateRange.count = values.length;
+    attribute.needsUpdate = true;
   }
+  geometry.setDrawRange(0, positions.length / 3);
+  geometry.computeBoundingSphere();
+}
+// Reuse GPU buffers: replacing BufferAttributes each frame leaks old GL buffers.
+const streamGeometry = dynamicGeometry(10000);
+const streams = new T.LineSegments(streamGeometry, new T.LineBasicMaterial({vertexColors: true}));
+scene.add(streams);
+const directionGeometry = dynamicGeometry(1024);
+const directions = new T.LineSegments(directionGeometry, new T.LineBasicMaterial({vertexColors: true}));
+scene.add(directions);
+const velocityArrow = arrow([0, 0, 0], 0xffffff);
+let cachedTraces = [], fieldKey = '', pathKey = '', lastFieldCost = 0;
+
+function buildSamples() {
   electric.forEach(a => dispose(a.arrow));
   flow.forEach(a => dispose(a.arrow));
-  rings = [];
-  electric = [];
-  flow = [];
-  const [nz, nr] = ({
-    sparse: [7, 5],
-    standard: [9, 7],
-    dense: [11, 9]
-  })[state.density];
-  for (let j = 0; j < nz; j++)
-    for (let i = 0; i < nr; i++) {
-      const z = -5 + 10 * j / (nz - 1),
-        rho = .65 + 6.35 * i / (nr - 1);
-      const points = Array.from({
-        length: 97
-      }, (_, k) => [rho * Math.cos(k * TAU / 96), rho * Math.sin(k * TAU / 96), z]);
-      const guide = line(points, 0x63d9e7, .4);
-      const arrows = Array.from({
-        length: 4
-      }, (_, k) => arrow([rho * Math.cos(k * TAU / 4), rho * Math.sin(k * TAU / 4), z], 0x63d9e7));
-      rings.push({
-        rho,
-        z,
-        line: guide,
-        arrows
-      });
-    }
-  // Sparse meridian: actual samples at fixed points, separate from magnetic density.
-  for (let z = -5; z <= 5; z += 1.25)
-    for (const x of [-6, -4, -2, 2, 4, 6]) {
+  electric = []; flow = [];
+  fieldSeeds = seeds(state.density);
+  fieldKey = '';
+  for (let z = -4; z <= 4; z += 2)
+    for (const x of [-5, -3, -1, 1, 3, 5]) {
       const p = [x, 0, z];
-      electric.push({
-        p,
-        arrow: arrow(p, Ecolor)
-      });
-      flow.push({
-        p,
-        arrow: arrow(p, Scolor)
-      });
+      electric.push({p, arrow: arrow(p, Ecolor)});
+      flow.push({p, arrow: arrow(p, Scolor)});
     }
+}
+
+function drawStreams(motion, t) {
+  streams.visible = directions.visible = $('magnetic').checked;
+  if (!streams.visible) return;
+  const key = [t, state.beta, state.motion, state.component, state.density].join('/');
+  if (key !== fieldKey) {
+    const start = performance.now();
+    cachedTraces = fieldSeeds.map(p => trace(p, t, motion, state.component));
+    fieldKey = key;
+    lastFieldCost = performance.now() - start;
+  }
+  const positions = [], colors = [], arrowPositions = [], arrowColors = [];
+  for (const points of cachedTraces) {
+    for (let i = 1; i < points.length; i++) {
+      const a = points[i - 1], b = points[i];
+      positions.push(...a.p, ...b.p);
+      for (const v of [a, b]) {
+        const color = v.B[1] >= 0 ? positive : negative;
+        const brightness = .12 + .88 * compress(v.magnitude, 120);
+        colors.push(color.r * brightness, color.g * brightness, color.b * brightness);
+      }
+      if (i % 24 === 12) {
+        // Arrowheads use the computed 3-D B tangent, not screen motion.
+        const side0 = cross(b.direction, [0, 0, 1]);
+        const side = norm(side0) > .01 ? scale(side0, 1 / norm(side0)) : [1, 0, 0];
+        const tip = add(b.p, scale(b.direction, .12));
+        const back = add(b.p, scale(b.direction, -.10));
+        arrowPositions.push(...add(back, scale(side, .10)), ...tip, ...tip, ...add(back, scale(side, -.10)));
+        const c = b.B[1] >= 0 ? positive : negative;
+        for (let j = 0; j < 4; j++) arrowColors.push(c.r, c.g, c.b);
+      }
+    }
+  }
+  updateGeometry(streamGeometry, positions, colors);
+  updateGeometry(directionGeometry, arrowPositions, arrowColors);
 }
 const compress = (m, factor) => Math.min(1, Math.log1p(factor * state.gain * m) / Math.log(13));
 
-function selected(f) {
-  return state.component === 'near' ? [f.Enear, f.Bnear] : state.component === 'rad' ? [f.Erad, f.Brad] : [f
-    .E, f.B
-  ];
-}
+const selected = f => selectField(f, state.component);
 
 function drawArrow(a, v, factor) {
   const m = norm(v);
@@ -213,28 +239,33 @@ let lastPlot = -Infinity,
   lastReadout = -Infinity;
 
 function updateFields() {
-  const motion = sinusoid(state.beta),
+  const motion = motionNow(),
     t = state.time;
   electron.position.fromArray(motion.at(t).position);
   exclusion.position.copy(electron.position);
-  path.geometry.setFromPoints([new T.Vector3(0, 0, -state.beta), new T.Vector3(0, 0, state.beta)]);
-  for (const r of rings) {
-    // Axial symmetry is exact: one evaluation determines Bφ around this ring.
-    const f = field([r.rho, 0, r.z], t, motion),
-      B = f.masked ? [0, 0, 0] : selected(f)[1],
-      signed = B[1];
-    const color = signed >= 0 ? positive : negative,
-      b = compress(Math.abs(signed), 120);
-    r.line.visible = $('magnetic').checked && Math.abs(signed) > 1e-14;
-    r.line.material.color.copy(color);
-    r.line.material.opacity = .08 + .82 * b;
-    r.arrows.forEach((a, k) => {
-      a.visible = r.line.visible;
-      if (!a.visible) return;
-      const phi = k * TAU / 4;
-      drawArrow(a, [-signed * Math.sin(phi), signed * Math.cos(phi), 0], 120);
-      a.setColor(color);
-    });
+  glow.position.copy(electron.position);
+  const newPathKey = `${state.motion}/${state.beta}`;
+  if (pathKey !== newPathKey) {
+    const pathPoints = state.motion === 'turn'
+      ? Array.from({length: 181}, (_, i) => new T.Vector3(1.4 * Math.sin(i * TAU / 180), 0, 3 * (Math.cos(i * TAU / 180) - 1)))
+      : [new T.Vector3(0, 0, -state.beta), new T.Vector3(0, 0, state.beta)];
+    path.geometry.dispose();
+    path.geometry = new T.BufferGeometry().setFromPoints(pathPoints);
+    pathKey = newPathKey;
+  }
+  path.material.color.setHex(0xa7b4bd); path.material.opacity = .6;
+  velocityArrow.position.copy(electron.position);
+  drawArrow(velocityArrow, motion.at(t).velocity, 4);
+  if (norm(motion.at(t).velocity) > 0) velocityArrow.setLength(1.1, .23, .16);
+  drawStreams(motion, t);
+  for (const witness of witnesses) {
+    const f = field(witness.p, t, motion);
+    const B = f.masked ? [0, 0, 0] : selected(f)[1];
+    witness.marker.position.fromArray(witness.p);
+    witness.marker.material.color.copy(B[1] >= 0 ? positive : negative);
+    const el = $(witness.id + '-readout');
+    el.textContent = `${Math.abs(B[1]) < 1e-14 ? 'By = 0' : B[1] >= 0 ? '+By' : '−By'} · tᵣ ${f.tr.toFixed(2)}`;
+    el.style.color = B[1] >= 0 ? '#63d9e7' : '#f2cd78';
   }
   for (let i = 0; i < electric.length; i++) {
     const e = electric[i],
@@ -257,8 +288,14 @@ function updateFields() {
     f = field(p, t, motion);
   probe.position.fromArray(p);
   past.position.fromArray(f.source.position);
-  lightPath.geometry.setFromPoints([past.position, probe.position]);
-  lightPath.computeLineDistances();
+  const lightPositions = lightPath.geometry.getAttribute('position');
+  lightPositions.setXYZ(0, ...past.position.toArray());
+  lightPositions.setXYZ(1, ...probe.position.toArray());
+  lightPositions.needsUpdate = true;
+  lightPath.geometry.computeBoundingSphere();
+  const distances = lightPath.geometry.getAttribute('lineDistance');
+  distances.setX(0, 0); distances.setX(1, past.position.distanceTo(probe.position));
+  distances.needsUpdate = true;
   if (performance.now() - lastReadout > 100 || !state.playing) {
     lastReadout = performance.now();
     const num = v => v.toExponential(3);
@@ -266,13 +303,13 @@ function updateFields() {
       ['t / tᵣ', `${t.toFixed(3)} / ${f.tr.toFixed(3)}`],
       ['Delay / R', f.R.toFixed(4)],
       ['z now / retarded', `${electron.position.z.toFixed(3)} / ${past.position.z.toFixed(3)}`],
-      ['βz retarded', f.source.velocity[2].toFixed(4)],
+      ['βx / βz retarded', `${f.source.velocity[0].toFixed(3)} / ${f.source.velocity[2].toFixed(3)}`],
       ['Solve residual', num(f.residual)]
     ];
     if (f.masked) entries.push(['Field', 'EXCLUDED']);
     else entries.push(['|E| / |B|', `${num(norm(f.E))} / ${num(norm(f.B))}`], ['|E near| / |E rad|',
       `${num(norm(f.Enear))} / ${num(norm(f.Erad))}`
-    ], ['Bφ near / rad', `${num(f.Bnear[1])} / ${num(f.Brad[1])}`], ['|S total|', num(norm(f.S))]);
+    ], ['By near / rad', `${num(f.Bnear[1])} / ${num(f.Brad[1])}`], ['|S total|', num(norm(f.S))]);
     $('probe-readout').replaceChildren(...entries.flatMap(([key, value]) => {
       const dt = document.createElement('dt'),
         dd = document.createElement('dd');
@@ -285,8 +322,10 @@ function updateFields() {
     drawPower(motion);
     lastPlot = performance.now();
   }
-  $('phase').value = ((t % TAU) + TAU) % TAU;
-  $('phase-value').textContent = `${(t/TAU%1).toFixed(2)} τ`;
+  $('phase').value = t;
+  $('phase-value').textContent = `${t.toFixed(2)} t`;
+  $('moment-label').textContent = state.motion === 'linear' ? 'LINEAR COMPARISON' : t < -1.5 ? '01 / APPROACHING THE TURN' : t < 1.5 ? '02 / THE ELECTRON TURNS' : t < 3 ? '03 / FOLLOW THE DELAY' : '04 / THE RESPONSE SPREADS';
+  $('moment-detail').textContent = state.motion === 'linear' ? 'Sinusoidal motion along z' : t < -1.5 ? 'Watch the white velocity arrow rotate.' : t < 1.5 ? 'Near and distant samples see different source times.' : 'Compare A and B: their fields sample different moments of the turn.';
 }
 
 function drawPower(motion) {
@@ -298,6 +337,15 @@ function drawPower(motion) {
     cy = h / 2,
     rad = 115;
   ctx.clearRect(0, 0, w, h);
+  if (!motion.axisymmetric) {
+    ctx.fillStyle = '#95a7b8'; ctx.font = '15px system-ui';
+    ctx.fillText('Turning motion is not axisymmetric.', 55, 135);
+    ctx.fillText('Choose Linear comparison for the meridian power plot.', 55, 163);
+    const source = motion.at(state.time), v = source.velocity, a = source.acceleration;
+    const total = (2 / 3) * (norm(a) ** 2 - norm(cross(v, a)) ** 2) / (1 - norm(v) ** 2) ** 3;
+    $('power-value').textContent = `Full-sphere Liénard power ${total.toExponential(3)} · emission t = ${state.time.toFixed(3)}`;
+    return;
+  }
   const n = 180,
     values = Array.from({
       length: n + 1
@@ -351,26 +399,36 @@ function render() {
   const start = performance.now();
   updateFields();
   renderer.render(scene, camera);
-  const p = new T.Vector3(0, 0, 7).project(camera),
+  const p = new T.Vector3(0, 0, -5.8).project(camera),
     box = host.getBoundingClientRect();
   $('axis-label').style.left = `${(p.x+1)*box.width/2+8}px`;
   $('axis-label').style.top = `${host.offsetTop+(1-p.y)*box.height/2}px`;
+  for (const [id, position] of [['electron-label', electron.position], ...witnesses.map(w => [w.id + '-label', w.marker.position])]) {
+    const projected = position.clone().project(camera), el = $(id);
+    el.style.left = `${(projected.x + 1) * box.width / 2 + 10}px`;
+    el.style.top = `${host.offsetTop + (1 - projected.y) * box.height / 2 - 14}px`;
+    el.hidden = Math.abs(projected.x) > .95 || Math.abs(projected.y) > .95 || projected.z > 1;
+  }
   work.push(performance.now() - start);
   if (work.length > 600) work.shift();
 }
+// This trajectory is analytic, so physical time comes from a playback clock,
+// not a frame counter. Fixed-step shared loop schedules rendering only. A slow
+// frame skips displayed instants, never changes the field at a given t.
+let clockStart = 0, clockTime = state.time;
 const loop = createLoop({
-  step: dt => {
-    state.time += dt;
-  },
+  step: () => {},
   render: () => {
     const now = performance.now();
+    state.time = Math.min(10, clockTime + (now - clockStart) * .00125);
     if (previousFrame) frames.push(now - previousFrame);
     previousFrame = now;
     if (frames.length > 600) frames.shift();
     render();
-  },
-  speed: .65
+    if (state.time >= 10) pause();
+  }
 });
+document.addEventListener('visibilitychange', () => { if (document.hidden && state.playing) pause(); });
 
 function pause() {
   state.playing = false;
@@ -381,6 +439,8 @@ function pause() {
 }
 
 function play() {
+  if (state.time >= 10) state.time = -4;
+  clockStart = performance.now(); clockTime = state.time;
   state.playing = true;
   previousFrame = 0;
   loop.start();
@@ -391,7 +451,7 @@ $('play').onclick = () => state.playing ? pause() : play();
 $('reset').onclick = () => {
   pause();
   loop.reset();
-  state.time = 0;
+  state.time = -4;
   render();
 };
 $('phase').oninput = () => {
@@ -434,23 +494,30 @@ for (const id of ['probe-radius', 'probe-angle']) $(id).oninput = () => {
   $('angle-value').textContent = $('probe-angle').value + '°';
   render();
 };
-$('preset').onchange = () => {
-  const v = $('preset').value;
-  state.beta = v === 'stationary' ? 0 : .15;
+function homeCamera() { distance = 21; azimuth = 1.08; elevation = .32; updateCamera(); }
+$('home-camera').onclick = () => { homeCamera(); render(); };
+$('motion').onchange = () => {
+  state.motion = $('motion').value;
+  state.beta = state.motion === 'turn' ? .72 : .15;
   $('beta').value = state.beta;
   $('beta').oninput();
-  $('component').value = v === 'radiation' || v === 'power' ? 'rad' : v === 'near' ? 'near' : 'total';
-  $('component').onchange();
+  render();
+};
+for (const [id, time] of [['before', -4], ['during', 0], ['delay', 2], ['after', 5.5]]) $(id).onclick = () => {
+  pause(); loop.reset(); state.time = time; render();
+};
+$('preset').onchange = () => {
+  const v = $('preset').value;
+  if (v === 'stationary') { state.beta = 0; $('beta').value = 0; $('beta-value').textContent = '0.00 c'; }
+  $('component').value = v === 'radiation' ? 'rad' : v === 'near' ? 'near' : 'total';
+  state.component = $('component').value;
+  $('component-label').textContent = ({total: 'TOTAL B', near: 'VELOCITY B', rad: 'RADIATION B'})[state.component];
   $('electric').checked = v === 'near' || v === 'stationary';
   $('magnetic').checked = true;
-  $('poynting').checked = v === 'radiation';
+  $('poynting').checked = false;
   $('power').checked = v === 'power';
   $('power-panel').hidden = v !== 'power';
-  distance = v === 'near' ? 10 : 26;
-  azimuth = v === 'power' ? Math.PI / 2 : .72;
-  elevation = v === 'power' ? .02 : .34;
-  updateCamera();
-  render();
+  homeCamera(); render();
 };
 const pointers = new Map();
 let pinchDistance = 0;
@@ -506,12 +573,16 @@ window.orrery = {
   snapshot: () => ({
     ...state,
     camera: [azimuth, elevation, distance],
-    rings: rings.length,
+    streamlines: fieldSeeds.length,
+    vertices: cachedTraces.reduce((n, points) => n + points.length, 0),
+    electron: motionNow().at(state.time),
+    witnesses: witnesses.map(w => field(w.p, state.time, motionNow())),
     probe: field([+$('probe-radius').value * Math.sin(+$('probe-angle').value * Math.PI / 180), 0, +$(
         'probe-radius').value * Math.cos(+$('probe-angle').value * Math.PI / 180)], state.time,
-      sinusoid(state.beta))
+      motionNow())
   }),
   metrics: () => ({
+    lastFieldCostMs: lastFieldCost,
     frameIntervalsMs: [...frames],
     cpuRenderMs: [...work],
     drawCalls: renderer.info.render.calls,
