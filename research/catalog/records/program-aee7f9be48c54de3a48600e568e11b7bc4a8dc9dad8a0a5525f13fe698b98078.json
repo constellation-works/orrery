@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:rar-network-fluctuation-limit",
+  "aliases": [
+    "rar-network-fluctuation-limit",
+    "lab/sims/rar-network-fluctuation-limit/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "d07a117576933205c663cca8bbc6e716a28a5c44",
+    "sha256": "sha256:8d2ae2572cb8a20e74c7d55d3126db12bd6f014e38551bc50fa7553c52fb5a52",
+    "path": "lab/sims/rar-network-fluctuation-limit/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/rar-network-fluctuation-limit/sim.json",
+    "source_sha256": "sha256:8d2ae2572cb8a20e74c7d55d3126db12bd6f014e38551bc50fa7553c52fb5a52",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "RAR network-force fluctuation limit"
+  },
+  "revision_id": "sha256:aee7f9be48c54de3a48600e568e11b7bc4a8dc9dad8a0a5525f13fe698b98078"
+}

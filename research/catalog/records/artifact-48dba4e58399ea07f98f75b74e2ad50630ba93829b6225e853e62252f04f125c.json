@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Frotation-curve-distributed-mass%2Findex.html",
+  "aliases": [
+    "lab/sims/rotation-curve-distributed-mass/index.html"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "5d55d8aa80a584193bec782219112c259f9ad100",
+    "sha256": "sha256:a1e89eb9a5fc332fbe47f16e3846608b5a4ebd283d05c440aa81c24c0f64e3c3",
+    "path": "lab/sims/rotation-curve-distributed-mass/index.html",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/rotation-curve-distributed-mass/index.html",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:a1e89eb9a5fc332fbe47f16e3846608b5a4ebd283d05c440aa81c24c0f64e3c3",
+    "locator": "lab/sims/rotation-curve-distributed-mass/index.html",
+    "media_type": "text/html"
+  },
+  "revision_id": "sha256:48dba4e58399ea07f98f75b74e2ad50630ba93829b6225e853e62252f04f125c"
+}

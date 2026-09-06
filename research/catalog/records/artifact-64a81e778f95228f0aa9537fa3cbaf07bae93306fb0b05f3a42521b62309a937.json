@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2Fassets%2Fradial-drift-results.json",
+  "aliases": [
+    "lab/sims/scarcity-rotation-curve-fit/assets/radial-drift-results.json",
+    "lab/sims/scarcity-rotation-curve-fit/assets/radial-drift-results.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "321d2609572d9eb269184880d0a96e69369efec8",
+    "sha256": "sha256:d2cffce9aed2e0da79bf26fa3695abbe59279a8d545fdaee9bffe185de3c1872",
+    "path": "lab/sims/scarcity-rotation-curve-fit/assets/radial-drift-results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/scarcity-rotation-curve-fit/assets/radial-drift-results.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:d2cffce9aed2e0da79bf26fa3695abbe59279a8d545fdaee9bffe185de3c1872",
+    "legacy_anonymous_alias": "5424fe36e1e045f475d9781c2aa91765b82594e9108464159e1b54daa5f2a46c",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:d2cffce9aed2e0da79bf26fa3695abbe59279a8d545fdaee9bffe185de3c1872",
+    "locator": "lab/sims/scarcity-rotation-curve-fit/assets/radial-drift-results.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:64a81e778f95228f0aa9537fa3cbaf07bae93306fb0b05f3a42521b62309a937"
+}

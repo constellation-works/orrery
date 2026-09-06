@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsolar-system-nbody%2Fscarcity%2Fsignature-vs-floor.png",
+  "aliases": [
+    "lab/sims/solar-system-nbody/scarcity/signature-vs-floor.png"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "ed44ba512a6855d10be5f2686ce6746a6cd31be1",
+    "sha256": "sha256:3f91466fc457b469e66ef34355a786cec6548def4157d21df7122741ad67179d",
+    "path": "lab/sims/solar-system-nbody/scarcity/signature-vs-floor.png",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/solar-system-nbody/scarcity/signature-vs-floor.png",
+    "scientific_role": "figure"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:3f91466fc457b469e66ef34355a786cec6548def4157d21df7122741ad67179d",
+    "locator": "lab/sims/solar-system-nbody/scarcity/signature-vs-floor.png",
+    "media_type": "image/png"
+  },
+  "revision_id": "sha256:85f701ab0c4f2b0d787c4172fd97d6ba7504a410810c51af85d73301b5d44469"
+}

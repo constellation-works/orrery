@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:wbsel-candidate-oracle-regression",
+  "aliases": [
+    "wbsel-candidate-oracle-regression"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "214e0067bd12c7e8ff71546f5a395d301b346477",
+    "sha256": "sha256:5414f2c4756337a1b656e763cae4b47a1621cf27787614de713d57e4019ace76",
+    "path": "research/wide-binary/records/claim-79ac5b0fc943fa6ab255f10439710546b578fb36e8770a177ba565c7fc3b92f4.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Historical synthetic/model calibration only; no new scientific adjudication or nature-level inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "wbsel-candidate-oracle-regression",
+    "family": "wide-binary-selection-methodology",
+    "kind": "model-property",
+    "status": "untested",
+    "claim": "An independent exhaustive great-circle candidate oracle (astropy SkyCoord.search_around_sky), run on every synthetic realization in this protocol, reproduces Astrolabe's cKDTree-based candidate/pair set exactly, confirming the ORB-11217 completeness fix continues to hold on the nonuniform, RA-wrap, and polar footprints used here.",
+    "kill": "Any realization where the independent oracle's candidate or final pair set disagrees with Astrolabe's, on any footprint (equatorial, wrap, or polar) — this reopens a candidate-completeness question against Astrolabe directly and is not folded into this protocol's own bias-statistic verdict.",
+    "links": [
+      "../../studies/wide-binary-selection-bias-preregistration.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "domain": "model",
+    "statement": "An independent exhaustive great-circle candidate oracle (astropy SkyCoord.search_around_sky), run on every synthetic realization in this protocol, reproduces Astrolabe's cKDTree-based candidate/pair set exactly, confirming the ORB-11217 completeness fix continues to hold on the nonuniform, RA-wrap, and polar footprints used here."
+  },
+  "revision_id": "sha256:79ac5b0fc943fa6ab255f10439710546b578fb36e8770a177ba565c7fc3b92f4"
+}

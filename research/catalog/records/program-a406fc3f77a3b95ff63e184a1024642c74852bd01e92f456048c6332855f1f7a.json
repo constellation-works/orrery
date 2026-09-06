@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:wide-binary-selection-bias",
+  "aliases": [
+    "wide-binary-selection-bias",
+    "lab/sims/wide-binary-selection-bias/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "b295015be42f93f5cbd5e59f8e181035a5efce52",
+    "sha256": "sha256:d9a5c8f63ac62acf061fe6ef3e2d89ee8fd3b5976c83ce2dabc45159cda19ec5",
+    "path": "lab/sims/wide-binary-selection-bias/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/wide-binary-selection-bias/sim.json",
+    "source_sha256": "sha256:d9a5c8f63ac62acf061fe6ef3e2d89ee8fd3b5976c83ce2dabc45159cda19ec5",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Wide-binary selection-bias injection/recovery control"
+  },
+  "revision_id": "sha256:a406fc3f77a3b95ff63e184a1024642c74852bd01e92f456048c6332855f1f7a"
+}

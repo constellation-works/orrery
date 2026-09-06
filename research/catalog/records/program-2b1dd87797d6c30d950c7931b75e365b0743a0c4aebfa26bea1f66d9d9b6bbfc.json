@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:moving-core-acoustic-rays",
+  "aliases": [
+    "moving-core-acoustic-rays",
+    "lab/sims/moving-core-acoustic-rays/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "a8fd580ea66289648cf1b9dbbd1a0bf63fedc3da",
+    "sha256": "sha256:3afc5378eb9026a16134c9e5b43188fb7dbf46f28d4cbde49c33724c7e2570bc",
+    "path": "lab/sims/moving-core-acoustic-rays/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/moving-core-acoustic-rays/sim.json",
+    "source_sha256": "sha256:3afc5378eb9026a16134c9e5b43188fb7dbf46f28d4cbde49c33724c7e2570bc",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Moving-core acoustic rays"
+  },
+  "revision_id": "sha256:2b1dd87797d6c30d950c7931b75e365b0743a0c4aebfa26bea1f66d9d9b6bbfc"
+}

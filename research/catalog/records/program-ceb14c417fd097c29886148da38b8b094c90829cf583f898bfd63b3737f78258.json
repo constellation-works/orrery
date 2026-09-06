@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:two-substance-defect-gravity",
+  "aliases": [
+    "two-substance-defect-gravity",
+    "lab/sims/two-substance-defect-gravity/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "a03da55e130d40c7c23bb4126fa384ab59b0fce4",
+    "sha256": "sha256:c7eb0c932e32fc7f45b7d76b626c13037f5b12d1420ae6efc93f165cb5010111",
+    "path": "lab/sims/two-substance-defect-gravity/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/two-substance-defect-gravity/sim.json",
+    "source_sha256": "sha256:c7eb0c932e32fc7f45b7d76b626c13037f5b12d1420ae6efc93f165cb5010111",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Two-substance defect gravity bridge"
+  },
+  "revision_id": "sha256:ceb14c417fd097c29886148da38b8b094c90829cf583f898bfd63b3737f78258"
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Ftwo-substance-vortex-lattice%2Fassets%2Fresults.json",
+  "aliases": [
+    "lab/sims/two-substance-vortex-lattice/assets/results.json",
+    "lab/sims/two-substance-vortex-lattice/assets/results.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "b403af80e6985d7085d83188347f0d7d7c404607",
+    "sha256": "sha256:8d2519e0b6d0b4a9f96e2a139cc2951a1da017a618f13338f99101f9b2f56bb0",
+    "path": "lab/sims/two-substance-vortex-lattice/assets/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/two-substance-vortex-lattice/assets/results.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:8d2519e0b6d0b4a9f96e2a139cc2951a1da017a618f13338f99101f9b2f56bb0",
+    "legacy_anonymous_alias": "3a6b2d2466fdb242028b294721f9e7528ea572f8a75ea61caeccc345715ed04c",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:8d2519e0b6d0b4a9f96e2a139cc2951a1da017a618f13338f99101f9b2f56bb0",
+    "locator": "lab/sims/two-substance-vortex-lattice/assets/results.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:bb6744636a525a786cc14e03501fd02d5cb72b874a581cdd5ef7ca7b2bbb9084"
+}

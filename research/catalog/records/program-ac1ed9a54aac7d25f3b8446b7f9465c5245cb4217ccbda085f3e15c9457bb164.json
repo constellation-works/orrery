@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:rotation-curve-distributed-mass",
+  "aliases": [
+    "rotation-curve-distributed-mass",
+    "lab/sims/rotation-curve-distributed-mass/sim.json"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "fb28cabe2d7bc340e155d1007f2dde6d16446348",
+    "sha256": "sha256:d92b0cbe38f528e4e625d5e956f2439c94f38a8dd4aafd337a18eba7d0f6cc7d",
+    "path": "lab/sims/rotation-curve-distributed-mass/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [
+    "activity-mapping",
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/rotation-curve-distributed-mass/sim.json",
+    "source_sha256": "sha256:d92b0cbe38f528e4e625d5e956f2439c94f38a8dd4aafd337a18eba7d0f6cc7d",
+    "catalog_status": "imported",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Rotation curve of a distributed mass"
+  },
+  "revision_id": "sha256:ac1ed9a54aac7d25f3b8446b7f9465c5245cb4217ccbda085f3e15c9457bb164"
+}

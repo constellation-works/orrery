@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fdelayed-center-analytic-checks%2Fassets%2Fresults.json",
+  "aliases": [
+    "lab/sims/delayed-center-analytic-checks/assets/results.json",
+    "lab/sims/delayed-center-analytic-checks/assets/results.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "332d6fc65c5e3bbd1b1059944b1c3fd9284b2eef",
+    "sha256": "sha256:3e71a831b5e4b9a3862074577d992693d35206b06b64cc048744bc91f826d526",
+    "path": "lab/sims/delayed-center-analytic-checks/assets/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/delayed-center-analytic-checks/assets/results.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:3e71a831b5e4b9a3862074577d992693d35206b06b64cc048744bc91f826d526",
+    "legacy_anonymous_alias": "ed53bcb7c3b00dcfe393e3c458f3be1ca3419604a541bb4da26a69d4bc91911b",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:3e71a831b5e4b9a3862074577d992693d35206b06b64cc048744bc91f826d526",
+    "locator": "lab/sims/delayed-center-analytic-checks/assets/results.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:c3595bd60872dd85290076e6cf94e3bb105f6778002f0620d14b38d0f392dc44"
+}

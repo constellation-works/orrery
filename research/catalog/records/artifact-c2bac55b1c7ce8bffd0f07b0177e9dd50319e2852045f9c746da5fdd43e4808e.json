@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flattice-photon-propagation%2Fassets%2Fresults.json",
+  "aliases": [
+    "lab/sims/lattice-photon-propagation/assets/results.json",
+    "lab/sims/lattice-photon-propagation/assets/results.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "951b41aed72d99fa1ca7977232baca159493dfee",
+    "sha256": "sha256:ea1e1e46f09a6e79cf10318caea9970dabac253d3c4189b85d6d0eeba7665d11",
+    "path": "lab/sims/lattice-photon-propagation/assets/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/lattice-photon-propagation/assets/results.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:ea1e1e46f09a6e79cf10318caea9970dabac253d3c4189b85d6d0eeba7665d11",
+    "legacy_anonymous_alias": "b7981a7ff096ae041ebb3ff19e1200bace348ac49ca055cfcd69765bbe0446a5",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:ea1e1e46f09a6e79cf10318caea9970dabac253d3c4189b85d6d0eeba7665d11",
+    "locator": "lab/sims/lattice-photon-propagation/assets/results.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:c2bac55b1c7ce8bffd0f07b0177e9dd50319e2852045f9c746da5fdd43e4808e"
+}

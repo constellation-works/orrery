@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:delayed-center-analytic-checks",
+  "aliases": [
+    "delayed-center-analytic-checks",
+    "lab/sims/delayed-center-analytic-checks/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "702ed86feddaf4325178a2790d6a272f6f6202f2",
+    "sha256": "sha256:27d0e458136b0cabe4f61724066525985699f501bdb79cba2a52783fde60e638",
+    "path": "lab/sims/delayed-center-analytic-checks/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/delayed-center-analytic-checks/sim.json",
+    "source_sha256": "sha256:27d0e458136b0cabe4f61724066525985699f501bdb79cba2a52783fde60e638",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Delayed-center analytic checks"
+  },
+  "revision_id": "sha256:88103f5b2c9dcdd3643adcd95817f98cee393e05d611511f361e6058f5ecf5b0"
+}

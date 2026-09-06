@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:two-substance-vortex-lattice",
+  "aliases": [
+    "two-substance-vortex-lattice",
+    "lab/sims/two-substance-vortex-lattice/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "7fbb7943be009b03444fc28fd4085f23369d731a",
+    "sha256": "sha256:1a468c6b0456904be30b7f6f03a2ba81e7ee29301eff5110c53858e36cd51263",
+    "path": "lab/sims/two-substance-vortex-lattice/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/two-substance-vortex-lattice/sim.json",
+    "source_sha256": "sha256:1a468c6b0456904be30b7f6f03a2ba81e7ee29301eff5110c53858e36cd51263",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Two-substance lattice vortex defects"
+  },
+  "revision_id": "sha256:32ff05f65ea773428dc7b993d177b895b06c8d618bf372b66216a5c6d72bea03"
+}

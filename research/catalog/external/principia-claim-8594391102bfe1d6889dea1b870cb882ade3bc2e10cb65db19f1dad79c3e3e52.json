@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:wbsel-cap-truncation-isolation",
+  "aliases": [
+    "wbsel-cap-truncation-isolation"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "b66e5e052d7223d089a5d946becb854b9330bf0c",
+    "sha256": "sha256:4e0c18d3e9220a052f7fac3f1d6dff956b724df19abfacf14644ebb8aa32c891",
+    "path": "research/wide-binary/records/claim-8594391102bfe1d6889dea1b870cb882ade3bc2e10cb65db19f1dad79c3e3e52.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Historical synthetic/model calibration only; no new scientific adjudication or nature-level inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "wbsel-cap-truncation-isolation",
+    "family": "wide-binary-selection-methodology",
+    "kind": "model-property",
+    "status": "untested",
+    "claim": "The operational max_stars=8000 brightness cap is not itself the source of any geometry-coupled v-tilde(g_N) bias: the uncapped (R1-uncapped) and heavily-capped (R1-heavycap, max_stars=2000) arms of the same nonuniform-footprint population agree with the baseline-cap arm (R1-baseline) within the seed-to-seed bootstrap uncertainty in every populated bin.",
+    "kill": "R1-uncapped or R1-heavycap median B_i differs from R1-baseline by more than the combined seed-to-seed uncertainty in any populated bin.",
+    "links": [
+      "../../studies/wide-binary-selection-bias-preregistration.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "domain": "model",
+    "statement": "The operational max_stars=8000 brightness cap is not itself the source of any geometry-coupled v-tilde(g_N) bias: the uncapped (R1-uncapped) and heavily-capped (R1-heavycap, max_stars=2000) arms of the same nonuniform-footprint population agree with the baseline-cap arm (R1-baseline) within the seed-to-seed bootstrap uncertainty in every populated bin."
+  },
+  "revision_id": "sha256:8594391102bfe1d6889dea1b870cb882ade3bc2e10cb65db19f1dad79c3e3e52"
+}

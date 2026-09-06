@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flattice-two-source-superposition%2Fassets%2Fresults.json",
+  "aliases": [
+    "lab/sims/lattice-two-source-superposition/assets/results.json",
+    "lab/sims/lattice-two-source-superposition/assets/results.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "46bf6bb5f347f6ab7efc11861e2e25c9828052b7",
+    "sha256": "sha256:83414e0ef59992da38f9d111bd3bf24633cfad9eedeae3fca974e08e6f1dbef6",
+    "path": "lab/sims/lattice-two-source-superposition/assets/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/lattice-two-source-superposition/assets/results.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:83414e0ef59992da38f9d111bd3bf24633cfad9eedeae3fca974e08e6f1dbef6",
+    "legacy_anonymous_alias": "8a7803e9e8a11c02554129bfefe0b4de69b2aed1ec86cc8eaa1d236c6cfa75f6",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:83414e0ef59992da38f9d111bd3bf24633cfad9eedeae3fca974e08e6f1dbef6",
+    "locator": "lab/sims/lattice-two-source-superposition/assets/results.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:1481ce86523924289c06b801a706c508762fa51ab060bc33ac9f2668861b1793"
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-desktop-guide.png",
+  "aliases": [
+    "lab/sims/oscillating-electron-retarded-fields/assets/dense-desktop-guide.png"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "06b551f01449c6964868d6740e1fefdb58986ea8",
+    "sha256": "sha256:f858e9dabdbcc05ea7f13afa6e91dcc562f51f43ab8e83047962a9383297d3af",
+    "path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-desktop-guide.png",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-desktop-guide.png",
+    "scientific_role": "figure"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:f858e9dabdbcc05ea7f13afa6e91dcc562f51f43ab8e83047962a9383297d3af",
+    "locator": "lab/sims/oscillating-electron-retarded-fields/assets/dense-desktop-guide.png",
+    "media_type": "image/png"
+  },
+  "revision_id": "sha256:24a50e378056bb36af78a02d441e3572e80847595465fb02ff3442142ba315f8"
+}

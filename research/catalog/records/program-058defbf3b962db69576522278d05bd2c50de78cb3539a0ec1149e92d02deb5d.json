@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:level-core-wind-tunnel",
+  "aliases": [
+    "level-core-wind-tunnel",
+    "lab/sims/level-core-wind-tunnel/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "269ad9a6d69aee18e478c5f12aedf6fec215b11d",
+    "sha256": "sha256:5a49aad21e16e1dbd47a7632710f3044fbb8d4c8b1f5f7b3e94b02a37fdb68f8",
+    "path": "lab/sims/level-core-wind-tunnel/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/level-core-wind-tunnel/sim.json",
+    "source_sha256": "sha256:5a49aad21e16e1dbd47a7632710f3044fbb8d4c8b1f5f7b3e94b02a37fdb68f8",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Level-core wind tunnel"
+  },
+  "revision_id": "sha256:058defbf3b962db69576522278d05bd2c50de78cb3539a0ec1149e92d02deb5d"
+}

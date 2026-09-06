@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fdynamical-consumption-lattice%2Fmain.py",
+  "aliases": [
+    "lab/sims/dynamical-consumption-lattice/main.py"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "9ef1efd2bde96c972f30c1062f6a263af261884b",
+    "sha256": "sha256:f005ff47975c223e8b041784e178eaddf4cf1e8e3cf5f2788e863aad12fd3e0e",
+    "path": "lab/sims/dynamical-consumption-lattice/main.py",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/dynamical-consumption-lattice/main.py",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:f005ff47975c223e8b041784e178eaddf4cf1e8e3cf5f2788e863aad12fd3e0e",
+    "locator": "lab/sims/dynamical-consumption-lattice/main.py",
+    "media_type": "text/x-python"
+  },
+  "revision_id": "sha256:0620da0f6d5cd621e9779e851b78587c97d80b565d101cd0d828bb26e322cd39"
+}

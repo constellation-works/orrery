@@ -1,0 +1,3408 @@
+{
+  "schema_version": 1,
+  "migration": "ORB-11393",
+  "authority": {
+    "legacy_fields": "lab/sims/**/sim.json and captured JSON source bytes",
+    "research_mapping": "research/catalog/migration.json plus generated records/",
+    "gallery_projection": "lab/gallery/index.html generated only from sim.json",
+    "rule": "Never edit a generated record or gallery copy independently; change its owning source and regenerate."
+  },
+  "framework": {
+    "version": "0.2.0",
+    "git_revision": "0a9cf756e1c2522b9d5ee71c1cf462b8676f4281",
+    "record_contract": 1
+  },
+  "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+  "inventory": {
+    "json_sources": 83,
+    "catalogs": 39,
+    "captured_results": 44,
+    "units": 16653,
+    "files": [
+      {
+        "path": "lab/sims/delayed-center-analytic-checks/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:3e71a831b5e4b9a3862074577d992693d35206b06b64cc048744bc91f826d526",
+        "bytes": 23184,
+        "blob_oid": "332d6fc65c5e3bbd1b1059944b1c3fd9284b2eef",
+        "unit_count": 57,
+        "unit_map_sha256": "sha256:53e3aee8ba58a48f8145dd76eddbf1b1503d027ba7e780a8a4c39b21229799b6"
+      },
+      {
+        "path": "lab/sims/delayed-center-analytic-checks/runs/2026-09-04.json",
+        "kind": "captured-result",
+        "sha256": "sha256:3e71a831b5e4b9a3862074577d992693d35206b06b64cc048744bc91f826d526",
+        "bytes": 23184,
+        "blob_oid": "332d6fc65c5e3bbd1b1059944b1c3fd9284b2eef",
+        "unit_count": 57,
+        "unit_map_sha256": "sha256:53e3aee8ba58a48f8145dd76eddbf1b1503d027ba7e780a8a4c39b21229799b6"
+      },
+      {
+        "path": "lab/sims/delayed-center-analytic-checks/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:27d0e458136b0cabe4f61724066525985699f501bdb79cba2a52783fde60e638",
+        "bytes": 912,
+        "blob_oid": "702ed86feddaf4325178a2790d6a272f6f6202f2",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:d4810aaea6f4bcbe7e1ad3c16afead05f6bd6fe9f00776e3e5b016849ca07a6d"
+      },
+      {
+        "path": "lab/sims/dynamical-consumption-lattice/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:a73817a9d8f40e04ea52165442c9fcbfd711b1177aba6b852bef9570cca6344b",
+        "bytes": 5515,
+        "blob_oid": "048e8d41fab1826f2de26882405753bab4be45f9",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:8f953fc0e42da855e74251ef9b5395f5cfd253ad6d8dfc315420eb97147efeb4"
+      },
+      {
+        "path": "lab/sims/dynamical-consumption-lattice/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:d9abe62a74ba70b3f4dd53255c11d872b6adbfc4a9016603e33b74a130038f39",
+        "bytes": 722,
+        "blob_oid": "e5082108e025812f9451f5e1ab3554513660077a",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:44c42befb69c0e591a4cc65a0cc060735b9ec06270fe6e00c9b8a9756c6783ae"
+      },
+      {
+        "path": "lab/sims/flowing-lattice-photon-propagation/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:204613b25582d9ff93796d1bf95abe1f7fc3c096dfb41d54e4c57293cd0bbb2c",
+        "bytes": 9023,
+        "blob_oid": "8ae8c7427e12b781c524fc7dded05aa498fdb6d4",
+        "unit_count": 8,
+        "unit_map_sha256": "sha256:2894552f6c1eccbc7e0bf02fe41aa7632b119a33b7320fe95529a61dd9fc534b"
+      },
+      {
+        "path": "lab/sims/flowing-lattice-photon-propagation/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:aa347f445bb5528fea7753513764db7835d4fe11e0bd33da03f1ddc41865beb5",
+        "bytes": 762,
+        "blob_oid": "795229d0dcfc71c4ea7ce110bdcbcee5f28565ad",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:c27038384b5ffbfab754294292965d048bae92787839888baa4bfb0211d2e3e8"
+      },
+      {
+        "path": "lab/sims/frame-drag-swirl-lense-thirring-check/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:54e90cc993b1b4787325110649c158b142d68054f8709d446b6a4f3ecbc719fc",
+        "bytes": 6768,
+        "blob_oid": "d08176cad7f9c22b0317dca5a555b02db6e16cad",
+        "unit_count": 33,
+        "unit_map_sha256": "sha256:494d8dbba5db02b8ae0144042e2e50722b297c235c2586dc5d06e1fedbe7fefc"
+      },
+      {
+        "path": "lab/sims/frame-drag-swirl-lense-thirring-check/runs/2026-09-04.json",
+        "kind": "captured-result",
+        "sha256": "sha256:54e90cc993b1b4787325110649c158b142d68054f8709d446b6a4f3ecbc719fc",
+        "bytes": 6768,
+        "blob_oid": "d08176cad7f9c22b0317dca5a555b02db6e16cad",
+        "unit_count": 33,
+        "unit_map_sha256": "sha256:494d8dbba5db02b8ae0144042e2e50722b297c235c2586dc5d06e1fedbe7fefc"
+      },
+      {
+        "path": "lab/sims/frame-drag-swirl-lense-thirring-check/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:69fcc9b10956c2e6497318cb315bc89cadc483760771d1a953fba655869fe8eb",
+        "bytes": 819,
+        "blob_oid": "6cee152ddb3930a176014d1e4603648b7f79d3f0",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:35b61ea7ccc60c87f228863ef7e94bebcbc6693bb893bf8bf4b5b456cab42188"
+      },
+      {
+        "path": "lab/sims/frame-drag-swirl/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:cea3d069477f38a381a85bb075325d7271fd73eb53aebabbde6ee96c7f88f2de",
+        "bytes": 666,
+        "blob_oid": "2837c7f09501671d529e4f120aaea5fe744a6369",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:acfb754c47ad1e4744cac8dd9b75390a1326fd0462f6ea82f56dc41c83d717c8"
+      },
+      {
+        "path": "lab/sims/lattice-photon-propagation/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:ea1e1e46f09a6e79cf10318caea9970dabac253d3c4189b85d6d0eeba7665d11",
+        "bytes": 3386,
+        "blob_oid": "951b41aed72d99fa1ca7977232baca159493dfee",
+        "unit_count": 3,
+        "unit_map_sha256": "sha256:39271132000a3a797e72925bdaf00f21de76b322211b07e3d7338923ca38f4fe"
+      },
+      {
+        "path": "lab/sims/lattice-photon-propagation/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:f8180b9df7d8ceee9f0e5015de4893807776ba038d70ca7632c9808acfbf1a6d",
+        "bytes": 820,
+        "blob_oid": "0dcff72ef6cf8eb8e9075d407b48f1b41db8ba0b",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:a6da8a0d240339ebc31901f9e14d4b9ee76335417f193afa165e290e1ab023d5"
+      },
+      {
+        "path": "lab/sims/lattice-two-source-superposition/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:83414e0ef59992da38f9d111bd3bf24633cfad9eedeae3fca974e08e6f1dbef6",
+        "bytes": 7414,
+        "blob_oid": "46bf6bb5f347f6ab7efc11861e2e25c9828052b7",
+        "unit_count": 15,
+        "unit_map_sha256": "sha256:7bebc72909ad8bb62632e44cea8fa5ac84e1cb19975dcbea1270b484c4183da9"
+      },
+      {
+        "path": "lab/sims/lattice-two-source-superposition/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:e5dfc528be72da8b77efff426e202ca7e49d7ca14495ecb80ea2401e4130c16e",
+        "bytes": 806,
+        "blob_oid": "ee5591e6f646a8b60165e58347cfbadf23a4cd80",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:83745b4c72a5cc675617678db0abe199b6d0ac61a00c3e7d8ee4b453c12a00d6"
+      },
+      {
+        "path": "lab/sims/level-core-cavitation-threshold-map/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:cdc3ce1b86732d2f915988fab6ce35693ed9d9a36f13c772722db0feeba4d8ea",
+        "bytes": 87097,
+        "blob_oid": "a00ac8c3ed2e0a8060666da75bc98d1d77d0c4a1",
+        "unit_count": 112,
+        "unit_map_sha256": "sha256:ab1986a960362d5182477ce168c8531554deeab371b06a7987a09dcc054e17d3"
+      },
+      {
+        "path": "lab/sims/level-core-cavitation-threshold-map/runs/2026-09-04-seed-42.json",
+        "kind": "captured-result",
+        "sha256": "sha256:cdc3ce1b86732d2f915988fab6ce35693ed9d9a36f13c772722db0feeba4d8ea",
+        "bytes": 87097,
+        "blob_oid": "a00ac8c3ed2e0a8060666da75bc98d1d77d0c4a1",
+        "unit_count": 112,
+        "unit_map_sha256": "sha256:ab1986a960362d5182477ce168c8531554deeab371b06a7987a09dcc054e17d3"
+      },
+      {
+        "path": "lab/sims/level-core-cavitation-threshold-map/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:129e2a607aff560199d3371cfca0794967ed94df097ca524285aef72e955f9ae",
+        "bytes": 816,
+        "blob_oid": "4f101f03e47bdb576868ef17271ef8cfe4596083",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:4c2fef81b54845e94094e038cebe1518801878aae0ea86eb82f96b7b743d50f0"
+      },
+      {
+        "path": "lab/sims/level-core-dynamical-relaxation/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:7db70004a2cd8af952fc1eb2fd23d8f440d8ccd5429ff43aa53ddaf12c30e2d1",
+        "bytes": 1047114,
+        "blob_oid": "4bd6e2eaccc878e4093768e2ff886dfe667f5b72",
+        "unit_count": 2076,
+        "unit_map_sha256": "sha256:47d4507e8b513eb17f6140124bef27f44243f81b7fce58386d5e900fa0971ef5"
+      },
+      {
+        "path": "lab/sims/level-core-dynamical-relaxation/runs/2026-08-21-extended-seed-42.json",
+        "kind": "captured-result",
+        "sha256": "sha256:ca1ace9c9cb7360c093de3809530d6e3ad0235233c6e8a3f07a573a319aab86e",
+        "bytes": 2090410,
+        "blob_oid": "c2c19baedb82549a43b14d19010951785762731f",
+        "unit_count": 4311,
+        "unit_map_sha256": "sha256:b38216fbe5c9de56da8deb6acae6b41e293324f77f4b4b0da06d3b8cd305c9ab"
+      },
+      {
+        "path": "lab/sims/level-core-dynamical-relaxation/runs/2026-08-21-seed-42.json",
+        "kind": "captured-result",
+        "sha256": "sha256:c7513a45fcaf5d376ec67995fde7e778aca9560f477b76dd10ababf0ac735e0b",
+        "bytes": 739414,
+        "blob_oid": "5d1b34e871b3ce078075fb7dd124abc036f0582c",
+        "unit_count": 1643,
+        "unit_map_sha256": "sha256:48fb9b0c845ee557cfe50257922fc135964c643d820b6a40a0bfefc936f0a8f0"
+      },
+      {
+        "path": "lab/sims/level-core-dynamical-relaxation/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:bcf4225c5eb3856db0b962555398f0370550c7b77eb634aa05e8c73d951c61eb",
+        "bytes": 862,
+        "blob_oid": "15e1027846a57fcc9c0d8d00d4f01ae9bfa0832a",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:b0a7d3987bb4b12d0e9908f351a802db61c01dc53df57334c467dc0579925728"
+      },
+      {
+        "path": "lab/sims/level-core-far-field-slot-coefficients/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:247ca36fdd17fbe8f83e733dd68f64361c38930bed692511669c7fe68bdac50a",
+        "bytes": 1167061,
+        "blob_oid": "ea96c6bca11041fb7a9e5a0a5d4b8027d4420698",
+        "unit_count": 1869,
+        "unit_map_sha256": "sha256:15ea129ab918cdcfeab48214a23ab35e4b8f5f45191431963e7a3e25ffc8811b"
+      },
+      {
+        "path": "lab/sims/level-core-far-field-slot-coefficients/runs/2026-08-28-seed-42.json",
+        "kind": "captured-result",
+        "sha256": "sha256:f0d1d773f55e8a6d15ad9f1b9ff68e8931af28c6e6baffc1b69e5ae2704ed1f3",
+        "bytes": 1078855,
+        "blob_oid": "37b75ba72425ba7224d47b0a82edbd1ea77550cb",
+        "unit_count": 1848,
+        "unit_map_sha256": "sha256:dc539a9ac53140f7763e6de4a99137538824b78e68a1b52a5bb0d3daac22ff4e"
+      },
+      {
+        "path": "lab/sims/level-core-far-field-slot-coefficients/runs/2026-09-04-seed-42.json",
+        "kind": "captured-result",
+        "sha256": "sha256:247ca36fdd17fbe8f83e733dd68f64361c38930bed692511669c7fe68bdac50a",
+        "bytes": 1167061,
+        "blob_oid": "ea96c6bca11041fb7a9e5a0a5d4b8027d4420698",
+        "unit_count": 1869,
+        "unit_map_sha256": "sha256:15ea129ab918cdcfeab48214a23ab35e4b8f5f45191431963e7a3e25ffc8811b"
+      },
+      {
+        "path": "lab/sims/level-core-far-field-slot-coefficients/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:a72ba86ccce26d25425731bb74976602039a9d455f280102954e028a633ed83c",
+        "bytes": 843,
+        "blob_oid": "d39970c8ed3159d00e3acd6fdd2cf520e41b3bc2",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:37eec3dc2f2752b23ff8314a1572620f9b82acbd65143396e51bf91938d7c2f5"
+      },
+      {
+        "path": "lab/sims/level-core-two-core-superposition/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:15f433b3feb46f398ad1f750e78cd8582412d24d64acd40957132ee649b36c1a",
+        "bytes": 16307,
+        "blob_oid": "da54eb5da5dd677984c2d0647bc851ac37036a99",
+        "unit_count": 10,
+        "unit_map_sha256": "sha256:6c8d9363fece9489db1ee8cf3645bb8c31afb5b81638b597d39efae36449202d"
+      },
+      {
+        "path": "lab/sims/level-core-two-core-superposition/runs/2026-08-21-seed-42.json",
+        "kind": "captured-result",
+        "sha256": "sha256:d2e4a80b1fd7e8b8f791a35cd2193f71a5f3dda86781aae72aa329787ae16833",
+        "bytes": 37932,
+        "blob_oid": "a996c37f0ef0072c6e61f493b28ee8454bbd8685",
+        "unit_count": 82,
+        "unit_map_sha256": "sha256:886638e1300c1419df6683445cadc4d1c3815a4f7b984b6993a3877687413655"
+      },
+      {
+        "path": "lab/sims/level-core-two-core-superposition/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:325a725cea00d08ccdc74bf6583473a578307544ed684ddf80399d79e00377f6",
+        "bytes": 805,
+        "blob_oid": "4bbf47ca41fd1b6c236dad486e654d9aa570aad2",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:433c56c4c993bd20e65d42b3d6b0990e491ebfa5da0693e0466bcd394e59d8c1"
+      },
+      {
+        "path": "lab/sims/level-core-wind-tunnel/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:6ddd8a9d524fe0ecbe4d6cae7c3407e191769ec392185ce75d5f07fd3c61ae2e",
+        "bytes": 39348,
+        "blob_oid": "345d4408f8616d34c71c9fe0cec7a9738ca0334e",
+        "unit_count": 56,
+        "unit_map_sha256": "sha256:fc45fe58ea14e3da81398806e3e44780a050e0d734617ec9df965e91f1679861"
+      },
+      {
+        "path": "lab/sims/level-core-wind-tunnel/runs/2026-08-21-seed-42.json",
+        "kind": "captured-result",
+        "sha256": "sha256:95763ff92aa4ee46badcec88f0a0b0e9c17a0b853077fa5fabcd378365b4482a",
+        "bytes": 113418,
+        "blob_oid": "45d9d4fdf1efcd0831604889b8fb331869f91587",
+        "unit_count": 119,
+        "unit_map_sha256": "sha256:23d1a5ed158e9c8c8552cc2bbdd50bdbd41740b4eaf52d4090dbb1f6c804acc5"
+      },
+      {
+        "path": "lab/sims/level-core-wind-tunnel/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:5a49aad21e16e1dbd47a7632710f3044fbb8d4c8b1f5f7b3e94b02a37fdb68f8",
+        "bytes": 818,
+        "blob_oid": "269ad9a6d69aee18e478c5f12aedf6fec215b11d",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:628d0b788d2fe99ced3074e3502f0f70a2131163f75cbda923f1a1120c53decb"
+      },
+      {
+        "path": "lab/sims/level-coupled-shear-lattice/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:9f37e9fc1e2a18ccfc9c1671f4c07a269ddcdbc66e2e8774774fc60b702b627a",
+        "bytes": 4532,
+        "blob_oid": "d49903cc814cbe767b673d770147d64a04f0641f",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:fab5174e3416ce0afaf117036c6881f2d9996447d149a4688eeab75bae4b5ede"
+      },
+      {
+        "path": "lab/sims/level-coupled-shear-lattice/runs/2026-08-21-seed-42.json",
+        "kind": "captured-result",
+        "sha256": "sha256:d9824591b202c2d1521de3baecd2e3a1cf09ddebca5a3e83790ff9fe3f47aec3",
+        "bytes": 45160,
+        "blob_oid": "4469179162bc64732a027e45cefdcc1b365fd89f",
+        "unit_count": 19,
+        "unit_map_sha256": "sha256:a9e7e0ac760ae12e7bb08c0e35617489d649c8448789c3bd27701f3673fbf57d"
+      },
+      {
+        "path": "lab/sims/level-coupled-shear-lattice/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:74d27508b2111e2979a99a695fd574f2bd7a63d59e56d882819e73efaf78d2e7",
+        "bytes": 878,
+        "blob_oid": "ccd600955db72b3e397a0f036c37cbfaa8f6b810",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:c67503056e0e1457d8c47d9c86f82a054eaa566ad0dbeddfa352dcf951861217"
+      },
+      {
+        "path": "lab/sims/moving-core-acoustic-rays/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:215e55a76636886a0e3fcf735336a33c1912e5bff29cfacb18e2996cc15c9a13",
+        "bytes": 532018,
+        "blob_oid": "ae7539ec95133c2065ea7dbd6e30a623a72ca800",
+        "unit_count": 89,
+        "unit_map_sha256": "sha256:248f99e5f199221238e513b5689dfce887d3c7afb773845efbc99da584c65bfb"
+      },
+      {
+        "path": "lab/sims/moving-core-acoustic-rays/runs/2026-08-21-seed-42.json",
+        "kind": "captured-result",
+        "sha256": "sha256:82b50dfa42b6edb7f1faf67049ffad9a68885ff7ad46b40c3388be062ad9997f",
+        "bytes": 532077,
+        "blob_oid": "8b753e3c1ad7832b08d88b3b90fe4ee10f910036",
+        "unit_count": 89,
+        "unit_map_sha256": "sha256:a921792db598eabc395423da4129fd895d0b696afb103d5b8da8e17f4346dea5"
+      },
+      {
+        "path": "lab/sims/moving-core-acoustic-rays/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:3afc5378eb9026a16134c9e5b43188fb7dbf46f28d4cbde49c33724c7e2570bc",
+        "bytes": 846,
+        "blob_oid": "a8fd580ea66289648cf1b9dbbd1a0bf63fedc3da",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:814f5f06ee6e1245ad061d5932b9768519c13a5537cf498f631b6f1078532624"
+      },
+      {
+        "path": "lab/sims/oscillating-electron-retarded-fields/assets/browser-report-after-controls.json",
+        "kind": "captured-result",
+        "sha256": "sha256:e074d1628b9a5cfa21d61dca788a81c8a04108cfd3e4def7baf56e9228b08517",
+        "bytes": 11938,
+        "blob_oid": "77335f23ea8ba9034954ea82d41c01384bdd4190",
+        "unit_count": 35,
+        "unit_map_sha256": "sha256:8df80602084448371ab99af2527b5cb05efeb09fff51d7d2152284776a721e27"
+      },
+      {
+        "path": "lab/sims/oscillating-electron-retarded-fields/assets/browser-report.json",
+        "kind": "captured-result",
+        "sha256": "sha256:ef071cb2e5704f0d01505777a11ebf28197e93334a7852685eb1c9bfcdb8ab2b",
+        "bytes": 12328,
+        "blob_oid": "d2bfe9e7e6058cff0555b2cf17b4f6ed1f2e8649",
+        "unit_count": 35,
+        "unit_map_sha256": "sha256:492b17fcea143220b1b16a927be32743381f7a4dadb3476187d709233d3eaf0b"
+      },
+      {
+        "path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-numerical-report.json",
+        "kind": "captured-result",
+        "sha256": "sha256:30c9a03391f7097bee80dbac9d8a2a464e59fd4dfdbaaf23de7bfd2cefa83071",
+        "bytes": 794,
+        "blob_oid": "fd6e7a006afd029409494deffd866e02a609f055",
+        "unit_count": 3,
+        "unit_map_sha256": "sha256:e6229486c79de53875fd1b57328865937c642b561a6131f9ac906ad6a0fb6695"
+      },
+      {
+        "path": "lab/sims/oscillating-electron-retarded-fields/assets/numerical-report.json",
+        "kind": "captured-result",
+        "sha256": "sha256:1838bae0aeac0bca5273365b165beb09401908ade79fb9ac811197ca6ac16a9d",
+        "bytes": 1781,
+        "blob_oid": "eac81a7a0980d20d09acf20b0067f9c212df46cb",
+        "unit_count": 4,
+        "unit_map_sha256": "sha256:aa69c38c996ed7db67c233864e8233464f5614fc4650cef2cae05118722e4576"
+      },
+      {
+        "path": "lab/sims/oscillating-electron-retarded-fields/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:a30c12eff0d65e97aee2138897cbfa9554309d3d4849d07683a5a49b053ca0ec",
+        "bytes": 829,
+        "blob_oid": "25d5e6b968e0ed2d642c9e1c80f2c49ee405a834",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:3ef955c32182968e181963f8a3aa60543385bf676aaf03f1ff60b1705d75a1a7"
+      },
+      {
+        "path": "lab/sims/pendulum-driven/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:7b9b7f44a99310e69c963766b7c523da9ff430eda14684b378e4e40db5233a4e",
+        "bytes": 394,
+        "blob_oid": "7eefbd14828f95193c1b9b1d16b163a914ca51f8",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:1c22db327ada76db80191975581fa655145aa82951a4e926ba5531a632fbcdcd"
+      },
+      {
+        "path": "lab/sims/pingpong-bell/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:f6b32f02e01a2cb71a972645a9242b1b177cebf5e1f2c41c047f0969a1e104f1",
+        "bytes": 595,
+        "blob_oid": "a6e89006c4309ac6a76ffe53076621c1056a7528",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:b013fac2d1fa1f273eb2fc883cd7808051ff1ae37c3a0510f7a5c28029cbee51"
+      },
+      {
+        "path": "lab/sims/ppn-reduction-symbolic-checks/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:3ec580fa4799b83db49df2193b82687d526be9ad5a9890e06eefd6e6cf8e6634",
+        "bytes": 6403,
+        "blob_oid": "43fc6e57162e14d2d60a08858ea2554b52d55dc4",
+        "unit_count": 15,
+        "unit_map_sha256": "sha256:f67bbd900ff0d368b2cd8e2a3ce7e42427962aa7bafeb3e7c75151fe398415cc"
+      },
+      {
+        "path": "lab/sims/ppn-reduction-symbolic-checks/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:8017d91e1fd0778685e2da5981bf1832a1236d3920d34762323a3fc9c2c8301f",
+        "bytes": 857,
+        "blob_oid": "d8e1991b50dfd873b80cc48f0effa303016f6606",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:7c5563deb6eaacf6ba6177059413aae2b296bc361dc2a1b1a4bd7f1c70aa8c9f"
+      },
+      {
+        "path": "lab/sims/rar-network-fluctuation-limit/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:f62f8385367b8e6221dd997633c2b799fb11f4d3ccfcecda2b594b547c08e78e",
+        "bytes": 57264,
+        "blob_oid": "7bd3ea07886355510f3d326dde3b789c844f7f15",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:df69445280409534e45c0fbae4c06ab2be37981efe129ba567d53d047d75c0aa"
+      },
+      {
+        "path": "lab/sims/rar-network-fluctuation-limit/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:8d2ae2572cb8a20e74c7d55d3126db12bd6f014e38551bc50fa7553c52fb5a52",
+        "bytes": 855,
+        "blob_oid": "d07a117576933205c663cca8bbc6e716a28a5c44",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:14e22e099c7e35d28f8eabfd5d8c447b39492c2df667ff893194a7e716be2b4e"
+      },
+      {
+        "path": "lab/sims/retarded-scarcity-wake/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:ec6dcd0da72fe60c5d1d9df49286f2d62aa24776702d0a354a33cbf80c9435cc",
+        "bytes": 776,
+        "blob_oid": "f93c3b81ad817709f861a7d9e0d3ea96c684f000",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:244f4a374e0524fc78ca5fc8df3f6aaba5d6daad6393d73841c074f57cbba918"
+      },
+      {
+        "path": "lab/sims/rotation-curve-distributed-mass/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:d92b0cbe38f528e4e625d5e956f2439c94f38a8dd4aafd337a18eba7d0f6cc7d",
+        "bytes": 616,
+        "blob_oid": "fb28cabe2d7bc340e155d1007f2dde6d16446348",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:a0f726faf42aae8021b1afad712a18b7cc4bb3bab590996dad4ab3a2479b63d2"
+      },
+      {
+        "path": "lab/sims/scarcity-capped-cumulative-field/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:0bf3f14a53b5dac06107785680d9f9c4ee4699ed3943fc688f0f5c570e38d41b",
+        "bytes": 599,
+        "blob_oid": "9b83e58149e98170dafca60431016d839972372f",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:4c8e8190edc90943abe7d56ea4b9a13dc92b02fdcdc64cae5b5206cf1d936b3c"
+      },
+      {
+        "path": "lab/sims/scarcity-field-slice-toggle/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:ab992cb7090f568d4cccd5626b68b42c436f77dd6959271d6394dfdb7cc8579a",
+        "bytes": 540,
+        "blob_oid": "810f43829fadf62ae1b3862c82452c402d36e5e0",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:060dfcb41bf7d5ed9bc545d6ccf2faba7e379ea69ab58305ca02c00ea9c030ed"
+      },
+      {
+        "path": "lab/sims/scarcity-grid-weight-black-hole/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:33d102a7efbaad408c4e50e11655d872859c7542be10e7be060af024c2d6e890",
+        "bytes": 611,
+        "blob_oid": "847618c4716f7ce89095f20168a10958f5dc8cbc",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:63d89f9e6659eb18868a127fd1254826321a029f83ca77bb52352bef4d00a278"
+      },
+      {
+        "path": "lab/sims/scarcity-rotation-curve-fit/assets/radial-drift-results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:d2cffce9aed2e0da79bf26fa3695abbe59279a8d545fdaee9bffe185de3c1872",
+        "bytes": 54472,
+        "blob_oid": "321d2609572d9eb269184880d0a96e69369efec8",
+        "unit_count": 28,
+        "unit_map_sha256": "sha256:6591c3e490a14a2c08efce405461232d11d49295ab242c8c959f0f2b462e7b4f"
+      },
+      {
+        "path": "lab/sims/scarcity-rotation-curve-fit/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:f9cc34f7df9ef2351c723e79485110b8c1a77ef2bbaf59ba4c6eec212c0c21b1",
+        "bytes": 62696,
+        "blob_oid": "371ed63f207defdefbd87a9aa5d41c0ce8942c07",
+        "unit_count": 70,
+        "unit_map_sha256": "sha256:a02354252deb2b195fef013608869a36e83e3db2e1385a1d07722c64f2bef0a0"
+      },
+      {
+        "path": "lab/sims/scarcity-rotation-curve-fit/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:fcb1b9d91debf76dc8dc6709ded2302c96cfc21d38ae590158716b98ecb3c242",
+        "bytes": 842,
+        "blob_oid": "950606b0bea5e548032d5e5bc115cf0917f81f72",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:33b5c180fa7f2644bf727bdffc3d7395335c2c3ff8e2221c7b473edb319b49e2"
+      },
+      {
+        "path": "lab/sims/scarcity-shell-depletion-field/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:98942a7bd097e23e9bf1ddd0160e26219e31e740533be9384ebff13af79ed64e",
+        "bytes": 592,
+        "blob_oid": "33c2212e6061c0ad2412271f5dca68aee75b34e3",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:c4a026070321f2c74ebfd880608f2457087cd9a0ded5c4a51fdfed84b8fd8978"
+      },
+      {
+        "path": "lab/sims/scarcity-star-well-headroom/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:120e213bbd8c7f691fb8f77020b97911e88af1deeb4aeffe908423ac7767e0b8",
+        "bytes": 579,
+        "blob_oid": "555f966036f0ca058825126a9398426ec087614e",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:9a0b8e656cb8d65fe9c797fb0bf80e5cdf0ce08c58805480c3cf10e0912d82f3"
+      },
+      {
+        "path": "lab/sims/shear-consumption-lattice/runs/2026-08-12-seed-42.json",
+        "kind": "captured-result",
+        "sha256": "sha256:294f74c8842867da874e2d76fa3a64511b0a7336434deaaea12101445a9de921",
+        "bytes": 21671,
+        "blob_oid": "09395c2baed244dd81d6505a0922a11d3bbbf4b4",
+        "unit_count": 18,
+        "unit_map_sha256": "sha256:064a9ddef30f1c1b7ef2f057488494077da58884ab15188f49cbe96e6455e414"
+      },
+      {
+        "path": "lab/sims/shear-consumption-lattice/runs/2026-08-21-seed-42.json",
+        "kind": "captured-result",
+        "sha256": "sha256:78d428a4192f7fb2099cdef0266d7709e48f45a147a2051437c59f2c6508f725",
+        "bytes": 49888,
+        "blob_oid": "2949e0a7aae2c20f46b8b04fd056725b0eab80f1",
+        "unit_count": 60,
+        "unit_map_sha256": "sha256:8eb70f7ee2c72a413e4375b54c7b36a56071cdf5f51eab74f3db9b478830fac5"
+      },
+      {
+        "path": "lab/sims/shear-consumption-lattice/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:67b18a919d9093ad00f8904cb478fb84e8e9c0d5071452496c5308b9c50063f9",
+        "bytes": 782,
+        "blob_oid": "27a3cf66f9c6652dcf041ffe8716153e3c294b48",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:ab09e7de4611e7b8d9a1000ae2499cb717d6b21af61da41a62ed9a513526f0ec"
+      },
+      {
+        "path": "lab/sims/shear-consumption-lattice/summary.json",
+        "kind": "captured-result",
+        "sha256": "sha256:66cd891349a484e0097d91b3994364f864075644b7a435448e0c09d60c76e70a",
+        "bytes": 11451,
+        "blob_oid": "5807fa288c93f64da799366065b4cc88f3ef5c1e",
+        "unit_count": 7,
+        "unit_map_sha256": "sha256:0c73da1329f747a346576e0372c1ef0c32c4621fa7bfe6e28375b532cad567a4"
+      },
+      {
+        "path": "lab/sims/solar-system-nbody/baseline/summary.json",
+        "kind": "captured-result",
+        "sha256": "sha256:d74c5b105cc6b7eb1d7361032ddd4d6844c5eb3ba72e4e8a3201909f3d1f21a8",
+        "bytes": 2961,
+        "blob_oid": "d013e3ea9caec6dab71cfebad01bfe2b8fe4925e",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:81e327bb62717a48e5441abc64f1fae9a920b1c349e83a302ab25496dee098ae"
+      },
+      {
+        "path": "lab/sims/solar-system-nbody/scarcity/summary.json",
+        "kind": "captured-result",
+        "sha256": "sha256:c8bb881e2ce706a69a2d73063f60d8cb50e931d004729448cb4fe93e868c47dd",
+        "bytes": 24780,
+        "blob_oid": "9fc01159fbc2e5fac503b07ee344113b81deb646",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:897a883bf78dba5c67692c7bbdd3ff0f0d9ad835a929e03467d3c83d4a193792"
+      },
+      {
+        "path": "lab/sims/solar-system-nbody/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:72e653b5ebe7ac8ef293f8e9d3b6df4c039405500019e8da59e70c83a6cc8d5f",
+        "bytes": 1019,
+        "blob_oid": "d1e35e4848dd6c389229588b450ed95a2ee8e514",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:7aafcd6e00fa4a1deb3f6353918f422d15487bb7f4546670def2110b2b1289d1"
+      },
+      {
+        "path": "lab/sims/sparc-scarcity-universality/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:024a315a6b35ba186d0458d32f22fdd240c9b3d1190cc7b60542dab0726d48dc",
+        "bytes": 184600,
+        "blob_oid": "1ca48a84718f85ee72a5eead056425d7518c7c2b",
+        "unit_count": 150,
+        "unit_map_sha256": "sha256:0e3e05cc4ce098c959e157c6a12df96e21cd7518eccda89518ece73e53c573f1"
+      },
+      {
+        "path": "lab/sims/sparc-scarcity-universality/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:f84866a81080e9de9384d02e34a79a698eb17f4c6862602e95bf03520c6d7f1d",
+        "bytes": 812,
+        "blob_oid": "9f0879430f7b229b5cedb922e5479c33ccdc3cf6",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:e196199f1ae6e62c321267162a205c261357f7785dbe4f4999020d7e99bbeb9c"
+      },
+      {
+        "path": "lab/sims/swirl-ball-far-field/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:77739f184fae1a1b737117f20827510946683d97f5e26f9246ea90d154f86ad9",
+        "bytes": 672,
+        "blob_oid": "c8b8cedf4fcad6a15aff5f64d4269f5aeab78b9d",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:e6305921f5646b9b549f76d0d3a502de83c4374007c743d1ca5379aa680e8a77"
+      },
+      {
+        "path": "lab/sims/swirl-ball/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:35be247b7cf626f05988d5ff254e5efed9fa9b7cd0914adba9876b901ae7a972",
+        "bytes": 549,
+        "blob_oid": "b667d42ca826902685b6108b37c17b9ed91da2e2",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:0fd1ab992062835bf7a1ce6d1f5b8497c4f252f1b4684271f859331a9349afbd"
+      },
+      {
+        "path": "lab/sims/two-substance-defect-gravity/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:39aafdc81ddbacc385d361f324d0d4500a1f622d827d9dfba9bd22a632c64c12",
+        "bytes": 13130,
+        "blob_oid": "59b247a031398c42a9c05e07570bf30434edf871",
+        "unit_count": 17,
+        "unit_map_sha256": "sha256:efed75c61c5e5a1d7a015d0dd14ceb99bc40983473bad9c9e00bd0821429198e"
+      },
+      {
+        "path": "lab/sims/two-substance-defect-gravity/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:c7eb0c932e32fc7f45b7d76b626c13037f5b12d1420ae6efc93f165cb5010111",
+        "bytes": 930,
+        "blob_oid": "a03da55e130d40c7c23bb4126fa384ab59b0fce4",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:d41836970edf2ad505d2b0338112c9194df49c2d508d798d9971e961962825d1"
+      },
+      {
+        "path": "lab/sims/two-substance-dynamical-packet/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:2cb7616ad2abc6dc21f9f648c80a01c8684d0831f72c3805fbd9af703491a84b",
+        "bytes": 1668942,
+        "blob_oid": "e15cc0074daba4cf9336a63d6d4b608e01290d78",
+        "unit_count": 55,
+        "unit_map_sha256": "sha256:26b7ed86614c8f8acfe3e71078c03a52af49a21680227ab50bffe34877d7f369"
+      },
+      {
+        "path": "lab/sims/two-substance-dynamical-packet/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:8457636175dc44e082b4631bc84205d04ead7ea5e4e5931db748c8306f9066ee",
+        "bytes": 972,
+        "blob_oid": "6c5d3780ea05a03d484d2b64436691613f0851bd",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:52b3b32228da277bd859434586f70ca18d03474a1904eb8dfea5991a8400bfff"
+      },
+      {
+        "path": "lab/sims/two-substance-packet-linear-symbol/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:dd0a17f5c8f759ee3e702f6960c0ba604946612aedd21aa49dc45b2ae6b96d14",
+        "bytes": 64002,
+        "blob_oid": "8473e0b351cdaa54439a59acf66d1c085bee1d3b",
+        "unit_count": 105,
+        "unit_map_sha256": "sha256:3f579f43e8b6348c7f2a153b142cc9f57f0730cf38c4110f87b9724dea3ca33c"
+      },
+      {
+        "path": "lab/sims/two-substance-packet-linear-symbol/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:01575d201d26387268548dc8215ad3b823be031c88894e1fc0a4b62c675eca73",
+        "bytes": 939,
+        "blob_oid": "6cb8739e2d4cd530ba2c9ffdc5f4f5c6502cdac4",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:b65d6de9d0035096c7fcd25dff1f729207c1ac64cfccd4c7d55b1177801b9047"
+      },
+      {
+        "path": "lab/sims/two-substance-vortex-lattice/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:8d2519e0b6d0b4a9f96e2a139cc2951a1da017a618f13338f99101f9b2f56bb0",
+        "bytes": 35099,
+        "blob_oid": "b403af80e6985d7085d83188347f0d7d7c404607",
+        "unit_count": 133,
+        "unit_map_sha256": "sha256:be4afa2403ffe2b2c59aa4467ee6892e10f6cffe47007635b6240e848e4f6a0c"
+      },
+      {
+        "path": "lab/sims/two-substance-vortex-lattice/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:1a468c6b0456904be30b7f6f03a2ba81e7ee29301eff5110c53858e36cd51263",
+        "bytes": 777,
+        "blob_oid": "7fbb7943be009b03444fc28fd4085f23369d731a",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:8f80a16102c607702809305f94070669b07a03f86d84bafb4c0ad310fe9e3c6a"
+      },
+      {
+        "path": "lab/sims/vortex-bell/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:de95ba707a57f044bac5341eb77636a1dee03fcdcbc182ab8d1ccb25d1f2513e",
+        "bytes": 607,
+        "blob_oid": "759efccfb45a5fd431ecc3ab2d7ac8c6d524a439",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:fc8d142c43bb9713b999aab9fba162170669e8258728778b35a1a9accbc18edb"
+      },
+      {
+        "path": "lab/sims/wide-binary-control-diagnosis/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:6e0d1205e53c430a910788b148c9b7b566a305738403c23e9aa513330366d7bc",
+        "bytes": 50489,
+        "blob_oid": "637859060e286afe1e3f5091bc8a7a83e23f03d8",
+        "unit_count": 79,
+        "unit_map_sha256": "sha256:d9a7de8e53f2e214d537c0b64cdd11661e47effda62a408e5875c930261a9c1d"
+      },
+      {
+        "path": "lab/sims/wide-binary-control-diagnosis/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:199b71846af45dc811c84aa22f49c61e43ae896a51dee86fc92b095ac39cf852",
+        "bytes": 1719,
+        "blob_oid": "af114f363b8b9f92604663677c58ceec2d9fc314",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:d5cff80fc50bf5e0a580a69306d93915ac2638f9d35edb898d03e7ae318aaff8"
+      },
+      {
+        "path": "lab/sims/wide-binary-selection-bias/assets/results.json",
+        "kind": "captured-result",
+        "sha256": "sha256:d1699b6e59654ade95ab1938bb35386c87e53124bf25255e4215671e56e95ec7",
+        "bytes": 486283,
+        "blob_oid": "acb70d8c1a260541657b2fdf9249d3677778a303",
+        "unit_count": 1285,
+        "unit_map_sha256": "sha256:3c241462b9c975a69bff73266a8dda6b9fab82cbf8d8714b08cc9e47c5b7b86e"
+      },
+      {
+        "path": "lab/sims/wide-binary-selection-bias/sim.json",
+        "kind": "catalog",
+        "sha256": "sha256:d9a5c8f63ac62acf061fe6ef3e2d89ee8fd3b5976c83ce2dabc45159cda19ec5",
+        "bytes": 1473,
+        "blob_oid": "b295015be42f93f5cbd5e59f8e181035a5efce52",
+        "unit_count": 1,
+        "unit_map_sha256": "sha256:dbcd5b1a303fe229f9bac4172ee7c5a2836604e7b5cbd3b584aeac64202b8c45"
+      }
+    ]
+  },
+  "records": [
+    {
+      "path": "records/program-88103f5b2c9dcdd3643adcd95817f98cee393e05d611511f361e6058f5ecf5b0.json",
+      "id": "urn:research:orrery:program:delayed-center-analytic-checks",
+      "revision_id": "sha256:88103f5b2c9dcdd3643adcd95817f98cee393e05d611511f361e6058f5ecf5b0",
+      "source_path": "lab/sims/delayed-center-analytic-checks/sim.json",
+      "sha256": "sha256:b8901f1587450aa97d94a2762bd3b0aa82f02b92078e59b72aedf7e26ae2a270"
+    },
+    {
+      "path": "records/program-e926b42c0acd567ace32c4affb79b2b0aff763dc392e4b8e2fc9ea6a7a5ca80d.json",
+      "id": "urn:research:orrery:program:dynamical-consumption-lattice",
+      "revision_id": "sha256:e926b42c0acd567ace32c4affb79b2b0aff763dc392e4b8e2fc9ea6a7a5ca80d",
+      "source_path": "lab/sims/dynamical-consumption-lattice/sim.json",
+      "sha256": "sha256:bf774c9dc7b21b0eaf8603660f503c6f79786a102209a69691bd2b86df801aa6"
+    },
+    {
+      "path": "records/program-13323c73c796ddee246a735bb139052e22f007e6b3f3bed024426660dd9af197.json",
+      "id": "urn:research:orrery:program:flowing-lattice-photon-propagation",
+      "revision_id": "sha256:13323c73c796ddee246a735bb139052e22f007e6b3f3bed024426660dd9af197",
+      "source_path": "lab/sims/flowing-lattice-photon-propagation/sim.json",
+      "sha256": "sha256:0625fb1513c1aeac5aa2533127cf2fd4b56ed6a58d73c5ec31cf6bec47d9429f"
+    },
+    {
+      "path": "records/program-e1d4e5b65b488d68ec4d257b18506aa59c19ebd8eece4236d3366496b6fa2abf.json",
+      "id": "urn:research:orrery:program:frame-drag-swirl-lense-thirring-check",
+      "revision_id": "sha256:e1d4e5b65b488d68ec4d257b18506aa59c19ebd8eece4236d3366496b6fa2abf",
+      "source_path": "lab/sims/frame-drag-swirl-lense-thirring-check/sim.json",
+      "sha256": "sha256:187b852beef77671ad06443a22374669cfd198e21d080f5d85c8f68d8332e72b"
+    },
+    {
+      "path": "records/program-c1cb59c71d652c740be9f7c034834374c5ef5828ddc5c69302e840185fca6bce.json",
+      "id": "urn:research:orrery:program:frame-drag-swirl",
+      "revision_id": "sha256:c1cb59c71d652c740be9f7c034834374c5ef5828ddc5c69302e840185fca6bce",
+      "source_path": "lab/sims/frame-drag-swirl/sim.json",
+      "sha256": "sha256:a34714dca352a640abde406b6b45596a6a248c7404a1f910378f68a25684a88a"
+    },
+    {
+      "path": "records/program-bc2e6585a749ca44aa30ade873e1147748b7c7a128158d8973ababf646052ab4.json",
+      "id": "urn:research:orrery:program:lattice-photon-propagation",
+      "revision_id": "sha256:bc2e6585a749ca44aa30ade873e1147748b7c7a128158d8973ababf646052ab4",
+      "source_path": "lab/sims/lattice-photon-propagation/sim.json",
+      "sha256": "sha256:3f35b4227f381bd5fccf37a5bd9d7b5d20636a74192a9c6c32307dc7984a9547"
+    },
+    {
+      "path": "records/program-3d29730622ed931e1715bf8a6b7b1a2db52e407fd68d93ecf478140b25bcff61.json",
+      "id": "urn:research:orrery:program:lattice-two-source-superposition",
+      "revision_id": "sha256:3d29730622ed931e1715bf8a6b7b1a2db52e407fd68d93ecf478140b25bcff61",
+      "source_path": "lab/sims/lattice-two-source-superposition/sim.json",
+      "sha256": "sha256:32b213c42aab87acda8568557798df8d283e3702898ae4d27afecb86d891d82b"
+    },
+    {
+      "path": "records/program-02dc8c9701cc3c986270f45332d386711c63e107e569d8908bed073b4fa35b6a.json",
+      "id": "urn:research:orrery:program:level-core-cavitation-threshold-map",
+      "revision_id": "sha256:02dc8c9701cc3c986270f45332d386711c63e107e569d8908bed073b4fa35b6a",
+      "source_path": "lab/sims/level-core-cavitation-threshold-map/sim.json",
+      "sha256": "sha256:1d3fa1be9e9c061366233b3b3a0b14d96bc0bd8b53a99bfb030f5759b5cf8dee"
+    },
+    {
+      "path": "records/program-1217ef228b5c56d962e1e93aef03e813b6c3cc5f6588a29ddcb45c8f5eb9cbcc.json",
+      "id": "urn:research:orrery:program:level-core-dynamical-relaxation",
+      "revision_id": "sha256:1217ef228b5c56d962e1e93aef03e813b6c3cc5f6588a29ddcb45c8f5eb9cbcc",
+      "source_path": "lab/sims/level-core-dynamical-relaxation/sim.json",
+      "sha256": "sha256:9511f435cfc120ac0b8bf5170eb5cbfaa13a6508c2ef0011b24371b7f756999f"
+    },
+    {
+      "path": "records/program-4c74a0505b150deb5f196bb42f676837e65dedde4f6fa40c46e1b1a22ef5664d.json",
+      "id": "urn:research:orrery:program:level-core-far-field-slot-coefficients",
+      "revision_id": "sha256:4c74a0505b150deb5f196bb42f676837e65dedde4f6fa40c46e1b1a22ef5664d",
+      "source_path": "lab/sims/level-core-far-field-slot-coefficients/sim.json",
+      "sha256": "sha256:b37a11733c3cef0259737bb74b4c207b0f60142aa6ff04591cacfb98b85e933b"
+    },
+    {
+      "path": "records/program-6f609e024b2fa5eb800996af0534f070277b50e2fc004f08373550bef86c5377.json",
+      "id": "urn:research:orrery:program:level-core-two-core-superposition",
+      "revision_id": "sha256:6f609e024b2fa5eb800996af0534f070277b50e2fc004f08373550bef86c5377",
+      "source_path": "lab/sims/level-core-two-core-superposition/sim.json",
+      "sha256": "sha256:c6a14e4bd79cb7ec41e1729c3a265063e73b1a245d664c7b6e75509e8ec369f8"
+    },
+    {
+      "path": "records/program-058defbf3b962db69576522278d05bd2c50de78cb3539a0ec1149e92d02deb5d.json",
+      "id": "urn:research:orrery:program:level-core-wind-tunnel",
+      "revision_id": "sha256:058defbf3b962db69576522278d05bd2c50de78cb3539a0ec1149e92d02deb5d",
+      "source_path": "lab/sims/level-core-wind-tunnel/sim.json",
+      "sha256": "sha256:8f4fb6593c3eedcf00ab8bdfaececac52228985efe0982afd6a0a3e13929d59e"
+    },
+    {
+      "path": "records/program-b9f8478664764d78231a854d1676c30d20e38c861b34095e3f69aa0698d8d3d2.json",
+      "id": "urn:research:orrery:program:level-coupled-shear-lattice",
+      "revision_id": "sha256:b9f8478664764d78231a854d1676c30d20e38c861b34095e3f69aa0698d8d3d2",
+      "source_path": "lab/sims/level-coupled-shear-lattice/sim.json",
+      "sha256": "sha256:9dc21602e7077be0b5f87786cbce19209750f8dade1d7e1682ea1477da71242c"
+    },
+    {
+      "path": "records/program-2b1dd87797d6c30d950c7931b75e365b0743a0c4aebfa26bea1f66d9d9b6bbfc.json",
+      "id": "urn:research:orrery:program:moving-core-acoustic-rays",
+      "revision_id": "sha256:2b1dd87797d6c30d950c7931b75e365b0743a0c4aebfa26bea1f66d9d9b6bbfc",
+      "source_path": "lab/sims/moving-core-acoustic-rays/sim.json",
+      "sha256": "sha256:791196a8476df55df1acf832345a7ca2044a26f0b0723d0f84fb039bf9a9c6f9"
+    },
+    {
+      "path": "records/program-2d4663035706bbbf9eae43da54867b820b207a052c0b57e112a88ab711149dbc.json",
+      "id": "urn:research:orrery:program:oscillating-electron-retarded-fields",
+      "revision_id": "sha256:2d4663035706bbbf9eae43da54867b820b207a052c0b57e112a88ab711149dbc",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/sim.json",
+      "sha256": "sha256:ed53cf8d8e70bb95d5c75cff69b649562e334e4ba4d660b8563dd421fba92d79"
+    },
+    {
+      "path": "records/program-bef95a27ee247aaf1800c173dfec5eaa1bc36132d5c2f35a13098730e968d780.json",
+      "id": "urn:research:orrery:program:pendulum-driven",
+      "revision_id": "sha256:bef95a27ee247aaf1800c173dfec5eaa1bc36132d5c2f35a13098730e968d780",
+      "source_path": "lab/sims/pendulum-driven/sim.json",
+      "sha256": "sha256:3c554bfc6e42172241352dedd76ba09a1855d0af1642bf32ead9b293f6d7b55b"
+    },
+    {
+      "path": "records/program-645035a1e0801678d04560ed279b7000aaf73ab18494bf416649cf859ca38739.json",
+      "id": "urn:research:orrery:program:pingpong-bell",
+      "revision_id": "sha256:645035a1e0801678d04560ed279b7000aaf73ab18494bf416649cf859ca38739",
+      "source_path": "lab/sims/pingpong-bell/sim.json",
+      "sha256": "sha256:c5034ed5b06916f53422fd27d118dd81a540837a0a42d03f7e71e53a4232ac36"
+    },
+    {
+      "path": "records/program-00a484133d15ba712e8f8e41ccffdf80e8f0515481a5349ba2f8b21f89f8641c.json",
+      "id": "urn:research:orrery:program:ppn-reduction-symbolic-checks",
+      "revision_id": "sha256:00a484133d15ba712e8f8e41ccffdf80e8f0515481a5349ba2f8b21f89f8641c",
+      "source_path": "lab/sims/ppn-reduction-symbolic-checks/sim.json",
+      "sha256": "sha256:c859f3b236331b7c1c1775796adbbb969f573e5ad221eab93b8a608f07deef24"
+    },
+    {
+      "path": "records/program-aee7f9be48c54de3a48600e568e11b7bc4a8dc9dad8a0a5525f13fe698b98078.json",
+      "id": "urn:research:orrery:program:rar-network-fluctuation-limit",
+      "revision_id": "sha256:aee7f9be48c54de3a48600e568e11b7bc4a8dc9dad8a0a5525f13fe698b98078",
+      "source_path": "lab/sims/rar-network-fluctuation-limit/sim.json",
+      "sha256": "sha256:fa7b0f78606385b016e0e0e4e263d1e5602e5c5cbbcf779de008e3fd272b6c32"
+    },
+    {
+      "path": "records/program-f79f9d6a5b8bb434913ce0708a13133720d30c5a892368f74d2930f5e5bba45a.json",
+      "id": "urn:research:orrery:program:retarded-scarcity-wake",
+      "revision_id": "sha256:f79f9d6a5b8bb434913ce0708a13133720d30c5a892368f74d2930f5e5bba45a",
+      "source_path": "lab/sims/retarded-scarcity-wake/sim.json",
+      "sha256": "sha256:947f74a0b567fc1ec90d83b34eec443c45d2e179e510e15fda67c602c4e37545"
+    },
+    {
+      "path": "records/program-ac1ed9a54aac7d25f3b8446b7f9465c5245cb4217ccbda085f3e15c9457bb164.json",
+      "id": "urn:research:orrery:program:rotation-curve-distributed-mass",
+      "revision_id": "sha256:ac1ed9a54aac7d25f3b8446b7f9465c5245cb4217ccbda085f3e15c9457bb164",
+      "source_path": "lab/sims/rotation-curve-distributed-mass/sim.json",
+      "sha256": "sha256:ec9357bdd7f849e26f5ad1863f229b395dbed1b37c00b7541f9e0214766e25ba"
+    },
+    {
+      "path": "records/program-58aba4d0587f096ea76b9436a8a33991b8af508245beb11f7e0b770726861d80.json",
+      "id": "urn:research:orrery:program:scarcity-capped-cumulative-field",
+      "revision_id": "sha256:58aba4d0587f096ea76b9436a8a33991b8af508245beb11f7e0b770726861d80",
+      "source_path": "lab/sims/scarcity-capped-cumulative-field/sim.json",
+      "sha256": "sha256:b36b7aca85f7296f85ccbef7eb9e3d3e382af8d042ba0b27589d8fbc16512fb0"
+    },
+    {
+      "path": "records/program-21f89f1f4380a442a3bea2c8bd01d6637862740c9115f68c27796b8ac47d3ab3.json",
+      "id": "urn:research:orrery:program:scarcity-field-slice-toggle",
+      "revision_id": "sha256:21f89f1f4380a442a3bea2c8bd01d6637862740c9115f68c27796b8ac47d3ab3",
+      "source_path": "lab/sims/scarcity-field-slice-toggle/sim.json",
+      "sha256": "sha256:8063a2dfae27af3b7d5166f5bc85419e87f8d7dd178bedd79e73b86303e93450"
+    },
+    {
+      "path": "records/program-8cb4b93a2957fa73fdb92314666faba58ecdc3529a87b93558db1538cfa39e1c.json",
+      "id": "urn:research:orrery:program:scarcity-grid-weight-black-hole",
+      "revision_id": "sha256:8cb4b93a2957fa73fdb92314666faba58ecdc3529a87b93558db1538cfa39e1c",
+      "source_path": "lab/sims/scarcity-grid-weight-black-hole/sim.json",
+      "sha256": "sha256:3028a427e2629d8a536a842f4b2add6d612e8736ba1fc6d46e895848fe50d801"
+    },
+    {
+      "path": "records/program-f2e2eca031958d6b26515722e2368a256e18a687a7c22c1834cb82e7aa93ec18.json",
+      "id": "urn:research:orrery:program:scarcity-rotation-curve-fit",
+      "revision_id": "sha256:f2e2eca031958d6b26515722e2368a256e18a687a7c22c1834cb82e7aa93ec18",
+      "source_path": "lab/sims/scarcity-rotation-curve-fit/sim.json",
+      "sha256": "sha256:43ac70c88af9da63972362c7f9df32b2b3e265eff7c45afeb3c990e4aaa46100"
+    },
+    {
+      "path": "records/program-822a59f4e38604c9a22ca1cfedb33cf8ce1a3531b70e6891cef4b5c8ad48eb0a.json",
+      "id": "urn:research:orrery:program:scarcity-shell-depletion-field",
+      "revision_id": "sha256:822a59f4e38604c9a22ca1cfedb33cf8ce1a3531b70e6891cef4b5c8ad48eb0a",
+      "source_path": "lab/sims/scarcity-shell-depletion-field/sim.json",
+      "sha256": "sha256:1f2cea005387d819c70f6e3df58501f1910a1efc5f3cacf371701dc3ad15e870"
+    },
+    {
+      "path": "records/program-e13cc278de62bf2b18915d34a1a2f9de1cddd7093dd1d056ed64f4038866853f.json",
+      "id": "urn:research:orrery:program:scarcity-star-well-headroom",
+      "revision_id": "sha256:e13cc278de62bf2b18915d34a1a2f9de1cddd7093dd1d056ed64f4038866853f",
+      "source_path": "lab/sims/scarcity-star-well-headroom/sim.json",
+      "sha256": "sha256:9280cc2f2e519fb9d5c009f02211a5e26e32aa8bd8d8ee7cf95cc6fdc04a3ca2"
+    },
+    {
+      "path": "records/program-85297c29120681b7c8f3fbe6f0449263989ef92c5f8a7f7fd6cc456542371e0f.json",
+      "id": "urn:research:orrery:program:shear-consumption-lattice",
+      "revision_id": "sha256:85297c29120681b7c8f3fbe6f0449263989ef92c5f8a7f7fd6cc456542371e0f",
+      "source_path": "lab/sims/shear-consumption-lattice/sim.json",
+      "sha256": "sha256:e3521f2804ef8e716692736c5c4a804271d6d38662a693c0eceb6ce9881bf64b"
+    },
+    {
+      "path": "records/program-ba90c0009b60d926991b1b35334419833a86abe02f14650fda8951f6f8974ae1.json",
+      "id": "urn:research:orrery:program:solar-system-nbody",
+      "revision_id": "sha256:ba90c0009b60d926991b1b35334419833a86abe02f14650fda8951f6f8974ae1",
+      "source_path": "lab/sims/solar-system-nbody/sim.json",
+      "sha256": "sha256:57b45bb37b0f5f47c3bfaad47a78c520ccf754c123f4a3fdb65fbff138f6c8ea"
+    },
+    {
+      "path": "records/program-5f07285109a1927294bfcb77dd6a81f1b2b5506c30d0460a232bfd808f09a62b.json",
+      "id": "urn:research:orrery:program:sparc-scarcity-universality",
+      "revision_id": "sha256:5f07285109a1927294bfcb77dd6a81f1b2b5506c30d0460a232bfd808f09a62b",
+      "source_path": "lab/sims/sparc-scarcity-universality/sim.json",
+      "sha256": "sha256:8d0ff754ad5165a338d4ede8bd4836f5315e123b0e21059b43496364aa9f55fb"
+    },
+    {
+      "path": "records/program-82783de20da5b8dbf96ae7026e3036562f1f8ef33f73f8b74e602d8138d1ec82.json",
+      "id": "urn:research:orrery:program:swirl-ball-far-field",
+      "revision_id": "sha256:82783de20da5b8dbf96ae7026e3036562f1f8ef33f73f8b74e602d8138d1ec82",
+      "source_path": "lab/sims/swirl-ball-far-field/sim.json",
+      "sha256": "sha256:84cdd6228d5054b74506214abada6a56ee7b7a181ca4cc465082f58de91c738b"
+    },
+    {
+      "path": "records/program-848b71a131ff911380fa82358081080696dfce4e738b252700fda6ba87a1d1e0.json",
+      "id": "urn:research:orrery:program:swirl-ball",
+      "revision_id": "sha256:848b71a131ff911380fa82358081080696dfce4e738b252700fda6ba87a1d1e0",
+      "source_path": "lab/sims/swirl-ball/sim.json",
+      "sha256": "sha256:cbd285876ebb217e70501861ce897ee8959dda8b1b3bf67de374b7485f0f0984"
+    },
+    {
+      "path": "records/program-ceb14c417fd097c29886148da38b8b094c90829cf583f898bfd63b3737f78258.json",
+      "id": "urn:research:orrery:program:two-substance-defect-gravity",
+      "revision_id": "sha256:ceb14c417fd097c29886148da38b8b094c90829cf583f898bfd63b3737f78258",
+      "source_path": "lab/sims/two-substance-defect-gravity/sim.json",
+      "sha256": "sha256:cc84da2e9603b9c06a96e0dd18df761edc5771a89f51bf09f6c2054c10d7b0da"
+    },
+    {
+      "path": "records/program-0ed6736d8243bf50f496993a45dcc7278567410bb86459c3169510e22ada9fe7.json",
+      "id": "urn:research:orrery:program:two-substance-dynamical-packet",
+      "revision_id": "sha256:0ed6736d8243bf50f496993a45dcc7278567410bb86459c3169510e22ada9fe7",
+      "source_path": "lab/sims/two-substance-dynamical-packet/sim.json",
+      "sha256": "sha256:c8b7c8b79e4cf447fe2950f0da179430c98657c85e9e3b3a970c0cb1eb25904f"
+    },
+    {
+      "path": "records/program-2de4da5b4e330c6dc03368708c2f592311608ad4221cd9a96ff785f53c6ff4e6.json",
+      "id": "urn:research:orrery:program:two-substance-packet-linear-symbol",
+      "revision_id": "sha256:2de4da5b4e330c6dc03368708c2f592311608ad4221cd9a96ff785f53c6ff4e6",
+      "source_path": "lab/sims/two-substance-packet-linear-symbol/sim.json",
+      "sha256": "sha256:f953071fc69d90408174a03ae61fa8faabc792cfd04cc6d2816aec8a5391c0d4"
+    },
+    {
+      "path": "records/program-32ff05f65ea773428dc7b993d177b895b06c8d618bf372b66216a5c6d72bea03.json",
+      "id": "urn:research:orrery:program:two-substance-vortex-lattice",
+      "revision_id": "sha256:32ff05f65ea773428dc7b993d177b895b06c8d618bf372b66216a5c6d72bea03",
+      "source_path": "lab/sims/two-substance-vortex-lattice/sim.json",
+      "sha256": "sha256:070b0d4d53ec9f619209b67803459406a2881be4e0463f0785b23ba8bf89a18e"
+    },
+    {
+      "path": "records/program-1a54e5dde75d0930e7baa734f9b6e8c4d61f9608e8be2176fe04529f997299f6.json",
+      "id": "urn:research:orrery:program:vortex-bell",
+      "revision_id": "sha256:1a54e5dde75d0930e7baa734f9b6e8c4d61f9608e8be2176fe04529f997299f6",
+      "source_path": "lab/sims/vortex-bell/sim.json",
+      "sha256": "sha256:f12c2c166ee05db0fdfa73f5b580dce15f94447249b4df6b4dcf3ae040444755"
+    },
+    {
+      "path": "records/program-8bee052a2328cd5ae672ac2741a19c49fe7ed6788f591fcbf853d9a1284d98b6.json",
+      "id": "urn:research:orrery:program:wide-binary-control-diagnosis",
+      "revision_id": "sha256:8bee052a2328cd5ae672ac2741a19c49fe7ed6788f591fcbf853d9a1284d98b6",
+      "source_path": "lab/sims/wide-binary-control-diagnosis/sim.json",
+      "sha256": "sha256:a75545e98f7c804b353785b5d5a0d065443390cff5bacf77564f1e4818e5ea0f"
+    },
+    {
+      "path": "records/program-a406fc3f77a3b95ff63e184a1024642c74852bd01e92f456048c6332855f1f7a.json",
+      "id": "urn:research:orrery:program:wide-binary-selection-bias",
+      "revision_id": "sha256:a406fc3f77a3b95ff63e184a1024642c74852bd01e92f456048c6332855f1f7a",
+      "source_path": "lab/sims/wide-binary-selection-bias/sim.json",
+      "sha256": "sha256:a80a745ce0a9fee7b0f2d8a8d5f448a5e214b6715aaa9228eed82b05fafa3b22"
+    },
+    {
+      "path": "records/artifact-c3595bd60872dd85290076e6cf94e3bb105f6778002f0620d14b38d0f392dc44.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fdelayed-center-analytic-checks%2Fassets%2Fresults.json",
+      "revision_id": "sha256:c3595bd60872dd85290076e6cf94e3bb105f6778002f0620d14b38d0f392dc44",
+      "source_path": "lab/sims/delayed-center-analytic-checks/assets/results.json",
+      "sha256": "sha256:cb5e07fbd7e8937659fc57aa103f185e6658a692d02574ed6d0831cd29e9f4be"
+    },
+    {
+      "path": "records/artifact-ef9800361948522f7200c2607026b59606964ccf242b6cb0b8b257a501c39566.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fdelayed-center-analytic-checks%2Fruns%2F2026-09-04.json",
+      "revision_id": "sha256:ef9800361948522f7200c2607026b59606964ccf242b6cb0b8b257a501c39566",
+      "source_path": "lab/sims/delayed-center-analytic-checks/runs/2026-09-04.json",
+      "sha256": "sha256:7b2f66e6b28c889f3bb50e66bfb6453c18ec2593c29487605a3d6293a4620f20"
+    },
+    {
+      "path": "records/artifact-e0c02ebab713673822f529a4cdbe2f0841f7b53d8ae5e2d49db47b91359fc764.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fdynamical-consumption-lattice%2Fassets%2Fresults.json",
+      "revision_id": "sha256:e0c02ebab713673822f529a4cdbe2f0841f7b53d8ae5e2d49db47b91359fc764",
+      "source_path": "lab/sims/dynamical-consumption-lattice/assets/results.json",
+      "sha256": "sha256:2730c1b12ab10a46ffcfdc2ce69a77e1f073f7bd7f946c0a85ece520b2e55922"
+    },
+    {
+      "path": "records/artifact-ab7aa4188f5038299dbc1de20d38e5deca9a925edee917763847553a135aeaba.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fflowing-lattice-photon-propagation%2Fassets%2Fresults.json",
+      "revision_id": "sha256:ab7aa4188f5038299dbc1de20d38e5deca9a925edee917763847553a135aeaba",
+      "source_path": "lab/sims/flowing-lattice-photon-propagation/assets/results.json",
+      "sha256": "sha256:e50a3666b5dbd8666deb9a8445f9077a49c7e90882441118cca1d8fc49f5ca92"
+    },
+    {
+      "path": "records/artifact-15cb643580a5127b73df90b071e11199437fcb18c6976764b2d1a962fdd70145.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fframe-drag-swirl-lense-thirring-check%2Fresults.json",
+      "revision_id": "sha256:15cb643580a5127b73df90b071e11199437fcb18c6976764b2d1a962fdd70145",
+      "source_path": "lab/sims/frame-drag-swirl-lense-thirring-check/results.json",
+      "sha256": "sha256:e79473e1373cf4cb2f344ea51c3bb2c35c9fb5a218d2d4c63cf2822876f61afa"
+    },
+    {
+      "path": "records/artifact-aeb58a7415a2da247f72697ce44d4900f0f3eee2a7cbb6b8411433bf2d23c463.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fframe-drag-swirl-lense-thirring-check%2Fruns%2F2026-09-04.json",
+      "revision_id": "sha256:aeb58a7415a2da247f72697ce44d4900f0f3eee2a7cbb6b8411433bf2d23c463",
+      "source_path": "lab/sims/frame-drag-swirl-lense-thirring-check/runs/2026-09-04.json",
+      "sha256": "sha256:e0cdeb7f3046d4f0d0f1f95210e28d25580938f5e83d393d64de85232f71639d"
+    },
+    {
+      "path": "records/artifact-c2bac55b1c7ce8bffd0f07b0177e9dd50319e2852045f9c746da5fdd43e4808e.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flattice-photon-propagation%2Fassets%2Fresults.json",
+      "revision_id": "sha256:c2bac55b1c7ce8bffd0f07b0177e9dd50319e2852045f9c746da5fdd43e4808e",
+      "source_path": "lab/sims/lattice-photon-propagation/assets/results.json",
+      "sha256": "sha256:8fe261fb0e003d3b00909af9a116f0e86f7b37236d15c88e04c89373bcc000a7"
+    },
+    {
+      "path": "records/artifact-1481ce86523924289c06b801a706c508762fa51ab060bc33ac9f2668861b1793.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flattice-two-source-superposition%2Fassets%2Fresults.json",
+      "revision_id": "sha256:1481ce86523924289c06b801a706c508762fa51ab060bc33ac9f2668861b1793",
+      "source_path": "lab/sims/lattice-two-source-superposition/assets/results.json",
+      "sha256": "sha256:f7bafb7ef644bfe7a7beba7befa27d45b47b9715e974a274c317cf6744233eca"
+    },
+    {
+      "path": "records/artifact-757976f32733ef417bb32ddfe5e3f8872a70db0fc368a7a4125f90b8643429bc.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-cavitation-threshold-map%2Fassets%2Fresults.json",
+      "revision_id": "sha256:757976f32733ef417bb32ddfe5e3f8872a70db0fc368a7a4125f90b8643429bc",
+      "source_path": "lab/sims/level-core-cavitation-threshold-map/assets/results.json",
+      "sha256": "sha256:d7f94ffd6af59eceae9429f0627c0e06b731f8a91de2df68fb0278d7d1f09cc9"
+    },
+    {
+      "path": "records/artifact-da89d231677f975d05cf666d625206534af1053b73008aee672b8d69066ee39b.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-cavitation-threshold-map%2Fruns%2F2026-09-04-seed-42.json",
+      "revision_id": "sha256:da89d231677f975d05cf666d625206534af1053b73008aee672b8d69066ee39b",
+      "source_path": "lab/sims/level-core-cavitation-threshold-map/runs/2026-09-04-seed-42.json",
+      "sha256": "sha256:8351208e825c74896e92070ec5e7d4e80e376d024f844e01311db50e233221ec"
+    },
+    {
+      "path": "records/artifact-790a7e225aa65a06c119a45a9f16544d4f4a5d22e555f3342395d88bbd81ce6b.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-dynamical-relaxation%2Fassets%2Fresults.json",
+      "revision_id": "sha256:790a7e225aa65a06c119a45a9f16544d4f4a5d22e555f3342395d88bbd81ce6b",
+      "source_path": "lab/sims/level-core-dynamical-relaxation/assets/results.json",
+      "sha256": "sha256:8ddd0266ad117b7b17cf9753add8166ec74cb9d90eecea66e8ad0c4b18d733ff"
+    },
+    {
+      "path": "records/artifact-2145e5660847123a12ad7632b5f5b1c05abf96503b6b868ac8c19ad5122299fc.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-dynamical-relaxation%2Fruns%2F2026-08-21-extended-seed-42.json",
+      "revision_id": "sha256:2145e5660847123a12ad7632b5f5b1c05abf96503b6b868ac8c19ad5122299fc",
+      "source_path": "lab/sims/level-core-dynamical-relaxation/runs/2026-08-21-extended-seed-42.json",
+      "sha256": "sha256:ef18d72ae0e19a4cc9244d1198ae072a4d7834b3e020b5163838cdc6f851a849"
+    },
+    {
+      "path": "records/artifact-719d3bff8eb0be858205c32d2b47ea62c23488bf143268f9cf5bc22e672cf260.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-dynamical-relaxation%2Fruns%2F2026-08-21-seed-42.json",
+      "revision_id": "sha256:719d3bff8eb0be858205c32d2b47ea62c23488bf143268f9cf5bc22e672cf260",
+      "source_path": "lab/sims/level-core-dynamical-relaxation/runs/2026-08-21-seed-42.json",
+      "sha256": "sha256:9533fc60d7a3b7c38e0915d78b4fd338161404f1fb990f704e97d20da3dd31bd"
+    },
+    {
+      "path": "records/artifact-fd8b54deee95f58b32d1dfc742c59d8166fb73e39766bd9a4f07b2e7aede423e.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-far-field-slot-coefficients%2Fassets%2Fresults.json",
+      "revision_id": "sha256:fd8b54deee95f58b32d1dfc742c59d8166fb73e39766bd9a4f07b2e7aede423e",
+      "source_path": "lab/sims/level-core-far-field-slot-coefficients/assets/results.json",
+      "sha256": "sha256:876af8916c5b27ffaa360ce2bc2a228bd680b2d5c38e0a4f79634e02869e0b1a"
+    },
+    {
+      "path": "records/artifact-9228c6d4203ab9f7834e5524b487cf3d6b7f0e0708e21a61d7b96397e0555fc8.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-far-field-slot-coefficients%2Fruns%2F2026-08-28-seed-42.json",
+      "revision_id": "sha256:9228c6d4203ab9f7834e5524b487cf3d6b7f0e0708e21a61d7b96397e0555fc8",
+      "source_path": "lab/sims/level-core-far-field-slot-coefficients/runs/2026-08-28-seed-42.json",
+      "sha256": "sha256:44417940c9a93e11475f17d46cfeb46d52d7a9c6eebe3f3dc2e9f0a0b2520c39"
+    },
+    {
+      "path": "records/artifact-ccf0454227d555318c09e252a3d3e978f8ff2e5b08113fdaf7aed20ba0a3b634.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-far-field-slot-coefficients%2Fruns%2F2026-09-04-seed-42.json",
+      "revision_id": "sha256:ccf0454227d555318c09e252a3d3e978f8ff2e5b08113fdaf7aed20ba0a3b634",
+      "source_path": "lab/sims/level-core-far-field-slot-coefficients/runs/2026-09-04-seed-42.json",
+      "sha256": "sha256:1552f602415666b64a272abfb2e983e7e9b368a0da320926b7b19d6853ad3d64"
+    },
+    {
+      "path": "records/artifact-c0add62a3f0f31554205b98a8814ca0866ffbf4ce4973c07576f273f94161668.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-two-core-superposition%2Fassets%2Fresults.json",
+      "revision_id": "sha256:c0add62a3f0f31554205b98a8814ca0866ffbf4ce4973c07576f273f94161668",
+      "source_path": "lab/sims/level-core-two-core-superposition/assets/results.json",
+      "sha256": "sha256:cb74cf950fdf93aa9d35a087fc3448c23dc642c72130c72428ae438971ff3669"
+    },
+    {
+      "path": "records/artifact-0af3df207b630f401d85e7c139c0fbb139dd5957e0314d86307b8da83470efcc.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-two-core-superposition%2Fruns%2F2026-08-21-seed-42.json",
+      "revision_id": "sha256:0af3df207b630f401d85e7c139c0fbb139dd5957e0314d86307b8da83470efcc",
+      "source_path": "lab/sims/level-core-two-core-superposition/runs/2026-08-21-seed-42.json",
+      "sha256": "sha256:82b9eb686d99cc00ff93d8bca82d24966615436cb4fde3dfd6f4395961ec08c3"
+    },
+    {
+      "path": "records/artifact-8be79e5702c68dcde51b982b8b79bba58abe18b851ce0e61ee462d0c89819de1.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-wind-tunnel%2Fassets%2Fresults.json",
+      "revision_id": "sha256:8be79e5702c68dcde51b982b8b79bba58abe18b851ce0e61ee462d0c89819de1",
+      "source_path": "lab/sims/level-core-wind-tunnel/assets/results.json",
+      "sha256": "sha256:604b3d2fe574e4097eb06d7e2f6e03592cba3d88fafb3440b275372a7ac59ac3"
+    },
+    {
+      "path": "records/artifact-fd2cc31540f5b8038086b0b9af09abaa4098493d76c9159c9de0c4dc1bd3656b.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-wind-tunnel%2Fruns%2F2026-08-21-seed-42.json",
+      "revision_id": "sha256:fd2cc31540f5b8038086b0b9af09abaa4098493d76c9159c9de0c4dc1bd3656b",
+      "source_path": "lab/sims/level-core-wind-tunnel/runs/2026-08-21-seed-42.json",
+      "sha256": "sha256:4101a2c8c6892c8f73125e6d5c147377f89e2248776f204d15ece4ef5a9d7098"
+    },
+    {
+      "path": "records/artifact-df14961059a6bdf98985be90c590d2569eb990f3b1aeefb8e5191ba6b0eb0040.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-coupled-shear-lattice%2Fassets%2Fresults.json",
+      "revision_id": "sha256:df14961059a6bdf98985be90c590d2569eb990f3b1aeefb8e5191ba6b0eb0040",
+      "source_path": "lab/sims/level-coupled-shear-lattice/assets/results.json",
+      "sha256": "sha256:4c061be1fb7de341da538c387d3b6e1b3f27ac49ca0610a30d39232f9fdafcfd"
+    },
+    {
+      "path": "records/artifact-92f5528fc257b5c02acd29d60543dee5622da95c5f299133c1990e62b62b6a60.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-coupled-shear-lattice%2Fruns%2F2026-08-21-seed-42.json",
+      "revision_id": "sha256:92f5528fc257b5c02acd29d60543dee5622da95c5f299133c1990e62b62b6a60",
+      "source_path": "lab/sims/level-coupled-shear-lattice/runs/2026-08-21-seed-42.json",
+      "sha256": "sha256:6411fb4ed5b87327b244876690ec554b1497cbbc9706d64f4795895fa256b4f1"
+    },
+    {
+      "path": "records/artifact-5d65edf283f3950eab7e3909e2be0342c210d4a9181aad3633633eda456f83b1.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fmoving-core-acoustic-rays%2Fassets%2Fresults.json",
+      "revision_id": "sha256:5d65edf283f3950eab7e3909e2be0342c210d4a9181aad3633633eda456f83b1",
+      "source_path": "lab/sims/moving-core-acoustic-rays/assets/results.json",
+      "sha256": "sha256:2af9aedb1cab6e2281bd8b0a031be6fcbef54af8e013276230b56d466a88753c"
+    },
+    {
+      "path": "records/artifact-9aa67a21696ad84da358da2bce2f97763e77b1aac22e55504492f643550527a3.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fmoving-core-acoustic-rays%2Fruns%2F2026-08-21-seed-42.json",
+      "revision_id": "sha256:9aa67a21696ad84da358da2bce2f97763e77b1aac22e55504492f643550527a3",
+      "source_path": "lab/sims/moving-core-acoustic-rays/runs/2026-08-21-seed-42.json",
+      "sha256": "sha256:f4875d31327d890425613fc8f1069cfa6371ddb6fa259fa608e03aaa48a479f0"
+    },
+    {
+      "path": "records/artifact-78fbac742e9892bbf7c58494e25014a6c015356a5da9465b4f880b222e335ce4.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fbrowser-report-after-controls.json",
+      "revision_id": "sha256:78fbac742e9892bbf7c58494e25014a6c015356a5da9465b4f880b222e335ce4",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/browser-report-after-controls.json",
+      "sha256": "sha256:4908cbf503cffd4b305d1e3a1a2737dbeee84e06e1e7f44a601f4a6dedd278dd"
+    },
+    {
+      "path": "records/artifact-399764d55385c10a0452984675b89a009268dd080b3c5b8375981db689d34525.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fbrowser-report.json",
+      "revision_id": "sha256:399764d55385c10a0452984675b89a009268dd080b3c5b8375981db689d34525",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/browser-report.json",
+      "sha256": "sha256:705d6a1f09a874e35a285f73d9494c8ab1a52592ee5d764779cb23417d4f5972"
+    },
+    {
+      "path": "records/artifact-fd06cbd6f3d639ad88cdff23224ebd991918f45eef60586dfb8a7682247a4c77.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-numerical-report.json",
+      "revision_id": "sha256:fd06cbd6f3d639ad88cdff23224ebd991918f45eef60586dfb8a7682247a4c77",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-numerical-report.json",
+      "sha256": "sha256:b6425768c602dae5b840c4efac197a9ad1753404be8a69eed719a01901b8f39e"
+    },
+    {
+      "path": "records/artifact-4d3e1a1bb075c20968c1ae1e03c00b9cb89051d7f104e6c9c05aee166f9cb7dc.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fnumerical-report.json",
+      "revision_id": "sha256:4d3e1a1bb075c20968c1ae1e03c00b9cb89051d7f104e6c9c05aee166f9cb7dc",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/numerical-report.json",
+      "sha256": "sha256:12283ad6a3e1f91dd075e729cc5baad585ec304cb664990f1312daaeadaaa8bf"
+    },
+    {
+      "path": "records/artifact-2a95a8b93b52de450fd9ad2890288b5e2b5aa7de0e14a1923ce197b94afe8095.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fppn-reduction-symbolic-checks%2Fassets%2Fresults.json",
+      "revision_id": "sha256:2a95a8b93b52de450fd9ad2890288b5e2b5aa7de0e14a1923ce197b94afe8095",
+      "source_path": "lab/sims/ppn-reduction-symbolic-checks/assets/results.json",
+      "sha256": "sha256:5147a06d191b4ff3b1e6c63db842fad0f37c7576df9133e6edf82aee9cbebca1"
+    },
+    {
+      "path": "records/artifact-addb5b78bfd40ed13e6876f8debb7abd06dea4f926edfec1909e1e54f7ac3332.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Frar-network-fluctuation-limit%2Fassets%2Fresults.json",
+      "revision_id": "sha256:addb5b78bfd40ed13e6876f8debb7abd06dea4f926edfec1909e1e54f7ac3332",
+      "source_path": "lab/sims/rar-network-fluctuation-limit/assets/results.json",
+      "sha256": "sha256:1f5c4900c194a00e41b28fb2fac07c0594aba404e1a7afbb0b33b5ca13c9a303"
+    },
+    {
+      "path": "records/artifact-64a81e778f95228f0aa9537fa3cbaf07bae93306fb0b05f3a42521b62309a937.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2Fassets%2Fradial-drift-results.json",
+      "revision_id": "sha256:64a81e778f95228f0aa9537fa3cbaf07bae93306fb0b05f3a42521b62309a937",
+      "source_path": "lab/sims/scarcity-rotation-curve-fit/assets/radial-drift-results.json",
+      "sha256": "sha256:cb8105c356550556a491a55f8ab4bb178b39285c8091ff962e9d6b893072f5fb"
+    },
+    {
+      "path": "records/artifact-80cde3487d3d6d67492cbf17aa9d54cc3e0e8f6d4316ea5c1ba6ebb8b1ea2a2f.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2Fassets%2Fresults.json",
+      "revision_id": "sha256:80cde3487d3d6d67492cbf17aa9d54cc3e0e8f6d4316ea5c1ba6ebb8b1ea2a2f",
+      "source_path": "lab/sims/scarcity-rotation-curve-fit/assets/results.json",
+      "sha256": "sha256:9701cea0272a050f35a9fadfe2cd51d5bc3cf26bfc8de8ec063712676d605a4a"
+    },
+    {
+      "path": "records/artifact-be8af3019705123b6e1c8ac9274017b7a27abc53a2ff61ffac8882fc5b71e01f.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fshear-consumption-lattice%2Fruns%2F2026-08-12-seed-42.json",
+      "revision_id": "sha256:be8af3019705123b6e1c8ac9274017b7a27abc53a2ff61ffac8882fc5b71e01f",
+      "source_path": "lab/sims/shear-consumption-lattice/runs/2026-08-12-seed-42.json",
+      "sha256": "sha256:73b32e8b51a9f1f24126de383fb51bf7c78a79e52acd03ea25cb8642d2e57d83"
+    },
+    {
+      "path": "records/artifact-989ef1b069171edd259b749828807411116733461eae38892370e3d28040037a.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fshear-consumption-lattice%2Fruns%2F2026-08-21-seed-42.json",
+      "revision_id": "sha256:989ef1b069171edd259b749828807411116733461eae38892370e3d28040037a",
+      "source_path": "lab/sims/shear-consumption-lattice/runs/2026-08-21-seed-42.json",
+      "sha256": "sha256:6671220f518cb351508066a7a73ec29b143f3f60da39daf00ecf7cfc80eb2290"
+    },
+    {
+      "path": "records/artifact-7822e949785491a0e72522050d2b3c16a9f53acb9a9a53b31de0ea278b64681e.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fshear-consumption-lattice%2Fsummary.json",
+      "revision_id": "sha256:7822e949785491a0e72522050d2b3c16a9f53acb9a9a53b31de0ea278b64681e",
+      "source_path": "lab/sims/shear-consumption-lattice/summary.json",
+      "sha256": "sha256:cf76e6afdeccdf1f5a70da0587aed43b9ff045d276a16f87f1ddfbb68f350f4a"
+    },
+    {
+      "path": "records/artifact-78da69b0f8d5ac651daa55f0c93c4618b2ec50f59b9a3d10efec86c42901bf12.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fsolar-system-nbody%2Fbaseline%2Fsummary.json",
+      "revision_id": "sha256:78da69b0f8d5ac651daa55f0c93c4618b2ec50f59b9a3d10efec86c42901bf12",
+      "source_path": "lab/sims/solar-system-nbody/baseline/summary.json",
+      "sha256": "sha256:cc370f6a6d925f70234caa858ed25ed78ad52063e56caa81eaebfc313d17cd26"
+    },
+    {
+      "path": "records/artifact-bf029f7a8f8c7730342d60d9f5f6dc99b9f460c4ae51311ec898cef1e096dea5.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fsolar-system-nbody%2Fscarcity%2Fsummary.json",
+      "revision_id": "sha256:bf029f7a8f8c7730342d60d9f5f6dc99b9f460c4ae51311ec898cef1e096dea5",
+      "source_path": "lab/sims/solar-system-nbody/scarcity/summary.json",
+      "sha256": "sha256:cf68c5d32e201f553dba08cef477f5f93cf80ba0fc5d640c3a0d70750714d394"
+    },
+    {
+      "path": "records/artifact-d069a9bdb73224cc331f3841082abdcb4d4169ae276fca84cd532c8a763bddd5.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fsparc-scarcity-universality%2Fassets%2Fresults.json",
+      "revision_id": "sha256:d069a9bdb73224cc331f3841082abdcb4d4169ae276fca84cd532c8a763bddd5",
+      "source_path": "lab/sims/sparc-scarcity-universality/assets/results.json",
+      "sha256": "sha256:30a171cbcd73b74c36489dca67cfeb35b89a1dbb2c1fd5d0c5118c0474e2fc44"
+    },
+    {
+      "path": "records/artifact-7a8fe01216f39e2031ba2e0ff08071998f7867599ab082d28c6715dc2f033bed.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Ftwo-substance-defect-gravity%2Fassets%2Fresults.json",
+      "revision_id": "sha256:7a8fe01216f39e2031ba2e0ff08071998f7867599ab082d28c6715dc2f033bed",
+      "source_path": "lab/sims/two-substance-defect-gravity/assets/results.json",
+      "sha256": "sha256:a9f1a41ab6d8747e58892325e995bbeb6ce5c00fd5d6899f25dfb6e0677b84ab"
+    },
+    {
+      "path": "records/artifact-95f7fb4c54ffafae7f7e8e3cf1d75d826f9dbaa085d87bb5634149490d3e90e0.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Ftwo-substance-dynamical-packet%2Fassets%2Fresults.json",
+      "revision_id": "sha256:95f7fb4c54ffafae7f7e8e3cf1d75d826f9dbaa085d87bb5634149490d3e90e0",
+      "source_path": "lab/sims/two-substance-dynamical-packet/assets/results.json",
+      "sha256": "sha256:f5def77c6da398f7659ae7d3c0ebb21fd5488491148baa146d41983ea722d168"
+    },
+    {
+      "path": "records/artifact-84981947653d484019b66c0fbaa99340facb455495ae004f332cc7f2fa53f0c8.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Ftwo-substance-packet-linear-symbol%2Fassets%2Fresults.json",
+      "revision_id": "sha256:84981947653d484019b66c0fbaa99340facb455495ae004f332cc7f2fa53f0c8",
+      "source_path": "lab/sims/two-substance-packet-linear-symbol/assets/results.json",
+      "sha256": "sha256:91d63b14fdf7e2f3483c2e6644bcff3c3c6512cc16977ed35ef20be19ab14201"
+    },
+    {
+      "path": "records/artifact-bb6744636a525a786cc14e03501fd02d5cb72b874a581cdd5ef7ca7b2bbb9084.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Ftwo-substance-vortex-lattice%2Fassets%2Fresults.json",
+      "revision_id": "sha256:bb6744636a525a786cc14e03501fd02d5cb72b874a581cdd5ef7ca7b2bbb9084",
+      "source_path": "lab/sims/two-substance-vortex-lattice/assets/results.json",
+      "sha256": "sha256:35b1166628f804cc0407bcdb8cbb8ac51c3cae8e8800527099f0a08ee6c1050f"
+    },
+    {
+      "path": "records/artifact-05a1791e4b2fe1f712119289df32553a9a67aa1dc04718f80a64bbf2ab722990.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fwide-binary-control-diagnosis%2Fassets%2Fresults.json",
+      "revision_id": "sha256:05a1791e4b2fe1f712119289df32553a9a67aa1dc04718f80a64bbf2ab722990",
+      "source_path": "lab/sims/wide-binary-control-diagnosis/assets/results.json",
+      "sha256": "sha256:ff33c6bb847ed5db74ed39b6a0671a5cd6fa27269459e981f75a2dd5901df2a8"
+    },
+    {
+      "path": "records/artifact-db3bfe2a09415d4fda7ad64ba2e3e79b5906e0ff61b5909d2f9177419dbf7534.json",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fwide-binary-selection-bias%2Fassets%2Fresults.json",
+      "revision_id": "sha256:db3bfe2a09415d4fda7ad64ba2e3e79b5906e0ff61b5909d2f9177419dbf7534",
+      "source_path": "lab/sims/wide-binary-selection-bias/assets/results.json",
+      "sha256": "sha256:548ebd88dbc262b13c71f44d7da7b643e6068f8e2e83d10ea75c87352dd0fa96"
+    },
+    {
+      "path": "records/artifact-67f80def38d85e55c783ba30a9279a702d91a8df1fd49bfb343e0ac327753421.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fdelayed-center-analytic-checks%2Fmain.py",
+      "revision_id": "sha256:67f80def38d85e55c783ba30a9279a702d91a8df1fd49bfb343e0ac327753421",
+      "source_path": "lab/sims/delayed-center-analytic-checks/main.py",
+      "sha256": "sha256:171699fd0f9571b5475d81807b3f0fe9142692002f08f1c2a68c2b520be3011a"
+    },
+    {
+      "path": "records/artifact-957c9e12a7fe69e1cb83f0a231ce70b601e84bba6fe23ad2112fbf4a6a3d61d8.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fdynamical-consumption-lattice%2Fassets%2Fprofiles.png",
+      "revision_id": "sha256:957c9e12a7fe69e1cb83f0a231ce70b601e84bba6fe23ad2112fbf4a6a3d61d8",
+      "source_path": "lab/sims/dynamical-consumption-lattice/assets/profiles.png",
+      "sha256": "sha256:977da15bee7619d5e3184efe5147e024fd4fc2f9624089590916b0ad73678d5c"
+    },
+    {
+      "path": "records/artifact-0620da0f6d5cd621e9779e851b78587c97d80b565d101cd0d828bb26e322cd39.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fdynamical-consumption-lattice%2Fmain.py",
+      "revision_id": "sha256:0620da0f6d5cd621e9779e851b78587c97d80b565d101cd0d828bb26e322cd39",
+      "source_path": "lab/sims/dynamical-consumption-lattice/main.py",
+      "sha256": "sha256:5954b7b221106f3c47c8d17f8a5fcb36f3e945c563103ded860f07045124ae20"
+    },
+    {
+      "path": "records/artifact-3b094272b7a50f0bfe82293fa71b3bb2c636c53c13fd8b1d7bc9e651c751eb67.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fflowing-lattice-photon-propagation%2Fassets%2Fpropagation.png",
+      "revision_id": "sha256:3b094272b7a50f0bfe82293fa71b3bb2c636c53c13fd8b1d7bc9e651c751eb67",
+      "source_path": "lab/sims/flowing-lattice-photon-propagation/assets/propagation.png",
+      "sha256": "sha256:ec6bcba56a9b448fcdb70b79eb9de01094408d4c37da378e829429a6580d1cde"
+    },
+    {
+      "path": "records/artifact-bc3cc2c240f8d86593c0c9738bddd6d09153b8573e097d183ee1686e2e0882f6.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fflowing-lattice-photon-propagation%2Fmain.py",
+      "revision_id": "sha256:bc3cc2c240f8d86593c0c9738bddd6d09153b8573e097d183ee1686e2e0882f6",
+      "source_path": "lab/sims/flowing-lattice-photon-propagation/main.py",
+      "sha256": "sha256:5e4f7f9a78125102936674c81ced84069d49ca6a426c54b317bfd49e7706e692"
+    },
+    {
+      "path": "records/artifact-8d18df897762569ec9f916ec73d354f6139795ba680344c8ce9541f0373fee0b.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fframe-drag-swirl-lense-thirring-check%2Fmain.py",
+      "revision_id": "sha256:8d18df897762569ec9f916ec73d354f6139795ba680344c8ce9541f0373fee0b",
+      "source_path": "lab/sims/frame-drag-swirl-lense-thirring-check/main.py",
+      "sha256": "sha256:1a0458100251814270bc7c2da6126f9bc0cd98cab05ac13252718ed0cacdab44"
+    },
+    {
+      "path": "records/artifact-46799f9665f69d7f30e16043a01cacf7cc4687890acfc76f7063f875b318c1d2.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fframe-drag-swirl%2Findex.html",
+      "revision_id": "sha256:46799f9665f69d7f30e16043a01cacf7cc4687890acfc76f7063f875b318c1d2",
+      "source_path": "lab/sims/frame-drag-swirl/index.html",
+      "sha256": "sha256:a1a885bdc08d0521a474d6dae36bce8998b830defecceeef56e958cbc2c910be"
+    },
+    {
+      "path": "records/artifact-2a5ee16d22002c7b06fb720a4eaa63fd2346f7106215b693d5b39b25e6cd462d.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flattice-photon-propagation%2Fassets%2Fpropagation.png",
+      "revision_id": "sha256:2a5ee16d22002c7b06fb720a4eaa63fd2346f7106215b693d5b39b25e6cd462d",
+      "source_path": "lab/sims/lattice-photon-propagation/assets/propagation.png",
+      "sha256": "sha256:20cd4c85e560743767ad4c689ca0bc5239eb1d259d19393fc5dac2b5accddfc8"
+    },
+    {
+      "path": "records/artifact-5197ad6a26d5878777da3c7cfb1aed380b8b7b2ab9404aeef1e847094fb340e4.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flattice-photon-propagation%2Fmain.py",
+      "revision_id": "sha256:5197ad6a26d5878777da3c7cfb1aed380b8b7b2ab9404aeef1e847094fb340e4",
+      "source_path": "lab/sims/lattice-photon-propagation/main.py",
+      "sha256": "sha256:35f0c1cd8e1d45b4a9ce90550ae660c01856b9dd0c8ec1dacd83939c6b18e328"
+    },
+    {
+      "path": "records/artifact-80e602e62ac14570f60bd237c02e62a689ee6935d3c03b8589de1ea22169a9c2.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flattice-two-source-superposition%2Fassets%2Fsuperposition.png",
+      "revision_id": "sha256:80e602e62ac14570f60bd237c02e62a689ee6935d3c03b8589de1ea22169a9c2",
+      "source_path": "lab/sims/lattice-two-source-superposition/assets/superposition.png",
+      "sha256": "sha256:66aec4b9eb1a5f3937716b7932546a206a136be47b6972ce86b9138f2e3af69e"
+    },
+    {
+      "path": "records/artifact-e2a71e78c1f5edc6090cb48ea3d4c7467150735966ec267c812aeb5463f88048.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flattice-two-source-superposition%2Fmain.py",
+      "revision_id": "sha256:e2a71e78c1f5edc6090cb48ea3d4c7467150735966ec267c812aeb5463f88048",
+      "source_path": "lab/sims/lattice-two-source-superposition/main.py",
+      "sha256": "sha256:fd2d5548743bcc4da811d0fe7cb68a27f4c3874b246807e16b7867ec9185fe4e"
+    },
+    {
+      "path": "records/artifact-b8cca56c8af2e240b758475ea38b6001b9782fdf27b0a8330fa42da6c5195aa0.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flevel-core-cavitation-threshold-map%2Fmain.py",
+      "revision_id": "sha256:b8cca56c8af2e240b758475ea38b6001b9782fdf27b0a8330fa42da6c5195aa0",
+      "source_path": "lab/sims/level-core-cavitation-threshold-map/main.py",
+      "sha256": "sha256:2bed6fd051127d565f16f6adb062dfcbef93d921da6bfbe59d79479317c121b0"
+    },
+    {
+      "path": "records/artifact-ec5d817308b79cccce33c843c33f6d701728ce854e2adb75ca98741007a627d4.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flevel-core-dynamical-relaxation%2Fmain.py",
+      "revision_id": "sha256:ec5d817308b79cccce33c843c33f6d701728ce854e2adb75ca98741007a627d4",
+      "source_path": "lab/sims/level-core-dynamical-relaxation/main.py",
+      "sha256": "sha256:a9cd7b7652e6add43281693398d0564d8e83300fcf2432cc7a27825625eee941"
+    },
+    {
+      "path": "records/artifact-2fb38619c30fa89708f7e564110f7db78d7aa7eb3aac0e3016bf2f56618ff4a8.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flevel-core-far-field-slot-coefficients%2Fmain.py",
+      "revision_id": "sha256:2fb38619c30fa89708f7e564110f7db78d7aa7eb3aac0e3016bf2f56618ff4a8",
+      "source_path": "lab/sims/level-core-far-field-slot-coefficients/main.py",
+      "sha256": "sha256:dd73325cc8c1e710d9ac92bc018362885c75be88586d7f254a678d9f241253f3"
+    },
+    {
+      "path": "records/artifact-e7f0d89b87818ab1a236f39a6305f933b896abc6abd66a05a34413e1501e094c.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flevel-core-two-core-superposition%2Fmain.py",
+      "revision_id": "sha256:e7f0d89b87818ab1a236f39a6305f933b896abc6abd66a05a34413e1501e094c",
+      "source_path": "lab/sims/level-core-two-core-superposition/main.py",
+      "sha256": "sha256:c6de3843762162f67be7cbbec922a6cade515d33b41263ee2f5389122ed0d84f"
+    },
+    {
+      "path": "records/artifact-969d07e59c96b2336c90a30a73630c751e50e9f8611bf93b3fd5972ef36eda41.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flevel-core-wind-tunnel%2Fmain.py",
+      "revision_id": "sha256:969d07e59c96b2336c90a30a73630c751e50e9f8611bf93b3fd5972ef36eda41",
+      "source_path": "lab/sims/level-core-wind-tunnel/main.py",
+      "sha256": "sha256:ed9b885cd8e69ba9b8c1ccef006b00e7f7c82b78dbb53bd05536b5b5c3b4a163"
+    },
+    {
+      "path": "records/artifact-05bcf60380213faa5ebd79f674dc5ee802237bfdd9e33fd28cc0dcff7718f0d4.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flevel-coupled-shear-lattice%2Fmain.py",
+      "revision_id": "sha256:05bcf60380213faa5ebd79f674dc5ee802237bfdd9e33fd28cc0dcff7718f0d4",
+      "source_path": "lab/sims/level-coupled-shear-lattice/main.py",
+      "sha256": "sha256:bb3971fc965bfc38923c4211dece6077831e0ae9749b8b391648ec877d48b6c4"
+    },
+    {
+      "path": "records/artifact-aa37756e0710180ba8cd6adbf90dcbff3de8186512a86fd245de475f858f712e.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fmoving-core-acoustic-rays%2Fmain.py",
+      "revision_id": "sha256:aa37756e0710180ba8cd6adbf90dcbff3de8186512a86fd245de475f858f712e",
+      "source_path": "lab/sims/moving-core-acoustic-rays/main.py",
+      "sha256": "sha256:d62d18966b4ba472baed66018f0be99f4fa6ab62bf89f456c0b8ae9dbb648dcc"
+    },
+    {
+      "path": "records/artifact-355918d3943caffb419fa918dd0ae2c56e43ad0e94abda851115b1045f76b24e.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fcomparison.html",
+      "revision_id": "sha256:355918d3943caffb419fa918dd0ae2c56e43ad0e94abda851115b1045f76b24e",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/comparison.html",
+      "sha256": "sha256:7adb0a1bdbc69ec911cc8499818852fcd78fb65baba4a82e05b3f39fb86b055d"
+    },
+    {
+      "path": "records/artifact-66e47e55c73c3d6d27be6a51346bf3c896192def620813cc6d01ed685e8c03b7.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-desktop-after.png",
+      "revision_id": "sha256:66e47e55c73c3d6d27be6a51346bf3c896192def620813cc6d01ed685e8c03b7",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-desktop-after.png",
+      "sha256": "sha256:4e22d8290622988621e64cd31008bf33e0438ce0d63d3b0c0cf260396ff692c2"
+    },
+    {
+      "path": "records/artifact-a1e36db6ec660593d32d2d3c04e3d7912a372a2a3efa8cc8d7e17d50e5efad09.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-desktop-before.png",
+      "revision_id": "sha256:a1e36db6ec660593d32d2d3c04e3d7912a372a2a3efa8cc8d7e17d50e5efad09",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-desktop-before.png",
+      "sha256": "sha256:4e9429cbe5416a6a5db88bd85f4e7885dbafa7e2d4df15fde18b58f4e3010cd1"
+    },
+    {
+      "path": "records/artifact-89e2348bc8d23666fc7cea426c74f09ef4d832618d6519dce1eda33d9eee7aa1.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-desktop-delay.png",
+      "revision_id": "sha256:89e2348bc8d23666fc7cea426c74f09ef4d832618d6519dce1eda33d9eee7aa1",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-desktop-delay.png",
+      "sha256": "sha256:c94aa725461282cc8be9e8e920bbb19f55345170bc9cc9c82623a3c3c907d95e"
+    },
+    {
+      "path": "records/artifact-e84afaad875145ffebd6aa79ead60ec5ac34695248d5bbe3821601a6176bd99c.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-desktop-during.png",
+      "revision_id": "sha256:e84afaad875145ffebd6aa79ead60ec5ac34695248d5bbe3821601a6176bd99c",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-desktop-during.png",
+      "sha256": "sha256:6389861db65cd24f62ca26a64736f88223d24e1cf0d4d334a87346b4d109fd1b"
+    },
+    {
+      "path": "records/artifact-24a50e378056bb36af78a02d441e3572e80847595465fb02ff3442142ba315f8.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-desktop-guide.png",
+      "revision_id": "sha256:24a50e378056bb36af78a02d441e3572e80847595465fb02ff3442142ba315f8",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-desktop-guide.png",
+      "sha256": "sha256:f41e5e8070b775177bc21b2724635218ef7cd23c81e14b5f147ac78b82ede933"
+    },
+    {
+      "path": "records/artifact-d6d85e77d467333178d0b78a22ba3cf1624a51d1afab95530ccbad5838e01e22.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-narrow-after.png",
+      "revision_id": "sha256:d6d85e77d467333178d0b78a22ba3cf1624a51d1afab95530ccbad5838e01e22",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-narrow-after.png",
+      "sha256": "sha256:1f1af0bec22d084cc4ad0069cf951307e2b1432c4f01c3e011a600add2e4fdbd"
+    },
+    {
+      "path": "records/artifact-4c8cb28b5c69868bf06286f22ec7d790969a65d5c944492992a05dad98d07eb2.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-narrow-before.png",
+      "revision_id": "sha256:4c8cb28b5c69868bf06286f22ec7d790969a65d5c944492992a05dad98d07eb2",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-narrow-before.png",
+      "sha256": "sha256:9abe8764a119416707b24817eb0e560a14d4c4abf29708d7735f785156425b02"
+    },
+    {
+      "path": "records/artifact-501be2ffa9823ee2140ea56171acf32d0f979c2b02d98e036ab15568daaa971f.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-narrow-controls.png",
+      "revision_id": "sha256:501be2ffa9823ee2140ea56171acf32d0f979c2b02d98e036ab15568daaa971f",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-narrow-controls.png",
+      "sha256": "sha256:78bb24e84aa56eecd5a1c4fddc0f8038ecc2153de1166f545760ac49d3133bbe"
+    },
+    {
+      "path": "records/artifact-245f45d76df056b8780b52f453f1bdeaa61abd5ac9bc96dbc1215b6a3e7e85e2.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-narrow-delay.png",
+      "revision_id": "sha256:245f45d76df056b8780b52f453f1bdeaa61abd5ac9bc96dbc1215b6a3e7e85e2",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-narrow-delay.png",
+      "sha256": "sha256:75bea54cdf6690ed20a9f9a523921437e9ee49cc9d6268217bb0e8298b7d231b"
+    },
+    {
+      "path": "records/artifact-c3023c0b61c3c6f03762606a8ed55690b0579b325031d5abee26102324ce5ac6.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-narrow-during.png",
+      "revision_id": "sha256:c3023c0b61c3c6f03762606a8ed55690b0579b325031d5abee26102324ce5ac6",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-narrow-during.png",
+      "sha256": "sha256:d157cd76dd8cb5aecc9177949b56e4ac850722abbcdce29337edb3be4cbb1671"
+    },
+    {
+      "path": "records/artifact-384dc04ec33dcb6d16f4da248aac387ff9dd31f3ee2bd090fa2da19b1376530f.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-after.png",
+      "revision_id": "sha256:384dc04ec33dcb6d16f4da248aac387ff9dd31f3ee2bd090fa2da19b1376530f",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/desktop-after.png",
+      "sha256": "sha256:b4641e72b213b8adaf4db3d41448e4465d7c0b8ddf3eb12582079a189ae6f38d"
+    },
+    {
+      "path": "records/artifact-11660019ea5e63186fc5b7aa983e2478d48a90ebd3b36a43864e852439a6da00.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-atlas.png",
+      "revision_id": "sha256:11660019ea5e63186fc5b7aa983e2478d48a90ebd3b36a43864e852439a6da00",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/desktop-atlas.png",
+      "sha256": "sha256:ff6c7f4b7e7c72f7b8223e2703c27701edccd7c2c5892c01feccbc94128629d8"
+    },
+    {
+      "path": "records/artifact-d0cd2dda36b419bab6633db7dc501604997fdb6f155fad443901161e123e3758.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-before.png",
+      "revision_id": "sha256:d0cd2dda36b419bab6633db7dc501604997fdb6f155fad443901161e123e3758",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/desktop-before.png",
+      "sha256": "sha256:16cb46a84ee1fddee9d338878c1e20c117301c7e2792d9b6da29ca06b2030f0b"
+    },
+    {
+      "path": "records/artifact-6a3f4e4d554b5df9cf843e5e1090dd52d3233db1a27afef156146970f635d58e.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-delay.png",
+      "revision_id": "sha256:6a3f4e4d554b5df9cf843e5e1090dd52d3233db1a27afef156146970f635d58e",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/desktop-delay.png",
+      "sha256": "sha256:bbb21b1e9ac5a898cdfbcd68e8857b94baa3989a0b32754e561d4fbc0b5f4c1a"
+    },
+    {
+      "path": "records/artifact-347fa77aa04127452069f2aeddf43e5a889da2ff1d2b70fa1ad36b7590662eaa.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-during.png",
+      "revision_id": "sha256:347fa77aa04127452069f2aeddf43e5a889da2ff1d2b70fa1ad36b7590662eaa",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/desktop-during.png",
+      "sha256": "sha256:a075cab7715479ec4bd3361681b3ab05d02f834d2749926dd76fb64d1aec4712"
+    },
+    {
+      "path": "records/artifact-eba2f5ce3236d243a8708d36c1ab353c64e5e8986bb205054e47c19e7116ca46.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-near.png",
+      "revision_id": "sha256:eba2f5ce3236d243a8708d36c1ab353c64e5e8986bb205054e47c19e7116ca46",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/desktop-near.png",
+      "sha256": "sha256:ca011a4ca49e7b1f7d5b2c4ba2dc4f0ba7b3783cbcbc4450713e2abeaa878ae2"
+    },
+    {
+      "path": "records/artifact-3e552a9f79700e97bca759071dc7fde300328e270f7167ba53dcf2143c1015bc.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-power.png",
+      "revision_id": "sha256:3e552a9f79700e97bca759071dc7fde300328e270f7167ba53dcf2143c1015bc",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/desktop-power.png",
+      "sha256": "sha256:2eb990b8a73ecf8051e47b1b9c9cea8645678e7788438fd7e96e39c16c9ac13f"
+    },
+    {
+      "path": "records/artifact-7ecde08c8eb5f54e20d4340636f5d45eb2c5d6f03d0368a738de75081afd27e0.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fnarrow-after.png",
+      "revision_id": "sha256:7ecde08c8eb5f54e20d4340636f5d45eb2c5d6f03d0368a738de75081afd27e0",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/narrow-after.png",
+      "sha256": "sha256:de0f5bac2c7977cf707d3aa1dab7b765260473b5e4b195bdb8405e152824a721"
+    },
+    {
+      "path": "records/artifact-19ad6f4e783bb11e5bd03680e1454e12921649e657d2e7edd9ffe5c14234de27.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fnarrow-atlas.png",
+      "revision_id": "sha256:19ad6f4e783bb11e5bd03680e1454e12921649e657d2e7edd9ffe5c14234de27",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/narrow-atlas.png",
+      "sha256": "sha256:58a35a4e0ba8b7007a1490a0ab0518a4a444dae223ec264cc2a2ee1e7b598156"
+    },
+    {
+      "path": "records/artifact-9c7b491251d1a1f755479d3d8627e0d275da86373c0061155a2c6a2724ce31d7.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fnarrow-before.png",
+      "revision_id": "sha256:9c7b491251d1a1f755479d3d8627e0d275da86373c0061155a2c6a2724ce31d7",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/narrow-before.png",
+      "sha256": "sha256:a1d639eaf1ae0d1ab068c36b24935a8e1c6d166729f78acf6168a6ee392c788e"
+    },
+    {
+      "path": "records/artifact-228c69075671333c8d08237b0dd4f76734c3e124cb2e44a1048f741c21a9ed5e.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fnarrow-delay.png",
+      "revision_id": "sha256:228c69075671333c8d08237b0dd4f76734c3e124cb2e44a1048f741c21a9ed5e",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/narrow-delay.png",
+      "sha256": "sha256:c52167e5651bc04ec701767bd73279336d1514325f0865fe4e590fd7ca1bdec4"
+    },
+    {
+      "path": "records/artifact-3a865a572fe0132656e63e1d6760521980b09759a4be7cc87ac2fcf301cff14c.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fnarrow-during.png",
+      "revision_id": "sha256:3a865a572fe0132656e63e1d6760521980b09759a4be7cc87ac2fcf301cff14c",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/narrow-during.png",
+      "sha256": "sha256:3275c4c5c6002b1b660146bd561b8aa7c69ecd775e2f2d5727b9d27cf4968bab"
+    },
+    {
+      "path": "records/artifact-97f77e9503878d1e63f0c0bdc0101d20009c6866b32a8b5fc22156cbcfc3c7a7.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-desktop-after.png",
+      "revision_id": "sha256:97f77e9503878d1e63f0c0bdc0101d20009c6866b32a8b5fc22156cbcfc3c7a7",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/original-desktop-after.png",
+      "sha256": "sha256:b794a232eb2fded88108a23f7bbcf2d7eee84c9814c362b95aebbc4767b1e0bd"
+    },
+    {
+      "path": "records/artifact-d3e373bb1d0ea9d94f67fad2835b2ecc9372d90e5dfd940d840de7da9ccbca47.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-desktop-before.png",
+      "revision_id": "sha256:d3e373bb1d0ea9d94f67fad2835b2ecc9372d90e5dfd940d840de7da9ccbca47",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/original-desktop-before.png",
+      "sha256": "sha256:e120a2f0427796af8674bc53dbb3f46b00f56ebe4488c85691edf70bd81ccefc"
+    },
+    {
+      "path": "records/artifact-e7c5b9e6a4255c7370b877cd5177fc3222e75d9816474dc0f9adbdb4b198a54b.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-desktop-delay.png",
+      "revision_id": "sha256:e7c5b9e6a4255c7370b877cd5177fc3222e75d9816474dc0f9adbdb4b198a54b",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/original-desktop-delay.png",
+      "sha256": "sha256:eb7cbc222b8cfd1e34443f7e2c54190d55bf70272b924c551de4d23a4b73f22e"
+    },
+    {
+      "path": "records/artifact-75b8b5921493c972b9740e82d38824fe403f69c66e845c7b7ea8759b7c3562b9.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-desktop-during.png",
+      "revision_id": "sha256:75b8b5921493c972b9740e82d38824fe403f69c66e845c7b7ea8759b7c3562b9",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/original-desktop-during.png",
+      "sha256": "sha256:ddac8289ab04d1637ebc0f488715b52c6995db5b104340ba7b78c652c389139e"
+    },
+    {
+      "path": "records/artifact-3aaa645cb7d9e6df559c5eabe6d7a3e3e3b11abfccc8a7a0a033a51cffc8bdc6.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-narrow-after.png",
+      "revision_id": "sha256:3aaa645cb7d9e6df559c5eabe6d7a3e3e3b11abfccc8a7a0a033a51cffc8bdc6",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/original-narrow-after.png",
+      "sha256": "sha256:f970dcd3c51ee051922a888ccb9ccfae87ea251c5a1e7cfc913cab8ab83820fa"
+    },
+    {
+      "path": "records/artifact-8cf4790494a317b16709c499ca221c455f9fff5501b1c2bac6116c134a91dac6.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-narrow-before.png",
+      "revision_id": "sha256:8cf4790494a317b16709c499ca221c455f9fff5501b1c2bac6116c134a91dac6",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/original-narrow-before.png",
+      "sha256": "sha256:9e6cc866abb85813722e0f510060a238b4c7d2fb4d33631ed346b03371f58038"
+    },
+    {
+      "path": "records/artifact-94864f91ecc71cc4ce226d42c934c5d8fca96589d8a79b8e5b5e3cc2c9242709.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-narrow-delay.png",
+      "revision_id": "sha256:94864f91ecc71cc4ce226d42c934c5d8fca96589d8a79b8e5b5e3cc2c9242709",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/original-narrow-delay.png",
+      "sha256": "sha256:7533752c792a8ba0e169d58515638b2dc5acee3975921122c5497e361a90d85d"
+    },
+    {
+      "path": "records/artifact-2fa7fd0b78d66e376dd075d50f7911017c168452c81650ee4264823065d3685b.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-narrow-during.png",
+      "revision_id": "sha256:2fa7fd0b78d66e376dd075d50f7911017c168452c81650ee4264823065d3685b",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/original-narrow-during.png",
+      "sha256": "sha256:2a388ef1243e10c0dfbbcf4db778b073afec34a5a553e3a20fc5e9af8e697f21"
+    },
+    {
+      "path": "records/artifact-50a19e4fb0f8cb7f00e8f921298be2d5a850615958c7edcc93102f69f29b4985.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Findex.html",
+      "revision_id": "sha256:50a19e4fb0f8cb7f00e8f921298be2d5a850615958c7edcc93102f69f29b4985",
+      "source_path": "lab/sims/oscillating-electron-retarded-fields/index.html",
+      "sha256": "sha256:928bc98494c088e9cc8da7b30c67b66f7f31710ade021371d79e6dc2ddbe2525"
+    },
+    {
+      "path": "records/artifact-297aa04529547f37e3520aef65086162969d6ada16054f8528d9469cd4710c66.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fpendulum-driven%2Findex.html",
+      "revision_id": "sha256:297aa04529547f37e3520aef65086162969d6ada16054f8528d9469cd4710c66",
+      "source_path": "lab/sims/pendulum-driven/index.html",
+      "sha256": "sha256:211f52f15e4ca1123695faa8ce9ea1839c62e5391b45d52e588790af68899047"
+    },
+    {
+      "path": "records/artifact-2790aa62305579db4319e903b1690ce1f741849fe9a8fbf63c156f2a99fb95e3.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fpingpong-bell%2Fanalyze_bell.py",
+      "revision_id": "sha256:2790aa62305579db4319e903b1690ce1f741849fe9a8fbf63c156f2a99fb95e3",
+      "source_path": "lab/sims/pingpong-bell/analyze_bell.py",
+      "sha256": "sha256:5db948334337bb5fcd266b7c163002a022dd431501d56310bd28bbf3cdb07732"
+    },
+    {
+      "path": "records/artifact-c25aefe735df9d6615ab2afacc3244f4ee431e6877c40080a7f4b17a5c2c6af4.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fpingpong-bell%2Fsample-tally.csv",
+      "revision_id": "sha256:c25aefe735df9d6615ab2afacc3244f4ee431e6877c40080a7f4b17a5c2c6af4",
+      "source_path": "lab/sims/pingpong-bell/sample-tally.csv",
+      "sha256": "sha256:128bf5e7f94fa9fb66dbff60912e757c8ddfd175a1201daa9c330c47946f623d"
+    },
+    {
+      "path": "records/artifact-34fbdc96a3aca996646345cbb4a9235f66672e16ab13c8f8911f4e4bc7fc3fc3.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fppn-reduction-symbolic-checks%2Fmain.py",
+      "revision_id": "sha256:34fbdc96a3aca996646345cbb4a9235f66672e16ab13c8f8911f4e4bc7fc3fc3",
+      "source_path": "lab/sims/ppn-reduction-symbolic-checks/main.py",
+      "sha256": "sha256:0c368326f6d054de570398e499075db49ea3c11fccb8236485000916617ac4cb"
+    },
+    {
+      "path": "records/artifact-6855b5176695f96f645924337e3e658b1669350fe9ea82c83461d4cd9e43f435.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Frar-network-fluctuation-limit%2Fassets%2Fexclusion-curve.png",
+      "revision_id": "sha256:6855b5176695f96f645924337e3e658b1669350fe9ea82c83461d4cd9e43f435",
+      "source_path": "lab/sims/rar-network-fluctuation-limit/assets/exclusion-curve.png",
+      "sha256": "sha256:125736a4ce46b516c294f60b14238590dda4d099d787ce51a31ecf595301f0b9"
+    },
+    {
+      "path": "records/artifact-841c588e238ef5a8f626bd3c4fa3c476e82aacdb955a80c5ba238ccf6c344462.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Frar-network-fluctuation-limit%2Fmain.py",
+      "revision_id": "sha256:841c588e238ef5a8f626bd3c4fa3c476e82aacdb955a80c5ba238ccf6c344462",
+      "source_path": "lab/sims/rar-network-fluctuation-limit/main.py",
+      "sha256": "sha256:59ce0d1191335ab3e3f9e76f93239e10ac7268baa96b3a94bf7795a2d4ed36e9"
+    },
+    {
+      "path": "records/artifact-ab7484f10b41859600db0c18b02c486c1f57d0f7bf6ebe565b484f08eb208aa1.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fretarded-scarcity-wake%2Findex.html",
+      "revision_id": "sha256:ab7484f10b41859600db0c18b02c486c1f57d0f7bf6ebe565b484f08eb208aa1",
+      "source_path": "lab/sims/retarded-scarcity-wake/index.html",
+      "sha256": "sha256:5694dfec7d78922ef4db868a64a62be6a1371ac3588b6291793358a7deb6ff7b"
+    },
+    {
+      "path": "records/artifact-48dba4e58399ea07f98f75b74e2ad50630ba93829b6225e853e62252f04f125c.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Frotation-curve-distributed-mass%2Findex.html",
+      "revision_id": "sha256:48dba4e58399ea07f98f75b74e2ad50630ba93829b6225e853e62252f04f125c",
+      "source_path": "lab/sims/rotation-curve-distributed-mass/index.html",
+      "sha256": "sha256:833b948f0b9a6aba09adac365e9168f71946a41f26c61ab06601ee7ad11002c2"
+    },
+    {
+      "path": "records/artifact-66cc1471e484824adedaeadcfcf1893c320a3924874c497d82350a8433c02808.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-capped-cumulative-field%2Findex.html",
+      "revision_id": "sha256:66cc1471e484824adedaeadcfcf1893c320a3924874c497d82350a8433c02808",
+      "source_path": "lab/sims/scarcity-capped-cumulative-field/index.html",
+      "sha256": "sha256:685e478e02abdaf63488d2f78a2e6142aa80286dd9208c53ec908d7e9bf82dd2"
+    },
+    {
+      "path": "records/artifact-d688602b675c6de1c0f78d76c264ace8077dd41033b7ed56732fcfa4c5c0e081.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-field-slice-toggle%2Findex.html",
+      "revision_id": "sha256:d688602b675c6de1c0f78d76c264ace8077dd41033b7ed56732fcfa4c5c0e081",
+      "source_path": "lab/sims/scarcity-field-slice-toggle/index.html",
+      "sha256": "sha256:017f9446b89824649da34eb91451919e9ae585d0ccf5545dad97457bc3f7a5fe"
+    },
+    {
+      "path": "records/artifact-8b09fefac7629513fd69f93c3218a96e4c9f0ce34d05c0d351cae635f188c7b9.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-grid-weight-black-hole%2Findex.html",
+      "revision_id": "sha256:8b09fefac7629513fd69f93c3218a96e4c9f0ce34d05c0d351cae635f188c7b9",
+      "source_path": "lab/sims/scarcity-grid-weight-black-hole/index.html",
+      "sha256": "sha256:76257ddbf4af247795622854a3d3af7a8422f5c713f4d39ba5387054ad7320bf"
+    },
+    {
+      "path": "records/artifact-086ce8a2d1e3e09e56e018acf4e28a997f74d221abf9d7a0cde156a44605e5fc.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2Fassets%2Ffit.png",
+      "revision_id": "sha256:086ce8a2d1e3e09e56e018acf4e28a997f74d221abf9d7a0cde156a44605e5fc",
+      "source_path": "lab/sims/scarcity-rotation-curve-fit/assets/fit.png",
+      "sha256": "sha256:310b7f30768816ffea56e6234f3729fb6dc372aa9d1c3a32917fbf57dad31357"
+    },
+    {
+      "path": "records/artifact-20918c169f541a7b413e45aee5b37d03939b191aa302dc0d8e1b83d3188af042.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2Fassets%2Fradial-drift-fit.png",
+      "revision_id": "sha256:20918c169f541a7b413e45aee5b37d03939b191aa302dc0d8e1b83d3188af042",
+      "source_path": "lab/sims/scarcity-rotation-curve-fit/assets/radial-drift-fit.png",
+      "sha256": "sha256:158d2b12684756993369f04d906366a3782012ba17b6d66445310a472fb778ed"
+    },
+    {
+      "path": "records/artifact-e7d12f456697bd0f38558dc2a3c09483c2cd31c561331abc76c9963f1b318a29.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2Fmain.py",
+      "revision_id": "sha256:e7d12f456697bd0f38558dc2a3c09483c2cd31c561331abc76c9963f1b318a29",
+      "source_path": "lab/sims/scarcity-rotation-curve-fit/main.py",
+      "sha256": "sha256:9024a74811dbaa6739340dbb62dd458d89a4e0538330c273b864ec43780caa38"
+    },
+    {
+      "path": "records/artifact-d9ff2e613d06acb2e4cab050e3bdbdbe923edcfc120a91fe77e8342d54c72e8e.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-shell-depletion-field%2Findex.html",
+      "revision_id": "sha256:d9ff2e613d06acb2e4cab050e3bdbdbe923edcfc120a91fe77e8342d54c72e8e",
+      "source_path": "lab/sims/scarcity-shell-depletion-field/index.html",
+      "sha256": "sha256:37ee43569d5bb58842fc6c30eaa6e887dfbf2bfe4a4521758ba1ee3e963f24b5"
+    },
+    {
+      "path": "records/artifact-590cf9a7588bb781e52ba5a524ffd8bc3192c7c95c08f770e2c83ec5c7925e47.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-star-well-headroom%2Findex.html",
+      "revision_id": "sha256:590cf9a7588bb781e52ba5a524ffd8bc3192c7c95c08f770e2c83ec5c7925e47",
+      "source_path": "lab/sims/scarcity-star-well-headroom/index.html",
+      "sha256": "sha256:71f69a28d768b4f4cb08145a7353fb42e233abfa895ee493203ee2133abc8a1b"
+    },
+    {
+      "path": "records/artifact-ca252da85b1a99e0d6b09a20c3c407ff172d430c6805ce68048883c6d2045baa.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fshear-consumption-lattice%2Fmain.py",
+      "revision_id": "sha256:ca252da85b1a99e0d6b09a20c3c407ff172d430c6805ce68048883c6d2045baa",
+      "source_path": "lab/sims/shear-consumption-lattice/main.py",
+      "sha256": "sha256:b17e0a309cbec9a0b2fd7cb44eb1cb045a502415fc32713abe776c4fa2ecdc9c"
+    },
+    {
+      "path": "records/artifact-f8dd594509c95ec810fc15598fbed3768e4facdd78a930ddbb26c61906e49e3b.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsolar-system-nbody%2Fbaseline%2Fnewtonian_2016_2026.parquet",
+      "revision_id": "sha256:f8dd594509c95ec810fc15598fbed3768e4facdd78a930ddbb26c61906e49e3b",
+      "source_path": "lab/sims/solar-system-nbody/baseline/newtonian_2016_2026.parquet",
+      "sha256": "sha256:4768597c9eae06364ca89659b25ffa8e8ea05567279d860c3ecacccabdc1b7e7"
+    },
+    {
+      "path": "records/artifact-e5cd339104cb00f6126d243792df1a1968ebf946ee7ea1fda7fe80b4c0989a03.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsolar-system-nbody%2Findex.html",
+      "revision_id": "sha256:e5cd339104cb00f6126d243792df1a1968ebf946ee7ea1fda7fe80b4c0989a03",
+      "source_path": "lab/sims/solar-system-nbody/index.html",
+      "sha256": "sha256:d99d7306dbb2c6265581f98c4d8f2ffdbdf448951269b37085894df0d6ca6923"
+    },
+    {
+      "path": "records/artifact-fd0a2cc335cc9e4f9621616a86c0c795e763681e76001f1775b53eca6a8ae9f7.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsolar-system-nbody%2Fscarcity%2Fmultiplicative_signature.parquet",
+      "revision_id": "sha256:fd0a2cc335cc9e4f9621616a86c0c795e763681e76001f1775b53eca6a8ae9f7",
+      "source_path": "lab/sims/solar-system-nbody/scarcity/multiplicative_signature.parquet",
+      "sha256": "sha256:d4964e33da3cb37af5e8de1675903bc55f0da3bd55c95c7348833ade6dbe0a0e"
+    },
+    {
+      "path": "records/artifact-85f701ab0c4f2b0d787c4172fd97d6ba7504a410810c51af85d73301b5d44469.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsolar-system-nbody%2Fscarcity%2Fsignature-vs-floor.png",
+      "revision_id": "sha256:85f701ab0c4f2b0d787c4172fd97d6ba7504a410810c51af85d73301b5d44469",
+      "source_path": "lab/sims/solar-system-nbody/scarcity/signature-vs-floor.png",
+      "sha256": "sha256:446dc6772cec619370ee54c071d74d9930f62582195871e2ac07589ac7045349"
+    },
+    {
+      "path": "records/artifact-878e696b2af701cefdbae7ce728675a9b34c620b5b7289230736fc029b7d8e30.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsparc-scarcity-universality%2Fassets%2Fdiagnostics.png",
+      "revision_id": "sha256:878e696b2af701cefdbae7ce728675a9b34c620b5b7289230736fc029b7d8e30",
+      "source_path": "lab/sims/sparc-scarcity-universality/assets/diagnostics.png",
+      "sha256": "sha256:8921036a1844cdfefb63137367cd7f970514f5d6cc40859b0cb1655c6abd85df"
+    },
+    {
+      "path": "records/artifact-3daf92e034fde8b96049aa7f71740f67057898419d3809d458eb7032d0012856.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsparc-scarcity-universality%2Fmain.py",
+      "revision_id": "sha256:3daf92e034fde8b96049aa7f71740f67057898419d3809d458eb7032d0012856",
+      "source_path": "lab/sims/sparc-scarcity-universality/main.py",
+      "sha256": "sha256:56016cd06dfd746c14a092d872d7d0d0e3f3adc701c39fac12da5caeb044f682"
+    },
+    {
+      "path": "records/artifact-51294e01d31fc4e4ab53337c1103b08063e4ddd8a0052b6c3cade9080df4354a.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fswirl-ball-far-field%2Findex.html",
+      "revision_id": "sha256:51294e01d31fc4e4ab53337c1103b08063e4ddd8a0052b6c3cade9080df4354a",
+      "source_path": "lab/sims/swirl-ball-far-field/index.html",
+      "sha256": "sha256:ef63de07cdf96498ef5f2533880c00bbbc375c82d0b167d5a8745896e4bbce4e"
+    },
+    {
+      "path": "records/artifact-ad65006cf8678e8cdb8abfce81d72d389e7233732f63a1a7c59a6828060fc562.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fswirl-ball%2Fassets%2Fphoton-field.png",
+      "revision_id": "sha256:ad65006cf8678e8cdb8abfce81d72d389e7233732f63a1a7c59a6828060fc562",
+      "source_path": "lab/sims/swirl-ball/assets/photon-field.png",
+      "sha256": "sha256:8ad85203552d06f0c3b7302d7820a31b079b34dd55b4c52f83c7dd735dea94a4"
+    },
+    {
+      "path": "records/artifact-26fb487aec9b7b0e8df57a6083ae4c74ad889d808db509d75555a80470d348b8.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fswirl-ball%2Findex.html",
+      "revision_id": "sha256:26fb487aec9b7b0e8df57a6083ae4c74ad889d808db509d75555a80470d348b8",
+      "source_path": "lab/sims/swirl-ball/index.html",
+      "sha256": "sha256:d5a5057e190c5d679813a09ae67949ed36744252cc65200c5939da89ebacc102"
+    },
+    {
+      "path": "records/artifact-6e17a50a91dd436ca51b403a8c87a1398d69a1601833d94654efa3cdfcb74f45.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-defect-gravity%2Fassets%2Fgravity-bridge.png",
+      "revision_id": "sha256:6e17a50a91dd436ca51b403a8c87a1398d69a1601833d94654efa3cdfcb74f45",
+      "source_path": "lab/sims/two-substance-defect-gravity/assets/gravity-bridge.png",
+      "sha256": "sha256:ae1027f70b22e27b4db60b094897d84992651bd2d7fd15076ea1e4ba02f387db"
+    },
+    {
+      "path": "records/artifact-0a22c96febbd34b16f56d88970f672e2e0df2553d17b96bc0c024225da0d456c.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-defect-gravity%2Fmain.py",
+      "revision_id": "sha256:0a22c96febbd34b16f56d88970f672e2e0df2553d17b96bc0c024225da0d456c",
+      "source_path": "lab/sims/two-substance-defect-gravity/main.py",
+      "sha256": "sha256:296cf7f381d311acba62195a36c4cbd1763d8bd5bac6ebb792176c5f17abe4f4"
+    },
+    {
+      "path": "records/artifact-b7d7d6bc022f1bf92ae851a17de1e551099f873057253d235be97665d1450c85.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-dynamical-packet%2Fassets%2Fpacket-budget.png",
+      "revision_id": "sha256:b7d7d6bc022f1bf92ae851a17de1e551099f873057253d235be97665d1450c85",
+      "source_path": "lab/sims/two-substance-dynamical-packet/assets/packet-budget.png",
+      "sha256": "sha256:74216bc804bfa31fff4110bd2ab929280b48bfb2d3a1e70ea869a4ddb290bd07"
+    },
+    {
+      "path": "records/artifact-5e5a66272eeab21fd7b8ae9ca4f2cd96234c774b56326b2a87a12af10f50dd87.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-dynamical-packet%2Fmain.py",
+      "revision_id": "sha256:5e5a66272eeab21fd7b8ae9ca4f2cd96234c774b56326b2a87a12af10f50dd87",
+      "source_path": "lab/sims/two-substance-dynamical-packet/main.py",
+      "sha256": "sha256:dbbc6ec46cfc468962c0b4e48d1509c7ab3cc9ba14ff85aab8922e18cdf11fa7"
+    },
+    {
+      "path": "records/artifact-1586a52e93cbd7159448b982ad32022d7d666c5dbf5860751697846511af28c7.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-packet-linear-symbol%2Fmain.py",
+      "revision_id": "sha256:1586a52e93cbd7159448b982ad32022d7d666c5dbf5860751697846511af28c7",
+      "source_path": "lab/sims/two-substance-packet-linear-symbol/main.py",
+      "sha256": "sha256:bd5a202b563acfe56a3d3f66cadfa47a2a5f5cb598b3d6a4b4311e7e7fed22f9"
+    },
+    {
+      "path": "records/artifact-c0c5735abc16193e7b13e911553fd176f09b1d03389c466c81ce73f35efbf22d.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-vortex-lattice%2Fassets%2Finteraction-sweep.png",
+      "revision_id": "sha256:c0c5735abc16193e7b13e911553fd176f09b1d03389c466c81ce73f35efbf22d",
+      "source_path": "lab/sims/two-substance-vortex-lattice/assets/interaction-sweep.png",
+      "sha256": "sha256:54ebe3d150d35905027b5556ab518d16aa81b17960f6ccb5379acbd65c597b31"
+    },
+    {
+      "path": "records/artifact-a703edbfc7e49957b4220e07e241ccb553af1061a6f0ed50c2d2c600dbdbb3fc.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-vortex-lattice%2Fmain.py",
+      "revision_id": "sha256:a703edbfc7e49957b4220e07e241ccb553af1061a6f0ed50c2d2c600dbdbb3fc",
+      "source_path": "lab/sims/two-substance-vortex-lattice/main.py",
+      "sha256": "sha256:411995f25c43659c708a8b389f99fabfd0de14516df7e60ce9199278d7748169"
+    },
+    {
+      "path": "records/artifact-47fd941b9fcf398b5003b817097522016a9d06eb4eb8d451dbb091187d9febac.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fvortex-bell%2Fvortex_bell.py",
+      "revision_id": "sha256:47fd941b9fcf398b5003b817097522016a9d06eb4eb8d451dbb091187d9febac",
+      "source_path": "lab/sims/vortex-bell/vortex_bell.py",
+      "sha256": "sha256:902a7e03852dbadb93130c9cd19ba1a0ea4e5a6f65e978623013880655a19ec2"
+    },
+    {
+      "path": "records/artifact-e46a072411540a86e26e2e8af2433ece12bc4c7c0140d7aa3a29d2f3a25b5ec1.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fwide-binary-control-diagnosis%2Fmain.py",
+      "revision_id": "sha256:e46a072411540a86e26e2e8af2433ece12bc4c7c0140d7aa3a29d2f3a25b5ec1",
+      "source_path": "lab/sims/wide-binary-control-diagnosis/main.py",
+      "sha256": "sha256:f5492d5418d88940ebb3405af2dbc044f7364cb89edabc33af335f628053e3b5"
+    },
+    {
+      "path": "records/artifact-b045e354d555a4b5bd8d41a3a22631ee710ad32eb0f270f47bead57095444df1.json",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fwide-binary-selection-bias%2Fmain.py",
+      "revision_id": "sha256:b045e354d555a4b5bd8d41a3a22631ee710ad32eb0f270f47bead57095444df1",
+      "source_path": "lab/sims/wide-binary-selection-bias/main.py",
+      "sha256": "sha256:4889882b37be99ffc4f6be6fb01a0aa75c7cc74d58914eb5786ceef93f31cad0"
+    },
+    {
+      "path": "records/experiment-edb09120e6071a9bd86a594dbade0f8fa84b9774f5a1b3098ac6ff91ec8003a4.json",
+      "id": "urn:research:orrery:experiment:wide-binary-selection-bias%3A2026-09-05",
+      "revision_id": "sha256:edb09120e6071a9bd86a594dbade0f8fa84b9774f5a1b3098ac6ff91ec8003a4",
+      "source_path": "lab/sims/wide-binary-selection-bias/assets/results.json",
+      "sha256": "sha256:ba90f86e7f17be7188af4582bc18e164f57fa44b4bc9dfeb214a85b38ff6a4cf"
+    },
+    {
+      "path": "records/experiment-6133d09e61048b31021c1d3c64353f50ac68e43e11eb3dfeedfebfc1804717ad.json",
+      "id": "urn:research:orrery:experiment:wide-binary-control-diagnosis%3A2026-09-05",
+      "revision_id": "sha256:6133d09e61048b31021c1d3c64353f50ac68e43e11eb3dfeedfebfc1804717ad",
+      "source_path": "lab/sims/wide-binary-control-diagnosis/assets/results.json",
+      "sha256": "sha256:666f5c62c589e81221c8af5acd7e6518a21d7028d502b73666a243d3a5409709"
+    }
+  ],
+  "supporting_artifacts": [
+    {
+      "path": "lab/sims/delayed-center-analytic-checks/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:6e354b52bfc5d6bdb0b8335acf4046e9ec19e339fdcc5624905aa7ba65e8a05f",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fdelayed-center-analytic-checks%2Fmain.py",
+        "revision_id": "sha256:67f80def38d85e55c783ba30a9279a702d91a8df1fd49bfb343e0ac327753421",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/dynamical-consumption-lattice/assets/profiles.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:2b4184d215fa31498233b982791a6aaba6d6671cffd446a39fb9b2589a5f19ca",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fdynamical-consumption-lattice%2Fassets%2Fprofiles.png",
+        "revision_id": "sha256:957c9e12a7fe69e1cb83f0a231ce70b601e84bba6fe23ad2112fbf4a6a3d61d8",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/dynamical-consumption-lattice/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:f005ff47975c223e8b041784e178eaddf4cf1e8e3cf5f2788e863aad12fd3e0e",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fdynamical-consumption-lattice%2Fmain.py",
+        "revision_id": "sha256:0620da0f6d5cd621e9779e851b78587c97d80b565d101cd0d828bb26e322cd39",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/flowing-lattice-photon-propagation/assets/propagation.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:8aebe4974bc272a5f931d6d873eac13990019b3838583f1294ea8e9c324875c4",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fflowing-lattice-photon-propagation%2Fassets%2Fpropagation.png",
+        "revision_id": "sha256:3b094272b7a50f0bfe82293fa71b3bb2c636c53c13fd8b1d7bc9e651c751eb67",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/flowing-lattice-photon-propagation/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:7148f06c8abf301a9a1a50732ae319caebae6d79e84e2500de03fb2f1979732d",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fflowing-lattice-photon-propagation%2Fmain.py",
+        "revision_id": "sha256:bc3cc2c240f8d86593c0c9738bddd6d09153b8573e097d183ee1686e2e0882f6",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/frame-drag-swirl-lense-thirring-check/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:c17a7689ffe0ef5f8db991de4382205df54d0b6a397810f89d831fd9ba8dbaa7",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fframe-drag-swirl-lense-thirring-check%2Fmain.py",
+        "revision_id": "sha256:8d18df897762569ec9f916ec73d354f6139795ba680344c8ce9541f0373fee0b",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/frame-drag-swirl/index.html",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:8fe7965fed27778cc567e36a86fc0e75f2703c14e04361fff82ea635b14ccea8",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fframe-drag-swirl%2Findex.html",
+        "revision_id": "sha256:46799f9665f69d7f30e16043a01cacf7cc4687890acfc76f7063f875b318c1d2",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/lattice-photon-propagation/assets/propagation.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:f47bdbaa4829811dba5ad8279ac12e216bcf988fefa116e31505e136a9dcbc81",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flattice-photon-propagation%2Fassets%2Fpropagation.png",
+        "revision_id": "sha256:2a5ee16d22002c7b06fb720a4eaa63fd2346f7106215b693d5b39b25e6cd462d",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/lattice-photon-propagation/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:517e32abb1588a41319f4f0d6503d07b2ec468086f8ab11a6d45162e17e5189f",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flattice-photon-propagation%2Fmain.py",
+        "revision_id": "sha256:5197ad6a26d5878777da3c7cfb1aed380b8b7b2ab9404aeef1e847094fb340e4",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/lattice-two-source-superposition/assets/superposition.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:d552fb0b6ee55b712dbb80f9c00cd9fe18418a66ed1ab288ae78c90e6a3486bb",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flattice-two-source-superposition%2Fassets%2Fsuperposition.png",
+        "revision_id": "sha256:80e602e62ac14570f60bd237c02e62a689ee6935d3c03b8589de1ea22169a9c2",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/lattice-two-source-superposition/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:08ea976b5fff0464f7a479d2406537066ab5210c58b3d9e84387d29c72b432c6",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flattice-two-source-superposition%2Fmain.py",
+        "revision_id": "sha256:e2a71e78c1f5edc6090cb48ea3d4c7467150735966ec267c812aeb5463f88048",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/level-core-cavitation-threshold-map/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:be59db3fccb491ed9d38c83877e5eb6b5e25ae5ae2007bdbcfc5f789221cf7ff",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flevel-core-cavitation-threshold-map%2Fmain.py",
+        "revision_id": "sha256:b8cca56c8af2e240b758475ea38b6001b9782fdf27b0a8330fa42da6c5195aa0",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/level-core-dynamical-relaxation/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:71cab31532886f207c619438cc7cc3452a108c61f7f08366c1817ad9c6c839f8",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flevel-core-dynamical-relaxation%2Fmain.py",
+        "revision_id": "sha256:ec5d817308b79cccce33c843c33f6d701728ce854e2adb75ca98741007a627d4",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/level-core-far-field-slot-coefficients/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:ee45ae27468dbb89116e0f7051881d24f814644f030eacf3d71c4b1c67e79b9d",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flevel-core-far-field-slot-coefficients%2Fmain.py",
+        "revision_id": "sha256:2fb38619c30fa89708f7e564110f7db78d7aa7eb3aac0e3016bf2f56618ff4a8",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/level-core-two-core-superposition/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:c3cc18162e29861faeed8e92b584a2656cb2af54b6ca053874b6ee49b913f22c",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flevel-core-two-core-superposition%2Fmain.py",
+        "revision_id": "sha256:e7f0d89b87818ab1a236f39a6305f933b896abc6abd66a05a34413e1501e094c",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/level-core-wind-tunnel/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:590daa9e32c33ba9c7a1e2bd3830978fdb7483e6cfecd17a7e413bc2e2250c96",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flevel-core-wind-tunnel%2Fmain.py",
+        "revision_id": "sha256:969d07e59c96b2336c90a30a73630c751e50e9f8611bf93b3fd5972ef36eda41",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/level-coupled-shear-lattice/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:0370cbf2a08a18e417121bd783a8876845dbc9b7c2045d5e3edbe85305b0f1e7",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flevel-coupled-shear-lattice%2Fmain.py",
+        "revision_id": "sha256:05bcf60380213faa5ebd79f674dc5ee802237bfdd9e33fd28cc0dcff7718f0d4",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/moving-core-acoustic-rays/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:3d7a838f70fb4bd0ec82a5dafd9d163fcb92fbeb63a4bde0be5ead511d853165",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fmoving-core-acoustic-rays%2Fmain.py",
+        "revision_id": "sha256:aa37756e0710180ba8cd6adbf90dcbff3de8186512a86fd245de475f858f712e",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/comparison.html",
+      "scientific_role": "comparison-view",
+      "availability": "available",
+      "sha256": "sha256:8a1ce93250e3c34cbe8d78f414b813f56cf68ee4ee7de49d1857f282e41d0f3a",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fcomparison.html",
+        "revision_id": "sha256:355918d3943caffb419fa918dd0ae2c56e43ad0e94abda851115b1045f76b24e",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-desktop-after.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:f424b6a62751d9f9b7f2a15c46cd882db45ac76f2a05d224d86ada7070a2b585",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-desktop-after.png",
+        "revision_id": "sha256:66e47e55c73c3d6d27be6a51346bf3c896192def620813cc6d01ed685e8c03b7",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-desktop-before.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:e136ea7a0930ee51ccb3e6c4c1b451d29711127294ddc45a384640778931378c",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-desktop-before.png",
+        "revision_id": "sha256:a1e36db6ec660593d32d2d3c04e3d7912a372a2a3efa8cc8d7e17d50e5efad09",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-desktop-delay.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:1195191d08db9a4db835548862dc6f47bf46c27a45433fc5f800bf8e505be3b7",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-desktop-delay.png",
+        "revision_id": "sha256:89e2348bc8d23666fc7cea426c74f09ef4d832618d6519dce1eda33d9eee7aa1",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-desktop-during.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:8d2f859ca8cb628e1276254d2a3705aad54804b1e8b4174ef65efde71935da26",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-desktop-during.png",
+        "revision_id": "sha256:e84afaad875145ffebd6aa79ead60ec5ac34695248d5bbe3821601a6176bd99c",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-desktop-guide.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:f858e9dabdbcc05ea7f13afa6e91dcc562f51f43ab8e83047962a9383297d3af",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-desktop-guide.png",
+        "revision_id": "sha256:24a50e378056bb36af78a02d441e3572e80847595465fb02ff3442142ba315f8",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-narrow-after.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:c16bf4e2f5882a5fb1340215ea926c391c814e792d4f64fc2d4f3e750c86414c",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-narrow-after.png",
+        "revision_id": "sha256:d6d85e77d467333178d0b78a22ba3cf1624a51d1afab95530ccbad5838e01e22",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-narrow-before.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:29fd345e89006b0ba6180b7bf2e09b5e3afebe7aaa0d644aa70cf04258461e25",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-narrow-before.png",
+        "revision_id": "sha256:4c8cb28b5c69868bf06286f22ec7d790969a65d5c944492992a05dad98d07eb2",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-narrow-controls.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:dd2eb02e4cec2f2ddbdf88462c7d2e5f97e3ffd5f92063a46df355dee0f9c352",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-narrow-controls.png",
+        "revision_id": "sha256:501be2ffa9823ee2140ea56171acf32d0f979c2b02d98e036ab15568daaa971f",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-narrow-delay.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:ac6b771c2f820438a21a79f80955a24363af97cbbaf7c5eab5b8f27a1bc3af8a",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-narrow-delay.png",
+        "revision_id": "sha256:245f45d76df056b8780b52f453f1bdeaa61abd5ac9bc96dbc1215b6a3e7e85e2",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-narrow-during.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:47400008150053a0b93ff7fa4de971cd085c92a182130c34073609e148dbab31",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-narrow-during.png",
+        "revision_id": "sha256:c3023c0b61c3c6f03762606a8ed55690b0579b325031d5abee26102324ce5ac6",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/desktop-after.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:382bf624d1c788927700baa112b67c24ac6c6c4bad34541569debde12d36a691",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-after.png",
+        "revision_id": "sha256:384dc04ec33dcb6d16f4da248aac387ff9dd31f3ee2bd090fa2da19b1376530f",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/desktop-atlas.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:fe1eed87fff28b59c2bd3e5c07fe5596892ccae0831a7574ebd9bf2fe8838963",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-atlas.png",
+        "revision_id": "sha256:11660019ea5e63186fc5b7aa983e2478d48a90ebd3b36a43864e852439a6da00",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/desktop-before.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:0f8f9bda2f32279475bb91caba036b2da9429da8e9b4c5312099ca698c0f495d",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-before.png",
+        "revision_id": "sha256:d0cd2dda36b419bab6633db7dc501604997fdb6f155fad443901161e123e3758",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/desktop-delay.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:689cafa1679024bd7285fd21eb29562714cdbddae729e30d5433585bab86f80b",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-delay.png",
+        "revision_id": "sha256:6a3f4e4d554b5df9cf843e5e1090dd52d3233db1a27afef156146970f635d58e",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/desktop-during.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:eb900deb97196d402880ac6899543514cd769ee527d6531500c3fcae15274840",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-during.png",
+        "revision_id": "sha256:347fa77aa04127452069f2aeddf43e5a889da2ff1d2b70fa1ad36b7590662eaa",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/desktop-near.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:d171ea77deb5c1da2560140fee8ad805053198018ec2a466e22d58d669915541",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-near.png",
+        "revision_id": "sha256:eba2f5ce3236d243a8708d36c1ab353c64e5e8986bb205054e47c19e7116ca46",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/desktop-power.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:5014601ddbabf962ef2a76fb55f3d93816d2eae7dccc9aa81746e601db37a953",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-power.png",
+        "revision_id": "sha256:3e552a9f79700e97bca759071dc7fde300328e270f7167ba53dcf2143c1015bc",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/narrow-after.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:bbb11f7d531fede673b229362de9eaebf52a662716d206b18cf361ecc46cd7a0",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fnarrow-after.png",
+        "revision_id": "sha256:7ecde08c8eb5f54e20d4340636f5d45eb2c5d6f03d0368a738de75081afd27e0",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/narrow-atlas.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:fccebd443edff956dcfa1ed5c1ff3143b0b2cf35d43a03cf6e50213e61b7d1f3",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fnarrow-atlas.png",
+        "revision_id": "sha256:19ad6f4e783bb11e5bd03680e1454e12921649e657d2e7edd9ffe5c14234de27",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/narrow-before.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:35966a5fbd894e325a735cb5bcbeb37b397b00b9d70eee093571efab0ea59363",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fnarrow-before.png",
+        "revision_id": "sha256:9c7b491251d1a1f755479d3d8627e0d275da86373c0061155a2c6a2724ce31d7",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/narrow-delay.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:2a975b2887fc8adc9c93e046a6760f939db8ba9ee296b3b8b51d595483a7f53c",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fnarrow-delay.png",
+        "revision_id": "sha256:228c69075671333c8d08237b0dd4f76734c3e124cb2e44a1048f741c21a9ed5e",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/narrow-during.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:da0a522c590cec7d98b531a2f71b0b8908fbf480ff3f47d5172332ad62275410",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fnarrow-during.png",
+        "revision_id": "sha256:3a865a572fe0132656e63e1d6760521980b09759a4be7cc87ac2fcf301cff14c",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/original-desktop-after.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:db60cd2674f823b0497f5aa3134b8189018716932cd7fb4da3fde0520737934a",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-desktop-after.png",
+        "revision_id": "sha256:97f77e9503878d1e63f0c0bdc0101d20009c6866b32a8b5fc22156cbcfc3c7a7",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/original-desktop-before.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:17b17bcc9d82d77858480cb3f6c9d2403433b29625451f65c7555485c6b35d9b",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-desktop-before.png",
+        "revision_id": "sha256:d3e373bb1d0ea9d94f67fad2835b2ecc9372d90e5dfd940d840de7da9ccbca47",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/original-desktop-delay.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:24e435126975f88bfd9d6434395cc73c97bc42927c04163765390b05c523b128",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-desktop-delay.png",
+        "revision_id": "sha256:e7c5b9e6a4255c7370b877cd5177fc3222e75d9816474dc0f9adbdb4b198a54b",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/original-desktop-during.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:8e3713fbed7c13dd4dc7607b87bb1e528267c314a28ebda2a4819bfd5aa0d025",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-desktop-during.png",
+        "revision_id": "sha256:75b8b5921493c972b9740e82d38824fe403f69c66e845c7b7ea8759b7c3562b9",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/original-narrow-after.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:43a28c395e633f1f4d941d50a9c8151460acabafbe2a4d64f96b231c9cff9659",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-narrow-after.png",
+        "revision_id": "sha256:3aaa645cb7d9e6df559c5eabe6d7a3e3e3b11abfccc8a7a0a033a51cffc8bdc6",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/original-narrow-before.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:fc7b0f9d5c779eb7efef1b9be3b85d1090ce8735519910a37043bd2dfb995ec9",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-narrow-before.png",
+        "revision_id": "sha256:8cf4790494a317b16709c499ca221c455f9fff5501b1c2bac6116c134a91dac6",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/original-narrow-delay.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:608b807bb549c81b2a5281f8c0906b4066ef6e65450b27b68d9eac307455bc70",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-narrow-delay.png",
+        "revision_id": "sha256:94864f91ecc71cc4ce226d42c934c5d8fca96589d8a79b8e5b5e3cc2c9242709",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/assets/original-narrow-during.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:919a033373e69b71176a8f46694a46be2d3930fe9955e80ef5f39a8f1cc67f43",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-narrow-during.png",
+        "revision_id": "sha256:2fa7fd0b78d66e376dd075d50f7911017c168452c81650ee4264823065d3685b",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/oscillating-electron-retarded-fields/index.html",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:fbb7eca15be420979de766dec4bbd76c55c54bdf9bd37040763b3ed22c15d2f7",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Findex.html",
+        "revision_id": "sha256:50a19e4fb0f8cb7f00e8f921298be2d5a850615958c7edcc93102f69f29b4985",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/pendulum-driven/index.html",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:854a74efd134d0ef1d35b0cb640137e4ecf977760de04637b558736bacb3e9f2",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fpendulum-driven%2Findex.html",
+        "revision_id": "sha256:297aa04529547f37e3520aef65086162969d6ada16054f8528d9469cd4710c66",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/pingpong-bell/analyze_bell.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:22922ac8cf5da3ccbaa0bb1af455d2fff1dcfb8beba1eb59bce34db1775b8a4e",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fpingpong-bell%2Fanalyze_bell.py",
+        "revision_id": "sha256:2790aa62305579db4319e903b1690ce1f741849fe9a8fbf63c156f2a99fb95e3",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/pingpong-bell/sample-tally.csv",
+      "scientific_role": "captured-data",
+      "availability": "available",
+      "sha256": "sha256:696190231540349e93dd973612e42009766b84ebaa327c2ca3e77ae3afe65e35",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fpingpong-bell%2Fsample-tally.csv",
+        "revision_id": "sha256:c25aefe735df9d6615ab2afacc3244f4ee431e6877c40080a7f4b17a5c2c6af4",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/ppn-reduction-symbolic-checks/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:a00edc14cf27db2255b066bb3a1c4e795b72201737120c43112682703338986e",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fppn-reduction-symbolic-checks%2Fmain.py",
+        "revision_id": "sha256:34fbdc96a3aca996646345cbb4a9235f66672e16ab13c8f8911f4e4bc7fc3fc3",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/rar-network-fluctuation-limit/assets/exclusion-curve.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:dc5d5751a0d9c23b1db404b6b17c926a11c169a94e7ca2f787962da5c744f3b0",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Frar-network-fluctuation-limit%2Fassets%2Fexclusion-curve.png",
+        "revision_id": "sha256:6855b5176695f96f645924337e3e658b1669350fe9ea82c83461d4cd9e43f435",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/rar-network-fluctuation-limit/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:a3d4b1117f1beb2497d8be6622714a92bd39ef9a1094d51f079e714484040aca",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Frar-network-fluctuation-limit%2Fmain.py",
+        "revision_id": "sha256:841c588e238ef5a8f626bd3c4fa3c476e82aacdb955a80c5ba238ccf6c344462",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/retarded-scarcity-wake/index.html",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:c3b75821fb3985138ab57123ada78df81f756defa125a2adad5c5de1c78e0ecf",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fretarded-scarcity-wake%2Findex.html",
+        "revision_id": "sha256:ab7484f10b41859600db0c18b02c486c1f57d0f7bf6ebe565b484f08eb208aa1",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/rotation-curve-distributed-mass/index.html",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:a1e89eb9a5fc332fbe47f16e3846608b5a4ebd283d05c440aa81c24c0f64e3c3",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Frotation-curve-distributed-mass%2Findex.html",
+        "revision_id": "sha256:48dba4e58399ea07f98f75b74e2ad50630ba93829b6225e853e62252f04f125c",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/scarcity-capped-cumulative-field/index.html",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:069265799989f3d5b7f988e22f25eb457d58d25fea1af71c5ef42e0972fd27f8",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-capped-cumulative-field%2Findex.html",
+        "revision_id": "sha256:66cc1471e484824adedaeadcfcf1893c320a3924874c497d82350a8433c02808",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/scarcity-field-slice-toggle/index.html",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:5e50636832f3cbc995077730f3ee200b0e5ffac183bf10df56ff7d8a679f12e4",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-field-slice-toggle%2Findex.html",
+        "revision_id": "sha256:d688602b675c6de1c0f78d76c264ace8077dd41033b7ed56732fcfa4c5c0e081",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/scarcity-grid-weight-black-hole/index.html",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:70ad7b4b1c2b6816cf71978c3daf95beadad98feaf6ed732d1ebcf2f8f392274",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-grid-weight-black-hole%2Findex.html",
+        "revision_id": "sha256:8b09fefac7629513fd69f93c3218a96e4c9f0ce34d05c0d351cae635f188c7b9",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/scarcity-rotation-curve-fit/assets/fit.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:d99ca85ac54d9aad06d1109f696235975ac3e91bf40c7f1b07dc0827478dcb32",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2Fassets%2Ffit.png",
+        "revision_id": "sha256:086ce8a2d1e3e09e56e018acf4e28a997f74d221abf9d7a0cde156a44605e5fc",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/scarcity-rotation-curve-fit/assets/radial-drift-fit.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:82cab010715e5a508a3a7e774c5745590751c2ccb024f531595d6f21edc1984f",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2Fassets%2Fradial-drift-fit.png",
+        "revision_id": "sha256:20918c169f541a7b413e45aee5b37d03939b191aa302dc0d8e1b83d3188af042",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/scarcity-rotation-curve-fit/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:c96bcd84057962bb025e4fed155fb93c8124746c0f01f8af5282d0cde1f27a02",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2Fmain.py",
+        "revision_id": "sha256:e7d12f456697bd0f38558dc2a3c09483c2cd31c561331abc76c9963f1b318a29",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/scarcity-shell-depletion-field/index.html",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:58425e971efd84668e2198d131b5fae8b5e76b5a4fd30cf0c9b7c98fa66e26d3",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-shell-depletion-field%2Findex.html",
+        "revision_id": "sha256:d9ff2e613d06acb2e4cab050e3bdbdbe923edcfc120a91fe77e8342d54c72e8e",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/scarcity-star-well-headroom/index.html",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:d0290a2e71ef4bc3133019b7a78656ff58689306151a439628e91bcaf2807644",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-star-well-headroom%2Findex.html",
+        "revision_id": "sha256:590cf9a7588bb781e52ba5a524ffd8bc3192c7c95c08f770e2c83ec5c7925e47",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/shear-consumption-lattice/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:f880a986a7df4901816132ec5d551d35119226b4d18f72d0df7593a5fac24c55",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fshear-consumption-lattice%2Fmain.py",
+        "revision_id": "sha256:ca252da85b1a99e0d6b09a20c3c407ff172d430c6805ce68048883c6d2045baa",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/solar-system-nbody/baseline/newtonian_2016_2026.parquet",
+      "scientific_role": "captured-data",
+      "availability": "available",
+      "sha256": "sha256:fc23d34cfabb974efb381d5c4d3cfb207d715a3db033d0f7f8dea3c9e63b2e6f",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsolar-system-nbody%2Fbaseline%2Fnewtonian_2016_2026.parquet",
+        "revision_id": "sha256:f8dd594509c95ec810fc15598fbed3768e4facdd78a930ddbb26c61906e49e3b",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/solar-system-nbody/index.html",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:24439cb5054c7b6a96909a0035582c7dfc67fb3eb586f1233da93b0ed7830971",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsolar-system-nbody%2Findex.html",
+        "revision_id": "sha256:e5cd339104cb00f6126d243792df1a1968ebf946ee7ea1fda7fe80b4c0989a03",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/solar-system-nbody/scarcity/multiplicative_signature.parquet",
+      "scientific_role": "captured-data",
+      "availability": "available",
+      "sha256": "sha256:fc5b3187cbb3a1a5731b19a97b613120fbddd3b311b9ac90191332527f001fed",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsolar-system-nbody%2Fscarcity%2Fmultiplicative_signature.parquet",
+        "revision_id": "sha256:fd0a2cc335cc9e4f9621616a86c0c795e763681e76001f1775b53eca6a8ae9f7",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/solar-system-nbody/scarcity/signature-vs-floor.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:3f91466fc457b469e66ef34355a786cec6548def4157d21df7122741ad67179d",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsolar-system-nbody%2Fscarcity%2Fsignature-vs-floor.png",
+        "revision_id": "sha256:85f701ab0c4f2b0d787c4172fd97d6ba7504a410810c51af85d73301b5d44469",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/sparc-scarcity-universality/assets/diagnostics.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:0414d2b234de67a7877160c2e50c3b19fb45e7db3e2c89e4c649a6fd83d241ac",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsparc-scarcity-universality%2Fassets%2Fdiagnostics.png",
+        "revision_id": "sha256:878e696b2af701cefdbae7ce728675a9b34c620b5b7289230736fc029b7d8e30",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/sparc-scarcity-universality/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:112531b9a5f1a33e256a5c08cd7dcb44f15cd547ade8dffcf26fa113a21f8cc1",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsparc-scarcity-universality%2Fmain.py",
+        "revision_id": "sha256:3daf92e034fde8b96049aa7f71740f67057898419d3809d458eb7032d0012856",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/swirl-ball-far-field/index.html",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:ed72bec20ee4fd3daeb6bb4ee295971d296441d0b6c6f72d6bc66f71df90070b",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fswirl-ball-far-field%2Findex.html",
+        "revision_id": "sha256:51294e01d31fc4e4ab53337c1103b08063e4ddd8a0052b6c3cade9080df4354a",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/swirl-ball/assets/photon-field.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:93bcd5d9eab2abd762b4f2143c7bc93b934c7630fd585a7594c2f72027d7e106",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fswirl-ball%2Fassets%2Fphoton-field.png",
+        "revision_id": "sha256:ad65006cf8678e8cdb8abfce81d72d389e7233732f63a1a7c59a6828060fc562",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/swirl-ball/index.html",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:9b527100319b4f8e8c3f1c6000b53a85d95c562cc66f49d5f0aefefc910155c6",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fswirl-ball%2Findex.html",
+        "revision_id": "sha256:26fb487aec9b7b0e8df57a6083ae4c74ad889d808db509d75555a80470d348b8",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/two-substance-defect-gravity/assets/gravity-bridge.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:9475683fa3d02c1d2df0ab4c5e901b20d6e244d3057c47b5a7a6c85f0d4aa295",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-defect-gravity%2Fassets%2Fgravity-bridge.png",
+        "revision_id": "sha256:6e17a50a91dd436ca51b403a8c87a1398d69a1601833d94654efa3cdfcb74f45",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/two-substance-defect-gravity/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:18de624bff23c16534aeef363921a87fc7452d5116d5004e297c722c7b46e369",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-defect-gravity%2Fmain.py",
+        "revision_id": "sha256:0a22c96febbd34b16f56d88970f672e2e0df2553d17b96bc0c024225da0d456c",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/two-substance-dynamical-packet/assets/packet-budget.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:8c340e0e11dfae85027ef0400e4269e016aa38691f249639661896772dc5aed6",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-dynamical-packet%2Fassets%2Fpacket-budget.png",
+        "revision_id": "sha256:b7d7d6bc022f1bf92ae851a17de1e551099f873057253d235be97665d1450c85",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/two-substance-dynamical-packet/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:bd3d02d5182446b94159e5eaf5d777da575f476d2c1d3e88a552517a5b881fe4",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-dynamical-packet%2Fmain.py",
+        "revision_id": "sha256:5e5a66272eeab21fd7b8ae9ca4f2cd96234c774b56326b2a87a12af10f50dd87",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/two-substance-packet-linear-symbol/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:02a5c7d3d9983c21500f80f5e710b009650231c4a4b58db95031371dae1606f9",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-packet-linear-symbol%2Fmain.py",
+        "revision_id": "sha256:1586a52e93cbd7159448b982ad32022d7d666c5dbf5860751697846511af28c7",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/two-substance-vortex-lattice/assets/interaction-sweep.png",
+      "scientific_role": "figure",
+      "availability": "available",
+      "sha256": "sha256:8980499c7f4169ded84e69b4617ba9494a8cdee6a656bb53b135aac066ee1fa5",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-vortex-lattice%2Fassets%2Finteraction-sweep.png",
+        "revision_id": "sha256:c0c5735abc16193e7b13e911553fd176f09b1d03389c466c81ce73f35efbf22d",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/two-substance-vortex-lattice/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:cd5af0c5fcf427f2de0a54269e29a68f71462915eca70c0a82c217db78215355",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-vortex-lattice%2Fmain.py",
+        "revision_id": "sha256:a703edbfc7e49957b4220e07e241ccb553af1061a6f0ed50c2d2c600dbdbb3fc",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/vortex-bell/vortex_bell.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:9acd14d4eeeac94615c02d1cca273c8212a9c1f9eec82584f599fd2aa3499369",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fvortex-bell%2Fvortex_bell.py",
+        "revision_id": "sha256:47fd941b9fcf398b5003b817097522016a9d06eb4eb8d451dbb091187d9febac",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/wide-binary-control-diagnosis/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:a77bfb869498d16dcc45cd540cdae949e352f7e37583dfe4df1beda2fec6a723",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fwide-binary-control-diagnosis%2Fmain.py",
+        "revision_id": "sha256:e46a072411540a86e26e2e8af2433ece12bc4c7c0140d7aa3a29d2f3a25b5ec1",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    },
+    {
+      "path": "lab/sims/wide-binary-selection-bias/main.py",
+      "scientific_role": "apparatus-entry",
+      "availability": "available",
+      "sha256": "sha256:d3b5e522b24966e84b57e5132994c4a3b6ab9b95c7d0138709b467143bde75c0",
+      "record": {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fwide-binary-selection-bias%2Fmain.py",
+        "revision_id": "sha256:b045e354d555a4b5bd8d41a3a22631ee710ad32eb0f270f47bead57095444df1",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    }
+  ],
+  "anonymous_collisions": [
+    {
+      "legacy_anonymous_alias": "5e9415e9779c2de43f3f606f38d94ad42e0220ac99c36c5098fa279684baec36",
+      "sources": [
+        "lab/sims/level-core-cavitation-threshold-map/assets/results.json",
+        "lab/sims/level-core-cavitation-threshold-map/runs/2026-09-04-seed-42.json"
+      ],
+      "resolution": "Each source/selector has a distinct path-qualified artifact identity; no winner selected."
+    },
+    {
+      "legacy_anonymous_alias": "b78d1b48c25a0b2e25b2705097fc8687ef9cd61d445e7eb1e0ed21d4154d0bc9",
+      "sources": [
+        "lab/sims/frame-drag-swirl-lense-thirring-check/results.json",
+        "lab/sims/frame-drag-swirl-lense-thirring-check/runs/2026-09-04.json"
+      ],
+      "resolution": "Each source/selector has a distinct path-qualified artifact identity; no winner selected."
+    },
+    {
+      "legacy_anonymous_alias": "dc0baa21b4ad3fe483aaf54a944dcb6e3b1d9a60ee779dfc42ab7c4e4160927d",
+      "sources": [
+        "lab/sims/level-core-far-field-slot-coefficients/assets/results.json",
+        "lab/sims/level-core-far-field-slot-coefficients/runs/2026-09-04-seed-42.json"
+      ],
+      "resolution": "Each source/selector has a distinct path-qualified artifact identity; no winner selected."
+    },
+    {
+      "legacy_anonymous_alias": "ed53bcb7c3b00dcfe393e3c458f3be1ca3419604a541bb4da26a69d4bc91911b",
+      "sources": [
+        "lab/sims/delayed-center-analytic-checks/assets/results.json",
+        "lab/sims/delayed-center-analytic-checks/runs/2026-09-04.json"
+      ],
+      "resolution": "Each source/selector has a distinct path-qualified artifact identity; no winner selected."
+    }
+  ],
+  "anonymous_collision_sources": 8,
+  "wide_binary": {
+    "protocol": {
+      "repository": "principia",
+      "id": "urn:research:principia:protocol:wide-binary-selection-bias-control",
+      "revision_id": "sha256:90b62ef438d73d1a9ceb25c4d7753c0d4fce49dbacbcc207c7febc17f7c70842",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "resolved"
+    },
+    "claims": [
+      {
+        "repository": "principia",
+        "id": "urn:research:principia:claim:wbsel-geometry-truncation-null",
+        "revision_id": "sha256:f5167b4f269e3e26112feea3ef2a28347616840c5d4df61830a7f330c067c883",
+        "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+        "status": "resolved"
+      },
+      {
+        "repository": "principia",
+        "id": "urn:research:principia:claim:wbsel-cap-truncation-isolation",
+        "revision_id": "sha256:8594391102bfe1d6889dea1b870cb882ade3bc2e10cb65db19f1dad79c3e3e52",
+        "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+        "status": "resolved"
+      },
+      {
+        "repository": "principia",
+        "id": "urn:research:principia:claim:wbsel-shifted-field-calibration",
+        "revision_id": "sha256:c913a7c4d4029c5cb9ca40b11ccd4c88b5d120224e883afdd25555e716190d0c",
+        "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+        "status": "resolved"
+      },
+      {
+        "repository": "principia",
+        "id": "urn:research:principia:claim:wbsel-injected-effect-power",
+        "revision_id": "sha256:3e712cdc7796c3aa552e3d78a8890309d29445b944e5de8cbfd01038eb782d37",
+        "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+        "status": "resolved"
+      },
+      {
+        "repository": "principia",
+        "id": "urn:research:principia:claim:wbsel-candidate-oracle-regression",
+        "revision_id": "sha256:79ac5b0fc943fa6ab255f10439710546b578fb36e8770a177ba565c7fc3b92f4",
+        "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+        "status": "resolved"
+      }
+    ],
+    "original_run": {
+      "repository": "orrery",
+      "id": "urn:research:orrery:experiment:wide-binary-selection-bias%3A2026-09-05",
+      "revision_id": "sha256:edb09120e6071a9bd86a594dbade0f8fa84b9774f5a1b3098ac6ff91ec8003a4",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    "diagnosis_run": {
+      "repository": "orrery",
+      "id": "urn:research:orrery:experiment:wide-binary-control-diagnosis%3A2026-09-05",
+      "revision_id": "sha256:6133d09e61048b31021c1d3c64353f50ac68e43e11eb3dfeedfebfc1804717ad",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    "inputs": [
+      {
+        "repository": "astrolabe",
+        "id": "urn:research:astrolabe:artifact:source%3Aastrolabe%3A90f5b58890da36c44286a4edbde7eead879410a8%3Asrc%2Fastrolabe%2Fanalysis%2Fwide_binaries.py",
+        "revision_id": "sha256:c094af1fe09fdfaae8e53ec1e4a29e2c60c14e7c4acff1a88224e96a57704226",
+        "source_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+        "status": "resolved"
+      },
+      {
+        "repository": "astrolabe",
+        "id": "urn:research:astrolabe:artifact:source%3Aastrolabe%3A90f5b58890da36c44286a4edbde7eead879410a8%3Ascripts%2Frun_wide_binary_study.py",
+        "revision_id": "sha256:1e4be6ad9f8d5f8199348a0db4cc6df956c0459008f0cb30b3fbf8e708060ed9",
+        "source_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+        "status": "resolved"
+      },
+      {
+        "repository": "astrolabe",
+        "id": "urn:research:astrolabe:artifact:dataset%3Acatalog%3Awidebin_gaia_dr3_d200",
+        "revision_id": "sha256:edd5093f6f24ff2a7e01eda7f43f750bb1be12ad7d1cc794ea390e509f600111",
+        "source_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+        "status": "resolved"
+      },
+      {
+        "repository": "astrolabe",
+        "id": "urn:research:astrolabe:artifact:dataset%3Acatalog%3Awidebin_pairs_baseline",
+        "revision_id": "sha256:eb5b5e5e6db1cd32348830d4315945f6eb83db8070a0930f711b4b525b0cad64",
+        "source_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+        "status": "resolved"
+      },
+      {
+        "repository": "astrolabe",
+        "id": "urn:research:astrolabe:artifact:dataset%3Aderived%3Awidebin_vtilde_gn",
+        "revision_id": "sha256:302bec3f697c44e4abbb4a5156cbf3f2af984a840972ea041b2575427b2344ef",
+        "source_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+        "status": "resolved"
+      },
+      {
+        "repository": "astrolabe",
+        "id": "urn:research:astrolabe:artifact:dataset%3Aderived%3Awidebin_sensitivity",
+        "revision_id": "sha256:77cdac007b611695d1174e1e315d1218c797372c0ba77f31b23aa4f3fbe949f0",
+        "source_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+        "status": "resolved"
+      }
+    ],
+    "external_deliveries": {
+      "principia": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "astrolabe": "1642b4ba2f75e16091692e280932363a6a4f0343"
+    },
+    "external_pins": [
+      {
+        "repository": "principia",
+        "delivery_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+        "record_path": "research/wide-binary/records/protocol-90b62ef438d73d1a9ceb25c4d7753c0d4fce49dbacbcc207c7febc17f7c70842.json",
+        "record_blob_oid": "a18753c4716a1c4747ba642d36498e2b5ba4f4e1",
+        "record_sha256": "sha256:eec8157343585e8e3fc1a761ed1ed41804d81a23d59a6be4bacc883186bf7d3d",
+        "id": "urn:research:principia:protocol:wide-binary-selection-bias-control",
+        "revision_id": "sha256:90b62ef438d73d1a9ceb25c4d7753c0d4fce49dbacbcc207c7febc17f7c70842"
+      },
+      {
+        "repository": "principia",
+        "delivery_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+        "record_path": "research/wide-binary/records/claim-f5167b4f269e3e26112feea3ef2a28347616840c5d4df61830a7f330c067c883.json",
+        "record_blob_oid": "ea2a9c881f581e491c1572096bae136bfd72183d",
+        "record_sha256": "sha256:d7aaee3d8b59b60f883cd95a72a5e80b1bc071efed6d1a66f48b50ed53559bc5",
+        "id": "urn:research:principia:claim:wbsel-geometry-truncation-null",
+        "revision_id": "sha256:f5167b4f269e3e26112feea3ef2a28347616840c5d4df61830a7f330c067c883"
+      },
+      {
+        "repository": "principia",
+        "delivery_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+        "record_path": "research/wide-binary/records/claim-8594391102bfe1d6889dea1b870cb882ade3bc2e10cb65db19f1dad79c3e3e52.json",
+        "record_blob_oid": "b66e5e052d7223d089a5d946becb854b9330bf0c",
+        "record_sha256": "sha256:4e0c18d3e9220a052f7fac3f1d6dff956b724df19abfacf14644ebb8aa32c891",
+        "id": "urn:research:principia:claim:wbsel-cap-truncation-isolation",
+        "revision_id": "sha256:8594391102bfe1d6889dea1b870cb882ade3bc2e10cb65db19f1dad79c3e3e52"
+      },
+      {
+        "repository": "principia",
+        "delivery_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+        "record_path": "research/wide-binary/records/claim-c913a7c4d4029c5cb9ca40b11ccd4c88b5d120224e883afdd25555e716190d0c.json",
+        "record_blob_oid": "a61039188b033c064b1f786e84b17fc54ef05878",
+        "record_sha256": "sha256:493f8ee0329f4a94cfac0785416a5a5e3db602c7951407fea623f23d19fcf34f",
+        "id": "urn:research:principia:claim:wbsel-shifted-field-calibration",
+        "revision_id": "sha256:c913a7c4d4029c5cb9ca40b11ccd4c88b5d120224e883afdd25555e716190d0c"
+      },
+      {
+        "repository": "principia",
+        "delivery_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+        "record_path": "research/wide-binary/records/claim-3e712cdc7796c3aa552e3d78a8890309d29445b944e5de8cbfd01038eb782d37.json",
+        "record_blob_oid": "bed2e2b801de7bfa88e7d974da91cd6653084c56",
+        "record_sha256": "sha256:e9687ae42cd69c51091e78130c161cb607637b575374bd6d91ade3c949bef5cc",
+        "id": "urn:research:principia:claim:wbsel-injected-effect-power",
+        "revision_id": "sha256:3e712cdc7796c3aa552e3d78a8890309d29445b944e5de8cbfd01038eb782d37"
+      },
+      {
+        "repository": "principia",
+        "delivery_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+        "record_path": "research/wide-binary/records/claim-79ac5b0fc943fa6ab255f10439710546b578fb36e8770a177ba565c7fc3b92f4.json",
+        "record_blob_oid": "214e0067bd12c7e8ff71546f5a395d301b346477",
+        "record_sha256": "sha256:5414f2c4756337a1b656e763cae4b47a1621cf27787614de713d57e4019ace76",
+        "id": "urn:research:principia:claim:wbsel-candidate-oracle-regression",
+        "revision_id": "sha256:79ac5b0fc943fa6ab255f10439710546b578fb36e8770a177ba565c7fc3b92f4"
+      },
+      {
+        "repository": "astrolabe",
+        "delivery_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+        "record_path": "research/datasets/records/artifact-c094af1fe09fdfaae8e53ec1e4a29e2c60c14e7c4acff1a88224e96a57704226.json",
+        "record_blob_oid": "b9154082050edae9892ee30cf50a0a6600519bd8",
+        "record_sha256": "sha256:73f24d242c46f2b77819efdc954627d641a23e37c151da55878c15e9dc67e36d",
+        "id": "urn:research:astrolabe:artifact:source%3Aastrolabe%3A90f5b58890da36c44286a4edbde7eead879410a8%3Asrc%2Fastrolabe%2Fanalysis%2Fwide_binaries.py",
+        "revision_id": "sha256:c094af1fe09fdfaae8e53ec1e4a29e2c60c14e7c4acff1a88224e96a57704226"
+      },
+      {
+        "repository": "astrolabe",
+        "delivery_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+        "record_path": "research/datasets/records/artifact-1e4be6ad9f8d5f8199348a0db4cc6df956c0459008f0cb30b3fbf8e708060ed9.json",
+        "record_blob_oid": "717a8bc1a0536e1ca1ae4cf0d1ae30d0e86cffac",
+        "record_sha256": "sha256:568f5ba6da8546db17ea561e4816f07b39c1fdcadbef8c622412e86f1ed5c3a9",
+        "id": "urn:research:astrolabe:artifact:source%3Aastrolabe%3A90f5b58890da36c44286a4edbde7eead879410a8%3Ascripts%2Frun_wide_binary_study.py",
+        "revision_id": "sha256:1e4be6ad9f8d5f8199348a0db4cc6df956c0459008f0cb30b3fbf8e708060ed9"
+      },
+      {
+        "repository": "astrolabe",
+        "delivery_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+        "record_path": "research/datasets/records/artifact-edd5093f6f24ff2a7e01eda7f43f750bb1be12ad7d1cc794ea390e509f600111.json",
+        "record_blob_oid": "9c56542f86676d4df6f7ffaea54a89c52efd9763",
+        "record_sha256": "sha256:2a486c76df2e8454dca7c5a32e01cb782357a969331457d2fd55763bec923fea",
+        "id": "urn:research:astrolabe:artifact:dataset%3Acatalog%3Awidebin_gaia_dr3_d200",
+        "revision_id": "sha256:edd5093f6f24ff2a7e01eda7f43f750bb1be12ad7d1cc794ea390e509f600111"
+      },
+      {
+        "repository": "astrolabe",
+        "delivery_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+        "record_path": "research/datasets/records/artifact-eb5b5e5e6db1cd32348830d4315945f6eb83db8070a0930f711b4b525b0cad64.json",
+        "record_blob_oid": "a1cbe556ee369975e67f5d3103a44a2d771e2f84",
+        "record_sha256": "sha256:6202030f9537d1b9272328c2e6e19aceb55b628263634250f91d3d0853eea3aa",
+        "id": "urn:research:astrolabe:artifact:dataset%3Acatalog%3Awidebin_pairs_baseline",
+        "revision_id": "sha256:eb5b5e5e6db1cd32348830d4315945f6eb83db8070a0930f711b4b525b0cad64"
+      },
+      {
+        "repository": "astrolabe",
+        "delivery_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+        "record_path": "research/datasets/records/artifact-302bec3f697c44e4abbb4a5156cbf3f2af984a840972ea041b2575427b2344ef.json",
+        "record_blob_oid": "efe2a48596b5769b010c838faa2393fe42c58ef1",
+        "record_sha256": "sha256:d86710954b224bf0f9f04be48883fb9a071464d1d4a610fd2129387971bfb403",
+        "id": "urn:research:astrolabe:artifact:dataset%3Aderived%3Awidebin_vtilde_gn",
+        "revision_id": "sha256:302bec3f697c44e4abbb4a5156cbf3f2af984a840972ea041b2575427b2344ef"
+      },
+      {
+        "repository": "astrolabe",
+        "delivery_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+        "record_path": "research/datasets/records/artifact-77cdac007b611695d1174e1e315d1218c797372c0ba77f31b23aa4f3fbe949f0.json",
+        "record_blob_oid": "ba1344d2d2c440c3413990f340fb0ea54c41f001",
+        "record_sha256": "sha256:00a0b5cfa8addcb686eddc1dbc948ebbc49889745732679a81ba0ac41629c07a",
+        "id": "urn:research:astrolabe:artifact:dataset%3Aderived%3Awidebin_sensitivity",
+        "revision_id": "sha256:77cdac007b611695d1174e1e315d1218c797372c0ba77f31b23aa4f3fbe949f0"
+      }
+    ],
+    "external_documents": [
+      {
+        "repository": "principia",
+        "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+        "path": "research/wide-binary/migration.json",
+        "blob_oid": "4295f6951f1fd045d953e260a3113cabd988843a",
+        "sha256": "sha256:070aad8ff51ce73458cf0f779b81bb8b03155cba8d0196d3fe50e68cb3967d43",
+        "bytes": 473056
+      },
+      {
+        "repository": "principia",
+        "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+        "path": "research/wide-binary/freeze-manifest.json",
+        "blob_oid": "20aa0c379fb4adc5889c3ff4b08f078458246402",
+        "sha256": "sha256:3dbedbb9ff9bfcc1177f2b9c18168a6dac687985aec24e7afe1b74c9d916c3e6",
+        "bytes": 5230
+      },
+      {
+        "repository": "principia",
+        "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+        "path": "research/wide-binary/source-manifest.json",
+        "blob_oid": "f9f8a108b7c7ba9596965cce785040163a7a186d",
+        "sha256": "sha256:43a6b4fad8aa6112c762ac1a758aa340f72de588147e74b77ef60db52e3c4f87",
+        "bytes": 8372
+      },
+      {
+        "repository": "astrolabe",
+        "git_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+        "path": "research/datasets/migration.json",
+        "blob_oid": "eeb3c1000096e16eee28c9cbaea5cd5ec698903d",
+        "sha256": "sha256:98cf3a0a781cd5d94e4271e6d52d1aaf01ef6e8a41ecb946211c11b97f0de806",
+        "bytes": 43626
+      },
+      {
+        "repository": "astrolabe",
+        "git_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+        "path": "research/datasets/inventory.json",
+        "blob_oid": "a896900335763c0b564f961239bef95cad20096c",
+        "sha256": "sha256:124eaac565a9147444a5603de4c1e5deee916c02d73f91249a32a0e9af3a0664",
+        "bytes": 69457
+      },
+      {
+        "repository": "astrolabe",
+        "git_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+        "path": "research/datasets/dataset-manifest.json",
+        "blob_oid": "694124cda279862d8380cc171c7bff1aaf9e7469",
+        "sha256": "sha256:81c987d9bd2f0cf58ce54f5ce88a403f6847cb0d59b80401fa2f936166a9cb0b",
+        "bytes": 8948
+      },
+      {
+        "repository": "astrolabe",
+        "git_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+        "path": "research/datasets/wide-binary-chain-manifest.json",
+        "blob_oid": "6e1669aca345076d756053d743f16185111a80d4",
+        "sha256": "sha256:323da50d7c52d32333976e8f0660d17fdfb48a537970a16d44c0a78ba0629fd0",
+        "bytes": 3012
+      }
+    ],
+    "limits": [
+      "Original failed controls and unresolved verdict are unchanged.",
+      "Diagnosis deviations annotate later evidence; they do not rewrite the frozen protocol or original run.",
+      "Four historical Astrolabe datasets remain missing and historical consumption remains unknown.",
+      "No assessment record is emitted; this migration cannot imply confirmation."
+    ]
+  },
+  "rollback": "Consumer/gallery cutover may be reverted while immutable records remain; rollback exports every legacy JSON byte unchanged."
+}

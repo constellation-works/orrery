@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2Fmain.py",
+  "aliases": [
+    "lab/sims/scarcity-rotation-curve-fit/main.py"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "6b1fcf8537032962a170622bf39bcc6f59392fb8",
+    "sha256": "sha256:c96bcd84057962bb025e4fed155fb93c8124746c0f01f8af5282d0cde1f27a02",
+    "path": "lab/sims/scarcity-rotation-curve-fit/main.py",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/scarcity-rotation-curve-fit/main.py",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:c96bcd84057962bb025e4fed155fb93c8124746c0f01f8af5282d0cde1f27a02",
+    "locator": "lab/sims/scarcity-rotation-curve-fit/main.py",
+    "media_type": "text/x-python"
+  },
+  "revision_id": "sha256:e7d12f456697bd0f38558dc2a3c09483c2cd31c561331abc76c9963f1b318a29"
+}

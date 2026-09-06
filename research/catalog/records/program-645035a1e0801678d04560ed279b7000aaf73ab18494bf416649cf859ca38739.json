@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:pingpong-bell",
+  "aliases": [
+    "pingpong-bell",
+    "lab/sims/pingpong-bell/sim.json"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "a6e89006c4309ac6a76ffe53076621c1056a7528",
+    "sha256": "sha256:f6b32f02e01a2cb71a972645a9242b1b177cebf5e1f2c41c047f0969a1e104f1",
+    "path": "lab/sims/pingpong-bell/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [
+    "activity-mapping",
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/pingpong-bell/sim.json",
+    "source_sha256": "sha256:f6b32f02e01a2cb71a972645a9242b1b177cebf5e1f2c41c047f0969a1e104f1",
+    "catalog_status": "imported",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Ping-pong Bell tally analysis"
+  },
+  "revision_id": "sha256:645035a1e0801678d04560ed279b7000aaf73ab18494bf416649cf859ca38739"
+}

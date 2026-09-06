@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsolar-system-nbody%2Fscarcity%2Fmultiplicative_signature.parquet",
+  "aliases": [
+    "lab/sims/solar-system-nbody/scarcity/multiplicative_signature.parquet"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "de7eaff140507de98a3673a39288ed57f250e66e",
+    "sha256": "sha256:fc5b3187cbb3a1a5731b19a97b613120fbddd3b311b9ac90191332527f001fed",
+    "path": "lab/sims/solar-system-nbody/scarcity/multiplicative_signature.parquet",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/solar-system-nbody/scarcity/multiplicative_signature.parquet",
+    "scientific_role": "captured-data"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:fc5b3187cbb3a1a5731b19a97b613120fbddd3b311b9ac90191332527f001fed",
+    "locator": "lab/sims/solar-system-nbody/scarcity/multiplicative_signature.parquet",
+    "media_type": "application/octet-stream"
+  },
+  "revision_id": "sha256:fd0a2cc335cc9e4f9621616a86c0c795e763681e76001f1775b53eca6a8ae9f7"
+}

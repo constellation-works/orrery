@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fshear-consumption-lattice%2Fruns%2F2026-08-21-seed-42.json",
+  "aliases": [
+    "lab/sims/shear-consumption-lattice/runs/2026-08-21-seed-42.json",
+    "lab/sims/shear-consumption-lattice/runs/2026-08-21-seed-42.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "2949e0a7aae2c20f46b8b04fd056725b0eab80f1",
+    "sha256": "sha256:78d428a4192f7fb2099cdef0266d7709e48f45a147a2051437c59f2c6508f725",
+    "path": "lab/sims/shear-consumption-lattice/runs/2026-08-21-seed-42.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/shear-consumption-lattice/runs/2026-08-21-seed-42.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:78d428a4192f7fb2099cdef0266d7709e48f45a147a2051437c59f2c6508f725",
+    "legacy_anonymous_alias": "d418c9ae6d2f27d05776dac467c4d84afeb82b95c3b5ee1efe8d873b2d5eeebb",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:78d428a4192f7fb2099cdef0266d7709e48f45a147a2051437c59f2c6508f725",
+    "locator": "lab/sims/shear-consumption-lattice/runs/2026-08-21-seed-42.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:989ef1b069171edd259b749828807411116733461eae38892370e3d28040037a"
+}

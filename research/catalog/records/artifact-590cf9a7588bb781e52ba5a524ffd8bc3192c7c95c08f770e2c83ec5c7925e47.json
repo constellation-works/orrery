@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-star-well-headroom%2Findex.html",
+  "aliases": [
+    "lab/sims/scarcity-star-well-headroom/index.html"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "4a3e2930105ca69d7b2f0125f5b67027c7c66c6e",
+    "sha256": "sha256:d0290a2e71ef4bc3133019b7a78656ff58689306151a439628e91bcaf2807644",
+    "path": "lab/sims/scarcity-star-well-headroom/index.html",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/scarcity-star-well-headroom/index.html",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:d0290a2e71ef4bc3133019b7a78656ff58689306151a439628e91bcaf2807644",
+    "locator": "lab/sims/scarcity-star-well-headroom/index.html",
+    "media_type": "text/html"
+  },
+  "revision_id": "sha256:590cf9a7588bb781e52ba5a524ffd8bc3192c7c95c08f770e2c83ec5c7925e47"
+}

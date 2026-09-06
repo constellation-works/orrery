@@ -1,0 +1,1209 @@
+{
+  "schema_version": 1,
+  "kind": "manifest",
+  "repositories": [
+    {
+      "id": "orrery",
+      "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398"
+    }
+  ],
+  "references": [
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:delayed-center-analytic-checks",
+      "revision_id": "sha256:88103f5b2c9dcdd3643adcd95817f98cee393e05d611511f361e6058f5ecf5b0",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:dynamical-consumption-lattice",
+      "revision_id": "sha256:e926b42c0acd567ace32c4affb79b2b0aff763dc392e4b8e2fc9ea6a7a5ca80d",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:flowing-lattice-photon-propagation",
+      "revision_id": "sha256:13323c73c796ddee246a735bb139052e22f007e6b3f3bed024426660dd9af197",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:frame-drag-swirl-lense-thirring-check",
+      "revision_id": "sha256:e1d4e5b65b488d68ec4d257b18506aa59c19ebd8eece4236d3366496b6fa2abf",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:frame-drag-swirl",
+      "revision_id": "sha256:c1cb59c71d652c740be9f7c034834374c5ef5828ddc5c69302e840185fca6bce",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:lattice-photon-propagation",
+      "revision_id": "sha256:bc2e6585a749ca44aa30ade873e1147748b7c7a128158d8973ababf646052ab4",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:lattice-two-source-superposition",
+      "revision_id": "sha256:3d29730622ed931e1715bf8a6b7b1a2db52e407fd68d93ecf478140b25bcff61",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:level-core-cavitation-threshold-map",
+      "revision_id": "sha256:02dc8c9701cc3c986270f45332d386711c63e107e569d8908bed073b4fa35b6a",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:level-core-dynamical-relaxation",
+      "revision_id": "sha256:1217ef228b5c56d962e1e93aef03e813b6c3cc5f6588a29ddcb45c8f5eb9cbcc",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:level-core-far-field-slot-coefficients",
+      "revision_id": "sha256:4c74a0505b150deb5f196bb42f676837e65dedde4f6fa40c46e1b1a22ef5664d",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:level-core-two-core-superposition",
+      "revision_id": "sha256:6f609e024b2fa5eb800996af0534f070277b50e2fc004f08373550bef86c5377",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:level-core-wind-tunnel",
+      "revision_id": "sha256:058defbf3b962db69576522278d05bd2c50de78cb3539a0ec1149e92d02deb5d",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:level-coupled-shear-lattice",
+      "revision_id": "sha256:b9f8478664764d78231a854d1676c30d20e38c861b34095e3f69aa0698d8d3d2",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:moving-core-acoustic-rays",
+      "revision_id": "sha256:2b1dd87797d6c30d950c7931b75e365b0743a0c4aebfa26bea1f66d9d9b6bbfc",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:oscillating-electron-retarded-fields",
+      "revision_id": "sha256:2d4663035706bbbf9eae43da54867b820b207a052c0b57e112a88ab711149dbc",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:pendulum-driven",
+      "revision_id": "sha256:bef95a27ee247aaf1800c173dfec5eaa1bc36132d5c2f35a13098730e968d780",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:pingpong-bell",
+      "revision_id": "sha256:645035a1e0801678d04560ed279b7000aaf73ab18494bf416649cf859ca38739",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:ppn-reduction-symbolic-checks",
+      "revision_id": "sha256:00a484133d15ba712e8f8e41ccffdf80e8f0515481a5349ba2f8b21f89f8641c",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:rar-network-fluctuation-limit",
+      "revision_id": "sha256:aee7f9be48c54de3a48600e568e11b7bc4a8dc9dad8a0a5525f13fe698b98078",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:retarded-scarcity-wake",
+      "revision_id": "sha256:f79f9d6a5b8bb434913ce0708a13133720d30c5a892368f74d2930f5e5bba45a",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:rotation-curve-distributed-mass",
+      "revision_id": "sha256:ac1ed9a54aac7d25f3b8446b7f9465c5245cb4217ccbda085f3e15c9457bb164",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:scarcity-capped-cumulative-field",
+      "revision_id": "sha256:58aba4d0587f096ea76b9436a8a33991b8af508245beb11f7e0b770726861d80",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:scarcity-field-slice-toggle",
+      "revision_id": "sha256:21f89f1f4380a442a3bea2c8bd01d6637862740c9115f68c27796b8ac47d3ab3",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:scarcity-grid-weight-black-hole",
+      "revision_id": "sha256:8cb4b93a2957fa73fdb92314666faba58ecdc3529a87b93558db1538cfa39e1c",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:scarcity-rotation-curve-fit",
+      "revision_id": "sha256:f2e2eca031958d6b26515722e2368a256e18a687a7c22c1834cb82e7aa93ec18",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:scarcity-shell-depletion-field",
+      "revision_id": "sha256:822a59f4e38604c9a22ca1cfedb33cf8ce1a3531b70e6891cef4b5c8ad48eb0a",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:scarcity-star-well-headroom",
+      "revision_id": "sha256:e13cc278de62bf2b18915d34a1a2f9de1cddd7093dd1d056ed64f4038866853f",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:shear-consumption-lattice",
+      "revision_id": "sha256:85297c29120681b7c8f3fbe6f0449263989ef92c5f8a7f7fd6cc456542371e0f",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:solar-system-nbody",
+      "revision_id": "sha256:ba90c0009b60d926991b1b35334419833a86abe02f14650fda8951f6f8974ae1",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:sparc-scarcity-universality",
+      "revision_id": "sha256:5f07285109a1927294bfcb77dd6a81f1b2b5506c30d0460a232bfd808f09a62b",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:swirl-ball-far-field",
+      "revision_id": "sha256:82783de20da5b8dbf96ae7026e3036562f1f8ef33f73f8b74e602d8138d1ec82",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:swirl-ball",
+      "revision_id": "sha256:848b71a131ff911380fa82358081080696dfce4e738b252700fda6ba87a1d1e0",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:two-substance-defect-gravity",
+      "revision_id": "sha256:ceb14c417fd097c29886148da38b8b094c90829cf583f898bfd63b3737f78258",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:two-substance-dynamical-packet",
+      "revision_id": "sha256:0ed6736d8243bf50f496993a45dcc7278567410bb86459c3169510e22ada9fe7",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:two-substance-packet-linear-symbol",
+      "revision_id": "sha256:2de4da5b4e330c6dc03368708c2f592311608ad4221cd9a96ff785f53c6ff4e6",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:two-substance-vortex-lattice",
+      "revision_id": "sha256:32ff05f65ea773428dc7b993d177b895b06c8d618bf372b66216a5c6d72bea03",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:vortex-bell",
+      "revision_id": "sha256:1a54e5dde75d0930e7baa734f9b6e8c4d61f9608e8be2176fe04529f997299f6",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:wide-binary-control-diagnosis",
+      "revision_id": "sha256:8bee052a2328cd5ae672ac2741a19c49fe7ed6788f591fcbf853d9a1284d98b6",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:program:wide-binary-selection-bias",
+      "revision_id": "sha256:a406fc3f77a3b95ff63e184a1024642c74852bd01e92f456048c6332855f1f7a",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fdelayed-center-analytic-checks%2Fassets%2Fresults.json",
+      "revision_id": "sha256:c3595bd60872dd85290076e6cf94e3bb105f6778002f0620d14b38d0f392dc44",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fdelayed-center-analytic-checks%2Fruns%2F2026-09-04.json",
+      "revision_id": "sha256:ef9800361948522f7200c2607026b59606964ccf242b6cb0b8b257a501c39566",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fdynamical-consumption-lattice%2Fassets%2Fresults.json",
+      "revision_id": "sha256:e0c02ebab713673822f529a4cdbe2f0841f7b53d8ae5e2d49db47b91359fc764",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fflowing-lattice-photon-propagation%2Fassets%2Fresults.json",
+      "revision_id": "sha256:ab7aa4188f5038299dbc1de20d38e5deca9a925edee917763847553a135aeaba",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fframe-drag-swirl-lense-thirring-check%2Fresults.json",
+      "revision_id": "sha256:15cb643580a5127b73df90b071e11199437fcb18c6976764b2d1a962fdd70145",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fframe-drag-swirl-lense-thirring-check%2Fruns%2F2026-09-04.json",
+      "revision_id": "sha256:aeb58a7415a2da247f72697ce44d4900f0f3eee2a7cbb6b8411433bf2d23c463",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flattice-photon-propagation%2Fassets%2Fresults.json",
+      "revision_id": "sha256:c2bac55b1c7ce8bffd0f07b0177e9dd50319e2852045f9c746da5fdd43e4808e",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flattice-two-source-superposition%2Fassets%2Fresults.json",
+      "revision_id": "sha256:1481ce86523924289c06b801a706c508762fa51ab060bc33ac9f2668861b1793",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-cavitation-threshold-map%2Fassets%2Fresults.json",
+      "revision_id": "sha256:757976f32733ef417bb32ddfe5e3f8872a70db0fc368a7a4125f90b8643429bc",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-cavitation-threshold-map%2Fruns%2F2026-09-04-seed-42.json",
+      "revision_id": "sha256:da89d231677f975d05cf666d625206534af1053b73008aee672b8d69066ee39b",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-dynamical-relaxation%2Fassets%2Fresults.json",
+      "revision_id": "sha256:790a7e225aa65a06c119a45a9f16544d4f4a5d22e555f3342395d88bbd81ce6b",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-dynamical-relaxation%2Fruns%2F2026-08-21-extended-seed-42.json",
+      "revision_id": "sha256:2145e5660847123a12ad7632b5f5b1c05abf96503b6b868ac8c19ad5122299fc",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-dynamical-relaxation%2Fruns%2F2026-08-21-seed-42.json",
+      "revision_id": "sha256:719d3bff8eb0be858205c32d2b47ea62c23488bf143268f9cf5bc22e672cf260",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-far-field-slot-coefficients%2Fassets%2Fresults.json",
+      "revision_id": "sha256:fd8b54deee95f58b32d1dfc742c59d8166fb73e39766bd9a4f07b2e7aede423e",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-far-field-slot-coefficients%2Fruns%2F2026-08-28-seed-42.json",
+      "revision_id": "sha256:9228c6d4203ab9f7834e5524b487cf3d6b7f0e0708e21a61d7b96397e0555fc8",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-far-field-slot-coefficients%2Fruns%2F2026-09-04-seed-42.json",
+      "revision_id": "sha256:ccf0454227d555318c09e252a3d3e978f8ff2e5b08113fdaf7aed20ba0a3b634",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-two-core-superposition%2Fassets%2Fresults.json",
+      "revision_id": "sha256:c0add62a3f0f31554205b98a8814ca0866ffbf4ce4973c07576f273f94161668",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-two-core-superposition%2Fruns%2F2026-08-21-seed-42.json",
+      "revision_id": "sha256:0af3df207b630f401d85e7c139c0fbb139dd5957e0314d86307b8da83470efcc",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-wind-tunnel%2Fassets%2Fresults.json",
+      "revision_id": "sha256:8be79e5702c68dcde51b982b8b79bba58abe18b851ce0e61ee462d0c89819de1",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-wind-tunnel%2Fruns%2F2026-08-21-seed-42.json",
+      "revision_id": "sha256:fd2cc31540f5b8038086b0b9af09abaa4098493d76c9159c9de0c4dc1bd3656b",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-coupled-shear-lattice%2Fassets%2Fresults.json",
+      "revision_id": "sha256:df14961059a6bdf98985be90c590d2569eb990f3b1aeefb8e5191ba6b0eb0040",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-coupled-shear-lattice%2Fruns%2F2026-08-21-seed-42.json",
+      "revision_id": "sha256:92f5528fc257b5c02acd29d60543dee5622da95c5f299133c1990e62b62b6a60",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fmoving-core-acoustic-rays%2Fassets%2Fresults.json",
+      "revision_id": "sha256:5d65edf283f3950eab7e3909e2be0342c210d4a9181aad3633633eda456f83b1",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fmoving-core-acoustic-rays%2Fruns%2F2026-08-21-seed-42.json",
+      "revision_id": "sha256:9aa67a21696ad84da358da2bce2f97763e77b1aac22e55504492f643550527a3",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fbrowser-report-after-controls.json",
+      "revision_id": "sha256:78fbac742e9892bbf7c58494e25014a6c015356a5da9465b4f880b222e335ce4",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fbrowser-report.json",
+      "revision_id": "sha256:399764d55385c10a0452984675b89a009268dd080b3c5b8375981db689d34525",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-numerical-report.json",
+      "revision_id": "sha256:fd06cbd6f3d639ad88cdff23224ebd991918f45eef60586dfb8a7682247a4c77",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fnumerical-report.json",
+      "revision_id": "sha256:4d3e1a1bb075c20968c1ae1e03c00b9cb89051d7f104e6c9c05aee166f9cb7dc",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fppn-reduction-symbolic-checks%2Fassets%2Fresults.json",
+      "revision_id": "sha256:2a95a8b93b52de450fd9ad2890288b5e2b5aa7de0e14a1923ce197b94afe8095",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Frar-network-fluctuation-limit%2Fassets%2Fresults.json",
+      "revision_id": "sha256:addb5b78bfd40ed13e6876f8debb7abd06dea4f926edfec1909e1e54f7ac3332",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2Fassets%2Fradial-drift-results.json",
+      "revision_id": "sha256:64a81e778f95228f0aa9537fa3cbaf07bae93306fb0b05f3a42521b62309a937",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2Fassets%2Fresults.json",
+      "revision_id": "sha256:80cde3487d3d6d67492cbf17aa9d54cc3e0e8f6d4316ea5c1ba6ebb8b1ea2a2f",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fshear-consumption-lattice%2Fruns%2F2026-08-12-seed-42.json",
+      "revision_id": "sha256:be8af3019705123b6e1c8ac9274017b7a27abc53a2ff61ffac8882fc5b71e01f",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fshear-consumption-lattice%2Fruns%2F2026-08-21-seed-42.json",
+      "revision_id": "sha256:989ef1b069171edd259b749828807411116733461eae38892370e3d28040037a",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fshear-consumption-lattice%2Fsummary.json",
+      "revision_id": "sha256:7822e949785491a0e72522050d2b3c16a9f53acb9a9a53b31de0ea278b64681e",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fsolar-system-nbody%2Fbaseline%2Fsummary.json",
+      "revision_id": "sha256:78da69b0f8d5ac651daa55f0c93c4618b2ec50f59b9a3d10efec86c42901bf12",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fsolar-system-nbody%2Fscarcity%2Fsummary.json",
+      "revision_id": "sha256:bf029f7a8f8c7730342d60d9f5f6dc99b9f460c4ae51311ec898cef1e096dea5",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fsparc-scarcity-universality%2Fassets%2Fresults.json",
+      "revision_id": "sha256:d069a9bdb73224cc331f3841082abdcb4d4169ae276fca84cd532c8a763bddd5",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Ftwo-substance-defect-gravity%2Fassets%2Fresults.json",
+      "revision_id": "sha256:7a8fe01216f39e2031ba2e0ff08071998f7867599ab082d28c6715dc2f033bed",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Ftwo-substance-dynamical-packet%2Fassets%2Fresults.json",
+      "revision_id": "sha256:95f7fb4c54ffafae7f7e8e3cf1d75d826f9dbaa085d87bb5634149490d3e90e0",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Ftwo-substance-packet-linear-symbol%2Fassets%2Fresults.json",
+      "revision_id": "sha256:84981947653d484019b66c0fbaa99340facb455495ae004f332cc7f2fa53f0c8",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Ftwo-substance-vortex-lattice%2Fassets%2Fresults.json",
+      "revision_id": "sha256:bb6744636a525a786cc14e03501fd02d5cb72b874a581cdd5ef7ca7b2bbb9084",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fwide-binary-control-diagnosis%2Fassets%2Fresults.json",
+      "revision_id": "sha256:05a1791e4b2fe1f712119289df32553a9a67aa1dc04718f80a64bbf2ab722990",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fwide-binary-selection-bias%2Fassets%2Fresults.json",
+      "revision_id": "sha256:db3bfe2a09415d4fda7ad64ba2e3e79b5906e0ff61b5909d2f9177419dbf7534",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fdelayed-center-analytic-checks%2Fmain.py",
+      "revision_id": "sha256:67f80def38d85e55c783ba30a9279a702d91a8df1fd49bfb343e0ac327753421",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fdynamical-consumption-lattice%2Fassets%2Fprofiles.png",
+      "revision_id": "sha256:957c9e12a7fe69e1cb83f0a231ce70b601e84bba6fe23ad2112fbf4a6a3d61d8",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fdynamical-consumption-lattice%2Fmain.py",
+      "revision_id": "sha256:0620da0f6d5cd621e9779e851b78587c97d80b565d101cd0d828bb26e322cd39",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fflowing-lattice-photon-propagation%2Fassets%2Fpropagation.png",
+      "revision_id": "sha256:3b094272b7a50f0bfe82293fa71b3bb2c636c53c13fd8b1d7bc9e651c751eb67",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fflowing-lattice-photon-propagation%2Fmain.py",
+      "revision_id": "sha256:bc3cc2c240f8d86593c0c9738bddd6d09153b8573e097d183ee1686e2e0882f6",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fframe-drag-swirl-lense-thirring-check%2Fmain.py",
+      "revision_id": "sha256:8d18df897762569ec9f916ec73d354f6139795ba680344c8ce9541f0373fee0b",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fframe-drag-swirl%2Findex.html",
+      "revision_id": "sha256:46799f9665f69d7f30e16043a01cacf7cc4687890acfc76f7063f875b318c1d2",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flattice-photon-propagation%2Fassets%2Fpropagation.png",
+      "revision_id": "sha256:2a5ee16d22002c7b06fb720a4eaa63fd2346f7106215b693d5b39b25e6cd462d",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flattice-photon-propagation%2Fmain.py",
+      "revision_id": "sha256:5197ad6a26d5878777da3c7cfb1aed380b8b7b2ab9404aeef1e847094fb340e4",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flattice-two-source-superposition%2Fassets%2Fsuperposition.png",
+      "revision_id": "sha256:80e602e62ac14570f60bd237c02e62a689ee6935d3c03b8589de1ea22169a9c2",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flattice-two-source-superposition%2Fmain.py",
+      "revision_id": "sha256:e2a71e78c1f5edc6090cb48ea3d4c7467150735966ec267c812aeb5463f88048",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flevel-core-cavitation-threshold-map%2Fmain.py",
+      "revision_id": "sha256:b8cca56c8af2e240b758475ea38b6001b9782fdf27b0a8330fa42da6c5195aa0",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flevel-core-dynamical-relaxation%2Fmain.py",
+      "revision_id": "sha256:ec5d817308b79cccce33c843c33f6d701728ce854e2adb75ca98741007a627d4",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flevel-core-far-field-slot-coefficients%2Fmain.py",
+      "revision_id": "sha256:2fb38619c30fa89708f7e564110f7db78d7aa7eb3aac0e3016bf2f56618ff4a8",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flevel-core-two-core-superposition%2Fmain.py",
+      "revision_id": "sha256:e7f0d89b87818ab1a236f39a6305f933b896abc6abd66a05a34413e1501e094c",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flevel-core-wind-tunnel%2Fmain.py",
+      "revision_id": "sha256:969d07e59c96b2336c90a30a73630c751e50e9f8611bf93b3fd5972ef36eda41",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flevel-coupled-shear-lattice%2Fmain.py",
+      "revision_id": "sha256:05bcf60380213faa5ebd79f674dc5ee802237bfdd9e33fd28cc0dcff7718f0d4",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fmoving-core-acoustic-rays%2Fmain.py",
+      "revision_id": "sha256:aa37756e0710180ba8cd6adbf90dcbff3de8186512a86fd245de475f858f712e",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fcomparison.html",
+      "revision_id": "sha256:355918d3943caffb419fa918dd0ae2c56e43ad0e94abda851115b1045f76b24e",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-desktop-after.png",
+      "revision_id": "sha256:66e47e55c73c3d6d27be6a51346bf3c896192def620813cc6d01ed685e8c03b7",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-desktop-before.png",
+      "revision_id": "sha256:a1e36db6ec660593d32d2d3c04e3d7912a372a2a3efa8cc8d7e17d50e5efad09",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-desktop-delay.png",
+      "revision_id": "sha256:89e2348bc8d23666fc7cea426c74f09ef4d832618d6519dce1eda33d9eee7aa1",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-desktop-during.png",
+      "revision_id": "sha256:e84afaad875145ffebd6aa79ead60ec5ac34695248d5bbe3821601a6176bd99c",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-desktop-guide.png",
+      "revision_id": "sha256:24a50e378056bb36af78a02d441e3572e80847595465fb02ff3442142ba315f8",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-narrow-after.png",
+      "revision_id": "sha256:d6d85e77d467333178d0b78a22ba3cf1624a51d1afab95530ccbad5838e01e22",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-narrow-before.png",
+      "revision_id": "sha256:4c8cb28b5c69868bf06286f22ec7d790969a65d5c944492992a05dad98d07eb2",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-narrow-controls.png",
+      "revision_id": "sha256:501be2ffa9823ee2140ea56171acf32d0f979c2b02d98e036ab15568daaa971f",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-narrow-delay.png",
+      "revision_id": "sha256:245f45d76df056b8780b52f453f1bdeaa61abd5ac9bc96dbc1215b6a3e7e85e2",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-narrow-during.png",
+      "revision_id": "sha256:c3023c0b61c3c6f03762606a8ed55690b0579b325031d5abee26102324ce5ac6",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-after.png",
+      "revision_id": "sha256:384dc04ec33dcb6d16f4da248aac387ff9dd31f3ee2bd090fa2da19b1376530f",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-atlas.png",
+      "revision_id": "sha256:11660019ea5e63186fc5b7aa983e2478d48a90ebd3b36a43864e852439a6da00",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-before.png",
+      "revision_id": "sha256:d0cd2dda36b419bab6633db7dc501604997fdb6f155fad443901161e123e3758",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-delay.png",
+      "revision_id": "sha256:6a3f4e4d554b5df9cf843e5e1090dd52d3233db1a27afef156146970f635d58e",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-during.png",
+      "revision_id": "sha256:347fa77aa04127452069f2aeddf43e5a889da2ff1d2b70fa1ad36b7590662eaa",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-near.png",
+      "revision_id": "sha256:eba2f5ce3236d243a8708d36c1ab353c64e5e8986bb205054e47c19e7116ca46",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-power.png",
+      "revision_id": "sha256:3e552a9f79700e97bca759071dc7fde300328e270f7167ba53dcf2143c1015bc",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fnarrow-after.png",
+      "revision_id": "sha256:7ecde08c8eb5f54e20d4340636f5d45eb2c5d6f03d0368a738de75081afd27e0",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fnarrow-atlas.png",
+      "revision_id": "sha256:19ad6f4e783bb11e5bd03680e1454e12921649e657d2e7edd9ffe5c14234de27",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fnarrow-before.png",
+      "revision_id": "sha256:9c7b491251d1a1f755479d3d8627e0d275da86373c0061155a2c6a2724ce31d7",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fnarrow-delay.png",
+      "revision_id": "sha256:228c69075671333c8d08237b0dd4f76734c3e124cb2e44a1048f741c21a9ed5e",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fnarrow-during.png",
+      "revision_id": "sha256:3a865a572fe0132656e63e1d6760521980b09759a4be7cc87ac2fcf301cff14c",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-desktop-after.png",
+      "revision_id": "sha256:97f77e9503878d1e63f0c0bdc0101d20009c6866b32a8b5fc22156cbcfc3c7a7",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-desktop-before.png",
+      "revision_id": "sha256:d3e373bb1d0ea9d94f67fad2835b2ecc9372d90e5dfd940d840de7da9ccbca47",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-desktop-delay.png",
+      "revision_id": "sha256:e7c5b9e6a4255c7370b877cd5177fc3222e75d9816474dc0f9adbdb4b198a54b",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-desktop-during.png",
+      "revision_id": "sha256:75b8b5921493c972b9740e82d38824fe403f69c66e845c7b7ea8759b7c3562b9",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-narrow-after.png",
+      "revision_id": "sha256:3aaa645cb7d9e6df559c5eabe6d7a3e3e3b11abfccc8a7a0a033a51cffc8bdc6",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-narrow-before.png",
+      "revision_id": "sha256:8cf4790494a317b16709c499ca221c455f9fff5501b1c2bac6116c134a91dac6",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-narrow-delay.png",
+      "revision_id": "sha256:94864f91ecc71cc4ce226d42c934c5d8fca96589d8a79b8e5b5e3cc2c9242709",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Foriginal-narrow-during.png",
+      "revision_id": "sha256:2fa7fd0b78d66e376dd075d50f7911017c168452c81650ee4264823065d3685b",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Findex.html",
+      "revision_id": "sha256:50a19e4fb0f8cb7f00e8f921298be2d5a850615958c7edcc93102f69f29b4985",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fpendulum-driven%2Findex.html",
+      "revision_id": "sha256:297aa04529547f37e3520aef65086162969d6ada16054f8528d9469cd4710c66",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fpingpong-bell%2Fanalyze_bell.py",
+      "revision_id": "sha256:2790aa62305579db4319e903b1690ce1f741849fe9a8fbf63c156f2a99fb95e3",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fpingpong-bell%2Fsample-tally.csv",
+      "revision_id": "sha256:c25aefe735df9d6615ab2afacc3244f4ee431e6877c40080a7f4b17a5c2c6af4",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fppn-reduction-symbolic-checks%2Fmain.py",
+      "revision_id": "sha256:34fbdc96a3aca996646345cbb4a9235f66672e16ab13c8f8911f4e4bc7fc3fc3",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Frar-network-fluctuation-limit%2Fassets%2Fexclusion-curve.png",
+      "revision_id": "sha256:6855b5176695f96f645924337e3e658b1669350fe9ea82c83461d4cd9e43f435",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Frar-network-fluctuation-limit%2Fmain.py",
+      "revision_id": "sha256:841c588e238ef5a8f626bd3c4fa3c476e82aacdb955a80c5ba238ccf6c344462",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fretarded-scarcity-wake%2Findex.html",
+      "revision_id": "sha256:ab7484f10b41859600db0c18b02c486c1f57d0f7bf6ebe565b484f08eb208aa1",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Frotation-curve-distributed-mass%2Findex.html",
+      "revision_id": "sha256:48dba4e58399ea07f98f75b74e2ad50630ba93829b6225e853e62252f04f125c",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-capped-cumulative-field%2Findex.html",
+      "revision_id": "sha256:66cc1471e484824adedaeadcfcf1893c320a3924874c497d82350a8433c02808",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-field-slice-toggle%2Findex.html",
+      "revision_id": "sha256:d688602b675c6de1c0f78d76c264ace8077dd41033b7ed56732fcfa4c5c0e081",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-grid-weight-black-hole%2Findex.html",
+      "revision_id": "sha256:8b09fefac7629513fd69f93c3218a96e4c9f0ce34d05c0d351cae635f188c7b9",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2Fassets%2Ffit.png",
+      "revision_id": "sha256:086ce8a2d1e3e09e56e018acf4e28a997f74d221abf9d7a0cde156a44605e5fc",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2Fassets%2Fradial-drift-fit.png",
+      "revision_id": "sha256:20918c169f541a7b413e45aee5b37d03939b191aa302dc0d8e1b83d3188af042",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2Fmain.py",
+      "revision_id": "sha256:e7d12f456697bd0f38558dc2a3c09483c2cd31c561331abc76c9963f1b318a29",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-shell-depletion-field%2Findex.html",
+      "revision_id": "sha256:d9ff2e613d06acb2e4cab050e3bdbdbe923edcfc120a91fe77e8342d54c72e8e",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-star-well-headroom%2Findex.html",
+      "revision_id": "sha256:590cf9a7588bb781e52ba5a524ffd8bc3192c7c95c08f770e2c83ec5c7925e47",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fshear-consumption-lattice%2Fmain.py",
+      "revision_id": "sha256:ca252da85b1a99e0d6b09a20c3c407ff172d430c6805ce68048883c6d2045baa",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsolar-system-nbody%2Fbaseline%2Fnewtonian_2016_2026.parquet",
+      "revision_id": "sha256:f8dd594509c95ec810fc15598fbed3768e4facdd78a930ddbb26c61906e49e3b",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsolar-system-nbody%2Findex.html",
+      "revision_id": "sha256:e5cd339104cb00f6126d243792df1a1968ebf946ee7ea1fda7fe80b4c0989a03",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsolar-system-nbody%2Fscarcity%2Fmultiplicative_signature.parquet",
+      "revision_id": "sha256:fd0a2cc335cc9e4f9621616a86c0c795e763681e76001f1775b53eca6a8ae9f7",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsolar-system-nbody%2Fscarcity%2Fsignature-vs-floor.png",
+      "revision_id": "sha256:85f701ab0c4f2b0d787c4172fd97d6ba7504a410810c51af85d73301b5d44469",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsparc-scarcity-universality%2Fassets%2Fdiagnostics.png",
+      "revision_id": "sha256:878e696b2af701cefdbae7ce728675a9b34c620b5b7289230736fc029b7d8e30",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsparc-scarcity-universality%2Fmain.py",
+      "revision_id": "sha256:3daf92e034fde8b96049aa7f71740f67057898419d3809d458eb7032d0012856",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fswirl-ball-far-field%2Findex.html",
+      "revision_id": "sha256:51294e01d31fc4e4ab53337c1103b08063e4ddd8a0052b6c3cade9080df4354a",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fswirl-ball%2Fassets%2Fphoton-field.png",
+      "revision_id": "sha256:ad65006cf8678e8cdb8abfce81d72d389e7233732f63a1a7c59a6828060fc562",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fswirl-ball%2Findex.html",
+      "revision_id": "sha256:26fb487aec9b7b0e8df57a6083ae4c74ad889d808db509d75555a80470d348b8",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-defect-gravity%2Fassets%2Fgravity-bridge.png",
+      "revision_id": "sha256:6e17a50a91dd436ca51b403a8c87a1398d69a1601833d94654efa3cdfcb74f45",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-defect-gravity%2Fmain.py",
+      "revision_id": "sha256:0a22c96febbd34b16f56d88970f672e2e0df2553d17b96bc0c024225da0d456c",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-dynamical-packet%2Fassets%2Fpacket-budget.png",
+      "revision_id": "sha256:b7d7d6bc022f1bf92ae851a17de1e551099f873057253d235be97665d1450c85",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-dynamical-packet%2Fmain.py",
+      "revision_id": "sha256:5e5a66272eeab21fd7b8ae9ca4f2cd96234c774b56326b2a87a12af10f50dd87",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-packet-linear-symbol%2Fmain.py",
+      "revision_id": "sha256:1586a52e93cbd7159448b982ad32022d7d666c5dbf5860751697846511af28c7",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-vortex-lattice%2Fassets%2Finteraction-sweep.png",
+      "revision_id": "sha256:c0c5735abc16193e7b13e911553fd176f09b1d03389c466c81ce73f35efbf22d",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-vortex-lattice%2Fmain.py",
+      "revision_id": "sha256:a703edbfc7e49957b4220e07e241ccb553af1061a6f0ed50c2d2c600dbdbb3fc",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fvortex-bell%2Fvortex_bell.py",
+      "revision_id": "sha256:47fd941b9fcf398b5003b817097522016a9d06eb4eb8d451dbb091187d9febac",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fwide-binary-control-diagnosis%2Fmain.py",
+      "revision_id": "sha256:e46a072411540a86e26e2e8af2433ece12bc4c7c0140d7aa3a29d2f3a25b5ec1",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fwide-binary-selection-bias%2Fmain.py",
+      "revision_id": "sha256:b045e354d555a4b5bd8d41a3a22631ee710ad32eb0f270f47bead57095444df1",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:experiment:wide-binary-selection-bias%3A2026-09-05",
+      "revision_id": "sha256:edb09120e6071a9bd86a594dbade0f8fa84b9774f5a1b3098ac6ff91ec8003a4",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:experiment:wide-binary-control-diagnosis%3A2026-09-05",
+      "revision_id": "sha256:6133d09e61048b31021c1d3c64353f50ac68e43e11eb3dfeedfebfc1804717ad",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    }
+  ]
+}

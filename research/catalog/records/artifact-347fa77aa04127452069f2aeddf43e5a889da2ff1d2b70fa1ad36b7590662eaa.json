@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-during.png",
+  "aliases": [
+    "lab/sims/oscillating-electron-retarded-fields/assets/desktop-during.png"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "72b3824cafe6d2c03933f35b31f0afc8410ed9e3",
+    "sha256": "sha256:eb900deb97196d402880ac6899543514cd769ee527d6531500c3fcae15274840",
+    "path": "lab/sims/oscillating-electron-retarded-fields/assets/desktop-during.png",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/desktop-during.png",
+    "scientific_role": "figure"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:eb900deb97196d402880ac6899543514cd769ee527d6531500c3fcae15274840",
+    "locator": "lab/sims/oscillating-electron-retarded-fields/assets/desktop-during.png",
+    "media_type": "image/png"
+  },
+  "revision_id": "sha256:347fa77aa04127452069f2aeddf43e5a889da2ff1d2b70fa1ad36b7590662eaa"
+}

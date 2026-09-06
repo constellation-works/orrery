@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-far-field-slot-coefficients%2Fruns%2F2026-09-04-seed-42.json",
+  "aliases": [
+    "lab/sims/level-core-far-field-slot-coefficients/runs/2026-09-04-seed-42.json",
+    "lab/sims/level-core-far-field-slot-coefficients/runs/2026-09-04-seed-42.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "ea96c6bca11041fb7a9e5a0a5d4b8027d4420698",
+    "sha256": "sha256:247ca36fdd17fbe8f83e733dd68f64361c38930bed692511669c7fe68bdac50a",
+    "path": "lab/sims/level-core-far-field-slot-coefficients/runs/2026-09-04-seed-42.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/level-core-far-field-slot-coefficients/runs/2026-09-04-seed-42.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:247ca36fdd17fbe8f83e733dd68f64361c38930bed692511669c7fe68bdac50a",
+    "legacy_anonymous_alias": "dc0baa21b4ad3fe483aaf54a944dcb6e3b1d9a60ee779dfc42ab7c4e4160927d",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:247ca36fdd17fbe8f83e733dd68f64361c38930bed692511669c7fe68bdac50a",
+    "locator": "lab/sims/level-core-far-field-slot-coefficients/runs/2026-09-04-seed-42.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:ccf0454227d555318c09e252a3d3e978f8ff2e5b08113fdaf7aed20ba0a3b634"
+}

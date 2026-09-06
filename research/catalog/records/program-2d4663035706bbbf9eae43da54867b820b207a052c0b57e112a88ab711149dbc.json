@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:oscillating-electron-retarded-fields",
+  "aliases": [
+    "oscillating-electron-retarded-fields",
+    "lab/sims/oscillating-electron-retarded-fields/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "25d5e6b968e0ed2d642c9e1c80f2c49ee405a834",
+    "sha256": "sha256:a30c12eff0d65e97aee2138897cbfa9554309d3d4849d07683a5a49b053ca0ec",
+    "path": "lab/sims/oscillating-electron-retarded-fields/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/oscillating-electron-retarded-fields/sim.json",
+    "source_sha256": "sha256:a30c12eff0d65e97aee2138897cbfa9554309d3d4849d07683a5a49b053ca0ec",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Turning electron — retarded fields"
+  },
+  "revision_id": "sha256:2d4663035706bbbf9eae43da54867b820b207a052c0b57e112a88ab711149dbc"
+}

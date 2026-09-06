@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "kind": "experiment",
+  "id": "urn:research:orrery:experiment:wide-binary-control-diagnosis%3A2026-09-05",
+  "aliases": [
+    "wide-binary-control-diagnosis:2026-09-05",
+    "lab/sims/wide-binary-control-diagnosis/assets/results.json#$"
+  ],
+  "activity": "resolved",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "637859060e286afe1e3f5091bc8a7a83e23f03d8",
+    "sha256": "sha256:6e0d1205e53c430a910788b148c9b7b566a305738403c23e9aa513330366d7bc",
+    "path": "lab/sims/wide-binary-control-diagnosis/assets/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Historical simulation evidence only; no observational or nature-level inference.",
+    "Historical execution has no native start receipt and cannot establish primary confirmation."
+  ],
+  "missingness": [
+    "native-start-receipt",
+    "independent-prospective-freeze-evidence"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/wide-binary-control-diagnosis/assets/results.json",
+    "source_selector": "$",
+    "historical_result_pin": {
+      "repository": "orrery",
+      "git_revision": "2e097e606bc751ba1a8b29ebdc5aab6bbd961c43",
+      "path": "lab/sims/wide-binary-control-diagnosis/assets/results.json",
+      "blob_oid": "637859060e286afe1e3f5091bc8a7a83e23f03d8",
+      "sha256": "sha256:6e0d1205e53c430a910788b148c9b7b566a305738403c23e9aa513330366d7bc",
+      "bytes": 50489
+    },
+    "code": {
+      "repository": "orrery",
+      "git_revision": "2e097e606bc751ba1a8b29ebdc5aab6bbd961c43",
+      "path": "lab/sims/wide-binary-control-diagnosis/main.py",
+      "blob_oid": "bb68d882063071091bbe989df5a6740ebe63f2ec",
+      "sha256": "sha256:a77bfb869498d16dcc45cd540cdae949e352f7e37583dfe4df1beda2fec6a723",
+      "bytes": 62320
+    },
+    "environment": {
+      "cpu_count": 14,
+      "machine": "x86_64",
+      "packages": {
+        "astrolabe": "0.1.0",
+        "astropy": "8.0.1",
+        "numpy": "2.5.2",
+        "orrery": "0.1.0",
+        "scipy": "1.18.1"
+      },
+      "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
+      "python": "3.12.3"
+    },
+    "invocation": {
+      "full": "PYTHONDONTWRITEBYTECODE=1 UV_CACHE_DIR=/tmp/orbit-uv-cache-11241 uv run --with ../astrolabe lab/sims/wide-binary-control-diagnosis/main.py --astrolabe-root ../astrolabe --principia-root ../principia",
+      "pilot": "PYTHONDONTWRITEBYTECODE=1 UV_CACHE_DIR=/tmp/orbit-uv-cache-11241 uv run --with ../astrolabe lab/sims/wide-binary-control-diagnosis/main.py --profile pilot --output /tmp/wbdiag-pilot.json --astrolabe-root ../astrolabe --principia-root ../principia"
+    },
+    "run_date": "2026-09-05",
+    "deviations": [
+      "protocol prose declares 47 realizations; the twelve frozen rows enumerate 44. Carried forward from ORB-11222, unrepaired.",
+      "the R4 gate requires detection in >=80% of seeds while allotting the R4 rows three seeds, so the rule is satisfiable only at 3/3 (100%).",
+      "protocol step 4 specifies planted pairs that are 'not physical pairs'; the fixture planted bound Keplerian pairs. The fixture is left as the frozen record of that run and is not edited here.",
+      "the gate compares chance_alignment_rate, a chance/selected fraction, against a planted/true-pair ratio."
+    ],
+    "historical_inputs": [
+      {
+        "reference": {
+          "repository": "astrolabe",
+          "id": "urn:research:astrolabe:artifact:source%3Aastrolabe%3A90f5b58890da36c44286a4edbde7eead879410a8%3Asrc%2Fastrolabe%2Fanalysis%2Fwide_binaries.py",
+          "revision_id": "sha256:c094af1fe09fdfaae8e53ec1e4a29e2c60c14e7c4acff1a88224e96a57704226",
+          "source_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+          "status": "resolved"
+        },
+        "availability": "available",
+        "historical_consumption": "unknown"
+      },
+      {
+        "reference": {
+          "repository": "astrolabe",
+          "id": "urn:research:astrolabe:artifact:source%3Aastrolabe%3A90f5b58890da36c44286a4edbde7eead879410a8%3Ascripts%2Frun_wide_binary_study.py",
+          "revision_id": "sha256:1e4be6ad9f8d5f8199348a0db4cc6df956c0459008f0cb30b3fbf8e708060ed9",
+          "source_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+          "status": "resolved"
+        },
+        "availability": "available",
+        "historical_consumption": "unknown"
+      },
+      {
+        "reference": {
+          "repository": "astrolabe",
+          "id": "urn:research:astrolabe:artifact:dataset%3Acatalog%3Awidebin_gaia_dr3_d200",
+          "revision_id": "sha256:edd5093f6f24ff2a7e01eda7f43f750bb1be12ad7d1cc794ea390e509f600111",
+          "source_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+          "status": "resolved"
+        },
+        "availability": "missing",
+        "historical_consumption": "unknown"
+      },
+      {
+        "reference": {
+          "repository": "astrolabe",
+          "id": "urn:research:astrolabe:artifact:dataset%3Acatalog%3Awidebin_pairs_baseline",
+          "revision_id": "sha256:eb5b5e5e6db1cd32348830d4315945f6eb83db8070a0930f711b4b525b0cad64",
+          "source_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+          "status": "resolved"
+        },
+        "availability": "missing",
+        "historical_consumption": "unknown"
+      },
+      {
+        "reference": {
+          "repository": "astrolabe",
+          "id": "urn:research:astrolabe:artifact:dataset%3Aderived%3Awidebin_vtilde_gn",
+          "revision_id": "sha256:302bec3f697c44e4abbb4a5156cbf3f2af984a840972ea041b2575427b2344ef",
+          "source_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+          "status": "resolved"
+        },
+        "availability": "missing",
+        "historical_consumption": "unknown"
+      },
+      {
+        "reference": {
+          "repository": "astrolabe",
+          "id": "urn:research:astrolabe:artifact:dataset%3Aderived%3Awidebin_sensitivity",
+          "revision_id": "sha256:77cdac007b611695d1174e1e315d1218c797372c0ba77f31b23aa4f3fbe949f0",
+          "source_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+          "status": "resolved"
+        },
+        "availability": "missing",
+        "historical_consumption": "unknown"
+      }
+    ],
+    "scientific_assessment": "pending"
+  },
+  "references": [
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-geometry-truncation-null",
+      "revision_id": "sha256:f5167b4f269e3e26112feea3ef2a28347616840c5d4df61830a7f330c067c883",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "resolved"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-cap-truncation-isolation",
+      "revision_id": "sha256:8594391102bfe1d6889dea1b870cb882ade3bc2e10cb65db19f1dad79c3e3e52",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "resolved"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-shifted-field-calibration",
+      "revision_id": "sha256:c913a7c4d4029c5cb9ca40b11ccd4c88b5d120224e883afdd25555e716190d0c",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "resolved"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-injected-effect-power",
+      "revision_id": "sha256:3e712cdc7796c3aa552e3d78a8890309d29445b944e5de8cbfd01038eb782d37",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "resolved"
+    },
+    {
+      "repository": "principia",
+      "id": "urn:research:principia:claim:wbsel-candidate-oracle-regression",
+      "revision_id": "sha256:79ac5b0fc943fa6ab255f10439710546b578fb36e8770a177ba565c7fc3b92f4",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "resolved"
+    },
+    {
+      "repository": "astrolabe",
+      "id": "urn:research:astrolabe:artifact:source%3Aastrolabe%3A90f5b58890da36c44286a4edbde7eead879410a8%3Asrc%2Fastrolabe%2Fanalysis%2Fwide_binaries.py",
+      "revision_id": "sha256:c094af1fe09fdfaae8e53ec1e4a29e2c60c14e7c4acff1a88224e96a57704226",
+      "source_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+      "status": "resolved"
+    },
+    {
+      "repository": "astrolabe",
+      "id": "urn:research:astrolabe:artifact:source%3Aastrolabe%3A90f5b58890da36c44286a4edbde7eead879410a8%3Ascripts%2Frun_wide_binary_study.py",
+      "revision_id": "sha256:1e4be6ad9f8d5f8199348a0db4cc6df956c0459008f0cb30b3fbf8e708060ed9",
+      "source_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+      "status": "resolved"
+    },
+    {
+      "repository": "astrolabe",
+      "id": "urn:research:astrolabe:artifact:dataset%3Acatalog%3Awidebin_gaia_dr3_d200",
+      "revision_id": "sha256:edd5093f6f24ff2a7e01eda7f43f750bb1be12ad7d1cc794ea390e509f600111",
+      "source_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+      "status": "resolved"
+    },
+    {
+      "repository": "astrolabe",
+      "id": "urn:research:astrolabe:artifact:dataset%3Acatalog%3Awidebin_pairs_baseline",
+      "revision_id": "sha256:eb5b5e5e6db1cd32348830d4315945f6eb83db8070a0930f711b4b525b0cad64",
+      "source_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+      "status": "resolved"
+    },
+    {
+      "repository": "astrolabe",
+      "id": "urn:research:astrolabe:artifact:dataset%3Aderived%3Awidebin_vtilde_gn",
+      "revision_id": "sha256:302bec3f697c44e4abbb4a5156cbf3f2af984a840972ea041b2575427b2344ef",
+      "source_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+      "status": "resolved"
+    },
+    {
+      "repository": "astrolabe",
+      "id": "urn:research:astrolabe:artifact:dataset%3Aderived%3Awidebin_sensitivity",
+      "revision_id": "sha256:77cdac007b611695d1174e1e315d1218c797372c0ba77f31b23aa4f3fbe949f0",
+      "source_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+      "status": "resolved"
+    },
+    {
+      "repository": "orrery",
+      "id": "urn:research:orrery:experiment:wide-binary-selection-bias%3A2026-09-05",
+      "revision_id": "sha256:edb09120e6071a9bd86a594dbade0f8fa84b9774f5a1b3098ac6ff91ec8003a4",
+      "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+      "status": "resolved"
+    }
+  ],
+  "presentation": {},
+  "payload": {
+    "execution_status": "completed",
+    "controls": "not-applicable",
+    "protocol": {
+      "repository": "principia",
+      "id": "urn:research:principia:protocol:wide-binary-selection-bias-control",
+      "revision_id": "sha256:90b62ef438d73d1a9ceb25c4d7753c0d4fce49dbacbcc207c7febc17f7c70842",
+      "source_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+      "status": "resolved"
+    },
+    "result_artifacts": [
+      {
+        "repository": "orrery",
+        "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fwide-binary-control-diagnosis%2Fassets%2Fresults.json",
+        "revision_id": "sha256:05a1791e4b2fe1f712119289df32553a9a67aa1dc04718f80a64bbf2ab722990",
+        "source_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+        "status": "resolved"
+      }
+    ]
+  },
+  "revision_id": "sha256:6133d09e61048b31021c1d3c64353f50ac68e43e11eb3dfeedfebfc1804717ad"
+}

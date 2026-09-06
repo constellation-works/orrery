@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fshear-consumption-lattice%2Fmain.py",
+  "aliases": [
+    "lab/sims/shear-consumption-lattice/main.py"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "4e02ae50446880101bfe00b896de6324f3d69931",
+    "sha256": "sha256:f880a986a7df4901816132ec5d551d35119226b4d18f72d0df7593a5fac24c55",
+    "path": "lab/sims/shear-consumption-lattice/main.py",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/shear-consumption-lattice/main.py",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:f880a986a7df4901816132ec5d551d35119226b4d18f72d0df7593a5fac24c55",
+    "locator": "lab/sims/shear-consumption-lattice/main.py",
+    "media_type": "text/x-python"
+  },
+  "revision_id": "sha256:ca252da85b1a99e0d6b09a20c3c407ff172d430c6805ce68048883c6d2045baa"
+}

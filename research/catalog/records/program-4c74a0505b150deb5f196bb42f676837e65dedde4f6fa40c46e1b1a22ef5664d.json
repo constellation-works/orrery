@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:level-core-far-field-slot-coefficients",
+  "aliases": [
+    "level-core-far-field-slot-coefficients",
+    "lab/sims/level-core-far-field-slot-coefficients/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "d39970c8ed3159d00e3acd6fdd2cf520e41b3bc2",
+    "sha256": "sha256:a72ba86ccce26d25425731bb74976602039a9d455f280102954e028a633ed83c",
+    "path": "lab/sims/level-core-far-field-slot-coefficients/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/level-core-far-field-slot-coefficients/sim.json",
+    "source_sha256": "sha256:a72ba86ccce26d25425731bb74976602039a9d455f280102954e028a633ed83c",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Level-core far-field shell stability"
+  },
+  "revision_id": "sha256:4c74a0505b150deb5f196bb42f676837e65dedde4f6fa40c46e1b1a22ef5664d"
+}

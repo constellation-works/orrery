@@ -4,6 +4,7 @@
 Run from anywhere: python3 lab/tools/build-gallery.py
 """
 
+import argparse
 import html
 import json
 import sys
@@ -113,7 +114,17 @@ def build(sims):
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--check", action="store_true",
+                        help="fail if the checked-in gallery is not the exact sim.json projection")
+    args = parser.parse_args()
     sims = load_sims()
+    generated = build(sims)
+    if args.check:
+        if not OUT.is_file() or OUT.read_text() != generated:
+            sys.exit("error: gallery/index.html is stale; run python3 lab/tools/build-gallery.py")
+        print(f"gallery/index.html: {len(sims)} sims (exact)")
+        raise SystemExit(0)
     OUT.parent.mkdir(exist_ok=True)
-    OUT.write_text(build(sims))
+    OUT.write_text(generated)
     print(f"gallery/index.html: {len(sims)} sims")

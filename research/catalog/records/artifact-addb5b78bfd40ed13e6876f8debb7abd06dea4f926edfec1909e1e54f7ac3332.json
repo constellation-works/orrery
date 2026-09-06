@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Frar-network-fluctuation-limit%2Fassets%2Fresults.json",
+  "aliases": [
+    "lab/sims/rar-network-fluctuation-limit/assets/results.json",
+    "lab/sims/rar-network-fluctuation-limit/assets/results.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "7bd3ea07886355510f3d326dde3b789c844f7f15",
+    "sha256": "sha256:f62f8385367b8e6221dd997633c2b799fb11f4d3ccfcecda2b594b547c08e78e",
+    "path": "lab/sims/rar-network-fluctuation-limit/assets/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/rar-network-fluctuation-limit/assets/results.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:f62f8385367b8e6221dd997633c2b799fb11f4d3ccfcecda2b594b547c08e78e",
+    "legacy_anonymous_alias": "9c68c20f186bf113b27c460ef98a29d9e9fcfc86ee6e206c06027e994e5d0ade",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:f62f8385367b8e6221dd997633c2b799fb11f4d3ccfcecda2b594b547c08e78e",
+    "locator": "lab/sims/rar-network-fluctuation-limit/assets/results.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:addb5b78bfd40ed13e6876f8debb7abd06dea4f926edfec1909e1e54f7ac3332"
+}

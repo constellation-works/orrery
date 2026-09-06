@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:wide-binary-control-diagnosis",
+  "aliases": [
+    "wide-binary-control-diagnosis",
+    "lab/sims/wide-binary-control-diagnosis/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "af114f363b8b9f92604663677c58ceec2d9fc314",
+    "sha256": "sha256:199b71846af45dc811c84aa22f49c61e43ae896a51dee86fc92b095ac39cf852",
+    "path": "lab/sims/wide-binary-control-diagnosis/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/wide-binary-control-diagnosis/sim.json",
+    "source_sha256": "sha256:199b71846af45dc811c84aa22f49c61e43ae896a51dee86fc92b095ac39cf852",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Wide-binary control-failure diagnosis"
+  },
+  "revision_id": "sha256:8bee052a2328cd5ae672ac2741a19c49fe7ed6788f591fcbf853d9a1284d98b6"
+}

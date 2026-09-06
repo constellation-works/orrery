@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:two-substance-dynamical-packet",
+  "aliases": [
+    "two-substance-dynamical-packet",
+    "lab/sims/two-substance-dynamical-packet/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "6c5d3780ea05a03d484d2b64436691613f0851bd",
+    "sha256": "sha256:8457636175dc44e082b4631bc84205d04ead7ea5e4e5931db748c8306f9066ee",
+    "path": "lab/sims/two-substance-dynamical-packet/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/two-substance-dynamical-packet/sim.json",
+    "source_sha256": "sha256:8457636175dc44e082b4631bc84205d04ead7ea5e4e5931db748c8306f9066ee",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Two-substance packet coupling and wake test"
+  },
+  "revision_id": "sha256:0ed6736d8243bf50f496993a45dcc7278567410bb86459c3169510e22ada9fe7"
+}

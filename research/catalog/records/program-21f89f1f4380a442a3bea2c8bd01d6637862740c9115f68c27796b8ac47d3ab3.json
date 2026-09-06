@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:scarcity-field-slice-toggle",
+  "aliases": [
+    "scarcity-field-slice-toggle",
+    "lab/sims/scarcity-field-slice-toggle/sim.json"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "810f43829fadf62ae1b3862c82452c402d36e5e0",
+    "sha256": "sha256:ab992cb7090f568d4cccd5626b68b42c436f77dd6959271d6394dfdb7cc8579a",
+    "path": "lab/sims/scarcity-field-slice-toggle/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [
+    "activity-mapping",
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/scarcity-field-slice-toggle/sim.json",
+    "source_sha256": "sha256:ab992cb7090f568d4cccd5626b68b42c436f77dd6959271d6394dfdb7cc8579a",
+    "catalog_status": "imported",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Scarcity field slice viewer"
+  },
+  "revision_id": "sha256:21f89f1f4380a442a3bea2c8bd01d6637862740c9115f68c27796b8ac47d3ab3"
+}

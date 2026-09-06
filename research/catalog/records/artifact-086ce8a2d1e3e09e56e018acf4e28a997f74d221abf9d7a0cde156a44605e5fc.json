@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-rotation-curve-fit%2Fassets%2Ffit.png",
+  "aliases": [
+    "lab/sims/scarcity-rotation-curve-fit/assets/fit.png"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "cfb89abe9b64ff6d2cfdd91d62ad7537f2f3c5e2",
+    "sha256": "sha256:d99ca85ac54d9aad06d1109f696235975ac3e91bf40c7f1b07dc0827478dcb32",
+    "path": "lab/sims/scarcity-rotation-curve-fit/assets/fit.png",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/scarcity-rotation-curve-fit/assets/fit.png",
+    "scientific_role": "figure"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:d99ca85ac54d9aad06d1109f696235975ac3e91bf40c7f1b07dc0827478dcb32",
+    "locator": "lab/sims/scarcity-rotation-curve-fit/assets/fit.png",
+    "media_type": "image/png"
+  },
+  "revision_id": "sha256:086ce8a2d1e3e09e56e018acf4e28a997f74d221abf9d7a0cde156a44605e5fc"
+}

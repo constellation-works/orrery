@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fretarded-scarcity-wake%2Findex.html",
+  "aliases": [
+    "lab/sims/retarded-scarcity-wake/index.html"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "cdcae0a97507b3ec0e9ee18ae3924955e0f724dd",
+    "sha256": "sha256:c3b75821fb3985138ab57123ada78df81f756defa125a2adad5c5de1c78e0ecf",
+    "path": "lab/sims/retarded-scarcity-wake/index.html",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/retarded-scarcity-wake/index.html",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:c3b75821fb3985138ab57123ada78df81f756defa125a2adad5c5de1c78e0ecf",
+    "locator": "lab/sims/retarded-scarcity-wake/index.html",
+    "media_type": "text/html"
+  },
+  "revision_id": "sha256:ab7484f10b41859600db0c18b02c486c1f57d0f7bf6ebe565b484f08eb208aa1"
+}

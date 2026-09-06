@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:frame-drag-swirl",
+  "aliases": [
+    "frame-drag-swirl",
+    "lab/sims/frame-drag-swirl/sim.json"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "2837c7f09501671d529e4f120aaea5fe744a6369",
+    "sha256": "sha256:cea3d069477f38a381a85bb075325d7271fd73eb53aebabbde6ee96c7f88f2de",
+    "path": "lab/sims/frame-drag-swirl/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [
+    "activity-mapping",
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/frame-drag-swirl/sim.json",
+    "source_sha256": "sha256:cea3d069477f38a381a85bb075325d7271fd73eb53aebabbde6ee96c7f88f2de",
+    "catalog_status": "imported",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Swirling space frame-drag sim"
+  },
+  "revision_id": "sha256:c1cb59c71d652c740be9f7c034834374c5ef5828ddc5c69302e840185fca6bce"
+}

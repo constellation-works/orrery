@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fnarrow-atlas.png",
+  "aliases": [
+    "lab/sims/oscillating-electron-retarded-fields/assets/narrow-atlas.png"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "afb5677be7877a5a3b23e93028664950f942f271",
+    "sha256": "sha256:fccebd443edff956dcfa1ed5c1ff3143b0b2cf35d43a03cf6e50213e61b7d1f3",
+    "path": "lab/sims/oscillating-electron-retarded-fields/assets/narrow-atlas.png",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/narrow-atlas.png",
+    "scientific_role": "figure"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:fccebd443edff956dcfa1ed5c1ff3143b0b2cf35d43a03cf6e50213e61b7d1f3",
+    "locator": "lab/sims/oscillating-electron-retarded-fields/assets/narrow-atlas.png",
+    "media_type": "image/png"
+  },
+  "revision_id": "sha256:19ad6f4e783bb11e5bd03680e1454e12921649e657d2e7edd9ffe5c14234de27"
+}

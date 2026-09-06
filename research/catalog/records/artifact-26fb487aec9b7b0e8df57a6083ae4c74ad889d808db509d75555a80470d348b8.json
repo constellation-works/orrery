@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fswirl-ball%2Findex.html",
+  "aliases": [
+    "lab/sims/swirl-ball/index.html"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "525b3407510e993c45eda69f7006cd1f29c4f593",
+    "sha256": "sha256:9b527100319b4f8e8c3f1c6000b53a85d95c562cc66f49d5f0aefefc910155c6",
+    "path": "lab/sims/swirl-ball/index.html",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/swirl-ball/index.html",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:9b527100319b4f8e8c3f1c6000b53a85d95c562cc66f49d5f0aefefc910155c6",
+    "locator": "lab/sims/swirl-ball/index.html",
+    "media_type": "text/html"
+  },
+  "revision_id": "sha256:26fb487aec9b7b0e8df57a6083ae4c74ad889d808db509d75555a80470d348b8"
+}

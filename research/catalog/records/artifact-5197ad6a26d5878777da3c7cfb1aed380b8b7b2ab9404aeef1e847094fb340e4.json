@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flattice-photon-propagation%2Fmain.py",
+  "aliases": [
+    "lab/sims/lattice-photon-propagation/main.py"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "c460dec24e1d835778ae0b7fb64fdd302c670f85",
+    "sha256": "sha256:517e32abb1588a41319f4f0d6503d07b2ec468086f8ab11a6d45162e17e5189f",
+    "path": "lab/sims/lattice-photon-propagation/main.py",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/lattice-photon-propagation/main.py",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:517e32abb1588a41319f4f0d6503d07b2ec468086f8ab11a6d45162e17e5189f",
+    "locator": "lab/sims/lattice-photon-propagation/main.py",
+    "media_type": "text/x-python"
+  },
+  "revision_id": "sha256:5197ad6a26d5878777da3c7cfb1aed380b8b7b2ab9404aeef1e847094fb340e4"
+}

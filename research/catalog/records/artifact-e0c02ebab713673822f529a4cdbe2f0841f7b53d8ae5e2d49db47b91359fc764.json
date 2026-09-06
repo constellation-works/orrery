@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fdynamical-consumption-lattice%2Fassets%2Fresults.json",
+  "aliases": [
+    "lab/sims/dynamical-consumption-lattice/assets/results.json",
+    "lab/sims/dynamical-consumption-lattice/assets/results.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "048e8d41fab1826f2de26882405753bab4be45f9",
+    "sha256": "sha256:a73817a9d8f40e04ea52165442c9fcbfd711b1177aba6b852bef9570cca6344b",
+    "path": "lab/sims/dynamical-consumption-lattice/assets/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/dynamical-consumption-lattice/assets/results.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:a73817a9d8f40e04ea52165442c9fcbfd711b1177aba6b852bef9570cca6344b",
+    "legacy_anonymous_alias": "05232b8719fbcec2728c5bfd0ffc365b27737105ceb0ad0df03927c10fcaaf11",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:a73817a9d8f40e04ea52165442c9fcbfd711b1177aba6b852bef9570cca6344b",
+    "locator": "lab/sims/dynamical-consumption-lattice/assets/results.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:e0c02ebab713673822f529a4cdbe2f0841f7b53d8ae5e2d49db47b91359fc764"
+}

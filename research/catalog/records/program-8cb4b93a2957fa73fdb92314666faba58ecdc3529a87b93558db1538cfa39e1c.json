@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:scarcity-grid-weight-black-hole",
+  "aliases": [
+    "scarcity-grid-weight-black-hole",
+    "lab/sims/scarcity-grid-weight-black-hole/sim.json"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "847618c4716f7ce89095f20168a10958f5dc8cbc",
+    "sha256": "sha256:33d102a7efbaad408c4e50e11655d872859c7542be10e7be060af024c2d6e890",
+    "path": "lab/sims/scarcity-grid-weight-black-hole/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [
+    "activity-mapping",
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/scarcity-grid-weight-black-hole/sim.json",
+    "source_sha256": "sha256:33d102a7efbaad408c4e50e11655d872859c7542be10e7be060af024c2d6e890",
+    "catalog_status": "imported",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Grid weight field around a black-hole sphere"
+  },
+  "revision_id": "sha256:8cb4b93a2957fa73fdb92314666faba58ecdc3529a87b93558db1538cfa39e1c"
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdense-narrow-controls.png",
+  "aliases": [
+    "lab/sims/oscillating-electron-retarded-fields/assets/dense-narrow-controls.png"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "53146c8ed220972295078c92a81be2d640e26967",
+    "sha256": "sha256:dd2eb02e4cec2f2ddbdf88462c7d2e5f97e3ffd5f92063a46df355dee0f9c352",
+    "path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-narrow-controls.png",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/dense-narrow-controls.png",
+    "scientific_role": "figure"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:dd2eb02e4cec2f2ddbdf88462c7d2e5f97e3ffd5f92063a46df355dee0f9c352",
+    "locator": "lab/sims/oscillating-electron-retarded-fields/assets/dense-narrow-controls.png",
+    "media_type": "image/png"
+  },
+  "revision_id": "sha256:501be2ffa9823ee2140ea56171acf32d0f979c2b02d98e036ab15568daaa971f"
+}

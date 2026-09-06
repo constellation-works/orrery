@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:sparc-scarcity-universality",
+  "aliases": [
+    "sparc-scarcity-universality",
+    "lab/sims/sparc-scarcity-universality/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "9f0879430f7b229b5cedb922e5479c33ccdc3cf6",
+    "sha256": "sha256:f84866a81080e9de9384d02e34a79a698eb17f4c6862602e95bf03520c6d7f1d",
+    "path": "lab/sims/sparc-scarcity-universality/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/sparc-scarcity-universality/sim.json",
+    "source_sha256": "sha256:f84866a81080e9de9384d02e34a79a698eb17f4c6862602e95bf03520c6d7f1d",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "SPARC scarcity universality test"
+  },
+  "revision_id": "sha256:5f07285109a1927294bfcb77dd6a81f1b2b5506c30d0460a232bfd808f09a62b"
+}

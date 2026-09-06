@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fbrowser-report.json",
+  "aliases": [
+    "lab/sims/oscillating-electron-retarded-fields/assets/browser-report.json",
+    "lab/sims/oscillating-electron-retarded-fields/assets/browser-report.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "d2bfe9e7e6058cff0555b2cf17b4f6ed1f2e8649",
+    "sha256": "sha256:ef071cb2e5704f0d01505777a11ebf28197e93334a7852685eb1c9bfcdb8ab2b",
+    "path": "lab/sims/oscillating-electron-retarded-fields/assets/browser-report.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/browser-report.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:ef071cb2e5704f0d01505777a11ebf28197e93334a7852685eb1c9bfcdb8ab2b",
+    "legacy_anonymous_alias": "ad974f3a41ff74ba4eb9665842a93c8816ca4a1a18bdcca208d61e11b3110b6b",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:ef071cb2e5704f0d01505777a11ebf28197e93334a7852685eb1c9bfcdb8ab2b",
+    "locator": "lab/sims/oscillating-electron-retarded-fields/assets/browser-report.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:399764d55385c10a0452984675b89a009268dd080b3c5b8375981db689d34525"
+}

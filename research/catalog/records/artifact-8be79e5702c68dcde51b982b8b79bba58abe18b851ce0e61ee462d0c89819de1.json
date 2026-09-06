@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-wind-tunnel%2Fassets%2Fresults.json",
+  "aliases": [
+    "lab/sims/level-core-wind-tunnel/assets/results.json",
+    "lab/sims/level-core-wind-tunnel/assets/results.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "345d4408f8616d34c71c9fe0cec7a9738ca0334e",
+    "sha256": "sha256:6ddd8a9d524fe0ecbe4d6cae7c3407e191769ec392185ce75d5f07fd3c61ae2e",
+    "path": "lab/sims/level-core-wind-tunnel/assets/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/level-core-wind-tunnel/assets/results.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:6ddd8a9d524fe0ecbe4d6cae7c3407e191769ec392185ce75d5f07fd3c61ae2e",
+    "legacy_anonymous_alias": "55cc3189b8082be4a5b2208cd5887e5196428bc7f042d802bd82915e36d01433",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:6ddd8a9d524fe0ecbe4d6cae7c3407e191769ec392185ce75d5f07fd3c61ae2e",
+    "locator": "lab/sims/level-core-wind-tunnel/assets/results.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:8be79e5702c68dcde51b982b8b79bba58abe18b851ce0e61ee462d0c89819de1"
+}

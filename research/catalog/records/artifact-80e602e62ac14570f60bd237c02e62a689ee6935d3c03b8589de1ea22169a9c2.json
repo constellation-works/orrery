@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flattice-two-source-superposition%2Fassets%2Fsuperposition.png",
+  "aliases": [
+    "lab/sims/lattice-two-source-superposition/assets/superposition.png"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "6e795ba03e86140dfe4c435b0a31a7e13bbb8134",
+    "sha256": "sha256:d552fb0b6ee55b712dbb80f9c00cd9fe18418a66ed1ab288ae78c90e6a3486bb",
+    "path": "lab/sims/lattice-two-source-superposition/assets/superposition.png",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/lattice-two-source-superposition/assets/superposition.png",
+    "scientific_role": "figure"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:d552fb0b6ee55b712dbb80f9c00cd9fe18418a66ed1ab288ae78c90e6a3486bb",
+    "locator": "lab/sims/lattice-two-source-superposition/assets/superposition.png",
+    "media_type": "image/png"
+  },
+  "revision_id": "sha256:80e602e62ac14570f60bd237c02e62a689ee6935d3c03b8589de1ea22169a9c2"
+}

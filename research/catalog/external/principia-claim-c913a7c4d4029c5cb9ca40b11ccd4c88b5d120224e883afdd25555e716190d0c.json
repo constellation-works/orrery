@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:wbsel-shifted-field-calibration",
+  "aliases": [
+    "wbsel-shifted-field-calibration"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "a61039188b033c064b1f786e84b17fc54ef05878",
+    "sha256": "sha256:493f8ee0329f4a94cfac0785416a5a5e3db602c7951407fea623f23d19fcf34f",
+    "path": "research/wide-binary/records/claim-c913a7c4d4029c5cb9ca40b11ccd4c88b5d120224e883afdd25555e716190d0c.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Historical synthetic/model calibration only; no new scientific adjudication or nature-level inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "wbsel-shifted-field-calibration",
+    "family": "wide-binary-selection-methodology",
+    "kind": "model-property",
+    "status": "untested",
+    "claim": "The shifted-field chance-alignment estimator R = N_shift/N_real, evaluated on the nonuniform-footprint synthetic population with known injected field-star contamination fractions (5%, 10%, 20%) and RA-wrap/polar field placements, recovers each injected fraction within the predeclared tolerance (+/-0.05 absolute at 5%, +/-25% relative at 10% and 20%).",
+    "kill": "R_chance falls outside the predeclared tolerance band for any injected-contamination arm or any field placement (equatorial baseline, RA-wrap, polar).",
+    "links": [
+      "../../studies/wide-binary-selection-bias-preregistration.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "domain": "model",
+    "statement": "The shifted-field chance-alignment estimator R = N_shift/N_real, evaluated on the nonuniform-footprint synthetic population with known injected field-star contamination fractions (5%, 10%, 20%) and RA-wrap/polar field placements, recovers each injected fraction within the predeclared tolerance (+/-0.05 absolute at 5%, +/-25% relative at 10% and 20%)."
+  },
+  "revision_id": "sha256:c913a7c4d4029c5cb9ca40b11ccd4c88b5d120224e883afdd25555e716190d0c"
+}

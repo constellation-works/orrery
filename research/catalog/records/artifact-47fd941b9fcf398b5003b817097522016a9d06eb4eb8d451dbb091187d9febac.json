@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fvortex-bell%2Fvortex_bell.py",
+  "aliases": [
+    "lab/sims/vortex-bell/vortex_bell.py"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "71dedfc3e7a7fb2ae044870212befff3508d2f8f",
+    "sha256": "sha256:9acd14d4eeeac94615c02d1cca273c8212a9c1f9eec82584f599fd2aa3499369",
+    "path": "lab/sims/vortex-bell/vortex_bell.py",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/vortex-bell/vortex_bell.py",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:9acd14d4eeeac94615c02d1cca273c8212a9c1f9eec82584f599fd2aa3499369",
+    "locator": "lab/sims/vortex-bell/vortex_bell.py",
+    "media_type": "text/x-python"
+  },
+  "revision_id": "sha256:47fd941b9fcf398b5003b817097522016a9d06eb4eb8d451dbb091187d9febac"
+}

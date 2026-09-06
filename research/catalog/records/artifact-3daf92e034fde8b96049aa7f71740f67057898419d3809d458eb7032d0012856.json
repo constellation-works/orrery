@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsparc-scarcity-universality%2Fmain.py",
+  "aliases": [
+    "lab/sims/sparc-scarcity-universality/main.py"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "908f79296a5a0713e514cee2a0b460f76169f510",
+    "sha256": "sha256:112531b9a5f1a33e256a5c08cd7dcb44f15cd547ade8dffcf26fa113a21f8cc1",
+    "path": "lab/sims/sparc-scarcity-universality/main.py",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/sparc-scarcity-universality/main.py",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:112531b9a5f1a33e256a5c08cd7dcb44f15cd547ade8dffcf26fa113a21f8cc1",
+    "locator": "lab/sims/sparc-scarcity-universality/main.py",
+    "media_type": "text/x-python"
+  },
+  "revision_id": "sha256:3daf92e034fde8b96049aa7f71740f67057898419d3809d458eb7032d0012856"
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fframe-drag-swirl%2Findex.html",
+  "aliases": [
+    "lab/sims/frame-drag-swirl/index.html"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "ee73a657729b95ec26143ccb122bf70d510ca79d",
+    "sha256": "sha256:8fe7965fed27778cc567e36a86fc0e75f2703c14e04361fff82ea635b14ccea8",
+    "path": "lab/sims/frame-drag-swirl/index.html",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/frame-drag-swirl/index.html",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:8fe7965fed27778cc567e36a86fc0e75f2703c14e04361fff82ea635b14ccea8",
+    "locator": "lab/sims/frame-drag-swirl/index.html",
+    "media_type": "text/html"
+  },
+  "revision_id": "sha256:46799f9665f69d7f30e16043a01cacf7cc4687890acfc76f7063f875b318c1d2"
+}

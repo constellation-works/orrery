@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flevel-core-dynamical-relaxation%2Fmain.py",
+  "aliases": [
+    "lab/sims/level-core-dynamical-relaxation/main.py"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "aec560288eae3e6f9eabc89a56ec50a221a59768",
+    "sha256": "sha256:71cab31532886f207c619438cc7cc3452a108c61f7f08366c1817ad9c6c839f8",
+    "path": "lab/sims/level-core-dynamical-relaxation/main.py",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/level-core-dynamical-relaxation/main.py",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:71cab31532886f207c619438cc7cc3452a108c61f7f08366c1817ad9c6c839f8",
+    "locator": "lab/sims/level-core-dynamical-relaxation/main.py",
+    "media_type": "text/x-python"
+  },
+  "revision_id": "sha256:ec5d817308b79cccce33c843c33f6d701728ce854e2adb75ca98741007a627d4"
+}

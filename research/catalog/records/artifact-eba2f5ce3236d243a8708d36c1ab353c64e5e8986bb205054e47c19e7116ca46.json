@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fdesktop-near.png",
+  "aliases": [
+    "lab/sims/oscillating-electron-retarded-fields/assets/desktop-near.png"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "a146ca95661fde4bb4ade18213ab812730714784",
+    "sha256": "sha256:d171ea77deb5c1da2560140fee8ad805053198018ec2a466e22d58d669915541",
+    "path": "lab/sims/oscillating-electron-retarded-fields/assets/desktop-near.png",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/desktop-near.png",
+    "scientific_role": "figure"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:d171ea77deb5c1da2560140fee8ad805053198018ec2a466e22d58d669915541",
+    "locator": "lab/sims/oscillating-electron-retarded-fields/assets/desktop-near.png",
+    "media_type": "image/png"
+  },
+  "revision_id": "sha256:eba2f5ce3236d243a8708d36c1ab353c64e5e8986bb205054e47c19e7116ca46"
+}

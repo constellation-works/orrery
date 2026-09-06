@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:scarcity-star-well-headroom",
+  "aliases": [
+    "scarcity-star-well-headroom",
+    "lab/sims/scarcity-star-well-headroom/sim.json"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "555f966036f0ca058825126a9398426ec087614e",
+    "sha256": "sha256:120e213bbd8c7f691fb8f77020b97911e88af1deeb4aeffe908423ac7767e0b8",
+    "path": "lab/sims/scarcity-star-well-headroom/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [
+    "activity-mapping",
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/scarcity-star-well-headroom/sim.json",
+    "source_sha256": "sha256:120e213bbd8c7f691fb8f77020b97911e88af1deeb4aeffe908423ac7767e0b8",
+    "catalog_status": "imported",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Nonlinear headroom star-well profile"
+  },
+  "revision_id": "sha256:e13cc278de62bf2b18915d34a1a2f9de1cddd7093dd1d056ed64f4038866853f"
+}

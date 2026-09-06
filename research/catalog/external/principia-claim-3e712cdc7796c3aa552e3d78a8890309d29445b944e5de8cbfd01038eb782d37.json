@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:wbsel-injected-effect-power",
+  "aliases": [
+    "wbsel-injected-effect-power"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "bed2e2b801de7bfa88e7d974da91cd6653084c56",
+    "sha256": "sha256:e9687ae42cd69c51091e78130c161cb607637b575374bd6d91ade3c949bef5cc",
+    "path": "research/wide-binary/records/claim-3e712cdc7796c3aa552e3d78a8890309d29445b944e5de8cbfd01038eb782d37.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Historical synthetic/model calibration only; no new scientific adjudication or nature-level inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "wbsel-injected-effect-power",
+    "family": "wide-binary-selection-methodology",
+    "kind": "model-property",
+    "status": "untested",
+    "claim": "At the R1 baseline sample size and cap, the predeclared primary bias statistic B_i detects an injected acceleration-dependent v-tilde offset of amplitude 0.05 or 0.10 (restricted to the two lowest g_N bins) with power >= 80% across the seed ladder, establishing the protocol's minimum-detectable-effect floor at or below the literature-contested anomaly scale.",
+    "kill": "Power below 80% at injected amplitude 0.10 (the larger arm) — the protocol's decision rule cannot reliably detect an effect at the scale of the literature disagreement, so a clean R1 null would not be informative.",
+    "links": [
+      "../../studies/wide-binary-selection-bias-preregistration.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "domain": "model",
+    "statement": "At the R1 baseline sample size and cap, the predeclared primary bias statistic B_i detects an injected acceleration-dependent v-tilde offset of amplitude 0.05 or 0.10 (restricted to the two lowest g_N bins) with power >= 80% across the seed ladder, establishing the protocol's minimum-detectable-effect floor at or below the literature-contested anomaly scale."
+  },
+  "revision_id": "sha256:3e712cdc7796c3aa552e3d78a8890309d29445b944e5de8cbfd01038eb782d37"
+}

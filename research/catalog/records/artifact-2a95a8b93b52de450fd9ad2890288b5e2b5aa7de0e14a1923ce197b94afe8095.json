@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fppn-reduction-symbolic-checks%2Fassets%2Fresults.json",
+  "aliases": [
+    "lab/sims/ppn-reduction-symbolic-checks/assets/results.json",
+    "lab/sims/ppn-reduction-symbolic-checks/assets/results.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "43fc6e57162e14d2d60a08858ea2554b52d55dc4",
+    "sha256": "sha256:3ec580fa4799b83db49df2193b82687d526be9ad5a9890e06eefd6e6cf8e6634",
+    "path": "lab/sims/ppn-reduction-symbolic-checks/assets/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/ppn-reduction-symbolic-checks/assets/results.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:3ec580fa4799b83db49df2193b82687d526be9ad5a9890e06eefd6e6cf8e6634",
+    "legacy_anonymous_alias": "460f408d3786a155c4fc2b7f003b09999bbca7bb7eb6c885ed4f482fa60d8d7e",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:3ec580fa4799b83db49df2193b82687d526be9ad5a9890e06eefd6e6cf8e6634",
+    "locator": "lab/sims/ppn-reduction-symbolic-checks/assets/results.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:2a95a8b93b52de450fd9ad2890288b5e2b5aa7de0e14a1923ce197b94afe8095"
+}

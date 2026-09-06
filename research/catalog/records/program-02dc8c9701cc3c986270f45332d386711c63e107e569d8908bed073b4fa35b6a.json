@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:level-core-cavitation-threshold-map",
+  "aliases": [
+    "level-core-cavitation-threshold-map",
+    "lab/sims/level-core-cavitation-threshold-map/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "4f101f03e47bdb576868ef17271ef8cfe4596083",
+    "sha256": "sha256:129e2a607aff560199d3371cfca0794967ed94df097ca524285aef72e955f9ae",
+    "path": "lab/sims/level-core-cavitation-threshold-map/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/level-core-cavitation-threshold-map/sim.json",
+    "source_sha256": "sha256:129e2a607aff560199d3371cfca0794967ed94df097ca524285aef72e955f9ae",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Level-core cavitation threshold map"
+  },
+  "revision_id": "sha256:02dc8c9701cc3c986270f45332d386711c63e107e569d8908bed073b4fa35b6a"
+}

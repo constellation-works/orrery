@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:shear-consumption-lattice",
+  "aliases": [
+    "shear-consumption-lattice",
+    "lab/sims/shear-consumption-lattice/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "27a3cf66f9c6652dcf041ffe8716153e3c294b48",
+    "sha256": "sha256:67b18a919d9093ad00f8904cb478fb84e8e9c0d5071452496c5308b9c50063f9",
+    "path": "lab/sims/shear-consumption-lattice/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/shear-consumption-lattice/sim.json",
+    "source_sha256": "sha256:67b18a919d9093ad00f8904cb478fb84e8e9c0d5071452496c5308b9c50063f9",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Shear-consumption lattice"
+  },
+  "revision_id": "sha256:85297c29120681b7c8f3fbe6f0449263989ef92c5f8a7f7fd6cc456542371e0f"
+}

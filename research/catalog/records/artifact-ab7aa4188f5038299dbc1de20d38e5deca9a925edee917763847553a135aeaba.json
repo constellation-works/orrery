@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fflowing-lattice-photon-propagation%2Fassets%2Fresults.json",
+  "aliases": [
+    "lab/sims/flowing-lattice-photon-propagation/assets/results.json",
+    "lab/sims/flowing-lattice-photon-propagation/assets/results.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "8ae8c7427e12b781c524fc7dded05aa498fdb6d4",
+    "sha256": "sha256:204613b25582d9ff93796d1bf95abe1f7fc3c096dfb41d54e4c57293cd0bbb2c",
+    "path": "lab/sims/flowing-lattice-photon-propagation/assets/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/flowing-lattice-photon-propagation/assets/results.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:204613b25582d9ff93796d1bf95abe1f7fc3c096dfb41d54e4c57293cd0bbb2c",
+    "legacy_anonymous_alias": "0534d08cf1f86905f9553c76994a59da572e7c3bcd8891831396317686e80e2e",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:204613b25582d9ff93796d1bf95abe1f7fc3c096dfb41d54e4c57293cd0bbb2c",
+    "locator": "lab/sims/flowing-lattice-photon-propagation/assets/results.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:ab7aa4188f5038299dbc1de20d38e5deca9a925edee917763847553a135aeaba"
+}

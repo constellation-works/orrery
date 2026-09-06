@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fflowing-lattice-photon-propagation%2Fmain.py",
+  "aliases": [
+    "lab/sims/flowing-lattice-photon-propagation/main.py"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "f804a1da91fe9f203728ace1fc30d955c96e2253",
+    "sha256": "sha256:7148f06c8abf301a9a1a50732ae319caebae6d79e84e2500de03fb2f1979732d",
+    "path": "lab/sims/flowing-lattice-photon-propagation/main.py",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/flowing-lattice-photon-propagation/main.py",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:7148f06c8abf301a9a1a50732ae319caebae6d79e84e2500de03fb2f1979732d",
+    "locator": "lab/sims/flowing-lattice-photon-propagation/main.py",
+    "media_type": "text/x-python"
+  },
+  "revision_id": "sha256:bc3cc2c240f8d86593c0c9738bddd6d09153b8573e097d183ee1686e2e0882f6"
+}

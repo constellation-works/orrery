@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Ftwo-substance-dynamical-packet%2Fassets%2Fresults.json",
+  "aliases": [
+    "lab/sims/two-substance-dynamical-packet/assets/results.json",
+    "lab/sims/two-substance-dynamical-packet/assets/results.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "e15cc0074daba4cf9336a63d6d4b608e01290d78",
+    "sha256": "sha256:2cb7616ad2abc6dc21f9f648c80a01c8684d0831f72c3805fbd9af703491a84b",
+    "path": "lab/sims/two-substance-dynamical-packet/assets/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/two-substance-dynamical-packet/assets/results.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:2cb7616ad2abc6dc21f9f648c80a01c8684d0831f72c3805fbd9af703491a84b",
+    "legacy_anonymous_alias": "03ce9f559397a473227c1a083952f1b879bdd033449fe5f7c7df292a51d45588",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:2cb7616ad2abc6dc21f9f648c80a01c8684d0831f72c3805fbd9af703491a84b",
+    "locator": "lab/sims/two-substance-dynamical-packet/assets/results.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:95f7fb4c54ffafae7f7e8e3cf1d75d826f9dbaa085d87bb5634149490d3e90e0"
+}

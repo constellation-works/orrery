@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:astrolabe:artifact:dataset%3Aderived%3Awidebin_sensitivity",
+  "aliases": [
+    "derived/widebin_sensitivity",
+    "widebin_sensitivity"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "astrolabe",
+    "git_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+    "blob_oid": "ba1344d2d2c440c3413990f340fb0ea54c41f001",
+    "sha256": "sha256:00a0b5cfa8addcb686eddc1dbc948ebbc49889745732679a81ba0ac41629c07a",
+    "path": "research/datasets/records/artifact-77cdac007b611695d1174e1e315d1218c797372c0ba77f31b23aa4f3fbe949f0.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Expected study output only; no dataset bytes or historical consumption were inferred."
+  ],
+  "missingness": [
+    "dataset-snapshot",
+    "historical-consumption",
+    "scope",
+    "activity"
+  ],
+  "legacy": {
+    "expected_dataset": {
+      "kind": "derived",
+      "name": "widebin_sensitivity"
+    },
+    "availability_at_inventory": "missing",
+    "historical_consumption": "unknown"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "dataset",
+    "availability": "missing",
+    "snapshot_digest": null,
+    "locator": "data/processed/derived/widebin_sensitivity.parquet",
+    "media_type": "application/vnd.apache.parquet"
+  },
+  "revision_id": "sha256:77cdac007b611695d1174e1e315d1218c797372c0ba77f31b23aa4f3fbe949f0"
+}

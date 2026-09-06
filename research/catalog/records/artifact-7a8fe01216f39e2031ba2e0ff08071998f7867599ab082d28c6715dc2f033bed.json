@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Ftwo-substance-defect-gravity%2Fassets%2Fresults.json",
+  "aliases": [
+    "lab/sims/two-substance-defect-gravity/assets/results.json",
+    "lab/sims/two-substance-defect-gravity/assets/results.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "59b247a031398c42a9c05e07570bf30434edf871",
+    "sha256": "sha256:39aafdc81ddbacc385d361f324d0d4500a1f622d827d9dfba9bd22a632c64c12",
+    "path": "lab/sims/two-substance-defect-gravity/assets/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/two-substance-defect-gravity/assets/results.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:39aafdc81ddbacc385d361f324d0d4500a1f622d827d9dfba9bd22a632c64c12",
+    "legacy_anonymous_alias": "241a2fa96d497c3d5064c37bc57229d4124080b74ce6fca24bdc801bd291d884",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:39aafdc81ddbacc385d361f324d0d4500a1f622d827d9dfba9bd22a632c64c12",
+    "locator": "lab/sims/two-substance-defect-gravity/assets/results.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:7a8fe01216f39e2031ba2e0ff08071998f7867599ab082d28c6715dc2f033bed"
+}

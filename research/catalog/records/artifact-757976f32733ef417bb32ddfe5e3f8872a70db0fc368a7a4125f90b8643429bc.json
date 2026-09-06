@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-cavitation-threshold-map%2Fassets%2Fresults.json",
+  "aliases": [
+    "lab/sims/level-core-cavitation-threshold-map/assets/results.json",
+    "lab/sims/level-core-cavitation-threshold-map/assets/results.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "a00ac8c3ed2e0a8060666da75bc98d1d77d0c4a1",
+    "sha256": "sha256:cdc3ce1b86732d2f915988fab6ce35693ed9d9a36f13c772722db0feeba4d8ea",
+    "path": "lab/sims/level-core-cavitation-threshold-map/assets/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/level-core-cavitation-threshold-map/assets/results.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:cdc3ce1b86732d2f915988fab6ce35693ed9d9a36f13c772722db0feeba4d8ea",
+    "legacy_anonymous_alias": "5e9415e9779c2de43f3f606f38d94ad42e0220ac99c36c5098fa279684baec36",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:cdc3ce1b86732d2f915988fab6ce35693ed9d9a36f13c772722db0feeba4d8ea",
+    "locator": "lab/sims/level-core-cavitation-threshold-map/assets/results.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:757976f32733ef417bb32ddfe5e3f8872a70db0fc368a7a4125f90b8643429bc"
+}

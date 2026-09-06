@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsparc-scarcity-universality%2Fassets%2Fdiagnostics.png",
+  "aliases": [
+    "lab/sims/sparc-scarcity-universality/assets/diagnostics.png"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "7bec23803c20d510264ef345118630f1816978de",
+    "sha256": "sha256:0414d2b234de67a7877160c2e50c3b19fb45e7db3e2c89e4c649a6fd83d241ac",
+    "path": "lab/sims/sparc-scarcity-universality/assets/diagnostics.png",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/sparc-scarcity-universality/assets/diagnostics.png",
+    "scientific_role": "figure"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:0414d2b234de67a7877160c2e50c3b19fb45e7db3e2c89e4c649a6fd83d241ac",
+    "locator": "lab/sims/sparc-scarcity-universality/assets/diagnostics.png",
+    "media_type": "image/png"
+  },
+  "revision_id": "sha256:878e696b2af701cefdbae7ce728675a9b34c620b5b7289230736fc029b7d8e30"
+}

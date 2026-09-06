@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-field-slice-toggle%2Findex.html",
+  "aliases": [
+    "lab/sims/scarcity-field-slice-toggle/index.html"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "2c5743105f1d3ec9752690772624647f5940bfda",
+    "sha256": "sha256:5e50636832f3cbc995077730f3ee200b0e5ffac183bf10df56ff7d8a679f12e4",
+    "path": "lab/sims/scarcity-field-slice-toggle/index.html",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/scarcity-field-slice-toggle/index.html",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:5e50636832f3cbc995077730f3ee200b0e5ffac183bf10df56ff7d8a679f12e4",
+    "locator": "lab/sims/scarcity-field-slice-toggle/index.html",
+    "media_type": "text/html"
+  },
+  "revision_id": "sha256:d688602b675c6de1c0f78d76c264ace8077dd41033b7ed56732fcfa4c5c0e081"
+}

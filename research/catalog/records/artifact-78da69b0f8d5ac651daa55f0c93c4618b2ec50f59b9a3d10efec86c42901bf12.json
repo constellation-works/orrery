@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fsolar-system-nbody%2Fbaseline%2Fsummary.json",
+  "aliases": [
+    "lab/sims/solar-system-nbody/baseline/summary.json",
+    "lab/sims/solar-system-nbody/baseline/summary.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "d013e3ea9caec6dab71cfebad01bfe2b8fe4925e",
+    "sha256": "sha256:d74c5b105cc6b7eb1d7361032ddd4d6844c5eb3ba72e4e8a3201909f3d1f21a8",
+    "path": "lab/sims/solar-system-nbody/baseline/summary.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/solar-system-nbody/baseline/summary.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:d74c5b105cc6b7eb1d7361032ddd4d6844c5eb3ba72e4e8a3201909f3d1f21a8",
+    "legacy_anonymous_alias": "8457380658ea6660ec67719763ff84c2485f28c7c61bc238440251ab9ebbdbf7",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:d74c5b105cc6b7eb1d7361032ddd4d6844c5eb3ba72e4e8a3201909f3d1f21a8",
+    "locator": "lab/sims/solar-system-nbody/baseline/summary.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:78da69b0f8d5ac651daa55f0c93c4618b2ec50f59b9a3d10efec86c42901bf12"
+}

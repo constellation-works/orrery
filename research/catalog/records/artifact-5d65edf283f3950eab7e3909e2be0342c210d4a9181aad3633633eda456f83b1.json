@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fmoving-core-acoustic-rays%2Fassets%2Fresults.json",
+  "aliases": [
+    "lab/sims/moving-core-acoustic-rays/assets/results.json",
+    "lab/sims/moving-core-acoustic-rays/assets/results.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "ae7539ec95133c2065ea7dbd6e30a623a72ca800",
+    "sha256": "sha256:215e55a76636886a0e3fcf735336a33c1912e5bff29cfacb18e2996cc15c9a13",
+    "path": "lab/sims/moving-core-acoustic-rays/assets/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/moving-core-acoustic-rays/assets/results.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:215e55a76636886a0e3fcf735336a33c1912e5bff29cfacb18e2996cc15c9a13",
+    "legacy_anonymous_alias": "5ed23d6fea702f706a49af004f715afc68a4571a8402e7a4bc100916011bec9b",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:215e55a76636886a0e3fcf735336a33c1912e5bff29cfacb18e2996cc15c9a13",
+    "locator": "lab/sims/moving-core-acoustic-rays/assets/results.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:5d65edf283f3950eab7e3909e2be0342c210d4a9181aad3633633eda456f83b1"
+}

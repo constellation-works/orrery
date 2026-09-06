@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fdynamical-consumption-lattice%2Fassets%2Fprofiles.png",
+  "aliases": [
+    "lab/sims/dynamical-consumption-lattice/assets/profiles.png"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "0f9369ca38661e3d875e43e844e78ca053916041",
+    "sha256": "sha256:2b4184d215fa31498233b982791a6aaba6d6671cffd446a39fb9b2589a5f19ca",
+    "path": "lab/sims/dynamical-consumption-lattice/assets/profiles.png",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/dynamical-consumption-lattice/assets/profiles.png",
+    "scientific_role": "figure"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:2b4184d215fa31498233b982791a6aaba6d6671cffd446a39fb9b2589a5f19ca",
+    "locator": "lab/sims/dynamical-consumption-lattice/assets/profiles.png",
+    "media_type": "image/png"
+  },
+  "revision_id": "sha256:957c9e12a7fe69e1cb83f0a231ce70b601e84bba6fe23ad2112fbf4a6a3d61d8"
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:scarcity-shell-depletion-field",
+  "aliases": [
+    "scarcity-shell-depletion-field",
+    "lab/sims/scarcity-shell-depletion-field/sim.json"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "33c2212e6061c0ad2412271f5dca68aee75b34e3",
+    "sha256": "sha256:98942a7bd097e23e9bf1ddd0160e26219e31e740533be9384ebff13af79ed64e",
+    "path": "lab/sims/scarcity-shell-depletion-field/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [
+    "activity-mapping",
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/scarcity-shell-depletion-field/sim.json",
+    "source_sha256": "sha256:98942a7bd097e23e9bf1ddd0160e26219e31e740533be9384ebff13af79ed64e",
+    "catalog_status": "imported",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Gravity-budget shell depletion field"
+  },
+  "revision_id": "sha256:822a59f4e38604c9a22ca1cfedb33cf8ce1a3531b70e6891cef4b5c8ad48eb0a"
+}

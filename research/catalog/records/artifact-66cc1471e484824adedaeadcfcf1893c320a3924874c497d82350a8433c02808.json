@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fscarcity-capped-cumulative-field%2Findex.html",
+  "aliases": [
+    "lab/sims/scarcity-capped-cumulative-field/index.html"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "02bb8d22ef44dc3ec773c9bf960c393309c09e4e",
+    "sha256": "sha256:069265799989f3d5b7f988e22f25eb457d58d25fea1af71c5ef42e0972fd27f8",
+    "path": "lab/sims/scarcity-capped-cumulative-field/index.html",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/scarcity-capped-cumulative-field/index.html",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:069265799989f3d5b7f988e22f25eb457d58d25fea1af71c5ef42e0972fd27f8",
+    "locator": "lab/sims/scarcity-capped-cumulative-field/index.html",
+    "media_type": "text/html"
+  },
+  "revision_id": "sha256:66cc1471e484824adedaeadcfcf1893c320a3924874c497d82350a8433c02808"
+}

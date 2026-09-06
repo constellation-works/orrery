@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fcomparison.html",
+  "aliases": [
+    "lab/sims/oscillating-electron-retarded-fields/assets/comparison.html"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "639e3abc3c3a8912c7e8511c815c7ec0adb7e5be",
+    "sha256": "sha256:8a1ce93250e3c34cbe8d78f414b813f56cf68ee4ee7de49d1857f282e41d0f3a",
+    "path": "lab/sims/oscillating-electron-retarded-fields/assets/comparison.html",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/comparison.html",
+    "scientific_role": "comparison-view"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:8a1ce93250e3c34cbe8d78f414b813f56cf68ee4ee7de49d1857f282e41d0f3a",
+    "locator": "lab/sims/oscillating-electron-retarded-fields/assets/comparison.html",
+    "media_type": "text/html"
+  },
+  "revision_id": "sha256:355918d3943caffb419fa918dd0ae2c56e43ad0e94abda851115b1045f76b24e"
+}

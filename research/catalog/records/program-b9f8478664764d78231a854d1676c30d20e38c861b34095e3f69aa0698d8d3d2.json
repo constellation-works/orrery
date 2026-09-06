@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:level-coupled-shear-lattice",
+  "aliases": [
+    "level-coupled-shear-lattice",
+    "lab/sims/level-coupled-shear-lattice/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "ccd600955db72b3e397a0f036c37cbfaa8f6b810",
+    "sha256": "sha256:74d27508b2111e2979a99a695fd574f2bd7a63d59e56d882819e73efaf78d2e7",
+    "path": "lab/sims/level-coupled-shear-lattice/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/level-coupled-shear-lattice/sim.json",
+    "source_sha256": "sha256:74d27508b2111e2979a99a695fd574f2bd7a63d59e56d882819e73efaf78d2e7",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Level-coupled shear lattice"
+  },
+  "revision_id": "sha256:b9f8478664764d78231a854d1676c30d20e38c861b34095e3f69aa0698d8d3d2"
+}

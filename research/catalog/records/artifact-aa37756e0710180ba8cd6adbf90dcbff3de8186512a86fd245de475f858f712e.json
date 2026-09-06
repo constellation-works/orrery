@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fmoving-core-acoustic-rays%2Fmain.py",
+  "aliases": [
+    "lab/sims/moving-core-acoustic-rays/main.py"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "bc526b6fe483fe9a5edf09f0311b98d008bf7ae8",
+    "sha256": "sha256:3d7a838f70fb4bd0ec82a5dafd9d163fcb92fbeb63a4bde0be5ead511d853165",
+    "path": "lab/sims/moving-core-acoustic-rays/main.py",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/moving-core-acoustic-rays/main.py",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:3d7a838f70fb4bd0ec82a5dafd9d163fcb92fbeb63a4bde0be5ead511d853165",
+    "locator": "lab/sims/moving-core-acoustic-rays/main.py",
+    "media_type": "text/x-python"
+  },
+  "revision_id": "sha256:aa37756e0710180ba8cd6adbf90dcbff3de8186512a86fd245de475f858f712e"
+}

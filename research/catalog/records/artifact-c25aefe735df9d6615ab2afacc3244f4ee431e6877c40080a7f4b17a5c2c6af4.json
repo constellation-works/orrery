@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fpingpong-bell%2Fsample-tally.csv",
+  "aliases": [
+    "lab/sims/pingpong-bell/sample-tally.csv"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "53b21f0a574fc127c1cd220646f0a56737b5ce54",
+    "sha256": "sha256:696190231540349e93dd973612e42009766b84ebaa327c2ca3e77ae3afe65e35",
+    "path": "lab/sims/pingpong-bell/sample-tally.csv",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/pingpong-bell/sample-tally.csv",
+    "scientific_role": "captured-data"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:696190231540349e93dd973612e42009766b84ebaa327c2ca3e77ae3afe65e35",
+    "locator": "lab/sims/pingpong-bell/sample-tally.csv",
+    "media_type": "text/csv"
+  },
+  "revision_id": "sha256:c25aefe735df9d6615ab2afacc3244f4ee431e6877c40080a7f4b17a5c2c6af4"
+}

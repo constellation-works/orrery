@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:lattice-two-source-superposition",
+  "aliases": [
+    "lattice-two-source-superposition",
+    "lab/sims/lattice-two-source-superposition/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "ee5591e6f646a8b60165e58347cfbadf23a4cd80",
+    "sha256": "sha256:e5dfc528be72da8b77efff426e202ca7e49d7ca14495ecb80ea2401e4130c16e",
+    "path": "lab/sims/lattice-two-source-superposition/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/lattice-two-source-superposition/sim.json",
+    "source_sha256": "sha256:e5dfc528be72da8b77efff426e202ca7e49d7ca14495ecb80ea2401e4130c16e",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Lattice two-source superposition"
+  },
+  "revision_id": "sha256:3d29730622ed931e1715bf8a6b7b1a2db52e407fd68d93ecf478140b25bcff61"
+}

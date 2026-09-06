@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:vortex-bell",
+  "aliases": [
+    "vortex-bell",
+    "lab/sims/vortex-bell/sim.json"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "759efccfb45a5fd431ecc3ab2d7ac8c6d524a439",
+    "sha256": "sha256:de95ba707a57f044bac5341eb77636a1dee03fcdcbc182ab8d1ccb25d1f2513e",
+    "path": "lab/sims/vortex-bell/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [
+    "activity-mapping",
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/vortex-bell/sim.json",
+    "source_sha256": "sha256:de95ba707a57f044bac5341eb77636a1dee03fcdcbc182ab8d1ccb25d1f2513e",
+    "catalog_status": "imported",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Vortex-electron CHSH Monte Carlo"
+  },
+  "revision_id": "sha256:1a54e5dde75d0930e7baa734f9b6e8c4d61f9608e8be2176fe04529f997299f6"
+}

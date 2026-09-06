@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:scarcity-capped-cumulative-field",
+  "aliases": [
+    "scarcity-capped-cumulative-field",
+    "lab/sims/scarcity-capped-cumulative-field/sim.json"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "9b83e58149e98170dafca60431016d839972372f",
+    "sha256": "sha256:0bf3f14a53b5dac06107785680d9f9c4ee4699ed3943fc688f0f5c570e38d41b",
+    "path": "lab/sims/scarcity-capped-cumulative-field/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [
+    "activity-mapping",
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/scarcity-capped-cumulative-field/sim.json",
+    "source_sha256": "sha256:0bf3f14a53b5dac06107785680d9f9c4ee4699ed3943fc688f0f5c570e38d41b",
+    "catalog_status": "imported",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Capped cumulative scarcity field"
+  },
+  "revision_id": "sha256:58aba4d0587f096ea76b9436a8a33991b8af508245beb11f7e0b770726861d80"
+}

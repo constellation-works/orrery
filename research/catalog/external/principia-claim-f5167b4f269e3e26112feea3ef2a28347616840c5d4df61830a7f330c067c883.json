@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "claim",
+  "id": "urn:research:principia:claim:wbsel-geometry-truncation-null",
+  "aliases": [
+    "wbsel-geometry-truncation-null"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "principia",
+    "git_revision": "4e3b02c59b694d85016915177ef1ae157895ed7b",
+    "blob_oid": "ea2a9c881f581e491c1572096bae136bfd72183d",
+    "sha256": "sha256:d7aaee3d8b59b60f883cd95a72a5e80b1bc071efed6d1a66f48b50ed53559bc5",
+    "path": "research/wide-binary/records/claim-f5167b4f269e3e26112feea3ef2a28347616840c5d4df61830a7f330c067c883.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Historical synthetic/model calibration only; no new scientific adjudication or nature-level inference."
+  ],
+  "missingness": [],
+  "legacy": {
+    "id": "wbsel-geometry-truncation-null",
+    "family": "wide-binary-selection-methodology",
+    "kind": "model-property",
+    "status": "untested",
+    "claim": "On a synthetic, purely Newtonian wide-binary population with a realistic nonuniform sky footprint (declination-dependent quality/completeness gradient, anisotropic density) and zero injected acceleration-dependent kinematics, Astrolabe's baseline selection pipeline (quality cuts, theta/s window, escape-speed PM gate) recovers a v-tilde(g_N) profile whose deviation from its own Newtonian-mock comparator stays below the predeclared threshold (abs(B_i) < 0.04 in median v-tilde) in every populated g_N bin.",
+    "kill": "Any populated bin (n >= 5 pairs) shows abs(B_i) >= 0.04 in median v-tilde, reproducibly across the seed ladder (median seed-to-seed abs(B_i) at or above threshold), under the baseline nonuniform-footprint arm (R1) at the operational max_stars=8000 cap.",
+    "links": [
+      "../../studies/wide-binary-selection-bias-preregistration.md",
+      "../../studies/gaia-wide-binaries-low-acceleration.md"
+    ],
+    "in_doc_ledger": true
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "claim",
+    "domain": "model",
+    "statement": "On a synthetic, purely Newtonian wide-binary population with a realistic nonuniform sky footprint (declination-dependent quality/completeness gradient, anisotropic density) and zero injected acceleration-dependent kinematics, Astrolabe's baseline selection pipeline (quality cuts, theta/s window, escape-speed PM gate) recovers a v-tilde(g_N) profile whose deviation from its own Newtonian-mock comparator stays below the predeclared threshold (abs(B_i) < 0.04 in median v-tilde) in every populated g_N bin."
+  },
+  "revision_id": "sha256:f5167b4f269e3e26112feea3ef2a28347616840c5d4df61830a7f330c067c883"
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-coupled-shear-lattice%2Fruns%2F2026-08-21-seed-42.json",
+  "aliases": [
+    "lab/sims/level-coupled-shear-lattice/runs/2026-08-21-seed-42.json",
+    "lab/sims/level-coupled-shear-lattice/runs/2026-08-21-seed-42.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "4469179162bc64732a027e45cefdcc1b365fd89f",
+    "sha256": "sha256:d9824591b202c2d1521de3baecd2e3a1cf09ddebca5a3e83790ff9fe3f47aec3",
+    "path": "lab/sims/level-coupled-shear-lattice/runs/2026-08-21-seed-42.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/level-coupled-shear-lattice/runs/2026-08-21-seed-42.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:d9824591b202c2d1521de3baecd2e3a1cf09ddebca5a3e83790ff9fe3f47aec3",
+    "legacy_anonymous_alias": "31be836d62f93515b2c010803f900e1bd75bc6c7aacb46c57e62721948f10ae8",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:d9824591b202c2d1521de3baecd2e3a1cf09ddebca5a3e83790ff9fe3f47aec3",
+    "locator": "lab/sims/level-coupled-shear-lattice/runs/2026-08-21-seed-42.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:92f5528fc257b5c02acd29d60543dee5622da95c5f299133c1990e62b62b6a60"
+}

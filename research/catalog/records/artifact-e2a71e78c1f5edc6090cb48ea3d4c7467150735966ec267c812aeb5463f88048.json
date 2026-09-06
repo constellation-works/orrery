@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flattice-two-source-superposition%2Fmain.py",
+  "aliases": [
+    "lab/sims/lattice-two-source-superposition/main.py"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "1d288e45d1b9f4fa76b55d05ab6a6effc68172b9",
+    "sha256": "sha256:08ea976b5fff0464f7a479d2406537066ab5210c58b3d9e84387d29c72b432c6",
+    "path": "lab/sims/lattice-two-source-superposition/main.py",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/lattice-two-source-superposition/main.py",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:08ea976b5fff0464f7a479d2406537066ab5210c58b3d9e84387d29c72b432c6",
+    "locator": "lab/sims/lattice-two-source-superposition/main.py",
+    "media_type": "text/x-python"
+  },
+  "revision_id": "sha256:e2a71e78c1f5edc6090cb48ea3d4c7467150735966ec267c812aeb5463f88048"
+}

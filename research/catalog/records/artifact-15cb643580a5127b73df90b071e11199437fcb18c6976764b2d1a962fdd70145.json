@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fframe-drag-swirl-lense-thirring-check%2Fresults.json",
+  "aliases": [
+    "lab/sims/frame-drag-swirl-lense-thirring-check/results.json",
+    "lab/sims/frame-drag-swirl-lense-thirring-check/results.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "d08176cad7f9c22b0317dca5a555b02db6e16cad",
+    "sha256": "sha256:54e90cc993b1b4787325110649c158b142d68054f8709d446b6a4f3ecbc719fc",
+    "path": "lab/sims/frame-drag-swirl-lense-thirring-check/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/frame-drag-swirl-lense-thirring-check/results.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:54e90cc993b1b4787325110649c158b142d68054f8709d446b6a4f3ecbc719fc",
+    "legacy_anonymous_alias": "b78d1b48c25a0b2e25b2705097fc8687ef9cd61d445e7eb1e0ed21d4154d0bc9",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:54e90cc993b1b4787325110649c158b142d68054f8709d446b6a4f3ecbc719fc",
+    "locator": "lab/sims/frame-drag-swirl-lense-thirring-check/results.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:15cb643580a5127b73df90b071e11199437fcb18c6976764b2d1a962fdd70145"
+}

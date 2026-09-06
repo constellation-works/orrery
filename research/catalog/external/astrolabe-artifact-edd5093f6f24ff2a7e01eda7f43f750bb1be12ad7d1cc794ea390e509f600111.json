@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:astrolabe:artifact:dataset%3Acatalog%3Awidebin_gaia_dr3_d200",
+  "aliases": [
+    "catalog/widebin_gaia_dr3_d200",
+    "widebin_gaia_dr3_d200"
+  ],
+  "activity": "unknown",
+  "scope": "unknown",
+  "provenance": {
+    "repository": "astrolabe",
+    "git_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+    "blob_oid": "9c56542f86676d4df6f7ffaea54a89c52efd9763",
+    "sha256": "sha256:2a486c76df2e8454dca7c5a32e01cb782357a969331457d2fd55763bec923fea",
+    "path": "research/datasets/records/artifact-edd5093f6f24ff2a7e01eda7f43f750bb1be12ad7d1cc794ea390e509f600111.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Expected study output only; no dataset bytes or historical consumption were inferred."
+  ],
+  "missingness": [
+    "dataset-snapshot",
+    "historical-consumption",
+    "scope",
+    "activity"
+  ],
+  "legacy": {
+    "expected_dataset": {
+      "kind": "catalog",
+      "name": "widebin_gaia_dr3_d200"
+    },
+    "availability_at_inventory": "missing",
+    "historical_consumption": "unknown"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "dataset",
+    "availability": "missing",
+    "snapshot_digest": null,
+    "locator": "data/processed/catalog/widebin_gaia_dr3_d200.parquet",
+    "media_type": "application/vnd.apache.parquet"
+  },
+  "revision_id": "sha256:edd5093f6f24ff2a7e01eda7f43f750bb1be12ad7d1cc794ea390e509f600111"
+}

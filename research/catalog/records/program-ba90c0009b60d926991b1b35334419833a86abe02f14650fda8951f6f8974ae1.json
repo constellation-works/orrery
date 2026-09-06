@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:solar-system-nbody",
+  "aliases": [
+    "solar-system-nbody",
+    "lab/sims/solar-system-nbody/sim.json"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "d1e35e4848dd6c389229588b450ed95a2ee8e514",
+    "sha256": "sha256:72e653b5ebe7ac8ef293f8e9d3b6df4c039405500019e8da59e70c83a6cc8d5f",
+    "path": "lab/sims/solar-system-nbody/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [
+    "activity-mapping",
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/solar-system-nbody/sim.json",
+    "source_sha256": "sha256:72e653b5ebe7ac8ef293f8e9d3b6df4c039405500019e8da59e70c83a6cc8d5f",
+    "catalog_status": "imported",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Solar system n-body simulator"
+  },
+  "revision_id": "sha256:ba90c0009b60d926991b1b35334419833a86abe02f14650fda8951f6f8974ae1"
+}

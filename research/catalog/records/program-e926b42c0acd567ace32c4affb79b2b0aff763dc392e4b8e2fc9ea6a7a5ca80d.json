@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:dynamical-consumption-lattice",
+  "aliases": [
+    "dynamical-consumption-lattice",
+    "lab/sims/dynamical-consumption-lattice/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "e5082108e025812f9451f5e1ab3554513660077a",
+    "sha256": "sha256:d9abe62a74ba70b3f4dd53255c11d872b6adbfc4a9016603e33b74a130038f39",
+    "path": "lab/sims/dynamical-consumption-lattice/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/dynamical-consumption-lattice/sim.json",
+    "source_sha256": "sha256:d9abe62a74ba70b3f4dd53255c11d872b6adbfc4a9016603e33b74a130038f39",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Dynamical-consumption lattice flow"
+  },
+  "revision_id": "sha256:e926b42c0acd567ace32c4affb79b2b0aff763dc392e4b8e2fc9ea6a7a5ca80d"
+}

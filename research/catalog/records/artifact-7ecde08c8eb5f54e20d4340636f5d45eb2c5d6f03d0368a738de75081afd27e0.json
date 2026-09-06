@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Foscillating-electron-retarded-fields%2Fassets%2Fnarrow-after.png",
+  "aliases": [
+    "lab/sims/oscillating-electron-retarded-fields/assets/narrow-after.png"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "12924966d5588c43b41646ec48242bafd72c015f",
+    "sha256": "sha256:bbb11f7d531fede673b229362de9eaebf52a662716d206b18cf361ecc46cd7a0",
+    "path": "lab/sims/oscillating-electron-retarded-fields/assets/narrow-after.png",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/oscillating-electron-retarded-fields/assets/narrow-after.png",
+    "scientific_role": "figure"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:bbb11f7d531fede673b229362de9eaebf52a662716d206b18cf361ecc46cd7a0",
+    "locator": "lab/sims/oscillating-electron-retarded-fields/assets/narrow-after.png",
+    "media_type": "image/png"
+  },
+  "revision_id": "sha256:7ecde08c8eb5f54e20d4340636f5d45eb2c5d6f03d0368a738de75081afd27e0"
+}

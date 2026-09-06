@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-two-core-superposition%2Fruns%2F2026-08-21-seed-42.json",
+  "aliases": [
+    "lab/sims/level-core-two-core-superposition/runs/2026-08-21-seed-42.json",
+    "lab/sims/level-core-two-core-superposition/runs/2026-08-21-seed-42.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "a996c37f0ef0072c6e61f493b28ee8454bbd8685",
+    "sha256": "sha256:d2e4a80b1fd7e8b8f791a35cd2193f71a5f3dda86781aae72aa329787ae16833",
+    "path": "lab/sims/level-core-two-core-superposition/runs/2026-08-21-seed-42.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/level-core-two-core-superposition/runs/2026-08-21-seed-42.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:d2e4a80b1fd7e8b8f791a35cd2193f71a5f3dda86781aae72aa329787ae16833",
+    "legacy_anonymous_alias": "09fe5d1bc6845d079afb147cd6aab4d50f8298b572bd0119cf5ebf3bd2e6ba9c",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:d2e4a80b1fd7e8b8f791a35cd2193f71a5f3dda86781aae72aa329787ae16833",
+    "locator": "lab/sims/level-core-two-core-superposition/runs/2026-08-21-seed-42.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:0af3df207b630f401d85e7c139c0fbb139dd5957e0314d86307b8da83470efcc"
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Frar-network-fluctuation-limit%2Fmain.py",
+  "aliases": [
+    "lab/sims/rar-network-fluctuation-limit/main.py"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "d5ec727ee652bcfdcd18124160036712cc514299",
+    "sha256": "sha256:a3d4b1117f1beb2497d8be6622714a92bd39ef9a1094d51f079e714484040aca",
+    "path": "lab/sims/rar-network-fluctuation-limit/main.py",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/rar-network-fluctuation-limit/main.py",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:a3d4b1117f1beb2497d8be6622714a92bd39ef9a1094d51f079e714484040aca",
+    "locator": "lab/sims/rar-network-fluctuation-limit/main.py",
+    "media_type": "text/x-python"
+  },
+  "revision_id": "sha256:841c588e238ef5a8f626bd3c4fa3c476e82aacdb955a80c5ba238ccf6c344462"
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:frame-drag-swirl-lense-thirring-check",
+  "aliases": [
+    "frame-drag-swirl-lense-thirring-check",
+    "lab/sims/frame-drag-swirl-lense-thirring-check/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "6cee152ddb3930a176014d1e4603648b7f79d3f0",
+    "sha256": "sha256:69fcc9b10956c2e6497318cb315bc89cadc483760771d1a953fba655869fe8eb",
+    "path": "lab/sims/frame-drag-swirl-lense-thirring-check/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/frame-drag-swirl-lense-thirring-check/sim.json",
+    "source_sha256": "sha256:69fcc9b10956c2e6497318cb315bc89cadc483760771d1a953fba655869fe8eb",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Frame-drag swirl Lense–Thirring shape check"
+  },
+  "revision_id": "sha256:e1d4e5b65b488d68ec4d257b18506aa59c19ebd8eece4236d3366496b6fa2abf"
+}

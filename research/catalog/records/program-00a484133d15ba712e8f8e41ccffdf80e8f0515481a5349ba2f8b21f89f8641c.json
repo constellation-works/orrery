@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:ppn-reduction-symbolic-checks",
+  "aliases": [
+    "ppn-reduction-symbolic-checks",
+    "lab/sims/ppn-reduction-symbolic-checks/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "d8e1991b50dfd873b80cc48f0effa303016f6606",
+    "sha256": "sha256:8017d91e1fd0778685e2da5981bf1832a1236d3920d34762323a3fc9c2c8301f",
+    "path": "lab/sims/ppn-reduction-symbolic-checks/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/ppn-reduction-symbolic-checks/sim.json",
+    "source_sha256": "sha256:8017d91e1fd0778685e2da5981bf1832a1236d3920d34762323a3fc9c2c8301f",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "PPN reduction symbolic checks"
+  },
+  "revision_id": "sha256:00a484133d15ba712e8f8e41ccffdf80e8f0515481a5349ba2f8b21f89f8641c"
+}

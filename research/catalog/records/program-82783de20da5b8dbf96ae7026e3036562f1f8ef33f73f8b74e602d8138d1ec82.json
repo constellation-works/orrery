@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:swirl-ball-far-field",
+  "aliases": [
+    "swirl-ball-far-field",
+    "lab/sims/swirl-ball-far-field/sim.json"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "c8b8cedf4fcad6a15aff5f64d4269f5aeab78b9d",
+    "sha256": "sha256:77739f184fae1a1b737117f20827510946683d97f5e26f9246ea90d154f86ad9",
+    "path": "lab/sims/swirl-ball-far-field/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [
+    "activity-mapping",
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/swirl-ball-far-field/sim.json",
+    "source_sha256": "sha256:77739f184fae1a1b737117f20827510946683d97f5e26f9246ea90d154f86ad9",
+    "catalog_status": "imported",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Oscillating electron — radiating B-field"
+  },
+  "revision_id": "sha256:82783de20da5b8dbf96ae7026e3036562f1f8ef33f73f8b74e602d8138d1ec82"
+}

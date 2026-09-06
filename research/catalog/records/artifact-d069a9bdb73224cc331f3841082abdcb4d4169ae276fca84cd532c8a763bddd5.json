@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fsparc-scarcity-universality%2Fassets%2Fresults.json",
+  "aliases": [
+    "lab/sims/sparc-scarcity-universality/assets/results.json",
+    "lab/sims/sparc-scarcity-universality/assets/results.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "1ca48a84718f85ee72a5eead056425d7518c7c2b",
+    "sha256": "sha256:024a315a6b35ba186d0458d32f22fdd240c9b3d1190cc7b60542dab0726d48dc",
+    "path": "lab/sims/sparc-scarcity-universality/assets/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/sparc-scarcity-universality/assets/results.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:024a315a6b35ba186d0458d32f22fdd240c9b3d1190cc7b60542dab0726d48dc",
+    "legacy_anonymous_alias": "f839e38dda30296418dbea3c331605e0d0a72c73ff89500e0b4fd3f1d7393574",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:024a315a6b35ba186d0458d32f22fdd240c9b3d1190cc7b60542dab0726d48dc",
+    "locator": "lab/sims/sparc-scarcity-universality/assets/results.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:d069a9bdb73224cc331f3841082abdcb4d4169ae276fca84cd532c8a763bddd5"
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Ftwo-substance-dynamical-packet%2Fmain.py",
+  "aliases": [
+    "lab/sims/two-substance-dynamical-packet/main.py"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "6959561274ca701b6ac34098e16a4a5c31d32ef5",
+    "sha256": "sha256:bd3d02d5182446b94159e5eaf5d777da575f476d2c1d3e88a552517a5b881fe4",
+    "path": "lab/sims/two-substance-dynamical-packet/main.py",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/two-substance-dynamical-packet/main.py",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:bd3d02d5182446b94159e5eaf5d777da575f476d2c1d3e88a552517a5b881fe4",
+    "locator": "lab/sims/two-substance-dynamical-packet/main.py",
+    "media_type": "text/x-python"
+  },
+  "revision_id": "sha256:5e5a66272eeab21fd7b8ae9ca4f2cd96234c774b56326b2a87a12af10f50dd87"
+}

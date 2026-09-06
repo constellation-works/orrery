@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:swirl-ball",
+  "aliases": [
+    "swirl-ball",
+    "lab/sims/swirl-ball/sim.json"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "b667d42ca826902685b6108b37c17b9ed91da2e2",
+    "sha256": "sha256:35be247b7cf626f05988d5ff254e5efed9fa9b7cd0914adba9876b901ae7a972",
+    "path": "lab/sims/swirl-ball/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [
+    "activity-mapping",
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/swirl-ball/sim.json",
+    "source_sha256": "sha256:35be247b7cf626f05988d5ff254e5efed9fa9b7cd0914adba9876b901ae7a972",
+    "catalog_status": "imported",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Swirl-ball electron model"
+  },
+  "revision_id": "sha256:848b71a131ff911380fa82358081080696dfce4e738b252700fda6ba87a1d1e0"
+}

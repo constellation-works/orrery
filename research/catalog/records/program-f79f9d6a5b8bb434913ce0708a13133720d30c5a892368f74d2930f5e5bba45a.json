@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:retarded-scarcity-wake",
+  "aliases": [
+    "retarded-scarcity-wake",
+    "lab/sims/retarded-scarcity-wake/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "f93c3b81ad817709f861a7d9e0d3ea96c684f000",
+    "sha256": "sha256:ec6dcd0da72fe60c5d1d9df49286f2d62aa24776702d0a354a33cbf80c9435cc",
+    "path": "lab/sims/retarded-scarcity-wake/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/retarded-scarcity-wake/sim.json",
+    "source_sha256": "sha256:ec6dcd0da72fe60c5d1d9df49286f2d62aa24776702d0a354a33cbf80c9435cc",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Retarded-Scarcity Wake"
+  },
+  "revision_id": "sha256:f79f9d6a5b8bb434913ce0708a13133720d30c5a892368f74d2930f5e5bba45a"
+}

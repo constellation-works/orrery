@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fsolar-system-nbody%2Fscarcity%2Fsummary.json",
+  "aliases": [
+    "lab/sims/solar-system-nbody/scarcity/summary.json",
+    "lab/sims/solar-system-nbody/scarcity/summary.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "9fc01159fbc2e5fac503b07ee344113b81deb646",
+    "sha256": "sha256:c8bb881e2ce706a69a2d73063f60d8cb50e931d004729448cb4fe93e868c47dd",
+    "path": "lab/sims/solar-system-nbody/scarcity/summary.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/solar-system-nbody/scarcity/summary.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:c8bb881e2ce706a69a2d73063f60d8cb50e931d004729448cb4fe93e868c47dd",
+    "legacy_anonymous_alias": "5dd6d8d32b3482d8b01048905f14ab1b6ce00e3d99aec3e7392fd4c839b62f51",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:c8bb881e2ce706a69a2d73063f60d8cb50e931d004729448cb4fe93e868c47dd",
+    "locator": "lab/sims/solar-system-nbody/scarcity/summary.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:bf029f7a8f8c7730342d60d9f5f6dc99b9f460c4ae51311ec898cef1e096dea5"
+}

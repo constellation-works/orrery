@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fpingpong-bell%2Fanalyze_bell.py",
+  "aliases": [
+    "lab/sims/pingpong-bell/analyze_bell.py"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "3176b2e97c8a909727962e5b958d6fe36114edcf",
+    "sha256": "sha256:22922ac8cf5da3ccbaa0bb1af455d2fff1dcfb8beba1eb59bce34db1775b8a4e",
+    "path": "lab/sims/pingpong-bell/analyze_bell.py",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/pingpong-bell/analyze_bell.py",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:22922ac8cf5da3ccbaa0bb1af455d2fff1dcfb8beba1eb59bce34db1775b8a4e",
+    "locator": "lab/sims/pingpong-bell/analyze_bell.py",
+    "media_type": "text/x-python"
+  },
+  "revision_id": "sha256:2790aa62305579db4319e903b1690ce1f741849fe9a8fbf63c156f2a99fb95e3"
+}

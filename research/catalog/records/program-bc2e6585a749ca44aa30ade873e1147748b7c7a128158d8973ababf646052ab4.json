@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:lattice-photon-propagation",
+  "aliases": [
+    "lattice-photon-propagation",
+    "lab/sims/lattice-photon-propagation/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "0dcff72ef6cf8eb8e9075d407b48f1b41db8ba0b",
+    "sha256": "sha256:f8180b9df7d8ceee9f0e5015de4893807776ba038d70ca7632c9808acfbf1a6d",
+    "path": "lab/sims/lattice-photon-propagation/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/lattice-photon-propagation/sim.json",
+    "source_sha256": "sha256:f8180b9df7d8ceee9f0e5015de4893807776ba038d70ca7632c9808acfbf1a6d",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Lattice photon propagation"
+  },
+  "revision_id": "sha256:bc2e6585a749ca44aa30ade873e1147748b7c7a128158d8973ababf646052ab4"
+}

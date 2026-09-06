@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:pendulum-driven",
+  "aliases": [
+    "pendulum-driven",
+    "lab/sims/pendulum-driven/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "7eefbd14828f95193c1b9b1d16b163a914ca51f8",
+    "sha256": "sha256:7b9b7f44a99310e69c963766b7c523da9ff430eda14684b378e4e40db5233a4e",
+    "path": "lab/sims/pendulum-driven/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/pendulum-driven/sim.json",
+    "source_sha256": "sha256:7b9b7f44a99310e69c963766b7c523da9ff430eda14684b378e4e40db5233a4e",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Damped driven pendulum"
+  },
+  "revision_id": "sha256:bef95a27ee247aaf1800c173dfec5eaa1bc36132d5c2f35a13098730e968d780"
+}

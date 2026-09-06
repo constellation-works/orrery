@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "program",
+  "id": "urn:research:orrery:program:scarcity-rotation-curve-fit",
+  "aliases": [
+    "scarcity-rotation-curve-fit",
+    "lab/sims/scarcity-rotation-curve-fit/sim.json"
+  ],
+  "activity": "active",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "950606b0bea5e548032d5e5bc115cf0917f81f72",
+    "sha256": "sha256:fcb1b9d91debf76dc8dc6709ded2302c96cfc21d38ae590158716b98ecb3c242",
+    "path": "lab/sims/scarcity-rotation-curve-fit/sim.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Catalog describes runnable apparatus; it is not an execution or scientific verdict."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_path": "lab/sims/scarcity-rotation-curve-fit/sim.json",
+    "source_sha256": "sha256:fcb1b9d91debf76dc8dc6709ded2302c96cfc21d38ae590158716b98ecb3c242",
+    "catalog_status": "active",
+    "catalog_is_execution": false
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "program",
+    "title": "Scarcity rotation-curve fit"
+  },
+  "revision_id": "sha256:f2e2eca031958d6b26515722e2368a256e18a687a7c22c1834cb82e7aa93ec18"
+}

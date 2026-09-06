@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fdelayed-center-analytic-checks%2Fmain.py",
+  "aliases": [
+    "lab/sims/delayed-center-analytic-checks/main.py"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "9c4913355c17bf09c919db6276c067d25edabadc",
+    "sha256": "sha256:6e354b52bfc5d6bdb0b8335acf4046e9ec19e339fdcc5624905aa7ba65e8a05f",
+    "path": "lab/sims/delayed-center-analytic-checks/main.py",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/delayed-center-analytic-checks/main.py",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:6e354b52bfc5d6bdb0b8335acf4046e9ec19e339fdcc5624905aa7ba65e8a05f",
+    "locator": "lab/sims/delayed-center-analytic-checks/main.py",
+    "media_type": "text/x-python"
+  },
+  "revision_id": "sha256:67f80def38d85e55c783ba30a9279a702d91a8df1fd49bfb343e0ac327753421"
+}

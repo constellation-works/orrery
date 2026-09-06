@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Fwide-binary-control-diagnosis%2Fassets%2Fresults.json",
+  "aliases": [
+    "lab/sims/wide-binary-control-diagnosis/assets/results.json",
+    "lab/sims/wide-binary-control-diagnosis/assets/results.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "637859060e286afe1e3f5091bc8a7a83e23f03d8",
+    "sha256": "sha256:6e0d1205e53c430a910788b148c9b7b566a305738403c23e9aa513330366d7bc",
+    "path": "lab/sims/wide-binary-control-diagnosis/assets/results.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/wide-binary-control-diagnosis/assets/results.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:6e0d1205e53c430a910788b148c9b7b566a305738403c23e9aa513330366d7bc",
+    "legacy_anonymous_alias": "ab635dfed53969cc7232b38c49955108da6cd2c20952a360455fa7f25c1cba28",
+    "execution_mapping": "explicit"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:6e0d1205e53c430a910788b148c9b7b566a305738403c23e9aa513330366d7bc",
+    "locator": "lab/sims/wide-binary-control-diagnosis/assets/results.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:05a1791e4b2fe1f712119289df32553a9a67aa1dc04718f80a64bbf2ab722990"
+}

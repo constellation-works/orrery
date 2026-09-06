@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fwide-binary-control-diagnosis%2Fmain.py",
+  "aliases": [
+    "lab/sims/wide-binary-control-diagnosis/main.py"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "bb68d882063071091bbe989df5a6740ebe63f2ec",
+    "sha256": "sha256:a77bfb869498d16dcc45cd540cdae949e352f7e37583dfe4df1beda2fec6a723",
+    "path": "lab/sims/wide-binary-control-diagnosis/main.py",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/wide-binary-control-diagnosis/main.py",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:a77bfb869498d16dcc45cd540cdae949e352f7e37583dfe4df1beda2fec6a723",
+    "locator": "lab/sims/wide-binary-control-diagnosis/main.py",
+    "media_type": "text/x-python"
+  },
+  "revision_id": "sha256:e46a072411540a86e26e2e8af2433ece12bc4c7c0140d7aa3a29d2f3a25b5ec1"
+}

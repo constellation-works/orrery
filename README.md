@@ -24,3 +24,20 @@ lab/tools/new-sim.sh my-sim --kind web --title "My Sim"
 
 See [CLAUDE.md](CLAUDE.md) for the sim contract (metadata, provenance,
 versioning) and repo conventions.
+
+## Research records
+
+Legacy `sim.json` and captured-result JSON bytes remain authoritative for their
+own fields. `research/catalog/` is their deterministic research-record mapping;
+the gallery is a generated `sim.json` projection. Validate both without running
+any simulation:
+
+```sh
+uv venv /tmp/orrery-research-env
+uv pip install --python /tmp/orrery-research-env/bin/python -r requirements-research.txt
+/tmp/orrery-research-env/bin/python scripts/research_records.py check
+python3 lab/tools/build-gallery.py --check
+```
+
+See [docs/research-records.md](docs/research-records.md) for authority,
+registration, cross-repository pin, equivalence, and rollback rules.

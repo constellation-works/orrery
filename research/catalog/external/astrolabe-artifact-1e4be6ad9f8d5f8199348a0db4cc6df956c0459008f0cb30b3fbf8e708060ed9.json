@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:astrolabe:artifact:source%3Aastrolabe%3A90f5b58890da36c44286a4edbde7eead879410a8%3Ascripts%2Frun_wide_binary_study.py",
+  "aliases": [
+    "source:astrolabe:90f5b58890da36c44286a4edbde7eead879410a8:scripts/run_wide_binary_study.py"
+  ],
+  "activity": "active",
+  "scope": "synthetic-calibration",
+  "provenance": {
+    "repository": "astrolabe",
+    "git_revision": "1642b4ba2f75e16091692e280932363a6a4f0343",
+    "blob_oid": "717a8bc1a0536e1ca1ae4cf0d1ae30d0e86cffac",
+    "sha256": "sha256:568f5ba6da8546db17ea561e4816f07b39c1fdcadbef8c622412e86f1ed5c3a9",
+    "path": "research/datasets/records/artifact-1e4be6ad9f8d5f8199348a0db4cc6df956c0459008f0cb30b3fbf8e708060ed9.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Source-code artifact only; execution and scientific assessment are separate."
+  ],
+  "missingness": [],
+  "legacy": {
+    "source_revision": "90f5b58890da36c44286a4edbde7eead879410a8",
+    "bytes_sha256": "sha256:5efd6457d7f13c2adce8786793aa24ef97110434395394ad141b47e12a6307c1"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:5efd6457d7f13c2adce8786793aa24ef97110434395394ad141b47e12a6307c1",
+    "locator": "scripts/run_wide_binary_study.py",
+    "media_type": "text/x-python"
+  },
+  "revision_id": "sha256:1e4be6ad9f8d5f8199348a0db4cc6df956c0459008f0cb30b3fbf8e708060ed9"
+}

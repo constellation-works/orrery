@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fpendulum-driven%2Findex.html",
+  "aliases": [
+    "lab/sims/pendulum-driven/index.html"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "0e6e3f2f56681108e9cf63182feece7e442a962b",
+    "sha256": "sha256:854a74efd134d0ef1d35b0cb640137e4ecf977760de04637b558736bacb3e9f2",
+    "path": "lab/sims/pendulum-driven/index.html",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/pendulum-driven/index.html",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:854a74efd134d0ef1d35b0cb640137e4ecf977760de04637b558736bacb3e9f2",
+    "locator": "lab/sims/pendulum-driven/index.html",
+    "media_type": "text/html"
+  },
+  "revision_id": "sha256:297aa04529547f37e3520aef65086162969d6ada16054f8528d9469cd4710c66"
+}

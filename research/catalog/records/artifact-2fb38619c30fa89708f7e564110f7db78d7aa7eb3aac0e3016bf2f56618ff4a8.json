@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Flevel-core-far-field-slot-coefficients%2Fmain.py",
+  "aliases": [
+    "lab/sims/level-core-far-field-slot-coefficients/main.py"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "044772a27e4b9721055dfcc140d28713dd83bc01",
+    "sha256": "sha256:ee45ae27468dbb89116e0f7051881d24f814644f030eacf3d71c4b1c67e79b9d",
+    "path": "lab/sims/level-core-far-field-slot-coefficients/main.py",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/level-core-far-field-slot-coefficients/main.py",
+    "scientific_role": "apparatus-entry"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "source",
+    "availability": "available",
+    "snapshot_digest": "sha256:ee45ae27468dbb89116e0f7051881d24f814644f030eacf3d71c4b1c67e79b9d",
+    "locator": "lab/sims/level-core-far-field-slot-coefficients/main.py",
+    "media_type": "text/x-python"
+  },
+  "revision_id": "sha256:2fb38619c30fa89708f7e564110f7db78d7aa7eb3aac0e3016bf2f56618ff4a8"
+}

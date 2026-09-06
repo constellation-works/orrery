@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:captured-result%3Alab%2Fsims%2Flevel-core-dynamical-relaxation%2Fruns%2F2026-08-21-extended-seed-42.json",
+  "aliases": [
+    "lab/sims/level-core-dynamical-relaxation/runs/2026-08-21-extended-seed-42.json",
+    "lab/sims/level-core-dynamical-relaxation/runs/2026-08-21-extended-seed-42.json#$"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "c2c19baedb82549a43b14d19010951785762731f",
+    "sha256": "sha256:ca1ace9c9cb7360c093de3809530d6e3ad0235233c6e8a3f07a573a319aab86e",
+    "path": "lab/sims/level-core-dynamical-relaxation/runs/2026-08-21-extended-seed-42.json",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Captured result bytes are retained; no distinct execution or verdict is inferred unless explicitly mapped."
+  ],
+  "missingness": [
+    "activity",
+    "execution-identity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/level-core-dynamical-relaxation/runs/2026-08-21-extended-seed-42.json",
+    "source_selector": "$",
+    "source_sha256": "sha256:ca1ace9c9cb7360c093de3809530d6e3ad0235233c6e8a3f07a573a319aab86e",
+    "legacy_anonymous_alias": "d5dc6a4da63f02cb195274b47dc48168272477c362825339de20493161ef5c6c",
+    "execution_mapping": "artifact-only"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:ca1ace9c9cb7360c093de3809530d6e3ad0235233c6e8a3f07a573a319aab86e",
+    "locator": "lab/sims/level-core-dynamical-relaxation/runs/2026-08-21-extended-seed-42.json",
+    "media_type": "application/json"
+  },
+  "revision_id": "sha256:2145e5660847123a12ad7632b5f5b1c05abf96503b6b868ac8c19ad5122299fc"
+}

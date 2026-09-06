@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "artifact",
+  "id": "urn:research:orrery:artifact:support%3Alab%2Fsims%2Fsolar-system-nbody%2Fbaseline%2Fnewtonian_2016_2026.parquet",
+  "aliases": [
+    "lab/sims/solar-system-nbody/baseline/newtonian_2016_2026.parquet"
+  ],
+  "activity": "unknown",
+  "scope": "simulation-under-assumptions",
+  "provenance": {
+    "repository": "orrery",
+    "git_revision": "a1c430db54d585048ec85c4e7c47141db634f398",
+    "blob_oid": "40600219883c6dbccf501cd92d184333c852c073",
+    "sha256": "sha256:fc23d34cfabb974efb381d5c4d3cfb207d715a3db033d0f7f8dea3c9e63b2e6f",
+    "path": "lab/sims/solar-system-nbody/baseline/newtonian_2016_2026.parquet",
+    "selector": "$",
+    "historical": true,
+    "working_tree": false
+  },
+  "limitations": [
+    "Presentation/output artifact; digest does not establish a scientific verdict."
+  ],
+  "missingness": [
+    "activity"
+  ],
+  "legacy": {
+    "source_path": "lab/sims/solar-system-nbody/baseline/newtonian_2016_2026.parquet",
+    "scientific_role": "captured-data"
+  },
+  "references": [],
+  "presentation": {},
+  "payload": {
+    "role": "result",
+    "availability": "available",
+    "snapshot_digest": "sha256:fc23d34cfabb974efb381d5c4d3cfb207d715a3db033d0f7f8dea3c9e63b2e6f",
+    "locator": "lab/sims/solar-system-nbody/baseline/newtonian_2016_2026.parquet",
+    "media_type": "application/octet-stream"
+  },
+  "revision_id": "sha256:f8dd594509c95ec810fc15598fbed3768e4facdd78a930ddbb26c61906e49e3b"
+}
