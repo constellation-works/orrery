@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oscillating electron · Orrery</title>
+<link rel="icon" href="data:,"><link rel="stylesheet" href="style.css">
+<script src="../../vendor/three/three.min.js"></script>
+</head>
+<body>
+<header><a href="../../gallery/">ORRERY <span>/ ELECTROMAGNETISM</span></a><a href="README.md">Model & validation ↗</a></header>
+<main>
+<section class="apparatus">
+<div class="intro"><p class="eyebrow">01 / RETARDED FIELDS</p><h1>An electron in motion.</h1><p>A local oscillation. A field that remembers.</p></div>
+<div id="scene" tabindex="0" role="img" aria-label="Interactive three dimensional electromagnetic field. Drag or use arrow keys to orbit; scroll or use plus and minus to zoom."></div>
+<div class="scene-top"><span class="badge">q = −e</span><span class="badge">c = ω = 1</span><span id="component-label">TOTAL FIELD</span></div>
+<div class="axis-label" id="axis-label">+z / drive axis</div>
+<div class="scene-bottom"><p><i class="cyan"></i> +Bφ <i class="coral"></i> −Bφ <span>arrows give circulation</span></p><p class="muted">Drag to orbit · scroll to zoom · arrow keys / + −</p></div>
+<div class="transport"><button id="play" aria-label="Pause simulation">Ⅱ Pause</button><button id="reset">↺ Reset</button><label for="phase">Phase</label><input id="phase" type="range" min="0" max="6.28318530718" step="0.001" value="0"><output id="phase-value">0.00 τ</output></div>
+<div id="fatal" role="alert" hidden></div>
+</section>
+<aside>
+<section><p class="eyebrow">THE EXPERIMENT</p><h2>Driven, not free.</h2><p class="muted">A classical point electron follows z = β₀ sin t. Its field is evaluated at the source’s retarded time.</p>
+<label class="row" for="preset">Curated view<select id="preset"><option value="overview">Field atlas</option><option value="radiation">Radiation only</option><option value="near">Near the electron</option><option value="power">Angular power</option><option value="stationary">Stationary control</option></select></label>
+<label class="range-label" for="beta">Peak speed <output id="beta-value">0.15 c</output></label><input id="beta" type="range" min="0" max="0.8" step="0.01" value="0.15"><p class="micro">0–0.8 c · default is nonrelativistic · ω fixed at 1</p>
+</section>
+<section><p class="eyebrow">READ THE FIELD</p>
+<label class="row" for="component">Contribution<select id="component"><option value="total">Total</option><option value="near">Velocity / near · 1/R²</option><option value="rad">Radiation · 1/R</option></select></label>
+<div class="checks"><label><input id="magnetic" type="checkbox" checked> <span class="cyan-text">B</span> circulation</label><label><input id="electric" type="checkbox"> <span class="gold-text">E</span> meridian slice</label><label><input id="poynting" type="checkbox"> <span class="green-text">S</span> energy flow</label><label><input id="power" type="checkbox"> Angular power</label></div>
+<label class="row" for="density">Sampling<select id="density"><option value="sparse">Sparse · 35 rings</option><option value="standard" selected>Standard · 63 rings</option><option value="dense">Dense · 99 rings</option></select></label>
+<label class="range-label" for="gain">Display gain <output id="gain-value">1.0×</output></label><input id="gain" type="range" min="0.25" max="4" step="0.05" value="1">
+<p class="micro">Fixed guides, not moving matter. Cyan/coral = sign of Bφ about +z. Brightness = log-compressed magnitude; arrows = direction. E is gold; S = E × B / 4π is green. <a href="#encoding">Encoding details ↓</a></p>
+</section>
+<section id="probe-panel"><p class="eyebrow">RETARDED-SOURCE PROBE</p>
+<label class="range-label" for="probe-radius">Radius from origin <output id="radius-value">5.0</output></label><input id="probe-radius" type="range" min="0.2" max="12" step="0.1" value="5">
+<label class="range-label" for="probe-angle">Polar angle from +z <output id="angle-value">65°</output></label><input id="probe-angle" type="range" min="0" max="180" step="1" value="65">
+<dl id="probe-readout"></dl><p class="micro">White point: observer in xz plane. Dashed line: light path from the amber retarded source. Solid white source: now. Dotted sphere: excluded radius 0.18 about the present electron; no field is assigned inside.</p>
+</section>
+</aside>
+<section id="power-panel" hidden><div><p class="eyebrow">RADIATION / SOURCE TIME</p><h2>Power has no sign.</h2><p class="muted">Calculated dP/dΩ at emission phase t; radius encodes power, normalized to the current angular maximum. Dashed: sin²θ reference. No near field or display gain enters this plot.</p><p id="power-value" class="mono"></p></div><canvas id="power-chart" width="620" height="300" aria-label="Angular radiation power in a meridian plane"></canvas></section>
+<section class="notes" id="encoding"><div><p class="eyebrow">A MAP, NOT A MATERIAL</p><h2>What the light means</h2><p>The rings are instantaneous magnetic-field guides around the drive axis, sampled from the Liénard–Wiechert solution. Their radii stay fixed as signs and strengths change. Neither guides nor arrows are particles, photons, or an electron’s structure.</p><p>Brightness b = min(1, log(1 + 120 g |B|) / log 13); ring opacity = 0.08 + 0.82 b. Zero fields hide their guides. E and S arrows use the same compression with factors 15 and 600, respectively; arrow lengths and brightness clip. Gain g and sampling alter only the drawing. Probe values are uncompressed totals and both contributions.</p></div><div><p class="eyebrow">THE MODEL’S BOUNDARY</p><h2>Prescribed classical motion</h2><p>The external drive supplies the energy. Radiation reaction, quantum structure and the driving apparatus’s own fields are omitted. This is a single net charge, not a neutral dipole. The exact field includes velocity and acceleration terms; “radiation only” isolates the acceleration term.</p><p>Dimensionless length c/ω, time 1/ω; E unit |e|ω²/(4πε₀c²), B unit E/c, power unit e²ω²/(4πε₀c). <a href="README.md">Derivation, checks and limitations ↗</a> · <a href="../swirl-ball-far-field/">Historical illustration ↗</a></p></div></section>
+</main><footer>ORRERY / CLASSICAL ELECTRODYNAMICS <span>One prescribed charge. Finite propagation speed.</span></footer>
+<script type="module" src="app.js"></script>
+</body></html>

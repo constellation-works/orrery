@@ -1,0 +1,116 @@
+{
+  "status": "pass",
+  "recordedAt": "2026-09-06T01:07:08.996225+00:00",
+  "browser": "151.0.7922.34",
+  "os": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
+  "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
+  "logicalCpus": 14,
+  "webgl": {
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "vendor": "Google Inc. (Google)"
+  },
+  "launchArgs": [
+    "--no-sandbox",
+    "--enable-unsafe-swiftshader"
+  ],
+  "checks": [
+    "pause/scrub/reset/play",
+    "all presets",
+    "all field toggles and contributions",
+    "probe position and singular exclusion",
+    "density/gain/camera/viewport invariance",
+    "mouse orbit/wheel zoom and keyboard orbit/zoom",
+    "narrow pointer and keyboard controls, no horizontal overflow",
+    "gallery and historical successor navigation",
+    "no console/page/load errors"
+  ],
+  "warnings": [
+    "[.WebGL-0x1a3c00164a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+    "[.WebGL-0x1a3c00164a00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)"
+  ],
+  "errors": [],
+  "failedResponses": [],
+  "measurements": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "preset": "overview",
+      "density": "standard",
+      "beta": 0.15,
+      "gain": 1,
+      "warmupSeconds": 1,
+      "measurementSeconds": 5,
+      "frameIntervalMs": {
+        "samples": 243,
+        "median": 20.300000000745058,
+        "p95": 24.099999997764826,
+        "max": 34.19999999925494
+      },
+      "cpuUpdateAndRenderSubmitMs": {
+        "samples": 244,
+        "median": 2.699999999254942,
+        "p95": 4.399999998509884,
+        "max": 6.5
+      },
+      "drawCalls": 580,
+      "triangles": 5100,
+      "pixelRatio": 1
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "preset": "radiation",
+      "density": "dense",
+      "beta": 0.15,
+      "gain": 1,
+      "warmupSeconds": 1,
+      "measurementSeconds": 5,
+      "frameIntervalMs": {
+        "samples": 191,
+        "median": 25.899999998509884,
+        "p95": 29.400000002235174,
+        "max": 32.599999997764826
+      },
+      "cpuUpdateAndRenderSubmitMs": {
+        "samples": 192,
+        "median": 3.600000001490116,
+        "p95": 6,
+        "max": 6.900000002235174
+      },
+      "drawCalls": 1012,
+      "triangles": 8070,
+      "pixelRatio": 1
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "preset": "overview",
+      "density": "standard",
+      "beta": 0.15,
+      "gain": 1,
+      "warmupSeconds": 1,
+      "measurementSeconds": 5,
+      "frameIntervalMs": {
+        "samples": 301,
+        "median": 16.699999999254942,
+        "p95": 17.699999999254942,
+        "max": 23.100000001490116
+      },
+      "cpuUpdateAndRenderSubmitMs": {
+        "samples": 302,
+        "median": 2.799999998882413,
+        "p95": 4.099999997764826,
+        "max": 5.899999998509884
+      },
+      "drawCalls": 580,
+      "triangles": 5100,
+      "pixelRatio": 1
+    }
+  ]
+}

@@ -3,14 +3,14 @@
   "title": "Oscillating electron \u2014 radiating B-field",
   "kind": "web",
   "entry": "index.html",
-  "status": "imported",
+  "status": "superseded",
   "created": "2026-06-27",
   "topics": [
     "electromagnetism",
     "radiation"
   ],
   "family": "swirl-photon",
-  "summary": "Far-field companion to the swirl-ball model: the radiating magnetic field of an oscillating electron.",
+  "summary": "Historical illustrative swirl-ball companion, not sampled Maxwell fields. Successor: oscillating-electron-retarded-fields (retarded classical point-charge model).",
   "provenance": {
     "almanac": "15-discussions/26-06/swirl-photon-correspondence.md",
     "imported_from": "almanac/_attachments/swirl-ball-sim/far-field.html"

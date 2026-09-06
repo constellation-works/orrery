@@ -1,0 +1,23 @@
+{
+  "slug": "oscillating-electron-retarded-fields",
+  "title": "Oscillating electron — retarded fields",
+  "kind": "web",
+  "entry": "index.html",
+  "status": "active",
+  "created": "2026-09-06",
+  "topics": [
+    "electromagnetism",
+    "radiation",
+    "retarded-fields"
+  ],
+  "family": "swirl-photon",
+  "summary": "Classical sinusoidally driven electron: calculated 3-D Liénard–Wiechert fields, signed magnetic circulation, radiation decomposition and a retarded-source probe. Physical-model successor to swirl-ball-far-field; the historical family label records lineage only.",
+  "provenance": {
+    "task": "ORB-11350",
+    "predecessor": "lab/sims/swirl-ball-far-field/",
+    "sources": [
+      "https://www.feynmanlectures.caltech.edu/II_21.html",
+      "https://www.damtp.cam.ac.uk/user/tong/em/el5.pdf"
+    ]
+  }
+}
