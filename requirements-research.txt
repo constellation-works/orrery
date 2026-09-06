@@ -1,5 +1,5 @@
 # ORB-11393: native operations v0.2.0 and contract-v1 migration compatibility.
-orbit-research @ git+https://github.com/danieljhkim/orbit-research.git@0a9cf756e1c2522b9d5ee71c1cf462b8676f4281
+orbit-research @ git+https://github.com/constellation-works/orbit-research.git@0a9cf756e1c2522b9d5ee71c1cf462b8676f4281
 attrs==26.1.0
 jsonschema==4.26.0
 jsonschema-specifications==2025.9.1
