@@ -1,5 +1,10 @@
 # orrery
 
+> **Archived 2026-09-07.** This repository was folded into
+> [constellation-works/observatory](https://github.com/constellation-works/observatory)
+> at `experiments/physics/_orrery/` with full history (`git subtree add`). Work continues there;
+> nothing here is updated any more.
+
 A cabinet of accumulated physics simulations — interactive canvas/three.js sims
 and Python Monte Carlo experiments, mostly born from discussions (gravity models,
 Bell tests, field visualizations). Named for the clockwork solar-system models.
